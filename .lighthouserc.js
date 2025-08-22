@@ -51,7 +51,9 @@ module.exports = {
       }
     },
     upload: {
-      target: 'temporary-public-storage'
+      target: 'temporary-public-storage',
+      githubAppToken: process.env.LHCI_GITHUB_APP_TOKEN || undefined,
+      githubToken: process.env.GITHUB_TOKEN || undefined
     }
   }
 };

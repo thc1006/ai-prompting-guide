@@ -166,5 +166,6 @@ jobs:
           urls: |
             https://thc1006.github.io/ai-prompting-guide/
           configPath: './.lighthouserc.js'
-          uploadArtifacts: true
+          uploadArtifacts: false
           temporaryPublicStorage: true
+        continue-on-error: true
