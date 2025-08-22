@@ -154,11 +154,17 @@ jobs:
     if: success()
     
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Wait for deployment to be ready
+        run: sleep 30
+        
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v10
         with:
           urls: |
-            ${{ needs.deploy.outputs.page_url }}
+            https://thc1006.github.io/ai-prompting-guide/
           configPath: './.lighthouserc.js'
           uploadArtifacts: true
           temporaryPublicStorage: true

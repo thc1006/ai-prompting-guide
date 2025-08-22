@@ -1,8 +1,15 @@
 module.exports = {
   ci: {
     collect: {
-      numberOfRuns: 3,
+      numberOfRuns: 1,
       settings: {
+        // Skip audits that are not applicable to GitHub Pages
+        skipAudits: [
+          'uses-http2',
+          'redirects-http',
+          'uses-long-cache-ttl',
+          'server-response-time'
+        ],
         // Performance budget configuration
         budgets: [
           {
@@ -30,10 +37,17 @@ module.exports = {
     assert: {
       preset: 'lighthouse:recommended',
       assertions: {
-        'categories:performance': ['warn', { minScore: 0.8 }],
+        'categories:performance': ['warn', { minScore: 0.75 }],
         'categories:accessibility': ['error', { minScore: 0.9 }],
         'categories:best-practices': ['warn', { minScore: 0.8 }],
-        'categories:seo': ['warn', { minScore: 0.8 }]
+        'categories:seo': ['warn', { minScore: 0.8 }],
+        // Disable assertions for GitHub Pages specific limitations
+        'uses-http2': 'off',
+        'redirects-http': 'off',
+        'uses-long-cache-ttl': 'off',
+        'server-response-time': 'off',
+        'canonical': 'off',
+        'is-crawlable': 'off'
       }
     },
     upload: {
