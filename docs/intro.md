@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /docs
 ---
 
 # Welcome to AI Prompting Guide
