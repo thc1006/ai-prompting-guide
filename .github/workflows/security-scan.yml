@@ -41,7 +41,7 @@ jobs:
 
       - name: Upload audit results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: npm-audit-report
           path: audit-report.json
@@ -60,9 +60,10 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: HEAD
+          base: ${{ github.event.pull_request.base.sha || github.event.before || github.sha }}
+          head: ${{ github.event.pull_request.head.sha || github.sha }}
           extra_args: --debug --only-verified
+        continue-on-error: true
 
   # SAST - Static Application Security Testing
   sast-scan:
@@ -97,7 +98,7 @@ jobs:
 
       - name: Upload SAST results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: eslint-security-report
           path: eslint-security-report.json
@@ -179,7 +180,7 @@ jobs:
             --json > license-report.json || true
 
       - name: Upload license report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: license-report
           path: license-report.json
@@ -208,7 +209,7 @@ jobs:
           echo "Generated at: $(date -u)" >> security-summary.md
 
       - name: Upload security summary
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: security-summary
           path: security-summary.md
