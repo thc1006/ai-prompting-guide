@@ -1,0 +1,171 @@
+name: Deploy Docusaurus to GitHub Pages
+
+on:
+  # Trigger deployment on push to main branch
+  push:
+    branches:
+      - main
+    # Don't trigger on README or documentation only changes
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**/*.md'
+      - '.gitignore'
+      - 'LICENSE'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+
+# Set permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+env:
+  # Build environment variables
+  NODE_ENV: production
+  # Docusaurus build optimization
+  NODE_OPTIONS: "--max_old_space_size=4096"
+
+jobs:
+  build:
+    name: Build Docusaurus Site
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history for accurate git info
+          fetch-depth: 0
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          # Use package-lock.json or yarn.lock for caching
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+          
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+        
+      - name: Install dependencies
+        run: |
+          # Clean install for reproducible builds
+          npm ci
+          
+      - name: Build Docusaurus site
+        run: |
+          # Build with proper base URL for GitHub Pages
+          npm run build
+        env:
+          # Use the Pages URL for proper routing
+          DOCUSAURUS_URL: ${{ steps.pages.outputs.origin }}
+          DOCUSAURUS_BASE_URL: ${{ steps.pages.outputs.base_path }}/
+          
+      - name: Upload build artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the build directory
+          path: ./build
+          
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
+      - name: Create deployment status
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { context } = require('@actions/github');
+            const deploymentUrl = '${{ steps.deployment.outputs.page_url }}';
+            const status = '${{ job.status }}' === 'success' ? 'success' : 'failure';
+            
+            // Create deployment status
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: context.payload.deployment?.id || 0,
+              state: status,
+              environment_url: deploymentUrl,
+              description: status === 'success' 
+                ? 'Deployment successful' 
+                : 'Deployment failed'
+            });
+            
+            // Add comment to commit with deployment info
+            if (status === 'success') {
+              await github.rest.repos.createCommitComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: context.sha,
+                body: `🚀 Successfully deployed to GitHub Pages!\n\n**Preview URL:** ${deploymentUrl}\n\n*Deployed from commit ${context.sha.substring(0, 7)}*`
+              });
+            }
+
+  # Optional: Create a notification job for failed deployments
+  notify-failure:
+    name: Notify on Deployment Failure
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    if: failure()
+    
+    steps:
+      - name: Create failure issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { context } = require('@actions/github');
+            
+            // Check if there's already an open issue for deployment failures
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'deployment-failure'
+            });
+            
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: '🚨 Deployment Failure Alert',
+                body: `**Deployment failed for commit:** ${context.sha}\n\n**Workflow:** [${context.workflow}](${context.payload.repository.html_url}/actions/runs/${context.runId})\n\n**Branch:** ${context.ref}\n\n**Please check the workflow logs and fix the deployment issues.**`,
+                labels: ['deployment-failure', 'bug']
+              });
+            }
+
+  # Performance monitoring job
+  lighthouse:
+    name: Lighthouse Performance Audit
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: success()
+    
+    steps:
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          urls: |
+            ${{ needs.deploy.outputs.page_url }}
+          configPath: './.lighthouserc.js'
+          uploadArtifacts: true
+          temporaryPublicStorage: true

@@ -1,0 +1,23 @@
+ai_team:
+  name: AI Prompting Guide Team
+  title: AI Prompting Experts
+  url: https://github.com/ai-prompting-guide
+  image_url: https://github.com/ai-prompting-guide.png
+
+sarah_chen:
+  name: Sarah Chen
+  title: Senior AI Engineer @ TechCorp
+  url: https://twitter.com/sarahchen_ai
+  image_url: https://github.com/sarahchen.png
+
+mike_rodriguez:
+  name: Mike Rodriguez  
+  title: Prompt Engineering Lead @ StartupAI
+  url: https://linkedin.com/in/mikerodriguez
+  image_url: https://github.com/mikerodriguez.png
+
+alex_kim:
+  name: Alex Kim
+  title: AI Research Scientist @ UniversityLab
+  url: https://twitter.com/alexkim_research
+  image_url: https://github.com/alexkim.png
