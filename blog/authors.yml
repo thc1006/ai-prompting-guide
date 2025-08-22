@@ -1,23 +1,12 @@
-ai_team:
-  name: AI Prompting Guide Team
-  title: AI Prompting Experts
-  url: https://github.com/ai-prompting-guide
-  image_url: https://github.com/ai-prompting-guide.png
+thc1006:
+  name: 蔡秀吉 (Hsiu-Chi Tsai)
+  title: COSCUP 2025 O-RAN Track Organizer | NTHU EE/CS Student
+  url: https://www.thc1006.cc
+  image_url: https://github.com/thc1006.png
+  email: hctsai1006@cs.nctu.edu.tw
 
-sarah_chen:
-  name: Sarah Chen
-  title: Senior AI Engineer @ TechCorp
-  url: https://twitter.com/sarahchen_ai
-  image_url: https://github.com/sarahchen.png
-
-mike_rodriguez:
-  name: Mike Rodriguez  
-  title: Prompt Engineering Lead @ StartupAI
-  url: https://linkedin.com/in/mikerodriguez
-  image_url: https://github.com/mikerodriguez.png
-
-alex_kim:
-  name: Alex Kim
-  title: AI Research Scientist @ UniversityLab
-  url: https://twitter.com/alexkim_research
-  image_url: https://github.com/alexkim.png
+admin:
+  name: AI Prompting Guide Admin
+  title: Site Administrator
+  url: https://github.com/thc1006
+  image_url: https://github.com/thc1006.png
