@@ -2,580 +2,580 @@
 sidebar_position: 3
 ---
 
-# Data Analysis & Insights Generation
+# 數據分析與洞察生成
 
-Learn to extract meaningful insights, create comprehensive reports, and generate data-driven recommendations through strategic prompting for analytics tasks.
+學習如何透過策略性提示提取有意義的洞察、創建全面性報告，並為分析任務生成數據驅動的建議。
 
-## Exploratory Data Analysis
+## 探索性數據分析
 
-### Basic Data Exploration Template
-
-```python
-"""
-You are a data analyst with expertise in [DOMAIN] analytics.
-
-Perform exploratory data analysis on this dataset:
-
-Dataset Description:
-- Source: [DATA_SOURCE]
-- Time period: [DATE_RANGE]
-- Sample size: [RECORD_COUNT]
-- Key variables: [VARIABLE_LIST]
-
-Data: [INSERT_DATA_OR_SUMMARY]
-
-Analysis Requirements:
-1. Data quality assessment
-   - Missing values and outliers
-   - Data types and formatting issues
-   - Inconsistencies or anomalies
-
-2. Descriptive statistics
-   - Central tendency measures
-   - Variability and distribution
-   - Correlation analysis
-
-3. Key insights identification
-   - Notable patterns or trends
-   - Unexpected findings
-   - Business-relevant observations
-
-4. Visualization recommendations
-   - Most effective chart types for key findings
-   - Dashboard layout suggestions
-   - Interactive element opportunities
-
-Format as a comprehensive EDA report with actionable next steps.
-"""
-```
-
-### Advanced Statistical Analysis
+### 基本數據探索模板
 
 ```python
 """
-You are a senior data scientist specializing in [STATISTICAL_METHOD/ML_TECHNIQUE].
+你是一位專精於 [領域] 分析的數據分析師。
 
-Conduct advanced statistical analysis on [DATASET_DESCRIPTION]:
+對這個資料集執行探索性數據分析：
 
-Research Question: [SPECIFIC_QUESTION_TO_ANSWER]
+資料集描述：
+- 來源：[資料來源]
+- 時間期間：[日期範圍]
+- 樣本大小：[記錄數量]
+- 關鍵變數：[變數清單]
 
-Analysis Framework:
-1. Hypothesis formulation
-   - Null and alternative hypotheses
-   - Statistical significance criteria
-   - Expected outcomes
+資料：[插入資料或摘要]
 
-2. Methodology selection
-   - Appropriate statistical tests
-   - Model selection rationale
-   - Assumption validation
+分析需求：
+1. 資料品質評估
+   - 缺失值和離群值
+   - 資料類型和格式問題
+   - 不一致性或異常
 
-3. Analysis execution
-   - Step-by-step methodology
-   - Parameter tuning decisions
-   - Validation approaches
+2. 描述性統計
+   - 中心趋勢測量
+   - 變異性和分佈
+   - 相關性分析
 
-4. Results interpretation
-   - Statistical significance assessment
-   - Practical significance evaluation
-   - Confidence intervals and effect sizes
+3. 關鍵洞察識別
+   - 顧著的模式或趨勢
+   - 意外發現
+   - 與業務相關的觀察
 
-5. Business recommendations
-   - Actionable insights
-   - Implementation strategies
-   - Risk considerations
+4. 視覺化建議
+   - 針對關鍵發現的最有效圖表類型
+   - 儀表板版面建議
+   - 互動元素機會
 
-Include:
-- Code examples for reproduction
-- Visualization specifications
-- Limitations and caveats
-- Future analysis suggestions
+以具備可行後續步驟的全面性 EDA 報告格式呈現。
 """
 ```
 
-## Business Intelligence Reports
-
-### Executive Dashboard Creation
+### 進階統計分析
 
 ```python
 """
-You are a business intelligence analyst creating executive dashboards.
+你是一位專精於 [統計方法/ML技術] 的資深數據科學家。
 
-Design a comprehensive dashboard for [BUSINESS_FUNCTION]:
+對 [資料集描述] 進行進階統計分析：
 
-Business Context:
-- Industry: [INDUSTRY_TYPE]
-- Company size: [ORGANIZATION_SIZE]
-- Key stakeholders: [EXECUTIVE_ROLES]
-- Primary business goals: [STRATEGIC_OBJECTIVES]
+研究問題：[要回答的具體問題]
 
-Dashboard Requirements:
-1. KPI Overview Section
-   - 4-6 primary metrics with targets
-   - Month-over-month and year-over-year comparisons
-   - Visual indicators (green/yellow/red status)
+分析框架：
+1. 假說建構
+   - 虛無假說和對立假說
+   - 統計顯著性標準
+   - 預期結果
 
-2. Trend Analysis Section
-   - Time series for key metrics
-   - Seasonal pattern identification
-   - Forecast projections (3-6 months)
+2. 方法選擇
+   - 適當的統計測試
+   - 模型選擇理由
+   - 假設驗證
 
-3. Performance Breakdown
-   - Segmentation by [RELEVANT_DIMENSIONS]
-   - Top performers and underperformers
-   - Contribution analysis
+3. 分析執行
+   - 逐步方法學
+   - 參數調整決策
+   - 驗證方法
 
-4. Operational Insights
-   - Process efficiency metrics
-   - Resource utilization data
-   - Quality and satisfaction measures
+4. 結果詮釋
+   - 統計顯著性評估
+   - 實用顯著性評估
+   - 信心区間和效應量
 
-5. Alert System
-   - Threshold-based notifications
-   - Anomaly detection highlights
-   - Priority action items
+5. 商業建議
+   - 可行的洞察
+   - 實施策略
+   - 風險考量
 
-For each section, specify:
-- Data sources and refresh frequency
-- Chart types and formatting
-- Interactivity and drill-down capabilities
-- Mobile responsiveness considerations
+包含：
+- 可重現的程式碼範例
+- 視覺化規格
+- 限制和注意事項
+- 未來分析建議
 """
 ```
 
-### Financial Analysis Framework
+## 商業情報報告
+
+### 主管儀表板創建
 
 ```python
 """
-You are a financial analyst with expertise in [FINANCIAL_DOMAIN].
+你是一位創建主管儀表板的商業情報分析師。
 
-Analyze the financial performance for [COMPANY/DIVISION]:
+為台灣製造業公司的運產部門設計全面性儀表板：
 
-Financial Data: [INSERT_FINANCIAL_DATA]
+商業背景：
+- 產業：電子製造業
+- 公司規模：中型企業（500-1000人）
+- 關鍵利害關係人：總經理、運產總監、品質管理組長
+- 主要商業目標：降低成本、提升交期績效、改善品質
 
-Analysis Structure:
-1. Revenue Analysis
-   - Growth trends and drivers
-   - Revenue stream breakdown
-   - Market share implications
-   - Seasonality patterns
+儀表板需求：
+1. KPI 概覽區塊
+   - 4-6 個主要指標與目標值
+   - 月對月和年對年比較
+   - 視覺指示器（綠/黃/紅狀態）
 
-2. Profitability Assessment
-   - Margin analysis (gross, operating, net)
-   - Cost structure evaluation
-   - Efficiency ratios
-   - Benchmarking against industry
+2. 趨勢分析區塊
+   - 關鍵指標的時間序列
+   - 季節性模式識別
+   - 預測投射（3-6個月）
 
-3. Cash Flow Evaluation
-   - Operating cash flow trends
-   - Working capital management
-   - Capital expenditure analysis
-   - Liquidity position
+3. 績效細分
+   - 按產品線、供應商分組
+   - 表現最佳和最差的項目
+   - 貢獻度分析
 
-4. Financial Health Indicators
-   - Key financial ratios
-   - Debt and leverage analysis
-   - Return on investment metrics
-   - Risk assessment factors
+4. 運產洞察
+   - 流程效率指標
+   - 資源利用率數據
+   - 品質和客戶滿意度測量
 
-5. Strategic Recommendations
-   - Growth opportunities
-   - Cost optimization areas
-   - Investment priorities
-   - Risk mitigation strategies
+5. 告警系統
+   - 闾值通知
+   - 異常檢測高亮
+   - 優先行動項目
 
-Include:
-- Executive summary (2-3 paragraphs)
-- Visual representation suggestions
-- Peer comparison framework
-- Scenario planning considerations
+每個區塊都請指定：
+- 資料來源和更新頻率
+- 圖表類型和格式
+- 互動性和鵽取能力
+- 手機響應式考量
 """
 ```
 
-## Customer Analytics
-
-### Customer Segmentation Analysis
+### 財務分析框架
 
 ```python
 """
-You are a customer analytics specialist with expertise in behavioral segmentation.
+你是一位專精於台灣中小企業財務分析的財務分析師。
 
-Perform customer segmentation analysis on [CUSTOMER_DATA]:
+分析台灣金融科技新創公司的財務績效：
 
-Dataset Overview:
-- Customer base size: [TOTAL_CUSTOMERS]
-- Data timeframe: [ANALYSIS_PERIOD]
-- Available variables: [CUSTOMER_ATTRIBUTES]
-- Business objective: [SEGMENTATION_PURPOSE]
+財務數據：[插入財務數據]
 
-Segmentation Approach:
-1. Variable Selection
-   - Demographic characteristics
-   - Behavioral metrics (RFM, engagement)
-   - Transactional data
-   - Psychographic indicators
+分析結構：
+1. 營收分析
+   - 成長趨勢和驅動因子
+   - 營收流細分（B2B/B2C服務）
+   - 市場佔有率影響
+   - 季節性模式
 
-2. Segmentation Methodology
-   - Statistical clustering approach
-   - Segment size and stability
-   - Validation criteria
-   - Business interpretability
+2. 盈利能力評估
+   - 毛利、營業、淨利率分析
+   - 成本結構評估
+   - 效率比率
+   - 與台灣金融科技同業比較
 
-3. Segment Profiling
-   - Detailed segment characteristics
-   - Value proposition for each segment
-   - Channel preferences and behaviors
-   - Lifetime value estimates
+3. 現金流評估
+   - 營運現金流趨勢
+   - 營運資金管理
+   - 資本支出分析
+   - 流動性位置
 
-4. Actionable Insights
-   - Marketing strategy recommendations
-   - Product development opportunities
-   - Retention and acquisition tactics
-   - Resource allocation priorities
+4. 財務健康指標
+   - 關鍵財務比率
+   - 債務和杠桿分析
+   - 投資報酬率指標
+   - 風險評估因子
 
-Deliverables:
-- Segment persona descriptions
-- Targeting strategy framework
-- Campaign customization guidelines
-- Performance measurement plan
+5. 策略建議
+   - 成長機會
+   - 成本優化領域
+   - 投資優先順序
+   - 風險緩解策略
+
+包含：
+- 管理摘要（2-3段落）
+- 視覺化呈現廊議
+- 同業比較框架
+- 情境規劃考量
 """
 ```
 
-### Customer Journey Analysis
+## 客戶分析
+
+### 客戶分群分析
 
 ```python
 """
-You are a customer experience analyst specializing in journey mapping.
+你是一位專精於行為分群的客戶分析專家。
 
-Analyze the customer journey for [PRODUCT/SERVICE]:
+對台灣電商平台的客戶資料進行客戶分群分析：
 
-Journey Data: [INSERT_TOUCHPOINT_DATA]
+資料集概覽：
+- 客戶基數大小：80萬名活躍用戶
+- 資料時間框：過去12個月
+- 可用變數：人口統計、購買行為、網站互動、行動裝置使用
+- 商業目標：提升精準行銷效果和客戶終身價值
 
-Analysis Framework:
-1. Journey Stage Mapping
-   - Awareness phase interactions
-   - Consideration touchpoints
-   - Purchase/conversion events
-   - Post-purchase experience
-   - Loyalty and advocacy behaviors
+分群方法：
+1. 變數選擇
+   - 人口統計特徵（年齡、地區、收入）
+   - 行為指標（RFM、互動頻率）
+   - 交易資料（購買類別、金額）
+   - 心理图像指標（品牌偏好、價格敏感度）
 
-2. Touchpoint Analysis
-   - Channel performance evaluation
-   - Friction point identification
-   - Conversion rate optimization
-   - Cross-channel consistency
+2. 分群方法學
+   - 統計聚類方法
+   - 分群大小和穩定性
+   - 驗證標準
+   - 商業可解釋性
 
-3. Customer Effort Assessment
-   - Task completion difficulty
-   - Support interaction frequency
-   - Self-service utilization
-   - Time-to-resolution metrics
+3. 分群輪庫
+   - 詳細的分群特徵
+   - 每個分群的價值主張
+   - 通路偏好和行為
+   - 終身價值估計
 
-4. Emotional Journey Mapping
-   - Satisfaction at each stage
-   - Pain point intensity
-   - Delight moment opportunities
-   - Brand perception evolution
+4. 可行洞察
+   - 行銷策略建議
+   - 產品開發機會
+   - 客戶保留和獲客策略
+   - 資源配置優先順序
 
-5. Optimization Recommendations
-   - Priority improvement areas
-   - Quick wins vs. strategic initiatives
-   - Resource requirements
-   - Expected impact metrics
-
-Include journey visualization suggestions and measurement frameworks.
+交付物：
+- 分群人物誌描述
+- 目標客戶策略框架
+- 行銷活動客製化指引
+- 績效衡量計畫
 """
 ```
 
-## Market Research & Competitive Analysis
-
-### Market Analysis Template
+### 客戶旅程分析
 
 ```python
 """
-You are a market research analyst specializing in [INDUSTRY_SECTOR].
+你是一位專精於旅程地圖繪製的客戶體驗分析師。
 
-Conduct comprehensive market analysis for [PRODUCT/SERVICE_CATEGORY]:
+分析台灣金融科技 App 的客戶旅程：
 
-Market Scope:
-- Geographic focus: [MARKET_REGIONS]
-- Target segments: [CUSTOMER_SEGMENTS]
-- Time horizon: [ANALYSIS_TIMEFRAME]
-- Competitive landscape: [COMPETITOR_SET]
+旅程資料：[插入接觸點資料]
 
-Analysis Components:
-1. Market Size & Growth
-   - Total addressable market (TAM)
-   - Serviceable addressable market (SAM)
-   - Growth rate projections
-   - Market maturity assessment
+分析框架：
+1. 旅程階段地圖
+   - 認知階段互動（社群媒體、廣告）
+   - 考慮接觸點（官網、評分查看）
+   - 購買/轉換事件（App 下載、註冊）
+   - 購買後體驗（首次使用、學習）
+   - 忠誠和推薦行為
 
-2. Customer Needs Analysis
-   - Unmet needs identification
-   - Purchase decision factors
-   - Price sensitivity analysis
-   - Channel preferences
+2. 接觸點分析
+   - 通路績效評估
+   - 摩擦點識別
+   - 轉換率優化
+   - 跨通路一致性
 
-3. Competitive Landscape
-   - Market share distribution
-   - Competitive positioning map
-   - Strength/weakness assessment
-   - Differentiation opportunities
+3. 客戶努力程度評估
+   - 任務完成難度
+   - 客服互動頻率
+   - 自助服務利用率
+   - 問題解決時間指標
 
-4. Market Trends & Drivers
-   - Technology adoption patterns
-   - Regulatory changes impact
-   - Consumer behavior shifts
-   - Economic factors influence
+4. 情感旅程地圖
+   - 各階段滿意度
+   - 痛點強度
+   - 惊喜時刻機會
+   - 品牌認知演變
 
-5. Strategic Recommendations
-   - Market entry strategies
-   - Positioning recommendations
-   - Go-to-market approach
-   - Success metrics definition
+5. 優化建議
+   - 優先改進領域
+   - 快速勝利 vs. 策略性措施
+   - 資源需求
+   - 預期影響指標
 
-Include data source recommendations and validation approaches.
+包含旅程視覺化廚議和衡量框架。
 """
 ```
 
-## Operational Analytics
+## 市場研究與競爭分析
 
-### Performance Optimization Analysis
+### 市場分析模板
 
 ```python
 """
-You are an operations analyst focused on process optimization.
+你是一位專精於台灣金融科技產業的市場研究分析師。
 
-Analyze operational performance for [BUSINESS_PROCESS]:
+對台灣數位支付市場進行全面性市場分析：
 
-Process Data: [INSERT_OPERATIONAL_DATA]
+市場範圍：
+- 地理焦點：台灣本島，兼及離島地區
+- 目標分群：年輕族群、中小企業、電商平台
+- 時間視野：2024-2027年三年期
+- 競爭格局：國內銀行、國際支付巨頭、新興 Fintech
 
-Optimization Framework:
-1. Current State Assessment
-   - Process flow mapping
-   - Cycle time analysis
-   - Resource utilization rates
-   - Quality metrics evaluation
+分析組成：
+1. 市場規模與成長
+   - 總可實現市場（TAM）
+   - 可服務市場（SAM）
+   - 成長率預測
+   - 市場成熟度評估
 
-2. Bottleneck Identification
-   - Constraint analysis
-   - Capacity limitation points
-   - Queue time evaluation
-   - Resource availability gaps
+2. 客戶需求分析
+   - 未滿足需求識別
+   - 購買決策因子
+   - 價格敏感度分析
+   - 通路偏好
 
-3. Efficiency Opportunities
-   - Automation potential
-   - Workflow streamlining
-   - Resource reallocation
-   - Technology enhancement
+3. 競爭格局
+   - 市場佔有率分佈
+   - 競爭定位地圖
+   - 優勣勢評估
+   - 差異化機會
 
-4. Cost-Benefit Analysis
-   - Implementation costs
-   - Expected savings
-   - ROI calculations
-   - Payback period estimates
+4. 市場趨勢與驅動因子
+   - 技術採用模式
+   - 法規變化影響（金管會政策）
+   - 消費者行為變化
+   - 經濟因子影響
 
-5. Implementation Roadmap
-   - Priority ranking system
-   - Implementation timeline
-   - Resource requirements
-   - Risk mitigation plans
+5. 策略建議
+   - 市場進入策略
+   - 定位廊議
+   - 上市方法
+   - 成功指標定義
 
-Deliverables:
-- Process improvement recommendations
-- Performance tracking dashboard
-- Change management considerations
-- Success measurement criteria
+包含資料來源廊議和驗證方法。
 """
 ```
 
-### Supply Chain Analytics
+## 營運分析
+
+### 績效優化分析
 
 ```python
 """
-You are a supply chain analyst with expertise in logistics optimization.
+你是一位專注於流程優化的營運分析師。
 
-Analyze supply chain performance for [PRODUCT_CATEGORY/BUSINESS]:
+分析台灣電子製造廠的營運績效：
 
-Supply Chain Data: [INSERT_LOGISTICS_DATA]
+流程資料：[插入營運資料]
 
-Analysis Scope:
-1. Supplier Performance
-   - Delivery reliability metrics
-   - Quality consistency measures
-   - Cost competitiveness analysis
-   - Relationship strength assessment
+優化框架：
+1. 現狀評估
+   - 流程地圖繪製
+   - 週期時間分析
+   - 資源利用率
+   - 品質指標評估
 
-2. Inventory Optimization
-   - Stock level efficiency
-   - Turnover rate analysis
-   - Carrying cost evaluation
-   - Stockout risk assessment
+2. 瓶頸識別
+   - 約束條件分析
+   - 產能限制點
+   - 佇列時間評估
+   - 資源供應缺口
 
-3. Distribution Efficiency
-   - Transportation cost analysis
-   - Delivery time optimization
-   - Warehouse utilization
-   - Last-mile performance
+3. 效率機會
+   - 自動化潛力
+   - 工作流程簡化
+   - 資源重新配置
+   - 技術升級
 
-4. Demand Forecasting
-   - Forecast accuracy assessment
-   - Seasonality pattern analysis
-   - Market trend incorporation
-   - Scenario planning models
+4. 成本效益分析
+   - 實施成本
+   - 預期節省
+   - ROI 計算
+   - 回收期估計
 
-5. Risk Management
-   - Supply disruption vulnerabilities
-   - Geographic concentration risks
-   - Supplier dependency analysis
-   - Contingency planning needs
+5. 實施路線圖
+   - 優先級排序系統
+   - 實施時程表
+   - 資源需求
+   - 風險緩解計畫
 
-Recommendations should include:
-- Cost reduction opportunities
-- Service level improvements
-- Risk mitigation strategies
-- Technology investment priorities
+交付物：
+- 流程改進廊議
+- 績效追蹤儀表板
+- 變革管理考量
+- 成功衡量標準
 """
 ```
 
-## Data Visualization & Reporting
-
-### Interactive Dashboard Design
+### 供應鏈分析
 
 ```python
 """
-You are a data visualization expert specializing in interactive dashboard design.
+你是一位專精於物流優化的供應鏈分析師。
 
-Design an interactive dashboard for [BUSINESS_FUNCTION]:
+分析台灣雜貨連鎖企業的供應鏈績效：
 
-Dashboard Specifications:
-- Primary users: [USER_ROLES_AND_NEEDS]
-- Data sources: [DATA_SYSTEMS]
-- Update frequency: [REFRESH_SCHEDULE]
-- Platform: [DASHBOARD_TOOL]
+供應鏈資料：[插入物流資料]
 
-Design Requirements:
-1. Information Architecture
-   - Page layout and navigation
-   - Content prioritization
-   - User flow optimization
-   - Mobile responsiveness
+分析範圍：
+1. 供應商績效
+   - 交貨可靠性指標
+   - 品質一致性測量
+   - 成本競爭力分析
+   - 關係強度評估
 
-2. Visual Design Elements
-   - Chart type selection rationale
-   - Color scheme and branding
-   - Typography and spacing
-   - Visual hierarchy principles
+2. 庫存優化
+   - 庫存水平效率
+   - 周轉率分析
+   - 持有成本評估
+   - 缺貨風險評估
 
-3. Interactivity Features
-   - Filter and parameter controls
-   - Drill-down capabilities
-   - Cross-filtering behaviors
-   - Export and sharing options
+3. 配送效率
+   - 運輸成本分析
+   - 交貨時間優化
+   - 倉庫利用率
+   - 最後一哩配送績效
 
-4. Performance Considerations
-   - Data aggregation strategies
-   - Query optimization
-   - Load time minimization
-   - Scalability planning
+4. 需求預測
+   - 預測準確度評估
+   - 季節性模式分析
+   - 市場趨勢結合
+   - 情境規劃模型
 
-5. User Experience Design
-   - Intuitive navigation patterns
-   - Contextual help and tooltips
-   - Error handling and messaging
-   - Accessibility compliance
+5. 風險管理
+   - 供應中斷弱點
+   - 地理集中風險
+   - 供應商依賴分析
+   - 緊急應變計畫需求
 
-Include:
-- Wireframe descriptions
-- Technical implementation notes
-- User testing recommendations
-- Maintenance and update procedures
+廚議應包含：
+- 降低成本機會
+- 服務水平改善
+- 風險緩解策略
+- 技術投資優先順序
 """
 ```
 
-## Advanced Analytics Techniques
+## 資料視覺化與報告
 
-### Predictive Modeling Framework
+### 互動式儀表板設計
 
 ```python
 """
-You are a data scientist specializing in predictive analytics.
+你是一位專精於互動式儀表板設計的資料視覺化專家。
 
-Develop a predictive model for [PREDICTION_TARGET]:
+為台灣新創公司的銷售部門設計互動式儀表板：
 
-Project Scope:
-- Prediction objective: [SPECIFIC_GOAL]
-- Available data: [DATA_SOURCES_AND_FEATURES]
-- Time horizon: [PREDICTION_TIMEFRAME]
-- Success criteria: [MODEL_PERFORMANCE_TARGETS]
+儀表板規格：
+- 主要用戶：銷售經理、業務代表、高階主管
+- 資料來源：CRM系統、ERP、Google Analytics
+- 更新頻率：即時更新（每15分鐘）
+- 平台：Power BI / Tableau
 
-Modeling Approach:
-1. Data Preparation
-   - Feature engineering strategies
-   - Missing value treatment
-   - Outlier handling methods
-   - Data transformation needs
+設計需求：
+1. 資訊架構
+   - 頁面版面和導航
+   - 內容優先度排序
+   - 用戶流程優化
+   - 手機響應式設計
 
-2. Model Selection
-   - Algorithm comparison rationale
-   - Cross-validation strategy
-   - Hyperparameter tuning approach
-   - Ensemble method consideration
+2. 視覺設計元素
+   - 圖表類型選擇理由
+   - 色彩配置和品牌識別
+   - 字體和間距
+   - 視覺層次原則
 
-3. Model Validation
-   - Train/validation/test splits
-   - Performance metrics selection
-   - Overfitting prevention
-   - Bias detection and mitigation
+3. 互動功能
+   - 篩選和參數控制
+   - 向下鵽取能力
+   - 交叉篩選行為
+   - 匯出和分享選項
 
-4. Model Interpretation
-   - Feature importance analysis
-   - Prediction explanation methods
-   - Business insight extraction
-   - Model limitations documentation
+4. 效能考量
+   - 資料聚合策略
+   - 查詢優化
+   - 載入時間最小化
+   - 可擴展性規劃
 
-5. Deployment Strategy
-   - Production implementation plan
-   - Model monitoring framework
-   - Retraining schedule
-   - Performance tracking system
+5. 用戶體驗設計
+   - 直覺式導航模式
+   - 情境式幫助和工具提示
+   - 錯誤處理和訊息傳遞
+   - 無障礙合規性
 
-Include:
-- Code structure recommendations
-- Documentation requirements
-- Stakeholder communication plan
-- Ethical considerations assessment
+包含：
+- 網頁程式結構描述
+- 技術實作說明
+- 用戶測試廚議
+- 維護和更新程序
 """
 ```
 
-## Quality Assurance for Data Analysis
+## 進階分析技巧
 
-### Analysis Validation Checklist
+### 預測建模框架
 
-Before presenting analytical results:
-- [ ] **Data Quality**: Verified data accuracy and completeness
-- [ ] **Methodology**: Appropriate analytical methods selected
-- [ ] **Assumptions**: Statistical assumptions validated
-- [ ] **Interpretation**: Conclusions supported by evidence
-- [ ] **Context**: Business context and limitations addressed
-- [ ] **Reproducibility**: Analysis can be replicated
-- [ ] **Communication**: Results clearly explained for audience
+```python
+"""
+你是一位專精於預測分析的數據科學家。
 
-### Common Pitfalls to Avoid
+為台灣隻商平台開發客戶流失預測模型：
 
-1. **Correlation vs. Causation**: Clearly distinguish between relationships
-2. **Sample Bias**: Ensure data representativeness
-3. **Cherry-picking**: Present balanced view of findings
-4. **Overconfidence**: Acknowledge uncertainty and limitations
-5. **Context Ignorance**: Consider business and industry context
+專案範圍：
+- 預測目標：識別高風險流失客戶
+- 可用資料：交易紀錄、客服互動、網站行為、人口統計
+- 時間視野：未來 30 天流失機率
+- 成功標準：召回率 >85%，精確率 >75%
 
-## Next Steps
+建模方法：
+1. 資料準備
+   - 特徵工程策略
+   - 缺失值處理
+   - 離群值處理方法
+   - 資料轉換需求
 
-Ready to advance your analytical prompting skills?
-- **[Advanced Techniques](/docs/advanced/chain-of-thought)** - Complex reasoning and problem-solving
-- **[Best Practices](/docs/best-practices/testing-prompts)** - Optimize analytical prompt effectiveness
-- **[Business Applications](/docs/applications/business-intelligence)** - Real-world analytical use cases
+2. 模型選擇
+   - 算法比較理由
+   - 交叉驗證策略
+   - 超參數調整方法
+   - 集成方法考量
 
-:::tip Analytics Workflow
-Develop a systematic approach: define questions → gather data → analyze patterns → validate findings → communicate insights → monitor impact. Use these prompts as foundations and adapt them to your specific analytical needs.
+3. 模型驗證
+   - 訓練/驗證/測試分割
+   - 績效指標選擇
+   - 過度配合預防
+   - 偏差檢測和緩解
+
+4. 模型解釋
+   - 特徵重要性分析
+   - 預測解釋方法
+   - 商業洞察提取
+   - 模型限制文件
+
+5. 部署策略
+   - 產業實施計畫
+   - 模型監控框架
+   - 重新訓練時程
+   - 績效追蹤系統
+
+包含：
+- 程式碼結構廚議
+- 文件需求
+- 利害關係人溝通計畫
+- 倖理考量評估
+"""
+```
+
+## 資料分析品質保證
+
+### 分析驗證檢查表
+
+呈現分析結果之前：
+- [ ] **資料品質**：已驗證資料準確性和完整性
+- [ ] **方法學**：選擇適當的分析方法
+- [ ] **假設**：統計假設已驗證
+- [ ] **詮釋**：結論有證據支持
+- [ ] **背景**：已處理商業背景和限制
+- [ ] **可重現性**：分析可被重現
+- [ ] **溝通**：結果已為受眾清楚解釋
+
+### 常見陷阱避免
+
+1. **相關性 vs. 因果關係**：清楚區分關係的性質
+2. **樣本偏差**：確保資料代表性
+3. **擇櫻桃**：呈現平衡的發現觀點
+4. **過度自信**：承認不確定性和限制
+5. **忽略背景**：考慮商業和產業背景
+
+## 下一步
+
+準備好提升你的分析提示技能了嗎？
+- **[進階技巧](/docs/advanced/chain-of-thought)** - 複雜推理和問題解決
+- **[最佳實務](/docs/best-practices/testing-prompts)** - 優化分析提示效果
+- **[商業應用](/docs/applications/business-intelligence)** - 真實世界的分析用例
+
+:::tip 分析工作流程
+發展系統化方法：定義問題 → 收集資料 → 分析模式 → 驗證發現 → 溝通洞察 → 監控影響。使用這些提示作為基礎，並根據你的特定分析需求進行調整。
 :::

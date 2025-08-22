@@ -215,35 +215,40 @@ Evaluation Criteria:
 
 ```python
 """
-PROMPT QA CHECKLIST:
+提示 QA 檢查清單（台灣本土化）：
 
-Requirements Validation:
-□ Clear, specific instructions provided
-□ Success criteria explicitly defined
-□ Output format specifications included
-□ Constraints and limitations stated
-□ Examples provided where helpful
+需求驗證：
+□ 提供清晰、具體的指示
+□ 明確定義成功標準
+□ 包含輸出格式規格
+□ 說明約束和限制
+□ 在有幫助的地方提供範例
+□ 符合台灣使用者期望
 
-Technical Validation:
-□ Prompt syntax correct and complete
-□ Token count optimized for efficiency
-□ Context window limitations considered
-□ Error handling scenarios addressed
-□ Integration compatibility verified
+技術驗證：
+□ 提示語法正確且完整
+□ Token 數量優化以提高效率
+□ 考量情境視窗限制
+□ 解決錯誤處理場景
+□ 驗證整合相容性
+□ 適用於台灣雲端環境
 
-Content Validation:
-□ Domain expertise appropriately specified
-□ Terminology usage accurate and consistent
-□ Bias and fairness considerations addressed
-□ Cultural sensitivity requirements met
-□ Legal and compliance factors included
+內容驗證：
+□ 適當指定領域專業知識
+□ 術語使用准確且一致
+□ 解決偏見和公平性問題
+□ 符合文化敏感性要求
+□ 包含法律和合規因素
+□ 遵循台灣個資法要求
+□ 符合台灣文化背景
 
-Performance Validation:
-□ Tested across multiple scenarios
-□ Edge cases handled appropriately
-□ Consistency maintained across runs
-□ Scalability requirements met
-□ Cost efficiency optimized
+效能驗證：
+□ 跨多種場景測試
+□ 適當處理邊緣情況
+□ 在多次執行中保持一致性
+□ 符合可擴展性要求
+□ 成本效率優化
+□ 符合台灣市場成本考量
 """
 ```
 

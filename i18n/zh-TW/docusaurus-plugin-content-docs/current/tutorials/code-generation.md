@@ -2,538 +2,539 @@
 sidebar_position: 2
 ---
 
-# Code Generation & Technical Documentation
+# 程式碼生成與技術文件
 
-Master the art of generating clean, functional code and comprehensive technical documentation through strategic prompting techniques.
+透過策略性提示技巧，掌握生成乾淨、功能性程式碼和全面技術文件的藝術。
 
-## Code Generation Fundamentals
+## 程式碼生成基礎
 
-### Basic Code Generation Template
-
-```python
-"""
-You are a [LANGUAGE] developer with [EXPERTISE_LEVEL] experience.
-
-Create a [FUNCTION/CLASS/MODULE] that:
-- [FUNCTIONALITY_1]
-- [FUNCTIONALITY_2] 
-- [FUNCTIONALITY_3]
-
-Requirements:
-- [TECHNICAL_REQUIREMENT_1]
-- [TECHNICAL_REQUIREMENT_2]
-- [PERFORMANCE_REQUIREMENT]
-
-Include:
-- Type hints/annotations where applicable
-- Comprehensive error handling
-- Clear docstrings and comments
-- Unit test examples
-"""
-```
-
-### Advanced Code Architecture Prompt
+### 基本程式碼生成模板
 
 ```python
 """
-You are a senior software architect specializing in [TECHNOLOGY_STACK].
+你是一位擁有 [專業程度] 經驗的 [程式語言] 開發者。
 
-Design and implement [PROJECT_DESCRIPTION]:
+創建一個 [函數/類別/模組]，具備以下功能：
+- [功能1]
+- [功能2] 
+- [功能3]
 
-Architecture Requirements:
-- Scalability: [EXPECTED_LOAD/USERS]
-- Performance: [RESPONSE_TIME_REQUIREMENTS]
-- Reliability: [UPTIME_EXPECTATIONS]
-- Security: [SECURITY_STANDARDS]
+需求：
+- [技術需求1]
+- [技術需求2]
+- [效能需求]
 
-Implementation Specifications:
-1. Data Layer
-   - Database design and relationships
-   - Data access patterns
-   - Caching strategy
-
-2. Business Logic Layer  
-   - Core domain models
-   - Service interfaces
-   - Validation rules
-
-3. Presentation Layer
-   - API design (if applicable)
-   - User interface components
-   - Error handling and messaging
-
-Deliverables:
-- System architecture diagram
-- Core implementation files
-- Configuration examples
-- Deployment instructions
-- Testing strategy
-
-Technology Constraints: [SPECIFIC_TECH_STACK]
-Timeline: [PROJECT_TIMELINE]
-Team Size: [DEVELOPMENT_TEAM_SIZE]
+包含：
+- 適用的型別提示/註解
+- 完整的錯誤處理
+- 清楚的文檔字串和註釋
+- 單元測試範例
 """
 ```
 
-## Language-Specific Examples
+### 進階程式碼架構提示
 
-### Python Development
-
-**Data Processing Pipeline:**
 ```python
 """
-You are a Python data engineer with expertise in pandas, NumPy, and data pipeline design.
+你是一位專精於 [技術堆疊] 的資深軟體架構師。
 
-Create a robust data processing pipeline that:
-- Reads CSV files from multiple sources
-- Validates data quality and handles missing values
-- Performs data transformations and aggregations
-- Exports results to both CSV and JSON formats
-- Includes comprehensive logging and error handling
+設計並實作 [專案描述]：
 
-Requirements:
-- Use type hints throughout
-- Implement configuration via environment variables
-- Add progress tracking for large datasets
-- Include memory-efficient processing for 1M+ records
-- Follow PEP 8 style guidelines
+架構需求：
+- 可擴展性：[預期負載/使用者]
+- 效能：[回應時間需求]
+- 可靠性：[正常運行時間期望]
+- 安全性：[安全標準]
 
-Structure:
-1. DataValidator class for quality checks
-2. DataProcessor class for transformations  
-3. DataExporter class for output handling
-4. Main pipeline orchestration function
-5. Configuration management module
+實作規格：
+1. 資料層
+   - 資料庫設計和關聯性
+   - 資料存取模式
+   - 快取策略
 
-Include unit tests using pytest and example usage documentation.
+2. 商業邏輯層  
+   - 核心領域模型
+   - 服務介面
+   - 驗證規則
+
+3. 展示層
+   - API 設計（如適用）
+   - 使用者介面元件
+   - 錯誤處理和訊息傳遞
+
+交付物：
+- 系統架構圖
+- 核心實作檔案
+- 組態範例
+- 部署說明
+- 測試策略
+
+技術限制：[特定技術堆疊]
+時程：[專案時程]
+團隊規模：[開發團隊規模]
 """
 ```
 
-**API Development:**
+## 語言特定範例
+
+### Python 開發
+
+**資料處理管線：**
 ```python
 """
-You are a Python backend developer specializing in FastAPI and modern web development.
+你是一位專精於 pandas、NumPy 和資料管線設計的 Python 資料工程師。
 
-Create a RESTful API for [APPLICATION_DOMAIN] with these endpoints:
+創建一個強健的資料處理管線，具備以下功能：
+- 從多個來源讀取 CSV 檔案
+- 驗證資料品質並處理缺失值
+- 執行資料轉換和聚合
+- 將結果匯出為 CSV 和 JSON 格式
+- 包含完整的日誌記錄和錯誤處理
 
-Core Functionality:
-- User authentication and authorization (JWT)
-- CRUD operations for [MAIN_ENTITY]
-- Data validation and serialization
-- Database integration with SQLAlchemy
-- Background task processing with Celery
+需求：
+- 全程使用型別提示
+- 透過環境變數實作組態
+- 為大型資料集添加進度追蹤
+- 包含 100 萬筆以上記錄的記憶體高效處理
+- 遵循 PEP 8 風格指引
 
-API Endpoints:
-POST /auth/login - User authentication
-GET /auth/me - Current user profile
-GET /[entities] - List entities with pagination/filtering
-POST /[entities] - Create new entity
-GET /[entities]/{id} - Retrieve specific entity
-PUT /[entities]/{id} - Update entity
-DELETE /[entities]/{id} - Delete entity
+結構：
+1. 用於品質檢查的 DataValidator 類別
+2. 用於轉換的 DataProcessor 類別  
+3. 用於輸出處理的 DataExporter 類別
+4. 主要管線編排函數
+5. 組態管理模組
 
-Requirements:
-- Pydantic models for request/response validation
-- Comprehensive error handling and HTTP status codes
-- OpenAPI documentation with examples
-- Rate limiting and security headers
-- Database migrations with Alembic
-- Environment-based configuration
-- Comprehensive test suite
-
-Include Docker configuration and deployment instructions.
+包含使用 pytest 的單元測試和使用範例文件。
 """
 ```
 
-### JavaScript/Node.js Development
+**API 開發：**
+```python
+"""
+你是一位專精於 FastAPI 和現代網頁開發的 Python 後端開發者。
 
-**React Component Library:**
+為台灣電商平台創建 RESTful API，包含以下端點：
+
+核心功能：
+- 使用者認證和授權（JWT）
+- [主要實體] 的 CRUD 操作
+- 資料驗證和序列化
+- 與 SQLAlchemy 的資料庫整合
+- 使用 Celery 的背景任務處理
+
+API 端點：
+POST /auth/login - 使用者認證
+GET /auth/me - 目前使用者資料
+GET /products - 列出商品（含分頁/篩選）
+POST /products - 創建新商品
+GET /products/{id} - 取得特定商品
+PUT /products/{id} - 更新商品
+DELETE /products/{id} - 刪除商品
+
+需求：
+- 用於請求/回應驗證的 Pydantic 模型
+- 完整的錯誤處理和 HTTP 狀態碼
+- 包含範例的 OpenAPI 文件
+- 速率限制和安全標頭
+- 使用 Alembic 的資料庫遷移
+- 基於環境的組態
+- 完整的測試套件
+
+包含 Docker 組態和部署說明。
+"""
+```
+
+### JavaScript/Node.js 開發
+
+**React 元件庫：**
 ```javascript
 """
-You are a senior React developer with expertise in component design and TypeScript.
+你是一位專精於元件設計和 TypeScript 的資深 React 開發者。
 
-Create a reusable component library for [UI_COMPONENT_TYPE]:
+為台灣金融科技公司創建可重用的 UI 元件庫：
 
-Component Requirements:
-- TypeScript interfaces for all props
-- Comprehensive prop validation
-- Accessibility (WCAG 2.1 AA compliance)
-- Responsive design support
-- Theme customization capability
-- Performance optimization (memoization where appropriate)
+元件需求：
+- 所有 props 的 TypeScript 介面
+- 完整的 prop 驗證
+- 無障礙設計（WCAG 2.1 AA 合規）
+- 響應式設計支援
+- 主題客製化能力
+- 效能優化（適當時使用記憶化）
 
-Components to Create:
-1. [Component1] - [Functionality]
-2. [Component2] - [Functionality]
-3. [Component3] - [Functionality]
+要創建的元件：
+1. FinanceCard - 財務卡片元件
+2. TransactionTable - 交易表格元件
+3. ChartWidget - 圖表小工具
 
-For each component provide:
-- TypeScript interface definitions
-- Component implementation with hooks
-- Storybook stories with multiple variants
-- Unit tests with React Testing Library
-- Usage documentation with examples
+為每個元件提供：
+- TypeScript 介面定義
+- 使用 hooks 的元件實作
+- 多種變化的 Storybook 故事
+- 使用 React Testing Library 的單元測試
+- 包含範例的使用文件
 
-Additional Requirements:
-- Styled-components or CSS modules for styling
-- Custom hooks for shared logic
-- Error boundaries where appropriate
-- Performance monitoring integration points
+額外需求：
+- 使用 styled-components 或 CSS 模組進行樣式設計
+- 共享邏輯的自訂 hooks
+- 適當時使用錯誤邊界
+- 效能監控整合點
 
-Include build configuration and npm publishing setup.
+包含建置組態和 npm 發布設定。
 """
 ```
 
-### Database Design & SQL
+### 資料庫設計與 SQL
 
-**Database Schema Design:**
+**資料庫架構設計：**
 ```sql
 """
-You are a database architect with expertise in PostgreSQL and relational database design.
+你是一位專精於 PostgreSQL 和關聯式資料庫設計的資料庫架構師。
 
-Design a database schema for [APPLICATION_TYPE]:
+為台灣製造業 ERP 系統設計資料庫架構：
 
-Schema Requirements:
-- Normalized design (3NF minimum)
-- Proper indexing strategy
-- Foreign key relationships with cascading rules
-- Data validation constraints
-- Audit trails for sensitive tables
+架構需求：
+- 正規化設計（至少 3NF）
+- 適當的索引策略
+- 具有級聯規則的外鍵關聯
+- 資料驗證約束
+- 敏感表格的稽核軌跡
 
-Core Entities:
-- [Entity1]: [Description and key attributes]
-- [Entity2]: [Description and key attributes]
-- [Entity3]: [Description and key attributes]
+核心實體：
+- 供應商：供應商資訊和聯絡資料
+- 產品：產品規格和庫存資訊
+- 訂單：採購和銷售訂單管理
+- 員工：人事資料和權限管理
 
-Deliverables:
-1. Complete DDL scripts with table creation
-2. Index creation statements with rationale
-3. Sample data insertion scripts
-4. Common query examples with performance notes
-5. Migration scripts for schema updates
-6. Backup and restore procedures
+交付物：
+1. 完整的 DDL 腳本和表格創建
+2. 索引創建語句及其理由
+3. 樣本資料插入腳本
+4. 常見查詢範例及效能說明
+5. 架構更新的遷移腳本
+6. 備份和還原程序
 
-Performance Considerations:
-- Expected data volume: [SIZE_ESTIMATES]
-- Query patterns: [READ_VS_WRITE_RATIO]
-- Scalability requirements: [GROWTH_PROJECTIONS]
+效能考量：
+- 預期資料量：[大小估計]
+- 查詢模式：[讀寫比例]
+- 可擴展性需求：[成長預測]
 
-Include documentation for developers and DBAs.
+包含開發者和 DBA 的文件。
 """
 ```
 
-## API Documentation Generation
+## API 文件生成
 
-### OpenAPI/Swagger Documentation
+### OpenAPI/Swagger 文件
 
 ```python
 """
-Create comprehensive OpenAPI 3.0 specification for [API_NAME]:
+為台灣線上支付平台 API 創建完整的 OpenAPI 3.0 規格：
 
-API Overview:
-- Base URL: [BASE_URL]
-- Authentication: [AUTH_METHOD]
-- Version: [API_VERSION]
-- Primary use cases: [USE_CASES]
+API 概覽：
+- 基礎 URL：https://api.twpay.com.tw/v1
+- 認證方式：API Key + JWT
+- 版本：v1.0
+- 主要用途：線上支付、交易查詢、退款處理
 
-For each endpoint include:
-1. Complete path and HTTP method
-2. Detailed description and purpose
-3. Request parameters (path, query, body)
-4. Request/response schema definitions
-5. Example requests and responses
-6. Error response formats and codes
-7. Authentication requirements
+每個端點包含：
+1. 完整路徑和 HTTP 方法
+2. 詳細描述和用途
+3. 請求參數（路徑、查詢、主體）
+4. 請求/回應架構定義
+5. 請求和回應範例
+6. 錯誤回應格式和代碼
+7. 認證需求
 
-Schema Definitions:
-- User model with validation rules
-- [Entity] models with relationships
-- Error response structures
-- Pagination metadata
+架構定義：
+- 用戶模型和驗證規則
+- 交易模型和關聯性
+- 錯誤回應結構
+- 分頁元資料
 
-Documentation Features:
-- Interactive examples in multiple languages
-- Authentication flow explanation
-- Rate limiting details
-- Webhook specifications (if applicable)
-- SDK generation instructions
+文件特色：
+- 多語言互動範例（包含繁中）
+- 認證流程說明
+- 速率限制細節
+- Webhook 規格（如適用）
+- SDK 生成說明
 
-Include:
-- Postman collection export
-- cURL examples for each endpoint
-- Client library usage examples
-- Common integration patterns
+包含：
+- Postman 集合匯出
+- 每個端點的 cURL 範例
+- 客戶端函式庫使用範例
+- 常見整合模式
 """
 ```
 
-### Technical Documentation Templates
+### 技術文件模板
 
-**README Generation:**
+**README 生成：**
 ```markdown
 """
-Create a comprehensive README.md for [PROJECT_NAME]:
+為台灣開源專案創建完整的 README.md：
 
-Project Overview:
-- Brief description and purpose
-- Key features and capabilities
-- Target audience and use cases
-- Technology stack and dependencies
+專案概覽：
+- 簡要描述和目的
+- 主要功能和能力
+- 目標受眾和使用案例
+- 技術堆疊和相依性
 
-Structure Requirements:
-# Project Name
-[Compelling tagline]
+結構需求：
+# 專案名稱
+[引人注目的標語]
 
-## Overview
-[2-3 paragraph project description]
+## 概覽
+[2-3 段落的專案描述]
 
-## Features
-- [Key feature 1 with brief explanation]
-- [Key feature 2 with brief explanation]
-- [Key feature 3 with brief explanation]
+## 功能特色
+- [主要功能 1 及簡要說明]
+- [主要功能 2 及簡要說明]
+- [主要功能 3 及簡要說明]
 
-## Quick Start
-[Minimal setup to get running]
+## 快速開始
+[最少設定即可運行]
 
-## Installation
-[Detailed setup instructions]
+## 安裝
+[詳細設定說明]
 
-## Usage
-[Code examples and common scenarios]
+## 使用方法
+[程式碼範例和常見情境]
 
-## API Reference
-[Link to detailed API docs]
+## API 參考
+[詳細 API 文件連結]
 
-## Contributing
-[Contribution guidelines and process]
+## 貢獻
+[貢獻指南和流程]
 
-## License
-[License information]
+## 授權
+[授權資訊]
 
-Additional Sections:
-- Prerequisites and system requirements
-- Configuration options
-- Troubleshooting common issues
-- Changelog or versioning info
-- Contact and support information
+額外章節：
+- 先決條件和系統需求
+- 組態選項
+- 常見問題排解
+- 更新日誌或版本資訊
+- 聯絡和支援資訊
 
-Make it scannable with proper headers, code blocks, and badges.
+使其易於瀏覽，包含適當的標題、程式碼區塊和徽章。
 """
 ```
 
-## Testing & Quality Assurance
+## 測試與品質保證
 
-### Test Generation Prompts
+### 測試生成提示
 
-**Unit Test Creation:**
+**單元測試創建：**
 ```python
 """
-You are a test engineer specializing in [TESTING_FRAMEWORK].
+你是一位專精於 [測試框架] 的測試工程師。
 
-Create comprehensive unit tests for this [LANGUAGE] code:
+為這段 [程式語言] 程式碼創建完整的單元測試：
 
-[INSERT_CODE_TO_TEST]
+[插入要測試的程式碼]
 
-Test Requirements:
-- Test all public methods and functions
-- Cover edge cases and error conditions
-- Test boundary values and invalid inputs
-- Mock external dependencies appropriately
-- Achieve >90% code coverage
+測試需求：
+- 測試所有公開方法和函數
+- 涵蓋邊緣情況和錯誤條件
+- 測試邊界值和無效輸入
+- 適當模擬外部相依性
+- 達到 >90% 程式碼覆蓋率
 
-Test Categories:
-1. Happy Path Tests
-   - Normal operation scenarios
-   - Expected input/output validation
-   - Successful execution flows
+測試類別：
+1. 正常路徑測試
+   - 正常操作情境
+   - 預期輸入/輸出驗證
+   - 成功執行流程
 
-2. Edge Case Tests
-   - Boundary value testing
-   - Empty/null input handling
-   - Maximum/minimum value limits
+2. 邊緣情況測試
+   - 邊界值測試
+   - 空值/null 輸入處理
+   - 最大/最小值限制
 
-3. Error Condition Tests
-   - Exception handling verification
-   - Invalid input responses
-   - Resource unavailability scenarios
+3. 錯誤條件測試
+   - 例外處理驗證
+   - 無效輸入回應
+   - 資源不可用情境
 
-4. Integration Points
-   - Database interaction mocking
-   - External API call simulation
-   - File system operation testing
+4. 整合點
+   - 資料庫互動模擬
+   - 外部 API 呼叫模擬
+   - 檔案系統操作測試
 
-Include:
-- Setup and teardown methods
-- Test data fixtures
-- Performance benchmarks where relevant
-- Documentation for complex test scenarios
+包含：
+- 設定和拆除方法
+- 測試資料固定裝置
+- 相關的效能基準
+- 複雜測試情境的文件
 """
 ```
 
-### Code Review Automation
+### 程式碼審查自動化
 
 ```python
 """
-You are a senior code reviewer with expertise in [LANGUAGE/FRAMEWORK].
+你是一位專精於 [程式語言/框架] 的資深程式碼審查員。
 
-Review this code for:
+審查此程式碼的以下面向：
 
-Code Quality Factors:
-1. Readability and maintainability
-2. Performance and efficiency
-3. Security vulnerabilities
-4. Best practice adherence
-5. Documentation completeness
+程式碼品質因子：
+1. 可讀性和可維護性
+2. 效能和效率
+3. 安全漏洞
+4. 最佳實務遵循
+5. 文件完整性
 
-Code to Review:
-[INSERT_CODE]
+要審查的程式碼：
+[插入程式碼]
 
-Provide feedback in this format:
+請以此格式提供回饋：
 
-## Overall Assessment
-[High-level summary and rating 1-10]
+## 整體評估
+[高階總結和 1-10 評分]
 
-## Strengths
-- [Positive aspect 1]
-- [Positive aspect 2]
+## 優點
+- [正面特點 1]
+- [正面特點 2]
 
-## Issues Found
+## 發現的問題
 
-### Critical Issues (Fix Required)
-- Line [X]: [Issue description and security/performance impact]
-- Line [Y]: [Issue description and recommended fix]
+### 嚴重問題（需要修正）
+- 第 [X] 行：[問題描述和安全/效能影響]
+- 第 [Y] 行：[問題描述和建議修正]
 
-### Suggestions (Recommended)
-- Line [X]: [Improvement suggestion with rationale]
-- Line [Y]: [Code style or maintainability suggestion]
+### 建議（推薦）
+- 第 [X] 行：[改進建議及理由]
+- 第 [Y] 行：[程式碼風格或可維護性建議]
 
-### Questions/Clarifications
-- [Question about design decision or implementation choice]
+### 問題/澄清
+- [關於設計決策或實作選擇的問題]
 
-## Refactored Code Examples
-[Provide improved versions for critical issues]
+## 重構程式碼範例
+[為嚴重問題提供改進版本]
 
-## Additional Recommendations
-- Testing strategy improvements
-- Documentation enhancements
-- Performance optimization opportunities
+## 額外建議
+- 測試策略改進
+- 文件增強
+- 效能優化機會
 """
 ```
 
-## DevOps & Deployment
+## DevOps 與部署
 
-### Infrastructure as Code
+### 基礎設施即程式碼
 
 ```yaml
 """
-You are a DevOps engineer specializing in [CLOUD_PROVIDER] and infrastructure automation.
+你是一位專精於 [雲端供應商] 和基礎設施自動化的 DevOps 工程師。
 
-Create Infrastructure as Code for [APPLICATION_TYPE]:
+為台灣新創公司的 SaaS 平台創建基礎設施即程式碼：
 
-Infrastructure Requirements:
-- Environment: [DEVELOPMENT/STAGING/PRODUCTION]
-- Expected traffic: [LOAD_ESTIMATES]
-- High availability: [UPTIME_REQUIREMENTS]
-- Security compliance: [COMPLIANCE_STANDARDS]
+基礎設施需求：
+- 環境：[開發/測試/正式]
+- 預期流量：[負載估計]
+- 高可用性：[正常運行時間需求]
+- 安全合規：[合規標準，包含個資法要求]
 
-Components to Include:
-1. Compute Resources
-   - [SERVER_TYPE] instances with auto-scaling
-   - Load balancer configuration
-   - Health check endpoints
+包含元件：
+1. 運算資源
+   - [伺服器類型] 實例與自動擴展
+   - 負載平衡器組態
+   - 健康檢查端點
 
-2. Database Layer
-   - [DATABASE_TYPE] with backup strategy
-   - Read replicas if needed
-   - Connection pooling setup
+2. 資料庫層
+   - [資料庫類型] 與備份策略
+   - 必要時的讀取副本
+   - 連線池設定
 
-3. Storage & CDN
-   - Static asset storage
-   - Media file handling
-   - CDN configuration
+3. 儲存與 CDN
+   - 靜態資產儲存
+   - 媒體檔案處理
+   - CDN 組態（考慮台灣地區最佳化）
 
-4. Security & Monitoring
-   - Security groups and network ACLs
-   - SSL/TLS certificate management
-   - Logging and monitoring setup
-   - Alerting configuration
+4. 安全與監控
+   - 安全群組和網路 ACL
+   - SSL/TLS 憑證管理
+   - 日誌記錄和監控設定
+   - 告警組態
 
-5. CI/CD Pipeline
-   - Source code integration
-   - Build and test automation
-   - Deployment strategies (blue/green, rolling)
-   - Rollback procedures
+5. CI/CD 管線
+   - 原始碼整合
+   - 建置和測試自動化
+   - 部署策略（藍綠、滾動）
+   - 回滾程序
 
-Deliverables:
-- [TOOL] configuration files (Terraform/CloudFormation)
-- Docker configuration and multi-stage builds
-- Kubernetes manifests (if applicable)
-- Environment variable management
-- Deployment scripts and documentation
-- Cost optimization recommendations
+交付物：
+- [工具] 組態檔案（Terraform/CloudFormation）
+- Docker 組態和多階段建置
+- Kubernetes 清單（如適用）
+- 環境變數管理
+- 部署腳本和文件
+- 成本最佳化建議
 """
 ```
 
-## Code Generation Best Practices
+## 程式碼生成最佳實務
 
-### Quality Checklist
+### 品質檢查表
 
-Before using generated code:
-- [ ] **Security Review**: No hardcoded secrets, proper input validation
-- [ ] **Performance**: Efficient algorithms, proper resource management
-- [ ] **Error Handling**: Comprehensive exception handling and logging
-- [ ] **Testing**: Unit tests cover main functionality and edge cases
-- [ ] **Documentation**: Clear comments and usage examples
-- [ ] **Standards**: Follows language-specific style guidelines
+使用生成的程式碼前：
+- [ ] **安全審查**：無硬編碼機密、適當的輸入驗證
+- [ ] **效能**：高效算法、適當的資源管理
+- [ ] **錯誤處理**：全面的例外處理和日誌記錄
+- [ ] **測試**：單元測試涵蓋主要功能和邊緣情況
+- [ ] **文件**：清楚的註釋和使用範例
+- [ ] **標準**：遵循程式語言特定的風格指引
 
-### Prompt Optimization Tips
+### 提示優化技巧
 
-1. **Be Specific About Requirements**: Include performance, security, and scalability needs
-2. **Specify Output Format**: Request specific file structure, naming conventions
-3. **Include Context**: Provide information about the larger system or application
-4. **Request Tests**: Always ask for unit tests and usage examples
-5. **Ask for Documentation**: Include inline comments and README sections
+1. **明確需求**：包含效能、安全性和可擴展性需求
+2. **指定輸出格式**：請求特定的檔案結構、命名約定
+3. **包含背景**：提供關於更大系統或應用程式的資訊
+4. **請求測試**：始終要求單元測試和使用範例
+5. **詢問文件**：包含內聯註釋和 README 章節
 
-## Advanced Techniques
+## 進階技巧
 
-### Code Migration & Modernization
+### 程式碼遷移與現代化
 
 ```python
 """
-You are a software modernization expert with experience in [LEGACY_TECH] to [MODERN_TECH] migrations.
+你是一位具有從 [舊技術] 到 [現代技術] 遷移經驗的軟體現代化專家。
 
-Modernize this legacy code:
-[INSERT_LEGACY_CODE]
+現代化這段舊程式碼：
+[插入舊程式碼]
 
-Migration Requirements:
-- Convert from [OLD_LANGUAGE/FRAMEWORK] to [NEW_LANGUAGE/FRAMEWORK]
-- Maintain existing functionality exactly
-- Improve performance and maintainability
-- Add modern features: [SPECIFIC_FEATURES]
-- Update architecture patterns
+遷移需求：
+- 從 [舊程式語言/框架] 轉換到 [新程式語言/框架]
+- 完全保持現有功能
+- 改善效能和可維護性
+- 添加現代功能：[特定功能]
+- 更新架構模式
 
-Deliverables:
-1. Modernized code with improved structure
-2. Migration guide with step-by-step process
-3. Comparison of old vs new functionality
-4. Test plan to verify feature parity
-5. Performance benchmarks
-6. Deployment and rollback procedures
+交付物：
+1. 改進結構的現代化程式碼
+2. 逐步過程的遷移指南
+3. 舊新功能比較
+4. 驗證功能同等性的測試計畫
+5. 效能基準
+6. 部署和回滾程序
 
-Consider:
-- Data migration requirements
-- API compatibility
-- User impact and training needs
-- Timeline and resource estimates
+考慮：
+- 資料遷移需求
+- API 相容性
+- 用戶影響和培訓需求
+- 時程和資源估計
 """
 ```
 
-## Next Steps
+## 下一步
 
-Ready to advance your technical prompting skills?
-- **[Data Analysis](/docs/tutorials/data-analysis)** - Generate insights and reports from data
-- **[Advanced Techniques](/docs/advanced/chain-of-thought)** - Complex reasoning and problem-solving
-- **[Best Practices](/docs/best-practices/testing-prompts)** - Optimize prompt effectiveness
+準備好提升你的技術提示技能了嗎？
+- **[數據分析](/docs/tutorials/data-analysis)** - 從數據中生成洞察和報告
+- **[進階技巧](/docs/advanced/chain-of-thought)** - 複雜推理和問題解決
+- **[最佳實務](/docs/best-practices/testing-prompts)** - 優化提示效果
 
-:::tip Development Workflow
-Create a library of tested prompts for your most common development tasks. Version control your prompts alongside your code for consistent results across projects.
+:::tip 開發工作流程
+為您最常見的開發任務創建經過測試的提示庫。將您的提示與程式碼一起進行版本控制，以在各個專案中獲得一致的結果。
 :::

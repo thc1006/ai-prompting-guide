@@ -2,322 +2,323 @@
 sidebar_position: 2
 ---
 
-# Quick Start Guide
+# 快速入門指南
 
-Get immediate results with proven prompt templates and practical examples. This guide provides ready-to-use prompts that you can adapt for your specific needs.
+使用經過驗證的 prompt 範本和實用範例，立即獲得成果。這份指南提供現成可用的 prompts，你可以根據自己的需求進行調整。
 
-## Essential Prompt Templates
+## 基本 Prompt 範本
 
-### 1. Content Creation Template
-
-```python
-"""
-You are a [ROLE] with expertise in [DOMAIN].
-
-Create [CONTENT_TYPE] about [TOPIC] that:
-- Is [LENGTH] long
-- Targets [AUDIENCE]
-- Uses a [TONE] tone
-- Includes [SPECIFIC_REQUIREMENTS]
-
-Format: [DESIRED_FORMAT]
-"""
-```
-
-**Example Usage:**
-```python
-"""
-You are a technical writer with expertise in software development.
-
-Create a blog post about API security best practices that:
-- Is 800-1000 words long
-- Targets junior developers
-- Uses a practical, instructional tone
-- Includes code examples and real-world scenarios
-
-Format: Blog post with headers, bullet points, and code blocks
-"""
-```
-
-### 2. Data Analysis Template
+### 1. 內容創作範本
 
 ```python
 """
-You are a data analyst. Analyze the following [DATA_TYPE]:
+你是一位 [角色]，在 [領域] 方面有專業知識。
 
-Data: [INSERT_DATA]
+建立關於 [主題] 的 [內容類型]，要符合：
+- 長度為 [長度]
+- 目標受眾是 [受眾]
+- 使用 [語氣] 的語氣
+- 包含 [特定要求]
 
-Please provide:
-1. [ANALYSIS_POINT_1]
-2. [ANALYSIS_POINT_2]
-3. [ANALYSIS_POINT_3]
-
-Format your response as [FORMAT_REQUIREMENT]
+格式：[期望格式]
 """
 ```
 
-**Example Usage:**
+**使用範例：**
 ```python
 """
-You are a data analyst. Analyze the following sales data:
+你是一位技術寫作專家，在軟體開發方面有專業知識。
 
-Data: Q3 Sales: $150k (up 15%), Q2 Sales: $130k, Q1 Sales: $125k
+建立一篇關於 API 安全最佳實務的部落格文章，要符合：
+- 長度為 800-1000 字
+- 目標受眾是初級工程師
+- 使用實用、教學式的語氣
+- 包含程式碼範例和真實場景
 
-Please provide:
-1. Key trends and patterns
-2. Performance highlights
-3. Recommendations for Q4
-
-Format your response as a structured report with clear sections
+格式：部落格文章，包含標題、項目符號和程式碼區塊
 """
 ```
 
-### 3. Code Generation Template
-
-```python
-"""
-You are a [PROGRAMMING_LANGUAGE] developer.
-
-Create a [FUNCTION/CLASS/SCRIPT] that:
-- [FUNCTIONALITY_1]
-- [FUNCTIONALITY_2]
-- [FUNCTIONALITY_3]
-
-Requirements:
-- [REQUIREMENT_1]
-- [REQUIREMENT_2]
-
-Include comments and error handling.
-"""
-```
-
-**Example Usage:**
-```python
-"""
-You are a Python developer.
-
-Create a function that:
-- Validates email addresses using regex
-- Handles multiple email formats
-- Returns detailed validation results
-
-Requirements:
-- Type hints for all parameters
-- Comprehensive error handling
-
-Include comments and error handling.
-"""
-```
-
-### 4. Problem-Solving Template
+### 2. 資料分析範本
 
 ```python
 """
-I need help with [PROBLEM_DESCRIPTION].
+你是一位資料分析師。分析以下 [資料類型]：
 
-Context:
-- [CONTEXT_POINT_1]
-- [CONTEXT_POINT_2]
+資料：[插入資料]
 
-Constraints:
-- [CONSTRAINT_1]
-- [CONSTRAINT_2]
+請提供：
+1. [分析要點_1]
+2. [分析要點_2]
+3. [分析要點_3]
 
-Please provide:
-1. Analysis of the problem
-2. Multiple solution approaches
-3. Recommended approach with reasoning
-4. Implementation steps
+將你的回應格式化為 [格式要求]
 """
 ```
 
-## Ready-to-Use Prompts by Category
-
-### Content & Marketing
-
-**Blog Post Creation:**
+**使用範例：**
 ```python
 """
-Write a comprehensive blog post about [TOPIC] for [TARGET_AUDIENCE].
+你是一位資料分析師。分析以下銷售資料：
 
-Structure:
-- Compelling headline
-- Introduction with hook
-- 3-5 main sections with subheadings
-- Conclusion with call-to-action
+資料：Q3 銷售額：450 萬台幣（成長 15%），Q2 銷售額：390 萬台幣，Q1 銷售額：375 萬台幣
 
-Length: 1200-1500 words
-Tone: Professional yet engaging
-Include: Statistics, examples, and actionable tips
+請提供：
+1. 關鍵趨勢和模式
+2. 效能亮點
+3. Q4 的建議
+
+將你的回應格式化為有清楚章節的結構化報告
 """
 ```
 
-**Social Media Content:**
+### 3. 程式碼生成範本
+
 ```python
 """
-Create 5 social media posts for [PLATFORM] about [TOPIC]:
+你是一位 [程式語言] 開發者。
 
-Requirements:
-- Platform-appropriate length and format
-- Engaging hook in first line
-- Include relevant hashtags
-- Call-to-action in each post
-- Mix of educational and promotional content
+建立一個 [函式/類別/腳本]，能夠：
+- [功能_1]
+- [功能_2]
+- [功能_3]
 
-Target audience: [AUDIENCE_DESCRIPTION]
+要求：
+- [要求_1]
+- [要求_2]
+
+包含註解和錯誤處理。
 """
 ```
 
-### Technical Documentation
-
-**API Documentation:**
+**使用範例：**
 ```python
 """
-Create comprehensive API documentation for this endpoint:
+你是一位 Python 開發者。
 
-Endpoint: [METHOD] [URL]
-Purpose: [DESCRIPTION]
+建立一個函式，能夠：
+- 使用正則表達式驗證電子郵件地址
+- 處理多種電子郵件格式
+- 返回詳細的驗證結果
 
-Include:
-1. Endpoint description
-2. Parameters (required/optional)
-3. Request examples (curl and multiple languages)
-4. Response format and examples
-5. Error codes and handling
-6. Rate limiting information
+要求：
+- 所有參數都要有型別提示
+- 完整的錯誤處理
 
-Format: OpenAPI 3.0 specification
+包含註解和錯誤處理。
 """
 ```
 
-**Code Review:**
+### 4. 問題解決範本
+
 ```python
 """
-Review this [LANGUAGE] code for:
-- Code quality and best practices
-- Performance optimizations
-- Security vulnerabilities
-- Maintainability issues
+我需要解決 [問題描述]。
 
-Code:
-[INSERT_CODE]
+背景：
+- [背景要點_1]
+- [背景要點_2]
 
-Provide:
-1. Overall assessment
-2. Specific issues with line numbers
-3. Suggested improvements with examples
-4. Priority ranking (High/Medium/Low)
+限制條件：
+- [限制_1]
+- [限制_2]
+
+請提供：
+1. 問題分析
+2. 多種解決方法
+3. 推薦的方法和理由
+4. 實施步驟
 """
 ```
 
-### Business & Analysis
+## 按類別分的現成 Prompts
 
-**Competitive Analysis:**
+### 內容與行銷
+
+**部落格文章創作：**
 ```python
 """
-Conduct a competitive analysis for [COMPANY/PRODUCT] in the [INDUSTRY] space.
+為 [目標受眾] 撰寫一篇關於 [主題] 的完整部落格文章。
 
-Analyze these competitors: [COMPETITOR_LIST]
+結構：
+- 吸引人的標題
+- 帶有鉤子的引言
+- 3-5 個主要章節和子標題
+- 包含行動呼籲的結論
 
-Provide:
-1. Feature comparison matrix
-2. Pricing analysis
-3. Strengths and weaknesses
-4. Market positioning
-5. Opportunities and threats
-6. Strategic recommendations
-
-Format: Executive summary followed by detailed analysis
+長度：1200-1500 字
+語氣：專業但吸引人
+包含：統計數據、範例和可執行的建議
 """
 ```
 
-**Meeting Summary:**
+**社群媒體內容：**
 ```python
 """
-Summarize this meeting transcript into a professional summary:
+為 [平台] 建立 5 則關於 [主題] 的社群媒體貼文：
 
-Participants: [LIST_PARTICIPANTS]
-Duration: [MEETING_LENGTH]
-Transcript: [INSERT_TRANSCRIPT]
+要求：
+- 符合平台的長度和格式
+- 第一行要有吸引人的鉤子
+- 包含相關 hashtags
+- 每則貼文都要有行動呼籲
+- 教育性和推廣性內容要混合
 
-Create:
-1. Executive summary (2-3 sentences)
-2. Key discussion points
-3. Decisions made
-4. Action items with owners and deadlines
-5. Next steps
-
-Format: Structured document suitable for distribution
+目標受眾：[受眾描述]
 """
 ```
 
-## Optimization Techniques
+### 技術文件
 
-### 1. Add Specific Context
-**Instead of:** "Write about marketing"
-**Try:** "Write a marketing guide for B2B SaaS companies with less than $1M ARR"
-
-### 2. Specify Output Format
-**Instead of:** "Analyze this data"
-**Try:** "Analyze this data and present findings as: 1) Executive summary, 2) Key metrics table, 3) Trend analysis, 4) Recommendations"
-
-### 3. Include Examples
+**API 文件：**
 ```python
 """
-Generate product descriptions following this example:
+為這個端點建立完整的 API 文件：
 
-Example:
-Product: Wireless Headphones
-Description: "Experience premium sound quality with our noise-canceling wireless headphones. Perfect for commutes, workouts, and focus sessions. 30-hour battery life, instant Bluetooth pairing, and comfortable all-day wear."
+端點：[METHOD] [URL]
+用途：[描述]
 
-Now generate for:
-Product: [YOUR_PRODUCT]
+包含：
+1. 端點描述
+2. 參數（必需/可選）
+3. 請求範例（curl 和多種程式語言）
+4. 回應格式和範例
+5. 錯誤碼和處理
+6. 速率限制資訊
+
+格式：OpenAPI 3.0 規範
 """
 ```
 
-### 4. Set Clear Constraints
+**程式碼審查：**
 ```python
 """
-Generate 5 marketing headlines that:
-- Are exactly 60 characters or less
-- Include the word "innovative"
-- Target small business owners
-- Avoid superlatives like "best" or "amazing"
-- Focus on practical benefits
+審查這段 [語言] 程式碼，檢查：
+- 程式碼品質和最佳實務
+- 效能優化
+- 安全漏洞
+- 可維護性問題
+
+程式碼：
+[插入程式碼]
+
+提供：
+1. 整體評估
+2. 具體問題和行號
+3. 改進建議和範例
+4. 優先級排序（高/中/低）
 """
 ```
 
-## Testing Your Prompts
+### 商業與分析
 
-### Quick Quality Check
-1. **Clarity**: Can someone else understand what you want?
-2. **Specificity**: Are your requirements detailed enough?
-3. **Format**: Is the desired output format clear?
-4. **Constraints**: Are limitations properly defined?
-5. **Examples**: Would examples improve understanding?
+**競爭分析：**
+```python
+"""
+為 [公司/產品] 在 [產業] 領域進行競爭分析。
 
-### Iteration Framework
-1. Start with a basic prompt
-2. Test with sample inputs
-3. Identify gaps in output quality
-4. Add specific requirements
-5. Test again and refine
+分析這些競爭者：[競爭者清單]
 
-## Common Pitfalls to Avoid
+提供：
+1. 功能比較矩陣
+2. 價格分析
+3. 優勢和劣勢
+4. 市場定位
+5. 機會和威脅
+6. 策略建議
 
-- **Over-complication**: Keep prompts as simple as possible while being specific
-- **Ambiguous instructions**: Be clear about format, length, and requirements
-- **Missing context**: Provide necessary background information
-- **Inconsistent formatting**: Use the same structure for similar tasks
-- **Ignoring constraints**: Always specify limitations and requirements
+格式：執行摘要後接詳細分析
+"""
+```
 
-## Next Steps
+**會議摘要：**
+```python
+"""
+將這份會議錄音整理成專業的摘要：
 
-Ready to go deeper? Explore:
-- **[Prompt Structure](./prompt-structure)** - Master the anatomy of effective prompts
-- **[Common Patterns](./common-patterns)** - Learn proven prompting techniques
-- **[Advanced Techniques](/docs/advanced/chain-of-thought)** - Sophisticated prompting methods
+參與者：[參與者清單]
+會議時長：[會議長度]
+錄音內容：[插入錄音內容]
 
-:::tip Pro Tip
-Start with these templates and customize them for your specific use case. The best prompts are iteratively refined through testing and feedback.
+建立：
+1. 執行摘要（2-3 句）
+2. 關鍵討論要點
+3. 做出的決定
+4. 行動項目、負責人和截止日期
+5. 下一步行動
+
+格式：適合分發的結構化文件
+"""
+```
+
+## 優化技巧
+
+### 1. 添加具體脈絡
+**不要這樣：** 「寫一些關於行銷的內容」
+**試試這樣：** 「為年營收低於 3000 萬台幣的 B2B SaaS 公司撰寫行銷指南」
+
+### 2. 指定輸出格式
+**不要這樣：** 「分析這些資料」
+**試試這樣：** 「分析這些資料並以下列方式呈現：1) 執行摘要，2) 關鍵指標表，3) 趨勢分析，4) 建議」
+
+### 3. 包含範例
+```python
+"""
+按照這個範例生成產品描述：
+
+範例：
+產品：無線耳機
+描述：「體驗我們降噪無線耳機的頂級音質。非常適合通勤、運動和專注工作。
+30 小時續航、即時藍牙配對，全天佩戴也舒適。」
+
+現在為以下產品生成：
+產品：[你的產品]
+"""
+```
+
+### 4. 設定清楚的限制
+```python
+"""
+生成 5 個行銷標題，要符合：
+- 正好 60 個字元或更少
+- 包含「創新」這個詞
+- 目標對象是中小企業主
+- 避免使用「最好」或「驚人」等最高級形容詞
+- 專注於實用的好處
+"""
+```
+
+## 測試你的 Prompts
+
+### 快速品質檢查
+1. **清晰度**：別人能理解你想要什麼嗎？
+2. **具體性**：你的要求夠詳細嗎？
+3. **格式**：期望的輸出格式清楚嗎？
+4. **限制**：限制條件有正確定義嗎？
+5. **範例**：範例會幫助理解嗎？
+
+### 迭代框架
+1. 從基本的 prompt 開始
+2. 用範例輸入測試
+3. 找出輸出品質的差距
+4. 添加具體要求
+5. 再次測試和精煉
+
+## 要避免的常見陷阱
+
+- **過度複雜**：在具體的同時保持 prompts 盡可能簡單
+- **模糊的指令**：清楚說明格式、長度和要求
+- **缺少脈絡**：提供必要的背景資訊
+- **格式不一致**：類似任務使用相同的結構
+- **忽略限制**：始終指定限制條件和要求
+
+## 下一步
+
+準備深入了解？來探索：
+- **[Prompt 結構](./prompt-structure)** - 掌握有效 prompts 的組成要素
+- **[常見模式](./common-patterns)** - 學習經過驗證的 prompting 技巧
+- **[進階技巧](/docs/advanced/chain-of-thought)** - 高級的 prompting 方法
+
+:::tip 專業建議
+從這些範本開始，然後根據你的特定需求進行客製化。最好的 prompts 都是透過測試和回饋不斷精煉出來的。
 :::

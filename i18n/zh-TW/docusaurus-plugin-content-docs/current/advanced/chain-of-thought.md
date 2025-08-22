@@ -2,15 +2,15 @@
 sidebar_position: 1
 ---
 
-# Chain-of-Thought Reasoning
+# Chain-of-Thought 思維鏈推理
 
-Master advanced reasoning techniques that enable AI models to break down complex problems into logical steps, improving accuracy and providing transparent problem-solving processes.
+掌握進階推理技巧，讓 AI 模型能夠將複雜問題拆解成邏輯步驟，提升準確度並提供透明的問題解決過程。
 
-## Understanding Chain-of-Thought
+## 理解 Chain-of-Thought
 
-Chain-of-Thought (CoT) prompting guides AI models to explicitly show their reasoning process, similar to how humans work through complex problems step by step.
+Chain-of-Thought（CoT）提示引導 AI 模型明確展示推理過程，就像人類逐步解決複雜問題一樣。
 
-### Basic CoT Structure
+### 基本 CoT 結構
 
 ```python
 """
@@ -28,519 +28,519 @@ Therefore: [Final answer]
 """
 ```
 
-### When to Use CoT
+### 何時使用 CoT
 
-- **Complex mathematical problems**
-- **Multi-step logical reasoning**
-- **Business strategy development**
-- **Technical troubleshooting**
-- **Creative problem-solving**
+- **複雜數學問題**
+- **多步驟邏輯推理**
+- **商業策略制定**
+- **技術問題排除**
+- **創意問題解決**
 
-## Mathematical Problem Solving
+## 數學問題解決
 
-### Advanced Mathematical CoT
+### 進階數學 CoT
 
 ```python
 """
-Solve this optimization problem using chain-of-thought reasoning:
+使用思維鏈推理解決這個最佳化問題：
 
-Problem: A company needs to determine the optimal pricing strategy for a new product. They have manufacturing costs of $50 per unit, market research shows demand follows the function D(p) = 1000 - 10p (where p is price), and they want to maximize profit.
+問題：一間手搖飲料店要為新推出的特調飲品制定最佳定價策略。製作成本每杯 50 元，市場調查顯示需求遵循函數 D(p) = 1000 - 10p（其中 p 是價格），他們希望最大化利潤。
 
-Let me work through this systematically:
+讓我系統性地分析這個問題：
 
-Step 1: Define the variables and objective function
-- Let p = selling price per unit
-- Manufacturing cost = $50 per unit
-- Demand function: D(p) = 1000 - 10p
-- Profit per unit = p - 50
-- Total profit = (p - 50) × D(p)
+步驟 1：定義變數和目標函數
+- 設 p = 每杯售價
+- 製作成本 = 每杯 50 元
+- 需求函數：D(p) = 1000 - 10p
+- 每杯利潤 = p - 50
+- 總利潤 = (p - 50) × D(p)
 
-Step 2: Set up the profit function
-- Revenue = p × D(p) = p × (1000 - 10p) = 1000p - 10p²
-- Total cost = 50 × D(p) = 50 × (1000 - 10p) = 50,000 - 500p
-- Profit function: P(p) = Revenue - Total cost
+步驟 2：建立利潤函數
+- 收入 = p × D(p) = p × (1000 - 10p) = 1000p - 10p²
+- 總成本 = 50 × D(p) = 50 × (1000 - 10p) = 50,000 - 500p
+- 利潤函數：P(p) = 收入 - 總成本
 - P(p) = (1000p - 10p²) - (50,000 - 500p)
 - P(p) = 1000p - 10p² - 50,000 + 500p
 - P(p) = -10p² + 1500p - 50,000
 
-Step 3: Find the maximum profit point
-- Take derivative: P'(p) = -20p + 1500
-- Set equal to zero: -20p + 1500 = 0
-- Solve for p: p = 1500/20 = 75
+步驟 3：找出最大利潤點
+- 取導數：P'(p) = -20p + 1500
+- 令其等於零：-20p + 1500 = 0
+- 解出 p：p = 1500/20 = 75
 
-Step 4: Verify this is a maximum
-- Second derivative: P''(p) = -20 (negative, confirms maximum)
+步驟 4：驗證這是最大值
+- 二階導數：P''(p) = -20（為負數，確認是最大值）
 
-Step 5: Calculate maximum profit and demand
-- Optimal price: $75
-- Demand at optimal price: D(75) = 1000 - 10(75) = 250 units
-- Maximum profit: P(75) = -10(75)² + 1500(75) - 50,000 = $6,250
+步驟 5：計算最大利潤和需求量
+- 最佳價格：75 元
+- 最佳價格下的需求量：D(75) = 1000 - 10(75) = 250 杯
+- 最大利潤：P(75) = -10(75)² + 1500(75) - 50,000 = 6,250 元
 
-Therefore: The optimal pricing strategy is $75 per unit, resulting in 250 units sold and maximum profit of $6,250.
+因此：最佳定價策略是每杯 75 元，可售出 250 杯，獲得最大利潤 6,250 元。
 """
 ```
 
-### Statistical Analysis CoT
+### 統計分析 CoT
 
 ```python
 """
-Analyze this A/B testing scenario with chain-of-thought reasoning:
+使用思維鏈推理分析這個 A/B 測試情境：
 
-Scenario: An e-commerce site tested two checkout processes:
-- Version A: 1,000 visitors, 120 conversions (12% rate)
-- Version B: 1,000 visitors, 140 conversions (14% rate)
+情境：一個網購平台測試兩種結帳流程：
+- 版本 A：1,000 名訪客，120 次轉換（12% 轉換率）
+- 版本 B：1,000 名訪客，140 次轉換（14% 轉換率）
 
-Is this difference statistically significant at 95% confidence?
+這個差異在 95% 信心水準下是否具有統計顯著性？
 
-Let me analyze this step by step:
+讓我逐步分析：
 
-Step 1: Set up the hypothesis test
-- H₀: p₁ = p₂ (no difference in conversion rates)
-- H₁: p₁ ≠ p₂ (there is a difference)
-- Significance level: α = 0.05
+步驟 1：建立假設檢定
+- H₀: p₁ = p₂（轉換率無差異）
+- H₁: p₁ ≠ p₂（轉換率有差異）
+- 顯著水準：α = 0.05
 
-Step 2: Calculate sample statistics
-- Version A: n₁ = 1000, x₁ = 120, p₁ = 0.12
-- Version B: n₂ = 1000, x₂ = 140, p₂ = 0.14
-- Observed difference: p₂ - p₁ = 0.14 - 0.12 = 0.02
+步驟 2：計算樣本統計量
+- 版本 A：n₁ = 1000, x₁ = 120, p₁ = 0.12
+- 版本 B：n₂ = 1000, x₂ = 140, p₂ = 0.14
+- 觀察到的差異：p₂ - p₁ = 0.14 - 0.12 = 0.02
 
-Step 3: Calculate pooled proportion and standard error
-- Pooled proportion: p̂ = (x₁ + x₂)/(n₁ + n₂) = (120 + 140)/(1000 + 1000) = 0.13
-- Standard error: SE = √[p̂(1-p̂)(1/n₁ + 1/n₂)]
+步驟 3：計算合併比例和標準誤差
+- 合併比例：p̂ = (x₁ + x₂)/(n₁ + n₂) = (120 + 140)/(1000 + 1000) = 0.13
+- 標準誤差：SE = √[p̂(1-p̂)(1/n₁ + 1/n₂)]
 - SE = √[0.13 × 0.87 × (1/1000 + 1/1000)] = √[0.1131 × 0.002] = 0.0151
 
-Step 4: Calculate test statistic
+步驟 4：計算檢定統計量
 - z = (p₂ - p₁)/SE = 0.02/0.0151 = 1.32
 
-Step 5: Determine critical value and conclusion
-- For α = 0.05 (two-tailed), critical value = ±1.96
-- |z| = 1.32 < 1.96, so we fail to reject H₀
+步驟 5：判定臨界值和結論
+- 對於 α = 0.05（雙尾檢定），臨界值 = ±1.96
+- |z| = 1.32 < 1.96，所以我們無法拒絕 H₀
 - p-value = 2 × P(Z > 1.32) ≈ 0.187
 
-Therefore: The difference is NOT statistically significant. We need more data or a larger effect size to detect a meaningful difference with confidence.
+因此：這個差異沒有統計顯著性。我們需要更多資料或更大的效應量才能有信心地檢測出有意義的差異。
 """
 ```
 
-## Business Strategy & Decision Making
+## 商業策略與決策制定
 
-### Strategic Decision CoT
+### 策略決策 CoT
 
 ```python
 """
-Should our SaaS company expand to the European market? Use chain-of-thought analysis.
+我們的 SaaS 公司應該拓展到歐洲市場嗎？使用思維鏈分析。
 
-Let me evaluate this strategic decision systematically:
+讓我系統性地評估這個策略決策：
 
-Step 1: Assess current market position
-- Current market: North America
-- Revenue: $5M ARR, 15% monthly growth
-- Team size: 50 employees
-- Product-market fit: Strong (NPS 65+)
-- Customer acquisition cost: $500, LTV: $5,000
+步驟 1：評估目前市場地位
+- 目前市場：北美
+- 收入：500 萬美元 ARR，每月成長 15%
+- 團隊規模：50 名員工
+- 產品市場適配度：強勁（NPS 65+）
+- 客戶獲取成本：500 美元，LTV：5,000 美元
 
-Step 2: Analyze European market opportunity
-- Market size: €2.3B TAM in our segment
-- Competition: 3 major players, less saturated than US
-- Regulatory environment: GDPR compliance required
-- Local preferences: Prefer European data centers, multilingual support
-- Pricing expectations: 20-30% lower than US market
+步驟 2：分析歐洲市場機會
+- 市場規模：我們這個領域的 TAM 為 23 億歐元
+- 競爭狀況：3 個主要競爭者，比美國市場飽和度低
+- 法規環境：需要符合 GDPR 規範
+- 在地偏好：偏好歐洲資料中心、多語言支援
+- 定價期望：比美國市場低 20-30%
 
-Step 3: Evaluate readiness and capabilities
-- Technical requirements: EU data residency, GDPR features
-- Team capabilities: No European sales/marketing experience
-- Financial position: $2M cash, 18-month runway
-- Product localization: Requires 6-month development effort
-- Support infrastructure: Need European timezone coverage
+步驟 3：評估準備度和能力
+- 技術需求：歐盟資料駐留、GDPR 功能
+- 團隊能力：缺乏歐洲銷售/行銷經驗
+- 財務狀況：200 萬美元現金，18 個月營運資金
+- 產品在地化：需要 6 個月開發時間
+- 支援基礎設施：需要歐洲時區的客服覆蓋
 
-Step 4: Calculate investment requirements
-- Product development: $300K (GDPR, localization)
-- Market entry: $500K (sales team, marketing)
-- Infrastructure: $100K (EU servers, security)
-- Legal/compliance: $50K
-- Total first-year investment: $950K
+步驟 4：計算投資需求
+- 產品開發：30 萬美元（GDPR、在地化）
+- 市場進入：50 萬美元（銷售團隊、行銷）
+- 基礎設施：10 萬美元（歐盟伺服器、安全性）
+- 法務/合規：5 萬美元
+- 第一年總投資：95 萬美元
 
-Step 5: Project potential returns
-- Conservative scenario: 100 customers, $200K ARR by year-end
-- Optimistic scenario: 300 customers, $600K ARR by year-end
-- Break-even timeline: 18-24 months
-- 3-year revenue potential: $2-5M ARR
+步驟 5：預估潛在報酬
+- 保守情境：100 個客戶，年底達到 20 萬美元 ARR
+- 樂觀情境：300 個客戶，年底達到 60 萬美元 ARR
+- 損益平衡時間：18-24 個月
+- 3 年收入潛力：200-500 萬美元 ARR
 
-Step 6: Risk assessment
-- High risks: Regulatory compliance, cultural differences, resource strain
-- Medium risks: Competition response, longer sales cycles
-- Low risks: Technical implementation, customer support
+步驟 6：風險評估
+- 高風險：法規合規、文化差異、資源吃緊
+- 中等風險：競爭者回應、較長銷售週期
+- 低風險：技術實作、客戶支援
 
-Therefore: Recommend delaying European expansion for 6-12 months. Focus on strengthening North American position, building cash reserves to $5M+, and hiring European expertise before market entry.
+因此：建議延後歐洲擴張 6-12 個月。專注於強化北美市場地位，建立 500 萬美元以上的現金儲備，並在進入市場前聘請歐洲專業人才。
 """
 ```
 
-### Investment Analysis CoT
+### 投資分析 CoT
 
 ```python
 """
-Evaluate this technology investment using discounted cash flow analysis:
+使用折現現金流分析評估這項科技投資：
 
-Investment: $2M to implement AI-powered customer service automation
-Expected benefits: 30% reduction in support costs, 25% improvement in response time
-Current support costs: $1.5M annually
-Project timeline: 2-year implementation
+投資：200 萬美元導入 AI 智能客服自動化
+預期效益：支援成本降低 30%，回應時間改善 25%
+目前支援成本：每年 150 萬美元
+專案時程：2 年實作期
 
-Let me analyze this investment step by step:
+讓我逐步分析這項投資：
 
-Step 1: Establish baseline metrics
-- Current annual support costs: $1,500,000
-- Current team size: 20 support agents
-- Average response time: 4 hours
-- Customer satisfaction: 3.2/5.0
-- Expected project duration: 24 months
+步驟 1：建立基準指標
+- 目前年度支援成本：150 萬美元
+- 目前團隊規模：20 名客服人員
+- 平均回應時間：4 小時
+- 客戶滿意度：3.2/5.0
+- 預期專案期程：24 個月
 
-Step 2: Calculate cost savings
-- 30% cost reduction = $1,500,000 × 0.30 = $450,000 annually
-- Improved efficiency allows reallocation of 6 agents to other roles
-- Value of agent reallocation: 6 × $75,000 = $450,000 annually
-- Total annual cost savings: $450,000 + $450,000 = $900,000
+步驟 2：計算成本節省
+- 30% 成本降低 = 150 萬美元 × 0.30 = 每年 45 萬美元
+- 效率提升讓 6 名客服人員可調配到其他職務
+- 人員調配價值：6 × 7.5 萬美元 = 每年 45 萬美元
+- 每年總成本節省：45 萬美元 + 45 萬美元 = 90 萬美元
 
-Step 3: Estimate implementation costs
-- Initial investment: $2,000,000
-- Implementation team (24 months): $300,000
-- Training and change management: $100,000
-- Ongoing maintenance (annual): $150,000
-- Total first-year cost: $2,400,000
+步驟 3：估算實作成本
+- 初始投資：200 萬美元
+- 實作團隊（24 個月）：30 萬美元
+- 培訓與變革管理：10 萬美元
+- 持續維護（每年）：15 萬美元
+- 第一年總成本：240 萬美元
 
-Step 4: Project cash flows (5-year horizon)
-- Year 0: -$2,400,000 (implementation)
-- Year 1: $450,000 (partial benefits, 6-month rollout)
-- Years 2-5: $750,000 annually ($900K savings - $150K maintenance)
-- Terminal value: Consider ongoing benefits beyond Year 5
+步驟 4：預估現金流（5 年期）
+- 第 0 年：-240 萬美元（實作期）
+- 第 1 年：45 萬美元（部分效益，6 個月上線）
+- 第 2-5 年：每年 75 萬美元（90 萬美元節省 - 15 萬美元維護）
+- 終值：考慮第 5 年後的持續效益
 
-Step 5: Calculate NPV and IRR (assume 10% discount rate)
-- Year 0: -$2,400,000
-- Year 1: $450,000 ÷ 1.10 = $409,091
-- Year 2: $750,000 ÷ 1.21 = $619,835
-- Year 3: $750,000 ÷ 1.33 = $563,659
-- Year 4: $750,000 ÷ 1.46 = $513,014
-- Year 5: $750,000 ÷ 1.61 = $465,839
-- NPV = $171,438
+步驟 5：計算 NPV 和 IRR（假設折現率 10%）
+- 第 0 年：-240 萬美元
+- 第 1 年：45 萬美元 ÷ 1.10 = 409,091 美元
+- 第 2 年：75 萬美元 ÷ 1.21 = 619,835 美元
+- 第 3 年：75 萬美元 ÷ 1.33 = 563,659 美元
+- 第 4 年：75 萬美元 ÷ 1.46 = 513,014 美元
+- 第 5 年：75 萬美元 ÷ 1.61 = 465,839 美元
+- NPV = 171,438 美元
 
-Step 6: Consider intangible benefits
-- Improved customer satisfaction (potential 25% increase in retention)
-- Faster response times enable upselling opportunities
-- Brand reputation improvement
-- Competitive advantage in customer service
+步驟 6：考慮無形效益
+- 客戶滿意度提升（潛在客戶留存率增加 25%）
+- 更快回應時間創造追加銷售機會
+- 品牌聲譽提升
+- 客戶服務競爭優勢
 
-Therefore: The investment shows positive NPV and strong strategic benefits. Recommend proceeding with implementation, with emphasis on change management and phased rollout to minimize risks.
+因此：這項投資顯示正的 NPV 和強勁的策略效益。建議進行實作，重點在於變革管理和分階段推出以降低風險。
 """
 ```
 
-## Technical Problem Solving
+## 技術問題解決
 
-### System Architecture CoT
+### 系統架構 CoT
 
 ```python
 """
-Design a scalable architecture for a real-time chat application expecting 1M concurrent users.
+為預期 100 萬併發用戶的即時聊天應用程式設計可擴展架構。
 
-Let me approach this architecture design systematically:
+讓我系統性地設計這個架構：
 
-Step 1: Analyze requirements and constraints
-- Peak concurrent users: 1,000,000
-- Message throughput: ~10,000 messages/second (assuming 1% active at any time)
-- Global user base: Need low latency worldwide
-- Features: Real-time messaging, presence, file sharing, group chats
-- Reliability: 99.9% uptime, data persistence required
+步驟 1：分析需求和限制
+- 峰值併發用戶：1,000,000
+- 訊息吞吐量：約每秒 10,000 則訊息（假設任何時刻 1% 用戶在線）
+- 全球用戶群：需要全球低延遲
+- 功能：即時訊息、線上狀態、檔案分享、群組聊天
+- 可靠性：99.9% 正常運行時間，需要資料持久化
 
-Step 2: Break down system components
-- User management and authentication
-- Real-time messaging infrastructure
-- Message persistence and history
-- Presence and online status
-- File storage and sharing
-- Push notifications
-- Load balancing and routing
+步驟 2：拆解系統組件
+- 用戶管理和身份驗證
+- 即時訊息基礎設施
+- 訊息持久化和歷史記錄
+- 線上狀態和在線狀況
+- 檔案儲存和分享
+- 推播通知
+- 負載平衡和路由
 
-Step 3: Design messaging infrastructure
-- WebSocket connections for real-time communication
-- Message brokers for reliable delivery (Apache Kafka/Redis Streams)
-- Connection servers to handle WebSocket termination
-- Need horizontal scaling: ~1000 concurrent connections per server = 1000 servers
-- Geographic distribution: Deploy in multiple regions
+步驟 3：設計訊息基礎設施
+- WebSocket 連線用於即時通訊
+- 訊息代理器確保可靠傳遞（Apache Kafka/Redis Streams）
+- 連線伺服器處理 WebSocket 終端
+- 需要水平擴展：每台伺服器約 1000 個併發連線 = 1000 台伺服器
+- 地理分佈：在多個地區部署
 
-Step 4: Plan data architecture
-- User data: PostgreSQL with read replicas
-- Message storage: Time-series database (ClickHouse/Cassandra)
-- Session management: Redis for active connections
-- File storage: Object storage (S3) with CDN
-- Search functionality: Elasticsearch for message history
+步驟 4：規劃資料架構
+- 用戶資料：PostgreSQL 搭配讀取副本
+- 訊息儲存：時間序列資料庫（ClickHouse/Cassandra）
+- 會話管理：Redis 用於活躍連線
+- 檔案儲存：物件儲存（S3）搭配 CDN
+- 搜尋功能：Elasticsearch 用於訊息歷史
 
-Step 5: Address scalability patterns
-- Microservices architecture with API Gateway
-- Event-driven architecture for loose coupling
-- Database sharding by user_id or room_id
-- Caching layer for frequently accessed data
-- Auto-scaling groups based on connection count
+步驟 5：處理擴展性模式
+- 微服務架構搭配 API Gateway
+- 事件驅動架構實現鬆耦合
+- 按 user_id 或 room_id 進行資料庫分片
+- 快取層處理常存取資料
+- 基於連線數的自動擴展群組
 
-Step 6: Plan infrastructure deployment
-- Kubernetes for container orchestration
-- Service mesh (Istio) for inter-service communication
-- Monitoring: Prometheus/Grafana for metrics
-- Logging: ELK stack for centralized logging
-- CI/CD pipeline for automated deployments
+步驟 6：規劃基礎設施部署
+- Kubernetes 用於容器編排
+- 服務網格（Istio）用於服務間通訊
+- 監控：Prometheus/Grafana 用於指標
+- 日誌：ELK 堆疊用於集中化日誌
+- CI/CD 流水線用於自動部署
 
-Step 7: Estimate resource requirements
-- Connection servers: 1000 instances (4 vCPU, 8GB RAM each)
-- Database cluster: 20 nodes for message storage
-- Redis cluster: 10 nodes for session management
-- Load balancers: 10 instances across regions
-- Estimated monthly cost: $150,000-200,000
+步驟 7：估算資源需求
+- 連線伺服器：1000 個實例（每個 4 vCPU、8GB RAM）
+- 資料庫叢集：20 個節點用於訊息儲存
+- Redis 叢集：10 個節點用於會話管理
+- 負載平衡器：跨地區 10 個實例
+- 估算月成本：15-20 萬美元
 
-Therefore: Implement a microservices architecture using WebSocket connection servers, Kafka for message routing, distributed databases for scaling, and global deployment for low latency. Start with core messaging functionality and iterate based on usage patterns.
+因此：實作微服務架構，使用 WebSocket 連線伺服器、Kafka 用於訊息路由、分散式資料庫用於擴展，以及全球部署實現低延遲。從核心訊息功能開始，根據使用模式進行迭代。
 """
 ```
 
-### Debugging CoT
+### 除錯 CoT
 
 ```python
 """
-Debug this performance issue: API response times increased from 200ms to 2000ms over the past week.
+除錯這個效能問題：API 回應時間在過去一週從 200ms 增加到 2000ms。
 
-Let me troubleshoot this systematically:
+讓我系統性地排除問題：
 
-Step 1: Gather initial information
-- Timeline: Performance degraded over past 7 days
-- Baseline: 200ms average response time
-- Current state: 2000ms average response time
-- Affected endpoints: Need to determine if all or specific endpoints
-- Traffic patterns: Check if load increased significantly
+步驟 1：收集初始資訊
+- 時間軸：過去 7 天效能下降
+- 基準線：200ms 平均回應時間
+- 目前狀態：2000ms 平均回應時間
+- 受影響端點：需要確定是全部還是特定端點
+- 流量模式：檢查負載是否顯著增加
 
-Step 2: Check system resource utilization
-- CPU usage: Monitor application and database server CPU
-- Memory utilization: Check for memory leaks or insufficient RAM
-- Disk I/O: Verify database and logging disk performance
-- Network latency: Test connectivity between services
-- Database connection pool: Check for connection exhaustion
+步驟 2：檢查系統資源使用率
+- CPU 使用率：監控應用程式和資料庫伺服器 CPU
+- 記憶體使用率：檢查記憶體洩漏或 RAM 不足
+- 磁碟 I/O：驗證資料庫和日誌磁碟效能
+- 網路延遲：測試服務間連線
+- 資料庫連線池：檢查連線耗盡情況
 
-Step 3: Analyze application metrics
-- Identify slowest endpoints using APM tools
-- Check database query performance and execution plans
-- Review recent code deployments for performance regressions
-- Examine error rates and timeout patterns
-- Analyze garbage collection metrics (if applicable)
+步驟 3：分析應用程式指標
+- 使用 APM 工具識別最慢的端點
+- 檢查資料庫查詢效能和執行計畫
+- 檢視最近的程式碼部署是否有效能回歸
+- 檢查錯誤率和逾時模式
+- 分析垃圾回收指標（如適用）
 
-Step 4: Investigate database performance
-- Check slow query logs for problematic queries
-- Analyze table locks and blocking processes
-- Review index usage and execution plans
-- Check database connection counts and wait times
-- Verify recent schema changes or data growth
+步驟 4：調查資料庫效能
+- 檢查慢查詢日誌找出問題查詢
+- 分析表鎖定和阻塞程序
+- 檢視索引使用和執行計畫
+- 檢查資料庫連線數和等待時間
+- 驗證最近的架構變更或資料增長
 
-Step 5: Review infrastructure changes
-- Check for recent deployments or configuration changes
-- Verify auto-scaling settings and resource limits
-- Review load balancer configuration and health checks
-- Check for any infrastructure maintenance or updates
-- Analyze third-party service dependencies
+步驟 5：檢視基礎設施變更
+- 檢查最近的部署或設定變更
+- 驗證自動擴展設定和資源限制
+- 檢視負載平衡器設定和健康檢查
+- 檢查任何基礎設施維護或更新
+- 分析第三方服務依賴
 
-Step 6: Test hypothesis and implement fixes
-- If database bottleneck: Add indexes, optimize queries, scale database
-- If memory issue: Increase allocation, fix memory leaks
-- If network latency: Optimize service communication, add caching
-- If code regression: Rollback problematic deployment, fix issues
-- If capacity issue: Scale infrastructure, implement caching
+步驟 6：測試假設並實施修復
+- 如果是資料庫瓶頸：新增索引、最佳化查詢、擴展資料庫
+- 如果是記憶體問題：增加配置、修復記憶體洩漏
+- 如果是網路延遲：最佳化服務通訊、新增快取
+- 如果是程式碼回歸：回滾有問題的部署、修復問題
+- 如果是容量問題：擴展基礎設施、實作快取
 
-Step 7: Verify resolution and prevent recurrence
-- Monitor response times after implementing fixes
-- Set up alerting for performance degradation
-- Implement automated performance testing
-- Establish baseline monitoring and SLA tracking
-- Document troubleshooting process for future reference
+步驟 7：驗證解決方案並防止復發
+- 實施修復後監控回應時間
+- 設定效能下降警報
+- 實作自動化效能測試
+- 建立基準監控和 SLA 追蹤
+- 記錄故障排除過程供未來參考
 
-Therefore: Focus investigation on database performance and recent deployments as most likely causes. Implement monitoring and alerting to catch similar issues earlier in the future.
+因此：重點調查資料庫效能和最近的部署，這些是最可能的原因。實作監控和警報系統，以便未來能更早發現類似問題。
 """
 ```
 
-## Creative Problem Solving
+## 創意問題解決
 
-### Innovation Framework CoT
+### 創新框架 CoT
 
 ```python
 """
-Develop an innovative solution for reducing food waste in grocery stores using technology.
+開發創新科技解決方案來減少便利商店的食物浪費。
 
-Let me approach this innovation challenge systematically:
+讓我系統性地處理這個創新挑戰：
 
-Step 1: Define the problem scope
-- Current state: 30-40% of food waste occurs at retail level
-- Key causes: Overordering, poor demand forecasting, expiration management
-- Stakeholders: Grocery stores, suppliers, customers, environment
-- Constraints: Cost-effectiveness, easy integration, regulatory compliance
-- Success metrics: Waste reduction %, cost savings, customer satisfaction
+步驟 1：定義問題範圍
+- 現況：30-40% 的食物浪費發生在零售層面
+- 主要原因：過度進貨、需求預測不準、過期管理
+- 利害關係人：便利商店、供應商、顧客、環境
+- 限制條件：成本效益、易於整合、法規合規
+- 成功指標：浪費減少百分比、成本節省、顧客滿意度
 
-Step 2: Analyze root causes
-- Demand forecasting inaccuracy (weather, events, seasonality)
-- Static pricing models that don't reflect perishability
-- Poor inventory visibility and tracking
-- Consumer behavior patterns not well understood
-- Lack of real-time communication between departments
-- Limited options for near-expiry products
+步驟 2：分析根本原因
+- 需求預測不準確（天氣、活動、季節性）
+- 靜態定價模式未反映易腐性
+- 庫存可見度和追蹤不佳
+- 消費者行為模式理解不足
+- 部門間缺乏即時溝通
+- 即期商品處理選擇有限
 
-Step 3: Generate solution concepts
-- AI-powered demand forecasting with external data integration
-- Dynamic pricing based on expiration dates and demand patterns
-- Smart shelf sensors for real-time inventory tracking
-- Mobile app connecting customers with discounted near-expiry items
-- Automated donation coordination with food banks
-- Predictive analytics for supply chain optimization
+步驟 3：產生解決方案概念
+- AI 驅動的需求預測搭配外部資料整合
+- 基於有效期限和需求模式的動態定價
+- 智慧貨架感測器進行即時庫存追蹤
+- 行動應用程式連結消費者與折扣即期商品
+- 與食物銀行的自動化捐贈協調
+- 供應鏈最佳化的預測分析
 
-Step 4: Develop integrated solution framework
-- Core platform: AI-driven inventory management system
-- Data inputs: Sales history, weather, events, social media trends
-- Smart hardware: IoT sensors for shelf monitoring and temperature
-- Customer interface: Mobile app for deal notifications and pickup
-- Partner integrations: Food banks, charities, secondary markets
-- Analytics dashboard: Store managers can track waste and savings
+步驟 4：開發整合解決方案框架
+- 核心平台：AI 驅動的庫存管理系統
+- 資料輸入：銷售歷史、天氣、活動、社群媒體趨勢
+- 智慧硬體：IoT 感測器進行貨架監控和溫度控制
+- 客戶介面：行動應用程式提供優惠通知和取貨
+- 合作夥伴整合：食物銀行、慈善機構、二級市場
+- 分析儀表板：店長可追蹤浪費和節省情況
 
-Step 5: Design implementation approach
-- Phase 1: Deploy sensors and data collection (3 months)
-- Phase 2: Implement AI forecasting models (6 months)
-- Phase 3: Launch customer mobile app (9 months)
-- Phase 4: Add partner integrations and automation (12 months)
-- Pilot approach: Start with 5-10 stores, measure results, scale
+步驟 5：設計實作方法
+- 第一階段：部署感測器和資料收集（3 個月）
+- 第二階段：實作 AI 預測模型（6 個月）
+- 第三階段：推出客戶行動應用程式（9 個月）
+- 第四階段：新增合作夥伴整合和自動化（12 個月）
+- 試點方法：從 5-10 家店開始，衡量成果，然後擴展
 
-Step 6: Calculate business case
-- Implementation cost: $50K per store (sensors, software, integration)
-- Expected waste reduction: 25-35% in first year
-- Average grocery store waste: $200K annually
-- Potential savings: $50-70K per store annually
-- ROI timeline: 12-18 months payback period
-- Additional benefits: Improved customer loyalty, sustainability brand
+步驟 6：計算商業案例
+- 實作成本：每店 5 萬美元（感測器、軟體、整合）
+- 預期浪費減少：第一年 25-35%
+- 便利商店平均浪費：每年 20 萬美元
+- 潛在節省：每店每年 5-7 萬美元
+- ROI 時間：12-18 個月回收期
+- 額外效益：提升客戶忠誠度、永續品牌形象
 
-Step 7: Address potential challenges
-- Data privacy and customer behavior tracking
-- Integration with existing POS and inventory systems
-- Staff training and change management
-- Supplier coordination and contract modifications
-- Regulatory compliance (food safety, data protection)
+步驟 7：處理潛在挑戰
+- 資料隱私和客戶行為追蹤
+- 與現有 POS 和庫存系統整合
+- 員工培訓和變革管理
+- 供應商協調和合約修改
+- 法規合規（食品安全、資料保護）
 
-Therefore: Develop an integrated AI-powered platform combining demand forecasting, dynamic pricing, IoT sensors, and customer engagement to create a comprehensive food waste reduction ecosystem. Start with pilot program to validate assumptions and refine the solution.
+因此：開發整合式 AI 驅動平台，結合需求預測、動態定價、IoT 感測器和客戶參與，創造全面的食物浪費減少生態系統。從試點計畫開始驗證假設並改進解決方案。
 """
 ```
 
-## Advanced CoT Techniques
+## 進階 CoT 技巧
 
-### Multi-Perspective CoT
+### 多角度 CoT
 
 ```python
 """
-Analyze whether our company should adopt remote-first work policy from multiple perspectives:
+從多個角度分析我們公司是否應該採用遠端優先的工作政策：
 
-Executive Leadership Perspective:
-Let me think through this from the C-suite viewpoint:
-- Cost considerations: Reduced office space = $2M annual savings
-- Talent acquisition: Access to global talent pool expands hiring options
-- Productivity concerns: Need metrics to measure remote work effectiveness  
-- Company culture: Risk of losing collaborative innovation and mentorship
-- Competitive advantage: Could differentiate in talent market
+高階主管角度：
+讓我從高層的觀點思考：
+- 成本考量：減少辦公空間 = 每年節省 200 萬美元
+- 人才招募：接觸全球人才庫擴大招聘選擇
+- 生產力擔憂：需要指標來衡量遠端工作效率
+- 公司文化：可能失去協作創新和導師制度
+- 競爭優勢：在人才市場中可能形成差異化
 
-Employee Perspective:
-From the workforce standpoint:
-- Work-life balance: Improved flexibility and reduced commute stress
-- Career development: Concern about reduced visibility and mentoring
-- Collaboration: Potential challenges with spontaneous interactions
-- Home setup: Need for equipment and workspace allowances
-- Social connections: Risk of isolation and reduced team bonding
+員工角度：
+從勞工的立場來看：
+- 工作生活平衡：改善彈性和減少通勤壓力
+- 職涯發展：擔心能見度降低和指導機會減少
+- 協作：自發性互動可能面臨挑戰
+- 居家設置：需要設備和工作空間津貼
+- 社交連結：孤立風險和團隊凝聚力降低
 
-Customer Perspective:
-Considering client impact:
-- Service delivery: Could improve 24/7 support with global team
-- Relationship building: Potential challenges with in-person meetings
-- Response times: Flexible schedules might improve customer service
-- Innovation: Concern about reduced collaborative problem-solving
-- Trust factors: Some clients prefer in-person interactions
+客戶角度：
+考慮客戶影響：
+- 服務交付：全球團隊可能改善 24/7 支援
+- 關係建立：面對面會議可能面臨挑戰
+- 回應時間：彈性排程可能改善客戶服務
+- 創新：擔心協作問題解決能力降低
+- 信任因素：部分客戶偏好面對面互動
 
-Financial Perspective:
-Analyzing the numbers:
-- Real estate savings: $2M annually in office costs
-- Technology investment: $500K for collaboration tools and security
-- Productivity metrics: Early data shows 15% increase in focused work
-- Recruitment costs: 30% reduction due to expanded candidate pool
-- Employee retention: 25% improvement in satisfaction scores
+財務角度：
+分析數字：
+- 不動產節省：每年辦公成本 200 萬美元
+- 技術投資：協作工具和安全性 50 萬美元
+- 生產力指標：早期資料顯示專注工作增加 15%
+- 招募成本：因擴大候選人庫降低 30%
+- 員工留存：滿意度分數提升 25%
 
-Therefore: Recommend hybrid approach - remote-first with quarterly in-person gatherings. This balances cost savings, talent access, and productivity gains while maintaining culture and collaboration opportunities.
+因此：建議混合方式 - 遠端優先搭配季度面對面聚會。這平衡了成本節省、人才接觸和生產力提升，同時維持文化和協作機會。
 """
 ```
 
-### Iterative Refinement CoT
+### 迭代改進 CoT
 
 ```python
 """
-Design a pricing strategy for our new SaaS product, refining through multiple iterations:
+為我們的新 SaaS 產品設計定價策略，透過多次迭代進行改進：
 
-Initial Analysis:
-Let me start with basic market positioning:
-- Competitor pricing: $29-99/month for similar tools
-- Our costs: $15/user/month (including support, hosting, development)
-- Target margin: 70-80% gross margin
-- Initial pricing idea: $49/month
+初始分析：
+讓我從基本市場定位開始：
+- 競爭者定價：類似工具每月 29-99 美元
+- 我們的成本：每用戶每月 15 美元（包含支援、託管、開發）
+- 目標毛利：70-80% 毛利率
+- 初始定價想法：每月 49 美元
 
-First Refinement - Value-Based Consideration:
-Reconsidering based on customer value delivered:
-- Customer saves 10 hours/week of manual work
-- At $50/hour consultant rate, that's $500/week value = $2000/month
-- Value-based pricing could support $200-400/month
-- But adoption curve suggests starting lower for market penetration
-- Revised pricing idea: $79/month with value messaging
+第一次改進 - 價值導向考量：
+基於客戶價值重新考慮：
+- 客戶每週節省 10 小時手動工作
+- 以每小時 50 美元顧問費率計算，那是每週 500 美元價值 = 每月 2000 美元
+- 價值導向定價可以支撐每月 200-400 美元
+- 但採用曲線建議從較低價格開始進行市場滲透
+- 修正定價想法：每月 79 美元搭配價值訊息
 
-Second Refinement - Competitive Differentiation:
-Analyzing our unique advantages:
-- We have 3 features competitors don't offer
-- Our automation capabilities are 2x more comprehensive
-- Customer onboarding is 50% faster than alternatives
-- Support response time is industry-leading
-- This justifies premium positioning at $99/month
+第二次改進 - 競爭差異化：
+分析我們的獨特優勢：
+- 我們有 3 個競爭者沒有的功能
+- 我們的自動化能力比競爭者全面 2 倍
+- 客戶上手速度比替代方案快 50%
+- 支援回應時間業界領先
+- 這證明每月 99 美元的高端定位合理
 
-Third Refinement - Go-to-Market Strategy:
-Considering market entry and growth:
-- Early adopters are price-sensitive and want to test solutions
-- Land-and-expand strategy works better with lower entry point
-- Freemium model could accelerate user acquisition
-- Plan progression: Free (limited) → $39 (basic) → $79 (pro) → $149 (enterprise)
+第三次改進 - 市場進入策略：
+考慮市場進入和成長：
+- 早期採用者對價格敏感且想測試解決方案
+- 拓土擴張策略在較低進入點效果更好
+- Freemium 模式可能加速用戶獲取
+- 方案進階：免費（限制版）→ 39 美元（基本版）→ 79 美元（專業版）→ 149 美元（企業版）
 
-Final Refinement - Revenue Optimization:
-Optimizing for multiple business objectives:
-- Freemium tier: Unlimited users, 1 project, basic features
-- Starter tier: $39/month, 5 projects, standard features
-- Professional tier: $79/month, unlimited projects, advanced features, priority support
-- Enterprise tier: $149/month, custom integrations, dedicated support, SLA
+最終改進 - 收入最佳化：
+針對多重商業目標最佳化：
+- Freemium 層：無限用戶、1 個專案、基本功能
+- 入門層：每月 39 美元、5 個專案、標準功能
+- 專業層：每月 79 美元、無限專案、進階功能、優先支援
+- 企業層：每月 149 美元、客製整合、專屬支援、SLA
 
-Therefore: Launch with tiered freemium model starting at $39/month, emphasizing value delivered and competitive advantages. Plan to optimize pricing based on usage data and customer feedback after 6 months.
+因此：推出分層 freemium 模式，從每月 39 美元開始，強調交付價值和競爭優勢。計劃在 6 個月後根據使用資料和客戶回饋最佳化定價。
 """
 ```
 
-## CoT Best Practices
+## CoT 最佳實務
 
-### Structure Guidelines
+### 結構指南
 
-1. **Clear Step Labeling**: Number or name each reasoning step
-2. **Logical Progression**: Each step builds on previous steps
-3. **Explicit Assumptions**: State assumptions clearly
-4. **Show Work**: Include calculations and intermediate results
-5. **Verification**: Check results for reasonableness
+1. **清楚的步驟標示**：為每個推理步驟編號或命名
+2. **邏輯性進展**：每個步驟都建立在前面步驟的基礎上
+3. **明確假設**：清楚陳述假設
+4. **展示工作**：包含計算和中間結果
+5. **驗證**：檢查結果的合理性
 
-### Common Pitfalls to Avoid
+### 常見陷阱避免
 
-- **Skipping Steps**: Don't jump to conclusions without showing reasoning
-- **Inconsistent Logic**: Ensure each step follows logically
-- **Unexplained Assumptions**: Make your reasoning transparent
-- **Insufficient Detail**: Provide enough detail for verification
-- **Circular Reasoning**: Avoid using conclusions to justify premises
+- **跳過步驟**：不要在未展示推理的情況下跳到結論
+- **邏輯不一致**：確保每個步驟都邏輯相承
+- **未解釋的假設**：讓你的推理過程透明
+- **細節不足**：提供足夠細節以供驗證
+- **循環推理**：避免用結論來證明前提
 
-## Next Steps
+## 下一步
 
-Ready to master more advanced techniques?
-- **[Multi-Modal Prompting](/docs/advanced/multi-modal)** - Work with text, images, and other data types
-- **[Prompt Chaining](/docs/advanced/prompt-chaining)** - Connect multiple prompts for complex workflows
-- **[Best Practices](/docs/best-practices/testing-prompts)** - Optimize your prompting effectiveness
+準備好掌握更進階的技巧了嗎？
+- **[Multi-Modal 提示](/docs/advanced/multi-modal)** - 處理文字、圖片和其他資料類型
+- **[提示鏈](/docs/advanced/prompt-chaining)** - 連接多個提示進行複雜工作流程
+- **[最佳實務](/docs/best-practices/testing-prompts)** - 最佳化你的提示效果
 
-:::tip CoT Development
-Practice chain-of-thought reasoning on problems in your domain. Start with simpler problems and gradually increase complexity. The key is making your thinking process explicit and systematic.
+:::tip CoT 開發
+在你的領域問題上練習思維鏈推理。從簡單問題開始，逐漸增加複雜度。關鍵是讓你的思考過程明確且系統化。
 :::

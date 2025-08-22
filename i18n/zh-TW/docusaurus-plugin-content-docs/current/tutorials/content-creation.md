@@ -2,472 +2,472 @@
 sidebar_position: 1
 ---
 
-# Content Creation Mastery
+# 內容創作精通指南
 
-Learn to craft prompts that generate high-quality content across different formats, audiences, and purposes. This tutorial provides practical examples and techniques for content creators.
+學習如何建構 Prompt 來產生高品質的內容，涵蓋不同格式、受眾和目的。本教學提供內容創作者實用的範例和技巧。
 
-## Blog Post Generation
+## 部落格文章生成
 
-### Basic Blog Post Prompt
-
-```python
-"""
-You are an experienced content marketer and blogger.
-
-Write a blog post about [TOPIC] that:
-- Targets [AUDIENCE]
-- Is [WORD_COUNT] words
-- Uses a [TONE] tone
-- Includes practical examples and actionable tips
-
-Structure:
-1. Compelling headline
-2. Hook-driven introduction
-3. 3-5 main sections with subheadings
-4. Conclusion with clear next steps
-
-SEO requirements:
-- Include [PRIMARY_KEYWORD] naturally throughout
-- Add relevant internal linking opportunities
-- Suggest meta description
-"""
-```
-
-### Advanced Blog Post with Research
+### 基本部落格文章 Prompt
 
 ```python
 """
-You are a senior content strategist with expertise in [INDUSTRY].
+你是一位經驗豐富的內容行銷專家和部落客。
 
-Research and write a comprehensive blog post about [SPECIFIC_TOPIC]:
+撰寫一篇關於 [主題] 的部落格文章，需要：
+- 針對 [目標受眾]
+- 字數約 [字數] 字
+- 使用 [語調] 的語氣
+- 包含實際案例和可行的建議
 
-Research Phase:
-1. Identify current trends and statistics in [TOPIC]
-2. Find 3-5 authoritative sources and expert quotes
-3. Analyze competitor content gaps
-4. Determine unique angle or perspective
+文章結構：
+1. 吸引人的標題
+2. 具有鉤子的開場
+3. 3-5 個主要段落，含小標題
+4. 附有明確後續步驟的結論
 
-Content Requirements:
-- Length: 2000-2500 words
-- Target audience: [SPECIFIC_AUDIENCE]
-- Include data-driven insights
-- Add original analysis or commentary
-- Provide downloadable resources or templates
-
-Format:
-- Executive summary (100 words)
-- Detailed sections with supporting data
-- Visual content suggestions (charts, infographics)
-- Call-to-action aligned with [BUSINESS_GOAL]
+SEO 要求：
+- 自然地融入 [主要關鍵字]
+- 加入相關的內部連結機會
+- 建議 meta description
 """
 ```
 
-**Example Implementation:**
-```python
-"""
-You are a senior content strategist with expertise in digital marketing.
-
-Research and write a comprehensive blog post about "AI-Powered Marketing Automation for Small Businesses":
-
-Research Phase:
-1. Identify current trends and statistics in marketing automation adoption
-2. Find 3-5 authoritative sources and expert quotes from marketing leaders
-3. Analyze competitor content gaps in small business automation
-4. Determine unique angle focusing on budget-conscious implementation
-
-Content Requirements:
-- Length: 2000-2500 words  
-- Target audience: Small business owners with $50K-$500K revenue
-- Include ROI data and cost-benefit analysis
-- Add original case studies from successful implementations
-- Provide downloadable automation workflow templates
-
-Format:
-- Executive summary highlighting key ROI potential
-- Implementation roadmap with budget considerations
-- Tool comparison matrix with pricing
-- Call-to-action for free automation audit
-"""
-```
-
-## Social Media Content
-
-### Multi-Platform Social Strategy
+### 進階部落格文章（含研究）
 
 ```python
 """
-Create a social media content series about [TOPIC] optimized for different platforms:
+你是一位專精於 [產業] 的資深內容策略師。
 
-Platform-Specific Requirements:
-LinkedIn (Professional):
-- 1500-character thought leadership post
-- Industry insights and professional takeaways
-- Business-focused call-to-action
+研究並撰寫一篇關於 [特定主題] 的全面性部落格文章：
 
-Twitter/X (Conversational):
-- Thread of 8-10 tweets (280 characters each)
-- Engaging hooks and conversation starters
-- Relevant hashtags and mentions
+研究階段：
+1. 識別 [主題] 的當前趋勢和統計數據
+2. 找出 3-5 個權威資料來源和專家引言
+3. 分析競爭對手的內容缺口
+4. 決定獨特的角度或觀點
 
-Instagram (Visual):
-- Carousel post with 5-7 slides
-- Visual-first content descriptions
-- Story-friendly format suggestions
+內容要求：
+- 長度：2000-2500 字
+- 目標受眾：[特定受眾]
+- 包含數據驅動的見解
+- 加入原創分析或評論
+- 提供可下載的資源或模板
 
-TikTok/YouTube Shorts (Video):
-- Video script with visual cues
-- Hook within first 3 seconds
-- Trending audio suggestions
-
-Content Theme: [SPECIFIC_THEME]
-Target Audience: [AUDIENCE_DESCRIPTION]
-Brand Voice: [TONE_AND_PERSONALITY]
-Campaign Goal: [AWARENESS/ENGAGEMENT/CONVERSION]
+格式：
+- 執行摘要（100字）
+- 含支持數據的詳細段落
+- 視覺內容建議（圖表、資訊圖表）
+- 與 [商業目標] 一致的行動呼籲
 """
 ```
 
-### Viral Content Formula
+**實作範例：**
+```python
+"""
+你是一位專精於數位行銷的資深內容策略師。
+
+研究並撰寫一篇關於「中小企業 AI 行銷自動化」的全面性部落格文章：
+
+Research Phase：
+1. 識別行銷自動化採用的當前趨勢和統計數據
+2. 找出 3-5 個權威來源和行銷領袖的專家引言
+3. 分析競爭對手在中小企業自動化領域的內容缺口
+4. 確定專注於預算考量實施的獨特角度
+
+內容要求：
+- 長度：2000-2500 字  
+- 目標受眾：年營收 150萬-1500萬台幣的中小企業主
+- 包含 ROI 數據和成本效益分析
+- 加入成功實施的原創案例研究
+- 提供可下載的自動化流程模板
+
+格式：
+- 突出關鍵 ROI 潛力的執行摘要
+- 含預算考量的實施路線圖
+- 工具比較矩陣與價格
+- 免費自動化診斷的行動呼籲
+"""
+```
+
+## 社群媒體內容
+
+### 多平台社群策略
 
 ```python
 """
-Create viral-potential social media content using this framework:
+創建關於 [主題] 的社群媒體內容系列，針對不同平台優化：
 
-Hook Elements:
-- Surprising statistic or counterintuitive fact
-- Relatable problem or frustration
-- Bold claim or controversial opinion
-- Story setup that creates curiosity
+平台特定要求：
+LinkedIn（專業導向）：
+- 1500 字元的思想領導力貼文
+- 產業洞察和專業心得
+- 以商業為焦點的行動呼籲
 
-Content Structure:
-1. Attention-grabbing opening (3-5 words max)
-2. Problem identification (audience pain point)
-3. Solution or insight reveal
-4. Social proof or credibility element
-5. Clear, actionable next step
+Twitter/X（對話式）：
+- 8-10 條推文串（每條 280 字元）
+- 吸引人的開場和話題起頭
+- 相關的 hashtag 和標記
 
-Platform Optimization:
-- Format for [PRIMARY_PLATFORM]
-- Include trending hashtags/keywords
-- Suggest visual elements or video concepts
-- Add engagement prompts (questions, polls)
+Instagram（視覺導向）：
+- 5-7 張圖片的輪播貼文
+- 以視覺為優先的內容描述
+- 適合限時動態的格式建議
 
-Topic: [YOUR_TOPIC]
-Audience: [TARGET_DEMOGRAPHIC]
-Desired Action: [SPECIFIC_GOAL]
+TikTok/YouTube Shorts（影片）：
+- 含視覺提示的影片腳本
+- 前 3 秒內的鉤子
+- 熱門音樂建議
+
+內容主題：[特定主題]
+目標受眾：[受眾描述]
+品牌聲音：[語調和個性]
+活動目標：[知名度/互動/轉換]
 """
 ```
 
-## Email Marketing
-
-### Newsletter Template System
+### 爆紅內容公式
 
 ```python
 """
-Create an email newsletter template system for [BUSINESS_TYPE]:
+使用此框架創建具爆紅潛力的社群媒體內容：
 
-Newsletter Components:
-1. Subject Line Variations (3 options)
-   - Curiosity-driven
-   - Benefit-focused  
-   - Urgency-based
+鉤子元素：
+- 令人驚訝的統計數據或反直覺的事實
+- 可共鳴的問題或挫折感
+- 大膽的主張或爭議性觀點
+- 創造好奇心的故事設定
 
-2. Header Section
-   - Personal greeting
-   - Issue number and date
-   - Brief what's inside preview
+內容結構：
+1. 抓住注意力的開場（最多 3-5 個字）
+2. 問題識別（受眾痛點）
+3. 解決方案或洞察揭露
+4. 社會證明或信譽元素
+5. 清楚、可行的下一步
 
-3. Main Content Sections
-   - Featured story/insight (200 words)
-   - Industry update or trend (100 words)
-   - Practical tip or tutorial (150 words)
-   - Community highlight or case study (100 words)
+平台優化：
+- 為 [主要平台] 格式化
+- 包含熱門 hashtag/關鍵字
+- 建議視覺元素或影片概念
+- 加入互動提示（問題、投票）
 
-4. Footer Elements
-   - Call-to-action (primary conversion goal)
-   - Social media links
-   - Unsubscribe and preferences
-
-Tone: [BRAND_VOICE]
-Audience: [SUBSCRIBER_DESCRIPTION]
-Frequency: [WEEKLY/BIWEEKLY/MONTHLY]
-Primary Goal: [ENGAGEMENT/EDUCATION/SALES]
-
-Include A/B testing suggestions for optimization.
+主題：[你的主題]
+受眾：[目標人群]
+期望行動：[特定目標]
 """
 ```
 
-### Conversion-Focused Email Sequences
+## Email 行銷
+
+### 電子報模板系統
 
 ```python
 """
-Design a 5-email welcome sequence for [PRODUCT/SERVICE]:
+為 [商業類型] 創建電子報模板系統：
 
-Email 1 - Welcome & Value Delivery (Send immediately):
-- Thank subscriber for joining
-- Deliver promised lead magnet
-- Set expectations for future emails
-- Soft brand introduction
+電子報組成：
+1. 主旨列變化（3 個選項）
+   - 好奇心導向
+   - 利益導向  
+   - 急迫性導向
 
-Email 2 - Problem Agitation (Send 2 days later):
-- Identify core problem your product solves
-- Share relatable scenarios and pain points
-- Build urgency around solving the problem
-- Tease upcoming solution
+2. 標題區塊
+   - 個人化問候
+   - 期號和日期
+   - 簡短內容預覽
 
-Email 3 - Solution Introduction (Send 4 days later):
-- Introduce your product as the solution
-- Highlight key features and benefits
-- Include customer testimonials or case studies
-- Address common objections
+3. 主要內容區塊
+   - 特色故事/洞察（200字）
+   - 產業更新或趨勢（100字）
+   - 實用技巧或教學（150字）
+   - 社群亮點或案例研究（100字）
 
-Email 4 - Social Proof & Credibility (Send 7 days later):
-- Share detailed customer success stories
-- Include metrics and specific results
-- Add expert endorsements or media mentions
-- Build trust and credibility
+4. 頁尾元素
+   - 行動呼籲（主要轉換目標）
+   - 社群媒體連結
+   - 取消訂閱和偏好設定
 
-Email 5 - Clear Call-to-Action (Send 10 days later):
-- Present special offer or incentive
-- Create urgency with limited-time bonus
-- Address final objections
-- Multiple clear calls-to-action
+語調：[品牌聲音]
+受眾：[訂閱者描述]
+頻率：[每週/雙週/每月]
+主要目標：[互動/教育/銷售]
 
-Each email specifications:
-- Subject lines (3 variations each)
-- 300-500 word body content
-- Mobile-optimized formatting
-- Conversion tracking recommendations
+包含 A/B 測試的優化建議。
 """
 ```
 
-## Video Scripts
-
-### Educational Video Framework
+### 轉換導向的 Email 序列
 
 ```python
 """
-Write a video script for [VIDEO_TYPE] about [TOPIC]:
+為 [產品/服務] 設計 5 封歡迎 Email 序列：
 
-Script Structure:
+Email 1 - 歡迎與價值傳遞（立即發送）：
+- 感謝訂閱者加入
+- 交付承諾的誘餌磁鐵
+- 設定未來 email 期待
+- 軟性品牌介紹
 
-[0-5 seconds] Hook:
-- Attention-grabbing opening statement
-- Promise of value delivery
-- Visual suggestion for opening shot
+Email 2 - 問題攪動（2天後發送）：
+- 識別你的產品解決的核心問題
+- 分享可共鳴的情境和痛點
+- 建立解決問題的急迫性
+- 預告即將到來的解決方案
 
-[5-15 seconds] Problem Setup:
-- Identify audience pain point
-- Relate to viewer's experience
-- Build curiosity for solution
+Email 3 - 解決方案介紹（4天後發送）：
+- 將你的產品介紹為解決方案
+- 突出關鍵特色和效益
+- 包含客戶見證或案例研究
+- 處理常見異議
 
-[15-90 seconds] Content Delivery:
-- Main teaching points (3-5 maximum)
-- Simple, actionable explanations
-- Visual aids and screen directions
-- Maintain engagement with questions/interactions
+Email 4 - 社會證明與信譽（7天後發送）：
+- 分享詳細的客戶成功故事
+- 包含指標和具體結果
+- 加入專家推薦或媒體報導
+- 建立信任和信譽
 
-[90-100 seconds] Conclusion:
-- Summarize key takeaways
-- Clear next step or call-to-action
-- End screen suggestions
+Email 5 - 明確行動呼籲（10天後發送）：
+- 呈現特別優惠或誘因
+- 用限時獎勵創造急迫性
+- 處理最終異議
+- 多個清楚的行動呼籲
 
-Additional Elements:
-- Suggested B-roll footage
-- Graphics or animation cues
-- Music/sound effect recommendations
-- Thumbnail concept ideas
-
-Target Length: [DURATION]
-Platform: [YOUTUBE/TIKTOK/INSTAGRAM/LINKEDIN]
-Audience Level: [BEGINNER/INTERMEDIATE/ADVANCED]
+每封 email 規格：
+- 主旨列（每封 3 個變化）
+- 300-500 字內容
+- 手機優化格式
+- 轉換追蹤建議
 """
 ```
 
-## Long-Form Content
+## 影片腳本
 
-### White Paper Creation
+### 教育影片框架
 
 ```python
 """
-Develop a comprehensive white paper on [TOPIC] for [INDUSTRY]:
+為 [影片類型] 撰寫關於 [主題] 的影片腳本：
 
-Executive Summary (500 words):
-- Problem statement and scope
-- Key findings overview
-- Primary recommendations
-- Business impact summary
+腳本結構：
 
-Main Content Structure:
+[0-5秒] 鉤子：
+- 抓住注意力的開場陳述
+- 承諾價值傳遞
+- 開場鏡頭的視覺建議
 
-1. Introduction & Market Context (750 words)
-   - Industry background and current challenges
-   - Market size and growth projections
-   - Stakeholder impact analysis
+[5-15秒] 問題設定：
+- 識別受眾痛點
+- 與觀眾經驗產生連結
+- 為解決方案建立好奇心
 
-2. Research Methodology (300 words)
-   - Data sources and collection methods
-   - Sample sizes and demographics
-   - Research limitations and scope
+[15-90秒] 內容傳遞：
+- 主要教學重點（最多3-5個）
+- 簡單、可行的解釋
+- 視覺輔助和畫面指示
+- 用問題/互動維持參與度
 
-3. Key Findings (1500 words)
-   - Data presentation with visualizations
-   - Trend analysis and insights
-   - Comparative analysis with benchmarks
+[90-100秒] 結論：
+- 總結關鍵要點
+- 清楚的下一步或行動呼籲
+- 結尾畫面建議
 
-4. Case Studies (1000 words)
-   - 2-3 detailed implementation examples
-   - Results and ROI measurements
-   - Lessons learned and best practices
+其他元素：
+- 建議的B-roll素材
+- 圖形或動畫提示
+- 音樂/音效建議
+- 縮圖概念想法
 
-5. Strategic Recommendations (750 words)
-   - Actionable next steps
-   - Implementation timeline
-   - Resource requirements and considerations
-
-6. Conclusion & Future Outlook (400 words)
-   - Summary of key insights
-   - Industry predictions
-   - Call-to-action for readers
-
-Requirements:
-- Professional, authoritative tone
-- Data-driven insights with citations
-- Visual content recommendations
-- Lead generation optimization
-- Industry-specific terminology and context
+目標長度：[時長]
+平台：[YOUTUBE/TIKTOK/INSTAGRAM/LINKEDIN]
+受眾程度：[初級/中級/高級]
 """
 ```
 
-## Content Optimization Techniques
+## 長篇內容
 
-### SEO-Optimized Content Framework
+### 白皮書創作
 
 ```python
 """
-Create SEO-optimized content for [TOPIC] targeting [PRIMARY_KEYWORD]:
+為 [產業] 開發關於 [主題] 的全面性白皮書：
 
-Keyword Strategy:
-- Primary keyword: [MAIN_KEYWORD] (target 1-2% density)
-- Secondary keywords: [3-5 RELATED_TERMS]
-- Long-tail variations: [5-8 SPECIFIC_PHRASES]
-- LSI keywords: [SEMANTIC_VARIATIONS]
+執行摘要（500字）：
+- 問題陳述和範圍
+- 關鍵發現概述
+- 主要建議
+- 商業影響總結
 
-Content Structure for SEO:
-1. Title Tag (60 characters max)
-   - Include primary keyword
-   - Compelling and click-worthy
-   - Brand mention if space allows
+主要內容結構：
 
-2. Meta Description (155 characters max)
-   - Primary keyword inclusion
-   - Value proposition
-   - Call-to-action
+1. 介紹與市場背景（750字）
+   - 產業背景和當前挑戰
+   - 市場規模和成長預測
+   - 利害關係人影響分析
 
-3. Header Hierarchy:
-   - H1: Primary keyword + value proposition
-   - H2s: Secondary keywords and main topics
-   - H3s: Supporting points and details
+2. 研究方法（300字）
+   - 資料來源和收集方法
+   - 樣本規模和人口統計
+   - 研究限制和範圍
 
-4. Content Requirements:
-   - Minimum 1500 words for competitive topics
-   - Natural keyword integration
-   - Internal linking opportunities (5-8 links)
-   - External authoritative source links (2-3)
-   - Featured snippet optimization
+3. 關鍵發現（1500字）
+   - 含視覺化的資料呈現
+   - 趨勢分析和洞察
+   - 與基準的比較分析
 
-5. User Engagement Elements:
-   - Table of contents for long content
-   - FAQ section for voice search
-   - Related questions and answers
-   - Visual content descriptions
+4. 案例研究（1000字）
+   - 2-3個詳細實施範例
+   - 結果和ROI測量
+   - 經驗教訓和最佳實務
 
-Content Topic: [SPECIFIC_SUBJECT]
-Search Intent: [INFORMATIONAL/NAVIGATIONAL/TRANSACTIONAL]
-Competition Level: [HIGH/MEDIUM/LOW]
-Target Audience: [DEMOGRAPHICS_AND_INTENT]
+5. 策略建議（750字）
+   - 可行的後續步驟
+   - 實施時程表
+   - 資源需求和考量
+
+6. 結論與未來展望（400字）
+   - 關鍵洞察總結
+   - 產業預測
+   - 讀者行動呼籲
+
+要求：
+- 專業、權威的語調
+- 含引用的資料驅動洞察
+- 視覺內容建議
+- 潛在客戶開發優化
+- 產業特定術語和背景
 """
 ```
 
-### Content Repurposing Strategy
+## 內容優化技巧
+
+### SEO優化內容框架
 
 ```python
 """
-Create a content repurposing strategy for [ORIGINAL_CONTENT_PIECE]:
+為 [主題] 創建SEO優化內容，針對 [主要關鍵字]：
 
-Original Asset Analysis:
-- Content type: [BLOG_POST/VIDEO/PODCAST/WHITEPAPER]
-- Length: [DURATION/WORD_COUNT]
-- Key points: [3-5 MAIN_TAKEAWAYS]
-- Target audience: [AUDIENCE_DESCRIPTION]
+關鍵字策略：
+- 主要關鍵字：[主關鍵字]（目標密度1-2%）
+- 次要關鍵字：[3-5個相關詞彙]
+- 長尾變化：[5-8個特定短語]
+- LSI關鍵字：[語義變化]
 
-Repurposing Plan:
+SEO內容結構：
+1. 標題標籤（最多60字元）
+   - 包含主要關鍵字
+   - 吸引人且值得點擊
+   - 空間允許時提及品牌
 
-Tier 1 - Direct Adaptations:
-1. [PLATFORM_1]: [FORMAT_ADAPTATION]
-2. [PLATFORM_2]: [FORMAT_ADAPTATION]  
-3. [PLATFORM_3]: [FORMAT_ADAPTATION]
+2. Meta描述（最多155字元）
+   - 包含主要關鍵字
+   - 價值主張
+   - 行動呼籲
 
-Tier 2 - Content Variations:
-1. Quote cards for social media (5-8 designs)
-2. FAQ document from main points
-3. Checklist or template creation
-4. Email newsletter section
+3. 標題層次：
+   - H1：主要關鍵字 + 價值主張
+   - H2：次要關鍵字和主要主題
+   - H3：支持論點和細節
 
-Tier 3 - Expanded Content:
-1. Detailed tutorial series
-2. Case study development
-3. Expert interview expansion
-4. Comparison guide creation
+4. 內容要求：
+   - 競爭性主題最少1500字
+   - 自然關鍵字整合
+   - 內部連結機會（5-8個連結）
+   - 外部權威來源連結（2-3個）
+   - 精選摘要優化
 
-Distribution Timeline:
-- Week 1: [IMMEDIATE_REPURPOSING]
-- Week 2-3: [MEDIUM_EFFORT_ADAPTATIONS]
-- Month 2-3: [EXPANDED_CONTENT_CREATION]
+5. 用戶參與元素：
+   - 長內容的目錄
+   - 語音搜尋的FAQ區塊
+   - 相關問答
+   - 視覺內容描述
 
-Success Metrics:
-- Engagement rates by platform
-- Traffic generation to original content
-- Lead generation from repurposed content
-- Brand awareness and reach expansion
+內容主題：[特定主題]
+搜尋意圖：[資訊性/導航性/交易性]
+競爭程度：[高/中/低]
+目標受眾：[人口統計和意圖]
 """
 ```
 
-## Quality Control Checklist
+### 內容再利用策略
 
-Before publishing any content, verify:
+```python
+"""
+為 [原創內容] 創建內容再利用策略：
 
-### Content Quality
-- [ ] Clear value proposition in opening
-- [ ] Logical flow and structure
-- [ ] Actionable insights or takeaways
-- [ ] Appropriate length for format and audience
-- [ ] Error-free grammar and spelling
+原始資產分析：
+- 內容類型：[部落格文章/影片/Podcast/白皮書]
+- 長度：[時長/字數]
+- 關鍵要點：[3-5個主要收穫]
+- 目標受眾：[受眾描述]
 
-### Audience Alignment
-- [ ] Matches target audience knowledge level
-- [ ] Addresses specific pain points or interests
-- [ ] Uses appropriate tone and language
-- [ ] Includes relevant examples and context
+再利用計畫：
 
-### Technical Optimization
-- [ ] SEO elements properly implemented
-- [ ] Platform-specific formatting applied
-- [ ] Visual content suggestions included
-- [ ] Call-to-action clearly defined
+第一層 - 直接適應：
+1. [平台1]：[格式適應]
+2. [平台2]：[格式適應]  
+3. [平台3]：[格式適應]
 
-### Brand Consistency
-- [ ] Aligns with brand voice and values
-- [ ] Maintains consistent messaging
-- [ ] Includes appropriate brand mentions
-- [ ] Supports overall marketing objectives
+第二層 - 內容變化：
+1. 社群媒體金句卡（5-8個設計）
+2. 從主要論點製作FAQ文件
+3. 檢查清單或模板創建
+4. 電子報區塊
 
-## Next Steps
+第三層 - 擴展內容：
+1. 詳細教學系列
+2. 案例研究開發
+3. 專家訪談擴展
+4. 比較指南創建
 
-Ready to advance your content creation skills?
-- **[Code Generation](/docs/tutorials/code-generation)** - Learn to create technical content and documentation
-- **[Data Analysis](/docs/tutorials/data-analysis)** - Generate insights and reports from data
-- **[Advanced Techniques](/docs/advanced/chain-of-thought)** - Master sophisticated prompting methods
+發布時程表：
+- 第1週：[立即再利用]
+- 第2-3週：[中等程度適應]
+- 第2-3個月：[擴展內容創建]
 
-:::tip Content Creation Workflow
-Develop a systematic approach: research → outline → draft → optimize → distribute → measure. Use these prompts as templates and customize them for your specific needs and brand voice.
+成功指標：
+- 各平台參與率
+- 原始內容的流量生成
+- 再利用內容的潛客開發
+- 品牌知名度和觸及擴展
+"""
+```
+
+## 品質控制檢查表
+
+發布任何內容前，請驗證：
+
+### 內容品質
+- [ ] 開場有清楚的價值主張
+- [ ] 邏輯流程和結構
+- [ ] 可行的洞察或收穫
+- [ ] 格式和受眾適當的長度
+- [ ] 無文法和拼字錯誤
+
+### 受眾對齊
+- [ ] 符合目標受眾知識水平
+- [ ] 處理特定痛點或興趣
+- [ ] 使用適當的語調和語言
+- [ ] 包含相關範例和背景
+
+### 技術優化
+- [ ] SEO元素適當實施
+- [ ] 應用平台特定格式
+- [ ] 包含視覺內容建議
+- [ ] 行動呼籲清楚定義
+
+### 品牌一致性
+- [ ] 與品牌聲音和價值觀一致
+- [ ] 保持一致的訊息
+- [ ] 包含適當的品牌提及
+- [ ] 支持整體行銷目標
+
+## 下一步
+
+準備好提升你的內容創作技能了嗎？
+- **[程式碼生成](/docs/tutorials/code-generation)** - 學習創建技術內容和文件
+- **[數據分析](/docs/tutorials/data-analysis)** - 從數據中生成洞察和報告
+- **[進階技巧](/docs/advanced/chain-of-thought)** - 掌握複雜的提示技巧
+
+:::tip 內容創作工作流程
+發展系統化方法：研究 → 大綱 → 草稿 → 優化 → 發布 → 測量。使用這些提示作為模板，並根據你的特定需求和品牌聲音進行客製化。
 :::

@@ -2,15 +2,15 @@
 sidebar_position: 2
 ---
 
-# Prompt Chaining & Workflows
+# Prompt Chaining 提示鏈與工作流程
 
-Learn to create sophisticated AI workflows by connecting multiple prompts in sequence, enabling complex multi-step processes and maintaining context across interactions.
+學會透過序列連接多個提示來創建精密的 AI 工作流程，實現複雜的多步驟過程並在互動中維持脈絡。就像組裝一台電腦，每個零件都要在正確的步驟安裝！
 
-## Understanding Prompt Chaining
+## 理解 Prompt Chaining
 
-Prompt chaining involves breaking complex tasks into smaller, manageable steps where the output of one prompt becomes the input for the next. This approach improves reliability, enables specialized processing, and allows for better quality control.
+Prompt Chaining 就是將複雜任務拆解成更小、更好管理的步驟，其中一個提示的輸出成為下一個提示的輸入。這種方法提高可靠性、實現專業化處理，並允許更好的品質控制。
 
-### Basic Chaining Structure
+### 基本鏈結構
 
 ```python
 """
@@ -30,609 +30,609 @@ Output: [Final deliverable]
 """
 ```
 
-### Benefits of Chaining
+### 鏈接的好處
 
-- **Quality Control**: Each step can be validated before proceeding
-- **Specialization**: Each prompt optimized for specific task
-- **Error Isolation**: Problems can be identified and fixed at specific steps
-- **Scalability**: Complex workflows become manageable
-- **Reusability**: Individual chain components can be reused
+- **品質控制**：每個步驟都可以在繼續前驗證
+- **專業化**：每個提示都針對特定任務最佳化
+- **錯誤隔離**：問題可以在特定步驟識別和修復
+- **可擴展性**：複雜工作流程變得可管理
+- **可重用性**：單獨的鏈組件可以重用
 
-## Content Creation Workflows
+## 內容創作工作流程
 
-### Blog Post Production Chain
+### 部落格文章製作鏈
 
 ```python
 """
-CHAIN 1: Research & Outline Generation
+鏈 1：研究與大綱產生
 
-You are a content strategist researching [TOPIC] for [AUDIENCE].
+你是一位為 [目標受眾] 研究 [主題] 的內容策略師。
 
-Research requirements:
-- Find 5-7 key subtopics that should be covered
-- Identify current trends and statistics
-- Locate 3-5 authoritative sources
-- Determine unique angle or perspective
-- Assess keyword opportunities
+研究需求：
+- 找出 5-7 個應該涵蓋的核心子主題
+- 識別目前趨勢和統計數據
+- 定位 3-5 個權威来源
+- 確定獨特角度或觀點
+- 評估關鍵字機會
 
-Deliverable: Structured research summary with:
-- Key points organized by subtopic
-- Supporting statistics and data
-- Source citations
-- Recommended keywords
-- Unique positioning angle
+交付成果：結構化研究摘要，包含：
+- 按子主題組織的要點
+- 支持統計和數據
+- 來源引用
+- 建議關鍵字
+- 獨特定位角度
 
-Topic: [SPECIFIC_TOPIC]
-Audience: [TARGET_AUDIENCE] 
-Word count goal: [LENGTH]
+主題：[具體主題]
+受眾：[目標受眾]
+字數目標：[長度]
 """
 
 # Output becomes input for Chain 2
 
 """
-CHAIN 2: Detailed Outline Creation
+鏈 2：詳細大綱創建
 
-Using this research: [RESEARCH_OUTPUT]
+使用這份研究：[RESEARCH_OUTPUT]
 
-Create a comprehensive blog post outline that includes:
-- Compelling headline options (3 variations)
-- Introduction with hook and preview
-- 4-6 main sections with subheadings
-- Key points and supporting evidence for each section
-- Conclusion with clear call-to-action
-- Meta description and SEO elements
+創建全面的部落格文章大綱，包括：
+- 吸引人的標題選擇（3 個變化）
+- 具有鉤子和預覽的引言
+- 4-6 個主要節段和子標題
+- 每個節段的要點和支持證據
+- 具有明確行動引導的結論
+- Meta 描述和 SEO 元素
 
-Ensure logical flow and reader engagement throughout.
+確保全篇的邏輯流程和讀者參與度。
 """
 
 # Output becomes input for Chain 3
 
 """
-CHAIN 3: First Draft Generation
+鏈 3：初稿產生
 
-Using this outline: [OUTLINE_OUTPUT]
+使用這份大綱：[OUTLINE_OUTPUT]
 
-Write the complete blog post following the structure exactly:
-- Engaging introduction that hooks readers
-- Well-developed sections with smooth transitions
-- Include specific examples and data points
-- Maintain consistent tone and voice
-- Strong conclusion with actionable next steps
+按照結構精確撰寫完整的部落格文章：
+- 吸引讀者的引人入勝的開頭
+- 發展完善的節段和流暢的轉接
+- 包含具體例子和數據要點
+- 保持一致的語調和聲音
+- 具有可行動下一步驟的強有力結論
 
-Target length: [WORD_COUNT]
-Writing style: [PROFESSIONAL/CONVERSATIONAL/TECHNICAL]
+目標長度：[WORD_COUNT]
+寫作風格：[專業/對話式/技術性]
 """
 
 # Output becomes input for Chain 4
 
 """
-CHAIN 4: Optimization & Polish
+鏈 4：最佳化與拋光
 
-Review and enhance this draft: [DRAFT_OUTPUT]
+檢視和增強這份草稿：[DRAFT_OUTPUT]
 
-Optimization focus:
-- SEO optimization (keyword integration, headers)
-- Readability improvements (sentence variety, transitions)
-- Engagement elements (questions, examples, formatting)
-- Call-to-action effectiveness
-- Mobile-friendly formatting
+最佳化重點：
+- SEO 最佳化（關鍵字整合、標題）
+- 可讀性改善（句子變化、轉接）
+- 參與元素（問題、例子、格式）
+- 行動引導效率
+- 手機友善格式
 
-Provide the polished final version with specific improvements noted.
+提供拋光後的最終版本，並註明具體改進之處。
 """
 ```
 
-### Marketing Campaign Development Chain
+### 行銷活動開發鏈
 
 ```python
 """
-CHAIN 1: Market Analysis
+鏈 1：市場分析
 
-You are a marketing strategist analyzing the market for [PRODUCT/SERVICE].
+你是一位分析 [產品/服務] 市場的行銷策略師。
 
-Conduct comprehensive market analysis:
-- Target audience segments and personas
-- Competitive landscape assessment
-- Market trends and opportunities
-- Channel preferences and behaviors
-- Budget allocation recommendations
+進行全面的市場分析：
+- 目標受眾區塊和人物設定
+- 競爭格局評估
+- 市場趨勢和機會
+- 渠道偏好和行為
+- 預算分配建議
 
-Output format: Strategic foundation document with clear segments and opportunities identified.
+輸出格式：策略基礎文件，明確識別區塊和機會。
 """
 
 """
-CHAIN 2: Campaign Strategy Development
+鏈 2：活動策略開發
 
-Based on this market analysis: [ANALYSIS_OUTPUT]
+基於這份市場分析：[ANALYSIS_OUTPUT]
 
-Develop comprehensive campaign strategy:
-- Primary campaign objectives and KPIs
-- Target audience prioritization
-- Key messaging framework
-- Channel strategy and mix
-- Timeline and budget allocation
-- Creative direction and themes
+開發全面的活動策略：
+- 主要活動目標和 KPI
+- 目標受眾優先序
+- 核心訊息框架
+- 渠道策略和組合
+- 時間表和預算分配
+- 創意方向和主題
 
-Focus on the highest-opportunity segment identified in the analysis.
+重點關注分析中識別的最高機會區塊。
 """
 
 """
-CHAIN 3: Creative Asset Creation
+鏈 3：創意素材創作
 
-Using this campaign strategy: [STRATEGY_OUTPUT]
+使用這份活動策略：[STRATEGY_OUTPUT]
 
-Create specific creative assets:
-- Email sequences (3-5 emails with subject lines)
-- Social media content (posts for each platform)
-- Ad copy variations (headlines, descriptions, CTAs)
-- Landing page copy and structure
-- Blog post topics supporting the campaign
+創建具體的創意素材：
+- 電子郵件序列（3-5 封電子郵件和主旨行）
+- 社群媒體內容（各平台的貼文）
+- 廣告文案變化（標題、描述、CTA）
+- 着陸頁文案和結構
+- 支持活動的部落格文章主題
 
-Ensure all assets align with the messaging framework and brand voice.
+確保所有素材都符合訊息框架和品牌聲音。
 """
 
 """
-CHAIN 4: Implementation & Measurement Plan
+鏈 4：實作與衡量計畫
 
-Based on the complete campaign: [CREATIVE_OUTPUT]
+基於完整的活動：[CREATIVE_OUTPUT]
 
-Create detailed implementation roadmap:
-- Week-by-week execution timeline
-- Resource requirements and assignments
-- Testing and optimization protocols
-- Success metrics and tracking setup
-- Budget monitoring and adjustment triggers
-- Risk mitigation strategies
+創建詳細的實作路線圖：
+- 週序實行時間表
+- 資源需求和任務分配
+- 測試和最佳化協議
+- 成功指標和追蹤設置
+- 預算監控和調整觸發機制
+- 風險緩解策略
 
-Include specific tools and processes for campaign management.
+包含活動管理的具體工具和流程。
 """
 ```
 
-## Product Development Workflows
+## 產品開發工作流程
 
-### Feature Development Chain
+### 功能開發鏈
 
 ```python
 """
-CHAIN 1: User Research Synthesis
+鏈 1：用戶研究綜合
 
-You are a UX researcher analyzing user feedback for [PRODUCT/FEATURE].
+你是一位分析 [產品/功能] 用戶回饋的 UX 研究員。
 
-User research data: [INSERT_RESEARCH_DATA]
+用戶研究資料：[INSERT_RESEARCH_DATA]
 
-Synthesize findings into:
-- Key user pain points (prioritized)
-- Unmet needs and opportunities
-- User journey friction points
-- Feature request patterns
-- Behavioral insights and preferences
+將研究結果綜合為：
+- 關鍵用戶痛點（按優先序排列）
+- 未滿足的需求和機會
+- 用戶旅程摩擦點
+- 功能請求模式
+- 行為見解和偏好
 
-Output: User insight summary with prioritized opportunity areas.
+輸出：用戶見解摘要，附優先序機會領域。
 """
 
 """
-CHAIN 2: Requirements Definition
+鏈 2：需求定義
 
-Based on these user insights: [RESEARCH_SYNTHESIS]
+基於這些用戶見解：[RESEARCH_SYNTHESIS]
 
-Define detailed feature requirements:
-- Core functionality specifications
-- User stories with acceptance criteria
-- Technical requirements and constraints
-- Integration points with existing features
-- Performance and scalability requirements
-- Security and compliance considerations
+定義詳細的功能需求：
+- 核心功能規格
+- 用戶故事和驗收標準
+- 技術需求和限制
+- 與現有功能的整合點
+- 效能和可擴展性需求
+- 安全和合規考量
 
-Prioritize requirements by user impact and technical feasibility.
+按用戶影響和技術可行性優先序排列需求。
 """
 
 """
-CHAIN 3: Technical Architecture Design
+鏈 3：技術架構設計
 
-Using these requirements: [REQUIREMENTS_OUTPUT]
+使用這些需求：[REQUIREMENTS_OUTPUT]
 
-Design technical architecture:
-- System architecture and component design
-- Data models and API specifications
-- Third-party integrations and dependencies
-- Security and performance considerations
-- Implementation phases and milestones
-- Testing strategy and quality assurance
+設計技術架構：
+- 系統架構和組件設計
+- 資料模型和 API 規格
+- 第三方整合和依賴關係
+- 安全和效能考量
+- 實作階段和里程碑
+- 測試策略和品質保證
 
-Include diagrams and technical specifications for development team.
+包含為開發團隊提供的圖表和技術規格。
 """
 
 """
-CHAIN 4: Go-to-Market Planning
+鏈 4：上市計畫
 
-With the complete feature specification: [ARCHITECTURE_OUTPUT]
+使用完整的功能規格：[ARCHITECTURE_OUTPUT]
 
-Develop launch strategy:
-- Rollout plan and user communication
-- Feature documentation and help content
-- Success metrics and monitoring setup
-- User onboarding and training materials
-- Marketing and announcement strategy
-- Support team preparation and FAQs
+開發推出策略：
+- 推出計畫和用戶溝通
+- 功能文件和幫助內容
+- 成功指標和監控設置
+- 用戶入門和培訓材料
+- 行銷和公告策略
+- 支援團隊準備和常見問題
 
-Create comprehensive launch playbook for cross-functional execution.
+為跨部門實行創建全面的推出手冊。
 """
 ```
 
-## Data Analysis Workflows
+## 資料分析工作流程
 
-### Business Intelligence Chain
+### 商業情報鏈
 
 ```python
 """
-CHAIN 1: Data Exploration & Quality Assessment
+鏈 1：資料探索與品質評估
 
-You are a data analyst examining [DATASET_TYPE] for [BUSINESS_OBJECTIVE].
+你是一位為 [商業目標] 檢查 [資料集類型] 的資料分析師。
 
-Raw data: [INSERT_DATA]
+原始資料：[INSERT_DATA]
 
-Perform initial analysis:
-- Data quality assessment (completeness, accuracy, consistency)
-- Descriptive statistics and distributions  
-- Pattern identification and anomaly detection
-- Data relationship exploration
-- Missing data and outlier analysis
+執行初始分析：
+- 資料品質評估（完整性、準確性、一致性）
+- 描述性統計和分布
+- 模式識別和異常檢測
+- 資料關係探索
+- 缺失資料和離群值分析
 
-Output: Data quality report with preliminary insights and recommended analysis approaches.
+輸出：資料品質報告，附初步見解和建議分析方法。
 """
 
 """
-CHAIN 2: Statistical Analysis & Modeling
+鏈 2：統計分析與建模
 
-Based on this data assessment: [EXPLORATION_OUTPUT]
+基於這份資料評估：[EXPLORATION_OUTPUT]
 
-Conduct detailed statistical analysis:
-- Hypothesis testing for key business questions
-- Correlation and causation analysis
-- Trend analysis and forecasting
-- Segmentation and clustering
-- Statistical significance testing
-- Model development and validation
+進行詳細統計分析：
+- 關鍵商業問題的假設檢定
+- 相關性和因果關係分析
+- 趨勢分析和預測
+- 分段和聚類
+- 統計顯著性檢定
+- 模型開發和驗證
 
-Focus on the most promising patterns identified in the exploration phase.
+重點關注在探索階段識別的最有前景的模式。
 """
 
 """
-CHAIN 3: Business Insight Generation
+鏈 3：商業見解產生
 
-Using these analytical results: [ANALYSIS_OUTPUT]
+使用這些分析結果：[ANALYSIS_OUTPUT]
 
-Generate actionable business insights:
-- Key findings translation to business language
-- Strategic implications and opportunities
-- Risk identification and mitigation recommendations
-- Performance benchmarking and competitive analysis
-- ROI projections and financial impact
-- Implementation priority ranking
+產生可行動的商業見解：
+- 關鍵結果轉譯成商業語言
+- 策略含義和機會
+- 風險識別和緩解建議
+- 效能基準和競爭分析
+- ROI 預測和財務影響
+- 實作優先序排列
 
-Present insights in executive-friendly format with supporting data.
+以高管友善的格式呈現見解，附支持數據。
 """
 
 """
-CHAIN 4: Recommendation & Action Plan
+鏈 4：建議與行動計畫
 
-Based on these business insights: [INSIGHTS_OUTPUT]
+基於這些商業見解：[INSIGHTS_OUTPUT]
 
-Develop comprehensive action plan:
-- Prioritized recommendations with rationale
-- Implementation roadmap and timeline
-- Resource requirements and budget estimates
-- Success metrics and monitoring framework
-- Risk mitigation strategies
-- Stakeholder communication plan
+開發全面的行動計畫：
+- 按優先序排列的建議和理由
+- 實作路線圖和時間表
+- 資源需求和預算估算
+- 成功指標和監控框架
+- 風險緩解策略
+- 利害關係人溝通計畫
 
-Include specific next steps and owner assignments for each recommendation.
+包含每個建議的具體下一步驟和負責人分配。
 """
 ```
 
-## Technical Problem-Solving Workflows
+## 技術問題解決工作流程
 
-### System Troubleshooting Chain
+### 系統故障排除鏈
 
 ```python
 """
-CHAIN 1: Problem Definition & Information Gathering
+鏈 1：問題定義與資訊收集
 
-You are a systems engineer investigating [SYSTEM_ISSUE].
+你是一位調查 [系統問題] 的系統工程師。
 
-Initial problem report: [ISSUE_DESCRIPTION]
+初始問題報告：[ISSUE_DESCRIPTION]
 
-Systematically gather information:
-- Exact problem symptoms and frequency
-- Timeline of when issues began
-- System components and configurations involved
-- Recent changes or deployments
-- Error logs and diagnostic data
-- User impact and business consequences
+系統性地收集資訊：
+- 確切的問題症狀和頻率
+- 問題開始的時間軸
+- 涉及的系統組件和配置
+- 最近的更改或部署
+- 錯誤日誌和診斷資料
+- 用戶影響和業務後果
 
-Output: Comprehensive problem statement with all relevant technical details.
+輸出：包含所有相關技術細節的全面問題陳述。
 """
 
 """
-CHAIN 2: Root Cause Analysis
+鏈 2：根本原因分析
 
-Using this problem information: [PROBLEM_DEFINITION]
+使用這份問題資訊：[PROBLEM_DEFINITION]
 
-Conduct systematic root cause analysis:
-- Create hypothesis list for potential causes
-- Analyze system logs and metrics for evidence
-- Test each hypothesis with diagnostic steps
-- Eliminate or confirm potential causes
-- Identify the most likely root cause(s)
-- Document evidence supporting conclusions
+進行系統性的根本原因分析：
+- 為潛在原因建立假設清單
+- 分析系統日誌和指標尋找證據
+- 用診斷步驟測試每個假設
+- 排除或確認潛在原因
+- 識別最可能的根本原因
+- 記錄支持結論的證據
 
-Use structured troubleshooting methodology (fishbone diagram, 5 whys, etc.).
+使用結構化故障排除方法（魚骨圖、5個為什麼等）。
 """
 
 """
-CHAIN 3: Solution Design & Testing
+鏈 3：解決方案設計與測試
 
-Based on the root cause analysis: [ROOT_CAUSE_ANALYSIS]
+基於根本原因分析：[ROOT_CAUSE_ANALYSIS]
 
-Design and validate solution:
-- Develop multiple solution approaches
-- Evaluate solutions for effectiveness, risk, and complexity
-- Create implementation plan with rollback procedures
-- Design testing methodology to validate fixes
-- Identify monitoring and alerting improvements
-- Plan change management and communication
+設計和驗證解決方案：
+- 開發多種解決方法
+- 評估解決方案的效果、風險和複雜性
+- 建立帶有回滾程序的實作計畫
+- 設計測試方法來驗證修復
+- 識別監控和警報改進
+- 規劃變更管理和溝通
 
-Include specific technical steps and validation criteria.
+包含具體的技術步驟和驗證標準。
 """
 
 """
-CHAIN 4: Implementation & Prevention
+鏈 4：實作與預防
 
-Using the validated solution: [SOLUTION_DESIGN]
+使用已驗證的解決方案：[SOLUTION_DESIGN]
 
-Execute implementation and prevention strategy:
-- Detailed implementation checklist
-- Rollback plan and success criteria
-- Post-implementation monitoring plan
-- Documentation updates and knowledge sharing
-- Process improvements to prevent recurrence
-- Training and skill development recommendations
+執行實作和預防策略：
+- 詳細的實作檢查清單
+- 回滾計畫和成功標準
+- 實作後監控計畫
+- 文件更新和知識分享
+- 程序改進以防止復發
+- 培訓和技能開發建議
 
-Ensure comprehensive resolution and organizational learning.
+確保全面解決和組織學習。
 """
 ```
 
-## Research & Analysis Workflows
+## 研究與分析工作流程
 
-### Competitive Intelligence Chain
+### 競爭情報鏈
 
 ```python
 """
-CHAIN 1: Competitive Landscape Mapping
+鏈 1：競爭格局地圖縚製
 
-You are a competitive intelligence analyst researching [INDUSTRY/MARKET].
+你是一位研究 [產業/市場] 的競爭情報分析師。
 
-Map the competitive landscape:
-- Identify direct and indirect competitors
-- Categorize competitors by size, focus, and strategy
-- Analyze market positioning and differentiation
-- Assess competitive strengths and weaknesses
-- Evaluate market share and growth trajectories
-- Identify emerging threats and opportunities
+縚製競爭格局：
+- 識別直接和間接競爭者
+- 按規模、焦點和策略對競爭者分類
+- 分析市場定位和差異化
+- 評估競爭優勢和弱點
+- 評估市場份額和成長軌跡
+- 識別新興威脅和機會
 
-Output: Comprehensive competitor database with strategic categorization.
+輸出：全面的競爭者資料庫，附策略分類。
 """
 
 """
-CHAIN 2: Deep Competitor Analysis
+鏈 2：深度競爭者分析
 
-Focus on top 3-5 competitors identified: [COMPETITOR_MAPPING]
+重點關注識別的前 3-5 主要競爭者：[COMPETITOR_MAPPING]
 
-Conduct detailed analysis for each major competitor:
-- Product feature comparison and gaps
-- Pricing strategy and value proposition
-- Marketing and sales approach analysis
-- Technology stack and capabilities assessment
-- Financial performance and funding status
-- Customer feedback and satisfaction analysis
+對每個主要競爭者進行詳細分析：
+- 產品功能比較和空缺
+- 定價策略和價值主張
+- 行銷和銷售方法分析
+- 技術堆疊和能力評估
+- 財務績效和資金狀況
+- 客戶回饋和滿意度分析
 
-Create detailed profiles for strategic planning.
+為策略規劃建立詳細讔案。
 """
 
 """
-CHAIN 3: Strategic Implications Assessment
+鏈 3：策略含義評估
 
-Using the competitor analysis: [COMPETITOR_PROFILES]
+使用競爭者分析：[COMPETITOR_PROFILES]
 
-Assess strategic implications:
-- Competitive advantages and vulnerabilities
-- Market opportunity identification
-- Threat assessment and risk evaluation
-- Pricing and positioning recommendations
-- Product development priorities
-- Partnership and acquisition opportunities
+評估策略含義：
+- 競爭優勢和弱點
+- 市場機會識別
+- 威脅評估和風險評估
+- 定價和定位建議
+- 產品開發優先順序
+- 合作夥伴和收購機會
 
-Focus on actionable strategic insights for decision-making.
+重點關注可行動的策略見解以供決策參考。
 """
 
 """
-CHAIN 4: Action Plan Development
+鏈 4：行動計畫開發
 
-Based on strategic implications: [STRATEGIC_ASSESSMENT]
+基於策略含義：[STRATEGIC_ASSESSMENT]
 
-Develop competitive response strategy:
-- Short-term tactical responses (0-6 months)
-- Medium-term strategic initiatives (6-18 months)
-- Long-term competitive positioning (18+ months)
-- Resource allocation and investment priorities
-- Success metrics and monitoring framework
-- Contingency plans for competitive responses
+開發競爭回應策略：
+- 短期戰術回應（0-6 個月）
+- 中期策略主動（6-18 個月）
+- 長期競爭定位（18+ 個月）
+- 資源分配和投資優先順序
+- 成功指標和監控框架
+- 競爭回應的應變計畫
 
-Create executable roadmap with clear milestones and accountability.
+建立具有明確里程碑和責任制的可執行路線圖。
 """
 ```
 
-## Advanced Chaining Techniques
+## 進階鏈接技巧
 
-### Parallel Processing Chains
+### 平行處理鏈
 
 ```python
 """
-PARALLEL CHAIN WORKFLOW: Comprehensive Product Launch Analysis
+平行鏈工作流程：全面產品上市分析
 
-CHAIN A: Market Analysis Track
-A1: Market size and segmentation analysis
-A2: Customer needs and behavior analysis  
-A3: Market opportunity quantification
-A4: Go-to-market strategy recommendations
+鏈 A：市場分析路線
+A1：市場規模和分段分析
+A2：客戶需求和行為分析
+A3：市場機會量化
+A4：上市策略建議
 
-CHAIN B: Competitive Analysis Track  
-B1: Competitor identification and mapping
-B2: Feature and pricing comparison
-B3: Competitive positioning analysis
-B4: Differentiation strategy development
+鏈 B：競爭分析路線
+B1：競爭者識別和地圖縚製
+B2：功能和定價比較
+B3：競爭定位分析
+B4：差異化策略開發
 
-CHAIN C: Financial Analysis Track
-C1: Cost structure and pricing analysis
-C2: Revenue projections and scenarios
-C3: Investment requirements assessment
-C4: Financial risk and return analysis
+鏈 C：財務分析路線
+C1：成本結構和定價分析
+C2：收入預測和情境分析
+C3：投資需求評估
+C4：財務風險和報酬分析
 
-SYNTHESIS CHAIN: Integration & Strategy
-S1: Combine outputs from Chains A, B, C
-S2: Identify synergies and conflicts
-S3: Develop integrated launch strategy
-S4: Create comprehensive business case
+綜合鏈：整合與策略
+S1：結合鏈 A、B、C 的輸出
+S2：識別協同效應和衝突
+S3：開發整合的上市策略
+S4：建立全面的商業案例
 
-This parallel approach allows specialized analysis while maintaining overall coherence.
+這種平行方法允許專業化分析，同時保持整體一致性。
 """
 ```
 
-### Conditional Chaining
+### 條件式鏈接
 
 ```python
 """
-CONDITIONAL WORKFLOW: Customer Support Issue Resolution
+條件式工作流程：客戶支援問題解決
 
-CHAIN 1: Issue Classification
-Classify support ticket: [TICKET_CONTENT]
-Output: Issue type (Technical, Billing, Feature Request, Bug Report)
+鏈 1：問題分類
+對支援工單進行分類：[TICKET_CONTENT]
+輸出：問題類型（技術、計費、功能請求、錯誤回報）
 
-IF Issue Type = "Technical":
-→ CHAIN 2A: Technical troubleshooting workflow
-→ CHAIN 3A: Technical solution implementation
+如果問題類型 = "技術"：
+→ 鏈 2A：技術故障排除工作流程
+→ 鏈 3A：技術解決方案實作
 
-IF Issue Type = "Billing":  
-→ CHAIN 2B: Billing inquiry workflow
-→ CHAIN 3B: Account resolution process
+如果問題類型 = "計費"：
+→ 鏈 2B：計費查詢工作流程
+→ 鏈 3B：帳戶解決程序
 
-IF Issue Type = "Feature Request":
-→ CHAIN 2C: Feature evaluation workflow  
-→ CHAIN 3C: Product roadmap integration
+如果問題類型 = "功能請求"：
+→ 鏈 2C：功能評估工作流程
+→ 鏈 3C：產品路線圖整合
 
-IF Issue Type = "Bug Report":
-→ CHAIN 2D: Bug verification workflow
-→ CHAIN 3D: Development prioritization process
+如果問題類型 = "錯誤回報"：
+→ 鏈 2D：錯誤驗證工作流程
+→ 鏈 3D：開發優先序排列程序
 
-Each conditional path optimizes for the specific issue type while maintaining consistent quality standards.
+每個條件路徑都針對特定問題類型最佳化，同時維持一致的品質標準。
 """
 ```
 
-### Iterative Refinement Chains
+### 迭代改進鏈
 
 ```python
 """
-ITERATIVE CHAIN: Creative Brief Development
+迭代鏈：創意簡報開發
 
-ITERATION 1: Initial Concept
-Create basic creative brief for [CAMPAIGN]
-Focus: Core message and target audience
+迭代 1：初始概念
+為 [活動] 建立基本創意簡報
+重點：核心訊息和目標受眾
 
-ITERATION 2: Enhancement  
-Refine brief based on: [ITERATION_1_OUTPUT]
-Add: Competitive differentiation and channel strategy
+迭代 2：增強
+基於迭代 1 的輸出改進簡報：[ITERATION_1_OUTPUT]
+新增：競爭差異化和渠道策略
 
-ITERATION 3: Optimization
-Further refine: [ITERATION_2_OUTPUT]  
-Add: Creative executions and measurement framework
+迭代 3：最佳化
+進一步改進：[ITERATION_2_OUTPUT]
+新增：創意執行和衡量框架
 
-ITERATION 4: Finalization
-Polish and complete: [ITERATION_3_OUTPUT]
-Add: Budget allocation and timeline
+迭代 4：最終化
+拋光和完成：[ITERATION_3_OUTPUT]
+新增：預算分配和時間表
 
-Each iteration builds sophistication while maintaining focus on core objectives.
+每個迭代都增加精密度，同時保持對核心目標的關注。
 """
 ```
 
-## Chain Quality Control
+## 鏈品質控制
 
-### Validation Checkpoints
+### 驗證檢查點
 
-Between each chain step, validate:
-- **Output Quality**: Does output meet requirements?
-- **Context Preservation**: Is important information maintained?
-- **Logical Consistency**: Do results make sense?
-- **Completeness**: Are all requirements addressed?
-- **Accuracy**: Are facts and calculations correct?
+在每個鏈步驟之間，驗證：
+- **輸出品質**：輸出是否符合需求？
+- **脈絡保留**：重要資訊是否得到維持？
+- **邏輯一致性**：結果是否合理？
+- **完整性**：是否滿足所有需求？
+- **準確性**：事實和計算是否正確？
 
-### Error Handling
+### 錯誤處理
 
 ```python
 """
-ERROR HANDLING PROTOCOL:
+錯誤處理協議：
 
-IF Chain Output is Incomplete:
-→ Retry with enhanced prompt specificity
-→ Request missing information explicitly
-→ Provide additional context if needed
+如果鏈輸出不完整：
+→ 以增強的提示精確度重試
+→ 明確要求缺失的資訊
+→ 如需要提供額外脈絡
 
-IF Chain Output is Inconsistent:
-→ Review previous chain outputs for conflicts  
-→ Clarify requirements and constraints
-→ Re-run problematic chain with corrections
+如果鏈輸出不一致：
+→ 檢視先前的鏈輸出是否有衝突
+→ 澄清需求和限制
+→ 以修正後的內容重新運行有問題的鏈
 
-IF Chain Output Quality is Low:
-→ Analyze prompt clarity and specificity
-→ Add examples or templates
-→ Increase context or reduce complexity
+如果鏈輸出品質低落：
+→ 分析提示的清晰度和精確度
+→ 新增範例或模板
+→ 增加脈絡或降低複雜度
 
-Always validate critical outputs before proceeding to next chain.
+在進入下一個鏈之前，始終驗證關鍵輸出。
 """
 ```
 
-## Implementation Best Practices
+## 實作最佳實務
 
-### Chain Design Principles
+### 鏈設計原則
 
-1. **Single Responsibility**: Each chain step should have one clear purpose
-2. **Clear Interfaces**: Define exact input/output formats
-3. **Maintainable Complexity**: Keep individual steps manageable
-4. **Reusable Components**: Design chains that can be reused
-5. **Quality Gates**: Build in validation and error handling
+1. **單一責任**：每個鏈步驟應該有一個明確的目的
+2. **清晰介面**：定義精確的輸入/輸出格式
+3. **可管理的複雜度**：保持單個步驟的可管理性
+4. **可重用組件**：設計可重用的鏈
+5. **品質閨道**：內建驗證和錯誤處理
 
-### Documentation Standards
+### 文件標準
 
 ```python
 """
-CHAIN DOCUMENTATION TEMPLATE:
+鏈文件模板：
 
-Chain Name: [Descriptive Name]
-Purpose: [What this chain accomplishes]
-Prerequisites: [Required inputs and conditions]
-Steps: [Detailed step descriptions]
-Outputs: [Expected deliverables]
-Quality Criteria: [Success measures]
-Error Handling: [What to do when things go wrong]
-Dependencies: [Other chains or systems required]
+鏈名稱：[描述性名稱]
+目的：[這個鏈完成什麼]
+前置條件：[所需輸入和條件]
+步驟：[詳細步驟描述]
+輸出：[預期交付成果]
+品質標準：[成功衡量標準]
+錯誤處理：[出問題時該怎麼辦]
+依賴關係：[所需的其他鏈或系統]
 """
 ```
 
-## Next Steps
+## 下一步
 
-Ready to master more advanced techniques?
-- **[Multi-Modal Prompting](/docs/advanced/multi-modal)** - Integrate text, images, and other data types
-- **[Best Practices](/docs/best-practices/testing-prompts)** - Optimize your chaining effectiveness
-- **[Production Systems](/docs/best-practices/production-deployment)** - Deploy chains in real applications
+準備好掌握更進階的技巧了嗎？
+- **[Multi-Modal 提示](/docs/advanced/multi-modal)** - 整合文字、圖片和其他資料類型
+- **[最佳實務](/docs/best-practices/testing-prompts)** - 最佳化你的鏈接效率
+- **[生產系統](/docs/best-practices/production-deployment)** - 在實際應用中部署鏈
 
-:::tip Chain Development
-Start with simple 2-3 step chains and gradually increase complexity. Test each chain thoroughly before connecting them together. The key to successful chaining is clear interfaces and robust error handling.
+:::tip 鏈開發小抃步
+從簡單的 2-3 步驟鏈開始，逐漸增加複雜度。在將鏈連接在一起之前，要彼底測試每個鏈。成功鏈接的關鍵在於清晰的介面和強健的錯誤處理。
 :::

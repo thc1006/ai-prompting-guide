@@ -2,93 +2,101 @@
 sidebar_position: 1
 ---
 
-# Business Intelligence
+# 商業情報應用
 
-Apply AI prompting techniques to business intelligence and data analysis workflows.
+將 AI 提示技巧應用於商業情報和數據分析工作流程。
 
-## Executive Reporting
+## 主管報告
 
-### Automated Summary Generation
-
-```
-Based on this quarterly data:
-[DATA]
-
-Generate an executive summary that includes:
-1. Key performance indicators and trends
-2. Notable achievements and concerns
-3. Strategic recommendations for next quarter
-4. Risk assessment and mitigation strategies
-
-Format the output for C-level presentation.
-```
-
-### Dashboard Insights
-
-Transform raw metrics into actionable insights:
+### 自動摘要生成
 
 ```
-Analyze these dashboard metrics and provide:
-- 3 most significant trends
-- 2 potential business opportunities
-- 1 critical risk requiring immediate attention
+基於台灣電子製造業的季報資料：
+[資料]
 
-Use data-driven evidence and specify confidence levels.
+生成一份主管摘要，包含：
+1. 關鍵績效指標和趨勢
+2. 值得注意的成就和憂慮
+3. 下一季度的策略廚議
+4. 風險評估和緩解策略
+5. 對台灣市場環境的影響評估
+
+請以適合高階主管簡報的格式輸出。
 ```
 
-## Data Analysis Patterns
+### 儀表板洞察
 
-### Trend Analysis
-
-```
-Examine this time-series data for:
-- Seasonal patterns
-- Growth trends
-- Anomaly detection
-- Forecasting insights
-
-Provide statistical confidence and methodology notes.
-```
-
-### Comparative Analysis
+將原始指標轉化為可行的洞察：
 
 ```
-Compare these datasets across:
-- Performance metrics
-- Market segments
-- Geographic regions
-- Time periods
+分析台灣新創公司的儀表板指標並提供：
+- 3 個最顯著的趨勢
+- 2 個潛在的商業機會
+- 1 個需要立即關注的關鍵風險
+- 台灣市場特有的考量因子
 
-Highlight the top 3 differentiating factors.
+使用數據驅動的證據並指定信心水平。
 ```
 
-## Integration with BI Tools
+## 數據分析模式
 
-### Power BI Integration
+### 趨勢分析
 
-- Custom visuals with AI insights
-- Automated report generation
-- Natural language queries
-- Predictive analytics integration
+```
+檢視台灣零售業的時間序列資料，分析：
+- 季節性模式（考慮農曆新年、中秋節等台灣節慶）
+- 成長趨勢
+- 異常檢測
+- 預測洞察
+- COVID-19 影響評估
 
-### Tableau Integration
+提供統計信心度和方法學說明。
+```
 
-- Story generation from dashboards
-- Automated annotations
-- Insight recommendations
-- Performance optimization suggestions
+### 比較分析
 
-### Excel Integration
+```
+比較台灣各地區的數據集：
+- 績效指標
+- 市場區塊
+- 地理區域（北中南東、離島）
+- 時間期間
+- 產業聚集區影響
 
-- Formula optimization
-- Data cleaning suggestions
-- Pattern recognition
-- Report automation
+突出前 3 名的關鍵差異化因子。
+```
 
-## Best Practices
+## 與 BI 工具整合
 
-- Always validate AI insights with domain experts
-- Implement confidence scoring for recommendations
-- Maintain audit trails for AI-generated content
-- Regular model performance reviews
-- Clear documentation of AI assistance in reports
+### Power BI 整合
+
+- 結合 AI 洞察的客製視覺化
+- 自動化報告生成
+- 自然語言查詢（支援繁中）
+- 預測分析整合
+
+### Tableau 整合
+
+- 從儀表板生成故事
+- 自動註釋功能
+- 洞察廚議
+- 效能優化廚議
+
+### Excel 整合
+
+- 公式優化
+- 資料清理廊議
+- 模式識別
+- 報告自動化
+- 中文資料處理支援
+
+## 最佳實務
+
+- 始終與領域專家驗證 AI 洞察
+- 為廚議實施信心評分
+- 維護 AI 生成內容的稽核軌跡
+- 定期模型效能審查
+- 在報告中清楚記錄 AI 協助
+- 考慮台灣的法規環境和產業特性
+- 確保資料隱私和安全合規
+- 提供中文化的報告和介面

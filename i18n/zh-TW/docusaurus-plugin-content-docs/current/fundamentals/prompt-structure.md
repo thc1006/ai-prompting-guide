@@ -2,396 +2,397 @@
 sidebar_position: 3
 ---
 
-# Prompt Structure & Anatomy
+# Prompt 結構與解析
 
-Understanding the building blocks of effective prompts is crucial for consistent AI interactions. This guide breaks down prompt anatomy and provides frameworks for structuring your instructions.
+了解有效 prompts 的組成要素對於一致的 AI 互動至關重要。這份指南將拆解 prompt 的結構，並提供架構你指令的框架。
 
-## The CLEAR Framework
+## CLEAR 框架
 
-Use the **CLEAR** framework to structure your prompts:
+使用 **CLEAR** 框架來架構你的 prompts：
 
-- **C**ontext - Set the scene and background
-- **L**ength - Specify output length requirements  
-- **E**xamples - Provide samples when needed
-- **A**ction - Define the specific task
-- **R**esults - Describe the expected output format
+- **C**ontext（脈絡）- 設定場景和背景
+- **L**ength（長度）- 指定輸出長度要求  
+- **E**xamples（範例）- 需要時提供範例
+- **A**ction（行動）- 定義具體任務
+- **R**esults（結果）- 描述預期的輸出格式
 
-### CLEAR in Practice
+### CLEAR 實際應用
 
 ```python
-# Context
-"""You are a senior software architect reviewing system design proposals."""
+# 脈絡
+"""你是一位資深軟體架構師，正在審查系統設計提案。"""
 
-# Length  
-"""Provide a detailed review of 800-1000 words."""
+# 長度  
+"""提供一份 800-1000 字的詳細審查報告。"""
 
-# Examples
+# 範例
 """
-Example feedback format:
-✅ Strengths: [list key strengths]
-⚠️ Concerns: [list potential issues]
-💡 Recommendations: [specific suggestions]
+回饋格式範例：
+✅ 優點：[列出主要優點]
+⚠️ 疑慮：[列出潛在問題]
+💡 建議：[具體建議]
 """
 
-# Action
-"""Review the attached microservices architecture design focusing on scalability, maintainability, and security."""
+# 行動
+"""審查附件的微服務架構設計，重點關注可擴展性、可維護性和安全性。"""
 
-# Results
-"""Structure your response as a formal architectural review with sections for strengths, concerns, and recommendations."""
+# 結果
+"""將你的回應結構化為正式的架構審查報告，包含優點、疑慮和建議等章節。"""
 ```
 
-## Essential Prompt Components
+## 基本 Prompt 組成要素
 
-### 1. Role Assignment
+### 1. 角色指派
 
-Define who the AI should act as to set appropriate context and expertise level.
+定義 AI 應該扮演誰，以設定適當的脈絡和專業程度。
 
-**Basic Role:**
+**基本角色：**
 ```python
-"You are a data scientist..."
+"你是一位資料科學家..."
 ```
 
-**Advanced Role with Context:**
+**進階角色與脈絡：**
 ```python
-"""You are a senior data scientist at a Fortune 500 retail company with 
-10+ years of experience in customer behavior analysis and predictive modeling. 
-You specialize in turning complex data insights into actionable business strategies."""
+"""你是一位在財富 500 大零售公司任職的資深資料科學家，
+擁有超過 10 年的顧客行為分析和預測建模經驗。
+你擅長將複雜的數據洞察轉化為可執行的商業策略。"""
 ```
 
-**Multiple Roles:**
+**多重角色：**
 ```python
-"""You are wearing two hats:
-1. Technical architect - ensuring scalability and performance
-2. Business analyst - considering cost and resource implications"""
+"""你同時扮演兩個角色：
+1. 技術架構師 - 確保可擴展性和效能
+2. 商業分析師 - 考慮成本和資源影響"""
 ```
 
-### 2. Task Definition
+### 2. 任務定義
 
-Be specific about what you want the AI to accomplish.
+明確說明你要 AI 完成什麼。
 
-**Vague Task:**
+**模糊的任務：**
 ```python
-"Help me with my presentation"
+"幫我弄簡報"
 ```
 
-**Clear Task:**
+**清楚的任務：**
 ```python
-"""Create an outline for a 20-minute presentation on AI ethics for 
-a non-technical executive audience, including key talking points, 
-potential Q&A topics, and suggested visual aids."""
+"""為非技術背景的高階主管聽眾，建立一份關於 AI 倫理的 20 分鐘簡報大綱，
+包含重點講述要點、可能的問答主題，以及建議的視覺輔助素材。"""
 ```
 
-**Multi-Step Task:**
+**多步驟任務：**
 ```python
-"""Please complete these steps in order:
-1. Analyze the provided customer feedback data
-2. Identify the top 5 recurring issues
-3. Categorize issues by severity (High/Medium/Low)
-4. Suggest specific action items for each high-severity issue
-5. Create a summary report for stakeholder review"""
+"""請依序完成以下步驟：
+1. 分析提供的客戶回饋資料
+2. 找出前 5 個重複出現的問題
+3. 按嚴重程度分類問題（高/中/低）
+4. 為每個高嚴重度問題提供具體的行動項目
+5. 建立一份供利害關係人審閱的摘要報告"""
 ```
 
-### 3. Context Setting
+### 3. 脈絡設定
 
-Provide relevant background information that influences the output.
+提供會影響輸出的相關背景資訊。
 
-**Temporal Context:**
+**時間脈絡：**
 ```python
-"""Context: This is for our Q4 2024 board meeting, following a challenging 
-year with supply chain disruptions and market volatility."""
+"""背景：這是為了我們 2024 年第四季的董事會議準備的，
+今年因為供應鏈中斷和市場波動充滿挑戰。"""
 ```
 
-**Audience Context:**
+**受眾脈絡：**
 ```python
-"""Target audience: Technical leads who are familiar with cloud architecture 
-but new to Kubernetes deployment strategies."""
+"""目標受眾：熟悉雲端架構但對 Kubernetes 部署策略陌生的技術主管。"""
 ```
 
-**Situational Context:**
+**情境脈絡：**
 ```python
-"""Situation: Our startup just raised Series A funding and needs to scale 
-from 10 to 50 engineers in 6 months while maintaining code quality."""
+"""情況：我們的新創公司剛完成 A 輪募資，需要在 6 個月內
+從 10 位工程師擴編到 50 位，同時維持程式碼品質。"""
 ```
 
-### 4. Format Specifications
+### 4. 格式規範
 
-Define exactly how you want the output structured.
+明確定義你想要的輸出結構。
 
-**Simple Format:**
+**簡單格式：**
 ```python
-"Format your response as a numbered list with brief explanations."
+"將你的回應格式化為帶有簡短說明的編號清單。"
 ```
 
-**Structured Format:**
+**結構化格式：**
 ```python
 """
-Format your response using this structure:
+使用以下結構來格式化你的回應：
 
-## Executive Summary
-[2-3 sentence overview]
+## 執行摘要
+[2-3 句概述]
 
-## Key Findings
-- Finding 1: [description and impact]
-- Finding 2: [description and impact]
+## 關鍵發現
+- 發現 1：[描述和影響]
+- 發現 2：[描述和影響]
 
-## Recommendations
-1. **Immediate Actions** (0-30 days)
-2. **Short-term Goals** (1-3 months)  
-3. **Long-term Strategy** (3-12 months)
+## 建議事項
+1. **立即行動** (0-30 天)
+2. **短期目標** (1-3 個月)  
+3. **長期策略** (3-12 個月)
 
-## Next Steps
-[Specific action items with owners]
+## 下一步行動
+[具體行動項目與負責人]
 """
 ```
 
-**Template Format:**
+**範本格式：**
 ```python
-"""Use this exact template for each product review:
+"""每個產品評論都使用這個範本：
 
-**Product:** [name]
-**Category:** [category]
-**Rating:** [1-5 stars]
-**Pros:** [3-4 bullet points]
-**Cons:** [2-3 bullet points]  
-**Best For:** [target user type]
-**Price Value:** [justify rating]
+**產品：** [名稱]
+**類別：** [類別]
+**評分：** [1-5 星]
+**優點：** [3-4 個要點]
+**缺點：** [2-3 個要點]  
+**最適合：** [目標使用者類型]
+**性價比：** [評分理由]
 """
 ```
 
-### 5. Constraints and Parameters
+### 5. 限制條件與參數
 
-Set clear boundaries and requirements.
+設定清楚的界限和要求。
 
-**Length Constraints:**
+**長度限制：**
 ```python
 """
-- Executive summary: exactly 100 words
-- Main content: 800-1200 words
-- Conclusion: 50-75 words
-"""
-```
-
-**Style Constraints:**
-```python
-"""
-Writing style requirements:
-- Professional but conversational tone
-- Use active voice
-- Avoid jargon unless defined
-- Include relevant statistics
-- Write for 8th-grade reading level
+- 執行摘要：剛好 100 字
+- 主要內容：800-1200 字
+- 結論：50-75 字
 """
 ```
 
-**Content Constraints:**
+**風格限制：**
 ```python
 """
-Constraints:
-- Focus only on open-source solutions
-- Budget limit: $50,000 annually
-- Must integrate with existing Salesforce system
-- Compliance with GDPR and CCPA required
-"""
-```
-
-## Advanced Structural Patterns
-
-### 1. Hierarchical Prompting
-
-Break complex tasks into hierarchical components.
-
-```python
-"""
-Primary Goal: Create a comprehensive marketing strategy
-
-Level 1: Strategy Framework
-- Market analysis
-- Competitive positioning
-- Target audience segmentation
-
-Level 2: Tactical Plans (for each Level 1 item)
-- Specific initiatives
-- Resource requirements
-- Success metrics
-
-Level 3: Implementation Details (for high-priority tactics)
-- Week-by-week action plans
-- Responsible parties
-- Dependencies and risks
+寫作風格要求：
+- 專業但親切的語氣
+- 使用主動語態
+- 避免術語，除非有定義
+- 包含相關統計數據
+- 以國中程度的閱讀水準撰寫
 """
 ```
 
-### 2. Conditional Logic
-
-Use if-then statements for complex scenarios.
-
+**內容限制：**
 ```python
 """
-Analyze this code and provide feedback based on these conditions:
-
-IF the code is a beginner's project:
-- Focus on fundamental concepts and best practices
-- Provide encouraging feedback with learning resources
-- Suggest incremental improvements
-
-IF the code is production-level:
-- Emphasize security, performance, and maintainability
-- Flag potential issues with severity levels
-- Recommend architectural improvements
-
-IF the code has security vulnerabilities:
-- IMMEDIATELY flag all security issues
-- Provide secure alternatives with examples
-- Explain the risks in business terms
+限制條件：
+- 只聚焦於開源解決方案
+- 預算上限：每年 150 萬台幣
+- 必須與現有的 Salesforce 系統整合
+- 需要符合 GDPR 和 CCPA 規範
 """
 ```
 
-### 3. Multi-Perspective Analysis
+## 進階結構模式
 
-Request analysis from different viewpoints.
+### 1. 層級式 Prompting
+
+將複雜任務分解為層級式組件。
 
 ```python
 """
-Evaluate this business proposal from three perspectives:
+主要目標：建立全面的行銷策略
 
-🏢 Executive Perspective:
-- Strategic alignment
-- ROI and financial impact
-- Risk assessment
+第一層：策略框架
+- 市場分析
+- 競爭定位
+- 目標受眾區隔
 
-👨‍💻 Technical Perspective:
-- Implementation complexity
-- Resource requirements
-- Technical risks and dependencies
+第二層：戰術計畫（針對每個第一層項目）
+- 具體方案
+- 資源需求
+- 成功指標
 
-👥 User Perspective:
-- User experience impact
-- Adoption challenges
-- Training and support needs
-
-For each perspective, provide specific concerns and recommendations.
+第三層：執行細節（針對高優先順序戰術）
+- 逐週行動計畫
+- 負責單位
+- 依賴關係與風險
 """
 ```
 
-## Prompt Optimization Techniques
+### 2. 條件邏輯
 
-### 1. Specificity Ladder
+對複雜情境使用 if-then 陳述。
 
-Start broad, then add specificity in layers.
-
-**Level 1 (Basic):**
 ```python
-"Write about customer service"
+"""
+根據以下條件分析這段程式碼並提供回饋：
+
+如果這是初學者的專案：
+- 專注於基礎概念和最佳實務
+- 提供鼓勵性的回饋與學習資源
+- 建議漸進式改進
+
+如果這是生產環境等級的程式碼：
+- 強調安全性、效能和可維護性
+- 標記潛在問題並標註嚴重程度
+- 推薦架構改進方案
+
+如果程式碼有安全漏洞：
+- 立即標記所有安全問題
+- 提供安全的替代方案與範例
+- 用商業術語解釋風險
+"""
 ```
 
-**Level 2 (Targeted):**
+### 3. 多角度分析
+
+從不同觀點要求分析。
+
 ```python
-"Write a guide about customer service for SaaS companies"
+"""
+從三個角度評估這個商業提案：
+
+🏢 高階主管角度：
+- 策略一致性
+- 投資報酬率和財務影響
+- 風險評估
+
+👨‍💻 技術角度：
+- 實施複雜度
+- 資源需求
+- 技術風險和依賴關係
+
+👥 使用者角度：
+- 使用者體驗影響
+- 採用挑戰
+- 培訓和支援需求
+
+針對每個角度，提供具體的疑慮和建議。
+"""
 ```
 
-**Level 3 (Specific):**
+## Prompt 優化技巧
+
+### 1. 具體程度階梯
+
+從廣泛開始，然後逐層增加具體性。
+
+**第一級（基礎）：**
 ```python
-"Write a customer service playbook for B2B SaaS companies with 100+ enterprise clients, focusing on technical support escalation procedures"
+"寫一些關於客戶服務的內容"
 ```
 
-**Level 4 (Highly Specific):**
+**第二級（有目標）：**
 ```python
-"""Create a customer service playbook for B2B SaaS companies serving 100+ enterprise clients.
-
-Focus Areas:
-- Technical support escalation (L1→L2→L3)
-- SLA management and communication
-- Enterprise client relationship protocols
-- Knowledge base optimization
-
-Format: Operations manual with process flows, templates, and metrics
-Audience: Customer success managers and support team leads
-Length: 3000-4000 words with actionable checklists"""
+"為 SaaS 公司寫一份客戶服務指南"
 ```
 
-### 2. Progressive Enhancement
-
-Build prompts by adding enhancement layers.
-
-**Base Prompt:**
+**第三級（具體）：**
 ```python
-"Explain machine learning algorithms"
+"為擁有 100+ 企業客戶的 B2B SaaS 公司撰寫客戶服務手冊，
+重點放在技術支援升級程序"
 ```
 
-**+ Audience:**
+**第四級（高度具體）：**
 ```python
-"Explain machine learning algorithms for business executives"
+"""為服務 100+ 企業客戶的 B2B SaaS 公司建立客戶服務手冊。
+
+重點領域：
+- 技術支援升級（L1→L2→L3）
+- SLA 管理和溝通
+- 企業客戶關係協議
+- 知識庫優化
+
+格式：包含流程圖、範本和指標的營運手冊
+受眾：客戶成功經理和支援團隊主管
+長度：3000-4000 字，附可執行的檢查清單"""
 ```
 
-**+ Context:**
+### 2. 漸進式增強
+
+透過添加增強層來建構 prompts。
+
+**基礎 Prompt：**
 ```python
-"Explain machine learning algorithms for business executives considering AI implementation"
+"解釋機器學習演算法"
 ```
 
-**+ Format:**
+**+ 受眾：**
 ```python
-"Explain machine learning algorithms for business executives considering AI implementation, structured as a decision-making framework"
+"為企業高階主管解釋機器學習演算法"
 ```
 
-**+ Examples:**
+**+ 脈絡：**
 ```python
-"""Explain machine learning algorithms for business executives considering AI implementation, structured as a decision-making framework.
-
-Include real-world examples like:
-- Netflix recommendation systems
-- Fraud detection in banking  
-- Predictive maintenance in manufacturing"""
+"為正在考慮導入 AI 的企業高階主管解釋機器學習演算法"
 ```
 
-## Common Structural Mistakes
-
-### 1. Buried Instructions
-**Problem:** Key instructions hidden in long text
-**Solution:** Put critical requirements at the beginning or end
-
-### 2. Conflicting Requirements
-**Problem:** Asking for "brief but comprehensive" analysis
-**Solution:** Prioritize requirements and be specific about trade-offs
-
-### 3. Unclear Success Criteria
-**Problem:** No way to evaluate if the output meets expectations
-**Solution:** Define specific, measurable success criteria
-
-### 4. Missing Context Hierarchy
-**Problem:** All information treated with equal importance
-**Solution:** Clearly indicate what's most important
-
-## Testing Prompt Structure
-
-### Quality Checklist
-- [ ] Role clearly defined with appropriate expertise level
-- [ ] Task broken into specific, actionable components  
-- [ ] Context provided without information overload
-- [ ] Output format explicitly specified
-- [ ] Constraints and requirements clearly stated
-- [ ] Success criteria identifiable
-
-### A/B Testing Framework
-1. Create two versions with different structures
-2. Test with same input data
-3. Compare output quality across dimensions
-4. Identify which structural elements improve results
-5. Iterate and refine
-
-## Next Steps
-
-Now that you understand prompt structure, explore:
-- **[Common Patterns](./common-patterns)** - Learn proven prompting techniques
-- **[Practical Tutorials](/docs/tutorials/content-creation)** - Apply structures to real scenarios
-- **[Advanced Techniques](/docs/advanced/chain-of-thought)** - Complex prompting strategies
-
-:::tip Structure Template
-Save this template for quick prompt structuring:
+**+ 格式：**
+```python
+"為正在考慮導入 AI 的企業高階主管解釋機器學習演算法，
+結構化為決策框架"
 ```
-Role: [Who should the AI act as]
-Context: [Important background information]  
-Task: [Specific action to perform]
-Format: [How to structure output]
-Constraints: [Limitations and requirements]
+
+**+ 範例：**
+```python
+"""為正在考慮導入 AI 的企業高階主管解釋機器學習演算法，
+結構化為決策框架。
+
+包含真實世界的例子，像是：
+- Netflix 推薦系統
+- 銀行業的詐騙偵測  
+- 製造業的預測性維護"""
+```
+
+## 常見的結構錯誤
+
+### 1. 埋藏的指令
+**問題：** 關鍵指令隱藏在長文字中
+**解決方案：** 把重要要求放在開頭或結尾
+
+### 2. 矛盾的要求
+**問題：** 要求「簡短但全面」的分析
+**解決方案：** 優先排序要求並明確說明取捨
+
+### 3. 不明確的成功標準
+**問題：** 無法評估輸出是否符合期望
+**解決方案：** 定義具體、可衡量的成功標準
+
+### 4. 缺少脈絡層級
+**問題：** 所有資訊都被視為同等重要
+**解決方案：** 清楚標示什麼最重要
+
+## 測試 Prompt 結構
+
+### 品質檢查清單
+- [ ] 角色明確定義，有適當的專業程度
+- [ ] 任務分解為具體、可執行的組件  
+- [ ] 提供脈絡但不資訊過載
+- [ ] 明確指定輸出格式
+- [ ] 清楚陳述限制和要求
+- [ ] 可識別成功標準
+
+### A/B 測試框架
+1. 建立兩個不同結構的版本
+2. 用相同的輸入資料測試
+3. 跨維度比較輸出品質
+4. 識別哪些結構元素能改善結果
+5. 迭代和精煉
+
+## 下一步
+
+現在你已經了解 prompt 結構，來探索：
+- **[常見模式](./common-patterns)** - 學習經過驗證的 prompting 技巧
+- **[實用教學](/docs/tutorials/content-creation)** - 將結構應用到實際場景
+- **[進階技巧](/docs/advanced/chain-of-thought)** - 複雜的 prompting 策略
+
+:::tip 結構範本
+儲存這個範本以便快速建構 prompt：
+```
+角色：[AI 應該扮演誰]
+脈絡：[重要背景資訊]  
+任務：[要執行的具體行動]
+格式：[如何架構輸出]
+限制：[限制條件和要求]
 ```
 :::

@@ -17,13 +17,13 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Start Learning AI Prompting 🚀
+            開始學習 AI 提示詞 🚀
           </Link>
           <Link
             className="button button--outline button--secondary button--lg"
             to="/docs/fundamentals/quick-start"
             style={{marginLeft: '1rem'}}>
-            Quick Start Guide
+            快速入門指南
           </Link>
         </div>
       </div>

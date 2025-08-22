@@ -2,13 +2,13 @@
 sidebar_position: 4
 ---
 
-# Markdown Features
+# Markdown 功能
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
+Docusaurus 支援 **[Markdown](https://daringfireball.net/projects/markdown/syntax)** 以及一些**額外功能**。
 
 ## Front Matter
 
-Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
+Markdown 文件的頂部有一個被稱為 [Front Matter](https://jekyllrb.com/docs/front-matter/) 的元數據區塊：
 
 ```text title="my-doc.md"
 ---
@@ -18,42 +18,42 @@ description: My document description
 slug: /my-custom-url
 ---
 
-## Markdown heading
+## Markdown 標題
 
-Markdown text with [links](./hello.md)
+帶有[連結](./hello.md)的 Markdown 文字
 ```
 
-## Links
+## 連結
 
-Regular Markdown links are supported, using url paths or relative file paths.
+支援一般的 Markdown 連結，可以使用 URL 路徑或相對檔案路徑。
 
 ```md
-Let me re-direct you to the [getting started page](../intro).
+讓我將你導向[入門教學頁面](../intro)。
 ```
 
-Let me re-direct you to the [getting started page](../intro).
+讓我將你導向[入門教學頁面](../intro)。
 
-## Images
+## 圖片
 
-Regular Markdown images are supported.
+支援一般的 Markdown 圖片。
 
-You can use absolute paths to reference images in the static directory (`static/img/logo.svg`):
-
-```md
-![Docusaurus logo](/img/logo.svg)
-```
-
-![Docusaurus logo](/img/logo.svg)
-
-You can reference images relative to the current file as well. This is particularly useful to colocate images close to the Markdown files using them:
+你可以使用絕對路徑來參照 static 目錄中的圖片（`static/img/logo.svg`）：
 
 ```md
 ![Docusaurus logo](/img/logo.svg)
 ```
 
-## Code Blocks
+![Docusaurus logo](/img/logo.svg)
 
-Markdown code blocks are supported with Syntax highlighting.
+你也可以使用相對於當前檔案的路徑來參照圖片。這對於將圖片放置在使用它們的 Markdown 檔案附近特別有用：
+
+```md
+![Docusaurus logo](/img/logo.svg)
+```
+
+## 程式碼區塊
+
+支援帶有語法高亮的 Markdown 程式碼區塊。
 
     ```jsx title="src/components/HelloDocusaurus.js"
     function HelloDocusaurus() {
@@ -69,37 +69,37 @@ function HelloDocusaurus() {
 }
 ```
 
-## Admonitions
+## 警告方塊
 
-Docusaurus has a special syntax to create admonitions and callouts:
+Docusaurus 有特殊的語法來建立警告和提示方塊：
 
-    :::tip My tip
+    :::tip 我的小訣竅
 
-    Use this awesome feature option
-
-    :::
-
-    :::danger Take care
-
-    This action is dangerous
+    使用這個強大的功能選項
 
     :::
 
-:::tip My tip
+    :::danger 要小心
 
-Use this awesome feature option
+    這個操作很危險
+
+    :::
+
+:::tip 我的小訣竅
+
+使用這個強大的功能選項
 
 :::
 
-:::danger Take care
+:::danger 要小心
 
-This action is dangerous
+這個操作很危險
 
 :::
 
-## MDX and React Components
+## MDX 和 React 組件
 
-[MDX](https://mdxjs.com/) can make your documentation more **interactive** and allows using any **React components inside Markdown**:
+[MDX](https://mdxjs.com/) 可以讓你的文件更加**互動**，並允許在 Markdown 中使用任何 **React 組件**：
 
 ```jsx
 export const Highlight = ({children, color}) => (
@@ -112,15 +112,15 @@ export const Highlight = ({children, color}) => (
       cursor: 'pointer',
     }}
     onClick={() => {
-      alert(`You clicked the color ${color} with label ${children}`)
+      alert(`你點擊了顏色 ${color}，標籤為 ${children}`)
     }}>
     {children}
   </span>
 );
 
-This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+這是 <Highlight color="#25c2a0">Docusaurus 綠色</Highlight>！
 
-This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+這是 <Highlight color="#1877F2">Facebook 藍色</Highlight>！
 ```
 
 export const Highlight = ({children, color}) => (
@@ -133,12 +133,12 @@ export const Highlight = ({children, color}) => (
       cursor: 'pointer',
     }}
     onClick={() => {
-      alert(`You clicked the color ${color} with label ${children}`);
+      alert(`你點擊了顏色 ${color}，標籤為 ${children}`);
     }}>
     {children}
   </span>
 );
 
-This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+這是 <Highlight color="#25c2a0">Docusaurus 綠色</Highlight>！
 
-This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+這是 <Highlight color="#1877F2">Facebook 藍色</Highlight>！

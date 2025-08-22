@@ -2,72 +2,103 @@
 sidebar_position: 4
 ---
 
-# Team Collaboration
+# 團隊協作
 
-Build effective workflows for AI prompting in team environments.
+在團隊環境中建立有效的 AI 提示工作流程。
 
-## Organizational Framework
+## 組織框架
 
-### Governance Structure
+### 治理結構
 
-Establish clear roles and responsibilities:
+建立清楚的角色與責任：
 
-- **Prompt Engineers**: Design and optimize prompts
-- **Domain Experts**: Provide subject matter expertise
-- **Quality Assurance**: Test and validate outputs
-- **DevOps**: Deploy and monitor systems
+- **提示工程師**：設計和優化提示
+- **領域專家**：提供專業知識
+- **品質保證**：測試和驗證輸出
+- **系統運維**：部署和監控系統
+- **法務合規**：確保符合台灣法規要求
 
-### Centralized Prompt Library
+### 集中式提示庫
 
-Create a shared repository of tested prompts:
+建立已測試提示的共享儲存庫：
 
 ```
 /prompts
   /templates
-    - customer-support.md
-    - content-generation.md
-    - data-analysis.md
+    - customer-support-tw.md        # 客戶服務（台灣）
+    - content-generation-tw.md      # 內容生成（繁中）
+    - data-analysis-business.md     # 商業分析
+    - legal-compliance-tw.md        # 法務合規（台灣）
   /examples
-    - successful-cases.md
-    - failure-analysis.md
+    - taiwan-enterprise-cases.md    # 台灣企業案例
+    - failure-analysis-tw.md        # 失敗分析
+  /compliance
+    - privacy-law-prompts.md        # 個資法相關提示
+    - ncc-compliance.md             # NCC 合規提示
 ```
 
-## Knowledge Sharing
+## 知識分享
 
-### Documentation Standards
+### 文件標準（符合台灣企業文化）
 
-- Version control for prompt templates
-- Change logs and rationale
-- Performance metrics and benchmarks
-- User feedback integration
+- 提示模板的版本控制
+- 變更日誌與理由說明
+- 效能指標與基準測試
+- 使用者回饋整合
+- 中文文件化（繁體中文優先）
+- 符合台灣法規的稽核記錄
 
-### Training Programs
+### 教育訓練計畫
 
-- Regular workshops on prompt engineering
-- Best practice sharing sessions
-- Cross-team collaboration initiatives
-- External training and certification
+- 定期舉辦提示工程工作坊
+- 最佳實踐分享會議
+- 跨部門協作專案
+- 台灣本土 AI 訓練認證
+- 與台大、交大等學術機構合作
+- 從業人員繼續教育（符合勞動部要求）
 
-## Workflow Integration
+## 工作流程整合
 
-### Development Process
+### 開發流程（適合台灣企業文化）
 
-1. **Requirements Gathering**: Define use cases and success criteria
-2. **Prompt Design**: Create initial templates
-3. **Testing & Validation**: Automated and manual testing
-4. **Deployment**: Staged rollout with monitoring
-5. **Feedback Loop**: Continuous improvement
+1. **需求蒐集**：定義使用案例與成功標準
+2. **提示設計**：建立初始模板
+3. **測試與驗證**：自動化和手動測試
+4. **法務審查**：確保符合台灣法規
+5. **部署實施**：分階段推出並監控
+6. **回饋循環**：持續改進
 
-### Tools and Platforms
+### 工具與平台（台灣適用）
 
-- Version control systems (Git)
-- Collaborative editing platforms
-- Testing frameworks
-- Monitoring and analytics tools
+- 版本控制系統（Git、GitLab）
+- 協作編輯平台（HackMD、Notion）
+- 測試框架（本土化測試環境）
+- 監控與分析工具（遵循資料不出境原則）
+- 台灣雲端服務（中華電信、遠傳）
+- 工作流程管理（Jira、Redmine）
 
-## Scaling Strategies
+## 擴展策略
 
-- Modular prompt architecture
-- Reusable component libraries
-- Automated testing pipelines
-- Performance optimization workflows
+### 技術擴展
+- 模組化提示架構
+- 可重用組件庫
+- 自動化測試管道
+- 效能優化工作流程
+
+### 組織擴展（符合台灣企業結構）
+- 跨部門協作機制
+- 專案管理辦公室（PMO）介入
+- 外包商管理（台灣本土合作夥伴）
+- 會議文化（中文記錄、共識決策）
+
+### 知識管理
+- 建立企業內部 AI 知識庫
+- 定期技術分享會
+- 師徒制度（資深同事帶新人）
+- 跨公司交流合作（台積電、鴻海等）
+
+### 合規與風険管理
+- 法務部門常感參與
+- 資安部門審查機制
+- 定期法規更新訓練
+- 企業社會責任（CSR）考量

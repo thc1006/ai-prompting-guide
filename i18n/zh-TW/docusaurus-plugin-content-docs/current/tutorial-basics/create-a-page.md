@@ -2,17 +2,17 @@
 sidebar_position: 1
 ---
 
-# Create a Page
+# 建立頁面
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+在 `src/pages` 新增 **Markdown 或 React** 檔案來建立**獨立頁面**：
 
 - `src/pages/index.js` → `localhost:3000/`
 - `src/pages/foo.md` → `localhost:3000/foo`
 - `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
 
-## Create your first React Page
+## 建立你的第一個 React 頁面
 
-Create a file at `src/pages/my-react-page.js`:
+在 `src/pages/my-react-page.js` 建立檔案：
 
 ```jsx title="src/pages/my-react-page.js"
 import React from 'react';
@@ -30,7 +30,7 @@ export default function MyReactPage() {
           fontSize: '20px',
         }}>
         <p>
-          Edit <code>pages/my-react-page.js</code> and save to reload.
+          編輯 <code>pages/my-react-page.js</code> 並儲存以重新載入。
         </p>
       </div>
     </Layout>
@@ -38,16 +38,16 @@ export default function MyReactPage() {
 }
 ```
 
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+現在你可以在 [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page) 看到新的頁面。
 
-## Create your first Markdown Page
+## 建立你的第一個 Markdown 頁面
 
-Create a file at `src/pages/my-markdown-page.md`:
+在 `src/pages/my-markdown-page.md` 建立檔案：
 
 ```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
+# 我的 Markdown 頁面
 
-This is a Markdown page
+這是一個 Markdown 頁面
 ```
 
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+現在你可以在 [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page) 看到新的頁面。

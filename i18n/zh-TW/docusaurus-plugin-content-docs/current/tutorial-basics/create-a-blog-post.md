@@ -2,13 +2,13 @@
 sidebar_position: 3
 ---
 
-# Create a Blog Post
+# 建立部落格文章
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+Docusaurus 會為每篇部落格文章建立**獨立頁面**，同時也會自動產生**部落格首頁**、**標籤系統**、**RSS** 資訊流等等...
 
-## Create your first Post
+## 建立你的第一篇文章
 
-Create a file at `blog/2021-02-28-greetings.md`:
+在 `blog/2021-02-28-greetings.md` 建立檔案：
 
 ```md title="blog/2021-02-28-greetings.md"
 ---
@@ -22,25 +22,25 @@ authors:
 tags: [greetings]
 ---
 
-Congratulations, you have made your first post!
+恭喜，你已經完成第一篇文章了！
 
-Feel free to play around and edit this post as much you like.
+歡迎盡情地編輯和調整這篇文章。
 ```
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+現在你可以在 [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings) 看到新的部落格文章。
 
-## Blog Post Headers
+## 部落格文章標頭
 
-Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
+部落格文章支援 [Docusaurus Markdown 功能](https://docusaurus.io/docs/markdown-features)，例如 [MDX](https://mdxjs.com/)。
 
 :::tip
 
-Use the power of React to create interactive blog posts.
+運用 React 的強大功能來打造互動式部落格文章。
 
 ```js
-<button onClick={() => alert('button clicked!')}>Click me!</button>
+<button onClick={() => alert('button clicked!')}>點我！</button>
 ```
 
-<button onClick={() => alert('button clicked!')}>Click me!</button>
+<button onClick={() => alert('button clicked!')}>點我！</button>
 
 :::

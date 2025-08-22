@@ -2,55 +2,85 @@
 sidebar_position: 3
 ---
 
-# Security & Ethics
+# 安全與倫理
 
-Ensure responsible and secure AI prompting practices in your applications.
+確保您的應用程式採用負責任且安全的 AI 提示實踐。
 
-## Data Protection
+## 資料保護
 
-### Input Sanitization
+### 輸入淨化
 
-Always validate and sanitize user inputs before processing:
+處理前務必驗證和淨化使用者輸入：
 
 ```javascript
 function sanitizePrompt(userInput) {
-  // Remove potentially harmful content
+  // 移除潛在有害內容
   return userInput
-    .replace(/[<>]/g, '') // Remove HTML tags
+    .replace(/[<>]/g, '') // 移除 HTML 標籤
     .trim()
-    .slice(0, 1000); // Limit length
+    .slice(0, 1000); // 限制長度
 }
 ```
 
-### Privacy Considerations
+### 隱私權考量
 
-- Never include personal identifiable information (PII) in prompts
-- Implement data anonymization techniques
-- Follow GDPR and privacy regulations
+- 絕不在提示中包含個人可識別資訊（PII）
+- 實施資料匿名化技術
+- 遵循台灣個資法及相關隱私法規
 
-## Ethical Guidelines
+## 倫理準則
 
-### Bias Prevention
+### 偏見防範
 
-- Test prompts with diverse datasets
-- Monitor outputs for biased responses
-- Implement fairness checks
+- 使用多元化資料集測試提示
+- 監控輸出是否有偏見回應
+- 實施公平性檢查
+- 考量台灣多元文化背景
 
-### Transparency
+### 透明度
 
-- Document prompt templates and their intended use
-- Provide clear user consent for AI processing
-- Maintain audit trails for prompt modifications
+- 記錄提示模板及其預期用途
+- 提供清楚的 AI 處理使用者同意機制
+- 維護提示修改的稽核軌跡
+- 符合台灣法規要求的資訊揭露
 
-## Security Best Practices
+## 安全最佳實踐
 
-- Use rate limiting to prevent abuse
-- Implement monitoring for unusual patterns
-- Regular security assessments
-- Secure API key management
+### 台灣法規合規
+- 遵循台灣個人資料保護法
+- 符合 NCC 通訊傳播安全管理法規
+- 實施政府資安防護規範
+- 符合金管會相關資安要求（金融業）
 
-## Compliance Frameworks
+### 技術安全措施
+- 使用速率限制防止濫用
+- 實施異常模式監控
+- 定期安全評估
+- 安全的 API 金鑰管理
+- 導入台灣資安院建議的防護標準
 
-- GDPR compliance for EU users
-- SOC 2 for enterprise applications
-- Industry-specific regulations
+### 台灣雲端安全
+- 選用符合台灣法規的雲端服務（如中華電信、遠傳雲端）
+- 確保資料不出境原則
+- 實施本地化備份機制
+
+## 合規框架
+
+### 台灣相關法規
+- **個人資料保護法**：個資蒐集、處理、利用規範
+- **通訊傳播安全管理法**：通訊網路安全要求
+- **資通安全管理法**：公務機關資安規範
+- **金融監督管理委員會**：金融業資安規範
+- **行政院資安處**：政府機關資安指引
+
+### 企業合規建議
+- SOC 2 Type II 認證（企業應用）
+- ISO 27001 資訊安全管理
+- 台灣資安院 TCCSS 認證
+- 行業特定法規（醫療、金融、電信）
+
+### 稽核與監控
+- 建立符合台灣法規的稽核機制
+- 定期進行滲透測試
+- 建立事件回應計畫
+- 與台灣 CERT/CC 建立聯繫管道

@@ -2,49 +2,49 @@
 sidebar_position: 5
 ---
 
-# Deploy your site
+# 部署你的網站
 
-Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
+Docusaurus 是一個**靜態網站產生器**（也被稱為 **[Jamstack](https://jamstack.org/)**）。
 
-It builds your site as simple **static HTML, JavaScript and CSS files**.
+它會將你的網站建置成簡單的**靜態 HTML、JavaScript 和 CSS 檔案**。
 
-## Build your site
+## 建置你的網站
 
-Build your site **for production**:
+建置網站以**上線為目標**：
 
 ```bash
 npm run build
 ```
 
-The static files are generated in the `build` folder.
+靜態檔案會產生在 `build` 資料夾中。
 
-## Deploy your site
+## 部署你的網站
 
-Test your production build locally:
+在本機測試你的正式版本：
 
 ```bash
 npm run serve
 ```
 
-The `build` folder is now served at [http://localhost:3000/](http://localhost:3000/).
+現在 `build` 資料夾會在 [http://localhost:3000/](http://localhost:3000/) 提供服務。
 
-You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).
+你可以輕鬆地將 `build` 資料夾部署到**任何地方**，通常是**免費**或成本極低（閱讀**[部署指南](https://docusaurus.io/docs/deployment)**）。
 
-## Popular deployment options
+## 熱門部署選擇
 
-- **[GitHub Pages](https://pages.github.com/)** - Free hosting for public repositories
-- **[Netlify](https://www.netlify.com/)** - Automatic deployments from Git repositories
-- **[Vercel](https://vercel.com/)** - Optimized for frontend frameworks
-- **[AWS Amplify](https://aws.amazon.com/amplify/)** - Full-stack development platform
-- **[Firebase Hosting](https://firebase.google.com/products/hosting)** - Fast and secure web hosting
+- **[GitHub Pages](https://pages.github.com/)** - 公開儲存庫的免費託管服務
+- **[Netlify](https://www.netlify.com/)** - 從 Git 儲存庫自動部署
+- **[Vercel](https://vercel.com/)** - 為前端框架最佳化
+- **[AWS Amplify](https://aws.amazon.com/amplify/)** - 全端開發平台
+- **[Firebase Hosting](https://firebase.google.com/products/hosting)** - 快速且安全的網站託管
 
-## Continuous Deployment
+## 持續部署
 
-Set up automatic deployments when you push to your Git repository:
+設定當你推送到 Git 儲存庫時的自動部署：
 
-### GitHub Pages with GitHub Actions
+### 使用 GitHub Actions 部署到 GitHub Pages
 
-Create `.github/workflows/deploy.yml`:
+建立 `.github/workflows/deploy.yml`：
 
 ```yaml
 name: Deploy to GitHub Pages
@@ -65,12 +65,12 @@ jobs:
           node-version: 18
           cache: npm
 
-      - name: Install dependencies
+      - name: 安裝相關套件
         run: npm ci
-      - name: Build website
+      - name: 建置網站
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

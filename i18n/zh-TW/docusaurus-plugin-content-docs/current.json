@@ -1,30 +1,30 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "最新版",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Fundamentals": {
-    "message": "Fundamentals",
+    "message": "基礎概念",
     "description": "The label for category Fundamentals in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Practical Tutorials": {
-    "message": "Practical Tutorials",
+    "message": "實作教學",
     "description": "The label for category Practical Tutorials in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Advanced Techniques": {
-    "message": "Advanced Techniques",
+    "message": "進階技巧",
     "description": "The label for category Advanced Techniques in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Best Practices": {
-    "message": "Best Practices",
+    "message": "最佳實踐",
     "description": "The label for category Best Practices in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Applications": {
-    "message": "Applications",
+    "message": "應用實例",
     "description": "The label for category Applications in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Case Studies": {
-    "message": "Case Studies",
+    "message": "案例研究",
     "description": "The label for category Case Studies in sidebar tutorialSidebar"
   }
 }

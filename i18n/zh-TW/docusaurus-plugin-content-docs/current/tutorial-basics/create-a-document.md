@@ -2,31 +2,31 @@
 sidebar_position: 2
 ---
 
-# Create a Document
+# 建立文件
 
-Documents are **groups of pages** connected through:
+文件是一群透過以下方式連結的**頁面集合**：
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+- **側邊選單**
+- **上一頁/下一頁導覽**
+- **版本控制**
 
-## Create your first Doc
+## 建立你的第一個文件
 
-Create a Markdown file at `docs/hello.md`:
+在 `docs/hello.md` 建立一個 Markdown 檔案：
 
 ```md title="docs/hello.md"
 # Hello
 
-This is my **first Docusaurus document**!
+這是我的**第一個 Docusaurus 文件**！
 ```
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+現在你可以在 [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello) 看到新的文件。
 
-## Configure the Sidebar
+## 設定側邊選單
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
+Docusaurus 會自動從 `docs` 資料夾**建立側邊選單**。
 
-Add metadata to customize the sidebar label and position:
+新增 metadata 來自訂側邊選單的標籤和位置：
 
 ```md title="docs/hello.md" {1-4}
 ---
@@ -36,10 +36,10 @@ sidebar_position: 3
 
 # Hello
 
-This is my **first Docusaurus document**!
+這是我的**第一個 Docusaurus 文件**！
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+你也可以在 `sidebars.js` 中明確定義側邊選單：
 
 ```js title="sidebars.js"
 export default {

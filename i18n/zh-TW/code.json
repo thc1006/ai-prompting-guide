@@ -44,7 +44,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
+    "message": "系統模式",
     "description": "The name for the system color mode"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
@@ -255,11 +255,11 @@
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "展開下拉選單",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "收起下拉選單",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {
@@ -315,11 +315,43 @@
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
-    "message": "跳至主要内容",
+    "message": "跳至主要內容",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
     "message": "標籤",
     "description": "The title of the tag list page"
+  },
+  "homepage.features.fundamentals.title": {
+    "message": "掌握基礎知識",
+    "description": "The title of the fundamentals feature"
+  },
+  "homepage.features.fundamentals.description": {
+    "message": "學習 AI 提示詞的核心原理，從基本結構到進階模式。建立扎實基礎，掌握專業人士使用的經驗證技巧。",
+    "description": "The description of the fundamentals feature"
+  },
+  "homepage.features.examples.title": {
+    "message": "實用範例與案例",
+    "description": "The title of the examples feature"
+  },
+  "homepage.features.examples.description": {
+    "message": "超越理論，透過實作教學涵蓋內容創作、程式碼生成、數據分析等領域。將技巧應用到您的具體使用情境。",
+    "description": "The description of the examples feature"
+  },
+  "homepage.features.strategies.title": {
+    "message": "生產級策略技巧",
+    "description": "The title of the strategies feature"
+  },
+  "homepage.features.strategies.description": {
+    "message": "運用進階技巧擴展您的提示詞專業知識，包括思維鏈推理、提示詞串聯，以及生產環境部署最佳實務。",
+    "description": "The description of the strategies feature"
+  },
+  "homepage.hero.startLearning": {
+    "message": "開始學習 AI 提示詞 🚀",
+    "description": "The text of the start learning button"
+  },
+  "homepage.hero.quickStart": {
+    "message": "快速入門指南",
+    "description": "The text of the quick start button"
   }
 }

@@ -2,440 +2,441 @@
 sidebar_position: 4
 ---
 
-# Common Prompting Patterns
+# 常見 Prompting 模式
 
-Master these proven prompting patterns to handle a wide variety of AI tasks effectively. Each pattern serves specific use cases and can be combined for more sophisticated interactions.
+掌握這些經過驗證的 prompting 模式，有效處理各種 AI 任務。每個模式都有特定的使用場景，並且可以組合使用以實現更複雜的互動。
 
-## Core Patterns
+## 核心模式
 
-### 1. Few-Shot Learning Pattern
+### 1. Few-Shot Learning 模式
 
-Provide examples to guide the AI's understanding and output format.
+提供範例來引導 AI 的理解和輸出格式。
 
-**When to use:** New tasks, specific formatting, consistent style requirements
+**何時使用：** 新任務、特定格式、一致的風格要求
 
-**Structure:**
+**結構：**
 ```python
 """
-[Task description]
+[任務描述]
 
-Examples:
-[Example 1: Input → Output]
-[Example 2: Input → Output]
-[Example 3: Input → Output]
+範例：
+[範例 1：輸入 → 輸出]
+[範例 2：輸入 → 輸出]
+[範例 3：輸入 → 輸出]
 
-Now apply this pattern to:
-[Your specific input]
+現在將這個模式應用到：
+[你的具體輸入]
 """
 ```
 
-**Real Example:**
+**實際範例：**
 ```python
 """
-Extract key information from customer support tickets:
+從客戶支援票單中提取關鍵資訊：
 
-Examples:
+範例：
 
-Ticket: "My login isn't working and I have an important presentation tomorrow"
-Extraction:
-- Issue: Authentication failure
-- Urgency: High (time-sensitive business need)
-- Category: Technical Support
-- Next Action: Priority troubleshooting
+票單：「我的登入功能壞了，明天有重要的簡報要做」
+提取資訊：
+- 問題：認證失敗
+- 緊急程度：高（時間敏感的商業需求）
+- 類別：技術支援
+- 下一步行動：優先故障排除
 
-Ticket: "Could you add a feature to export data as CSV?"
-Extraction:
-- Issue: Feature request
-- Urgency: Low (enhancement)
-- Category: Product Development
-- Next Action: Feature evaluation process
+票單：「可以新增一個匯出 CSV 檔的功能嗎？」
+提取資訊：
+- 問題：功能請求
+- 緊急程度：低（功能增強）
+- 類別：產品開發
+- 下一步行動：功能評估流程
 
-Now extract from:
-"The app keeps crashing when I try to upload large files over 100MB"
+現在從以下票單提取：
+「當我試著上傳超過 100MB 的大檔案時，App 一直閃退」
 """
 ```
 
-### 2. Chain-of-Thought Pattern
+### 2. Chain-of-Thought 模式
 
-Break down complex reasoning into step-by-step thinking.
+將複雜的推理分解成逐步思考。
 
-**When to use:** Complex problem-solving, mathematical calculations, logical reasoning
+**何時使用：** 複雜問題解決、數學計算、邏輯推理
 
-**Structure:**
+**結構：**
 ```python
 """
-[Problem statement]
+[問題陳述]
 
-Let's think through this step by step:
-1. [First consideration]
-2. [Next logical step]
-3. [Building on previous steps]
+讓我們一步一步思考：
+1. [第一個考慮點]
+2. [下一個邏輯步驟]
+3. [基於先前步驟的推論]
 ...
-Therefore: [Conclusion]
+因此：[結論]
 """
 ```
 
-**Real Example:**
+**實際範例：**
 ```python
 """
-Determine the best pricing strategy for our new SaaS product.
+為我們的新 SaaS 產品決定最佳定價策略。
 
-Let's think through this step by step:
-1. Analyze our target market size and willingness to pay
-2. Evaluate competitor pricing models and positioning
-3. Calculate our costs (development, hosting, support, sales)
-4. Determine required profit margins for sustainability
-5. Consider different pricing models (freemium, tiered, usage-based)
-6. Test assumptions against customer discovery interviews
-7. Model revenue scenarios for each option
+讓我們一步一步思考：
+1. 分析我們的目標市場規模和付費意願
+2. 評估競爭對手的定價模式和定位
+3. 計算我們的成本（開發、主機、支援、銷售）
+4. 確定持續營運所需的利潤率
+5. 考慮不同的定價模式（freemium、分級、按用量計費）
+6. 根據客戶訪談驗證假設
+7. 為每個選項建立收入模型
 
-Based on this analysis, recommend the optimal pricing structure.
+基於這些分析，推薦最佳的定價結構。
 """
 ```
 
-### 3. Role-Based Pattern
+### 3. 角色基礎模式
 
-Assign specific expertise and perspective to the AI.
+賦予 AI 特定的專業知識和觀點。
 
-**When to use:** Domain-specific tasks, expert analysis, specialized knowledge
+**何時使用：** 特定領域任務、專家分析、專業知識
 
-**Structure:**
+**結構：**
 ```python
 """
-You are a [specific role] with [relevant experience/expertise].
+你是一位 [特定角色]，擁有 [相關經驗/專業]。
 
-[Context about the situation]
+[情境背景]
 
-As this expert, [specific task with role-appropriate considerations].
+作為這位專家，[符合角色的具體任務和考慮]。
 """
 ```
 
-**Real Example:**
+**實際範例：**
 ```python
 """
-You are a cybersecurity architect with 15 years of experience in enterprise security, specializing in cloud infrastructure and zero-trust implementations.
+你是一位資安架構師，擁有 15 年的企業資安經驗，專精於雲端基礎設施和零信任架構的導入。
 
-Our company is migrating from on-premises to AWS cloud infrastructure and needs to design a comprehensive security framework.
+我們公司正在從地端遷移到 AWS 雲端基礎設施，需要設計一個全面的資安框架。
 
-As a cybersecurity expert, evaluate our current security posture, identify migration risks, and design a phased security implementation plan that maintains business continuity while achieving zero-trust architecture.
+作為資安專家，請評估我們目前的資安狀態，識別遷移風險，並設計一個分階段的資安實施計畫，
+在實現零信任架構的同時維持業務連續性。
 """
 ```
 
-### 4. Perspective-Taking Pattern
+### 4. 多角度思考模式
 
-Analyze from multiple viewpoints or stakeholder perspectives.
+從多個角度或利害關係人的觀點進行分析。
 
-**When to use:** Complex decisions, stakeholder analysis, comprehensive evaluation
+**何時使用：** 複雜決策、利害關係人分析、全面評估
 
-**Structure:**
+**結構：**
 ```python
 """
-Analyze [situation/decision] from these perspectives:
+從以下角度分析 [情況/決策]：
 
-Perspective 1 - [Stakeholder A]:
-[Their concerns, priorities, constraints]
+角度 1 - [利害關係人 A]：
+[他們的關切、優先事項、限制]
 
-Perspective 2 - [Stakeholder B]:
-[Their concerns, priorities, constraints]
+角度 2 - [利害關係人 B]：
+[他們的關切、優先事項、限制]
 
-Perspective 3 - [Stakeholder C]:
-[Their concerns, priorities, constraints]
+角度 3 - [利害關係人 C]：
+[他們的關切、優先事項、限制]
 
-Synthesis: [Balanced recommendation considering all perspectives]
+綜合分析：[考慮所有角度的平衡建議]
 """
 ```
 
-**Real Example:**
+**實際範例：**
 ```python
 """
-Analyze the decision to implement AI-powered customer service chatbots from these perspectives:
+從以下角度分析導入 AI 客服聊天機器人的決定：
 
-Perspective 1 - Customer Experience Team:
-- Impact on customer satisfaction and resolution times
-- Quality of automated responses vs. human interaction
-- Handling of complex or emotional customer issues
+角度 1 - 客戶體驗團隊：
+- 對客戶滿意度和解決時間的影響
+- 自動回應與人工互動的品質差異
+- 處理複雜或情緒性客戶問題的能力
 
-Perspective 2 - Finance/Operations:
-- Implementation costs vs. long-term savings
-- ROI timeline and break-even analysis
-- Staffing implications and retraining costs
+角度 2 - 財務/營運：
+- 導入成本與長期節省的比較
+- 投資報酬率時間表和損益平衡分析
+- 人力配置影響和再培訓成本
 
-Perspective 3 - Customer Service Representatives:
-- Job security and role evolution concerns
-- New skills and responsibilities required
-- Workload changes and job satisfaction impact
+角度 3 - 客服代表：
+- 工作保障和角色轉型的擔憂
+- 所需的新技能和責任
+- 工作量變化和工作滿意度影響
 
-Synthesis: Provide a balanced implementation strategy that addresses each group's concerns.
+綜合分析：提供一個平衡的實施策略，解決每個團體的關切。
 """
 ```
 
-### 5. Template-Based Pattern
+### 5. 範本基礎模式
 
-Provide specific output templates for consistency.
+提供特定的輸出範本以保持一致性。
 
-**When to use:** Standardized outputs, reporting, consistent formatting
+**何時使用：** 標準化輸出、報告、一致的格式
 
-**Structure:**
+**結構：**
 ```python
 """
-[Task description]
+[任務描述]
 
-Use this exact template:
+使用這個範本：
 
-## [Section 1]
-[Specific requirements for this section]
+## [章節 1]
+[這個章節的具體要求]
 
-## [Section 2]  
-[Specific requirements for this section]
+## [章節 2]  
+[這個章節的具體要求]
 
-[Additional formatting requirements]
+[額外的格式要求]
 """
 ```
 
-**Real Example:**
+**實際範例：**
 ```python
 """
-Create a competitive analysis report for our project management software.
+為我們的專案管理軟體建立競爭分析報告。
 
-Use this exact template:
+使用這個範本：
 
-## Executive Summary
-[2-3 sentences highlighting key findings]
+## 執行摘要
+[2-3 句突出關鍵發現]
 
-## Competitive Landscape
-- **Primary Competitors:** [List top 3]
-- **Emerging Threats:** [List 2-3 up-and-coming players]
+## 競爭格局
+- **主要競爭者：** [列出前 3 名]
+- **新興威脅：** [列出 2-3 個新興競爭者]
 
-## Feature Comparison Matrix
-| Feature | Our Product | Competitor A | Competitor B | Competitor C |
+## 功能比較矩陣
+| 功能 | 我們的產品 | 競爭者 A | 競爭者 B | 競爭者 C |
 |---------|-------------|---------------|---------------|---------------|
-[Complete comparison table]
+[完整比較表]
 
-## Pricing Analysis
-[Detailed pricing comparison with value proposition analysis]
+## 定價分析
+[詳細的定價比較和價值主張分析]
 
-## Strategic Recommendations
-1. **Immediate Actions** (0-3 months)
-2. **Medium-term Strategy** (3-12 months)
-3. **Long-term Vision** (1-3 years)
+## 策略建議
+1. **立即行動** (0-3 個月)
+2. **中期策略** (3-12 個月)
+3. **長期願景** (1-3 年)
 """
 ```
 
-## Advanced Patterns
+## 進階模式
 
-### 6. Iterative Refinement Pattern
+### 6. 迭代精煉模式
 
-Build solutions through successive refinement.
+透過連續精煉建立解決方案。
 
-**Structure:**
+**結構：**
 ```python
 """
-[Initial request]
+[初始請求]
 
-First, provide a basic [solution/analysis].
+首先，提供一個基本的 [解決方案/分析]。
 
-Then, refine it by:
-- [Refinement criteria 1]
-- [Refinement criteria 2]
-- [Refinement criteria 3]
+然後，透過以下方式精煉：
+- [精煉標準 1]
+- [精煉標準 2]
+- [精煉標準 3]
 
-Finally, present the polished version.
+最後，呈現完善的版本。
 """
 ```
 
-**Example:**
+**範例：**
 ```python
 """
-Design a user onboarding flow for our mobile app.
+為我們的手機 App 設計使用者引導流程。
 
-First, provide a basic onboarding sequence covering essential steps.
+首先，提供一個涵蓋基本步驟的引導流程。
 
-Then, refine it by:
-- Adding personalization based on user goals
-- Incorporating progressive disclosure principles
-- Optimizing for different user technical skill levels
-- Including retention-focused engagement hooks
+然後，透過以下方式精煉：
+- 根據使用者目標加入個人化
+- 融入漸進式揭露原則
+- 為不同技術程度的使用者優化
+- 包含以留存為目的的互動鉤子
 
-Finally, present the polished onboarding flow with rationale for each decision.
+最後，呈現完善的引導流程，並說明每個決定的理由。
 """
 ```
 
-### 7. Constraint-Based Pattern
+### 7. 限制基礎模式
 
-Define specific limitations that shape the solution.
+定義影響解決方案的特定限制。
 
-**Structure:**
+**結構：**
 ```python
 """
-[Task description]
+[任務描述]
 
-Work within these constraints:
-- Constraint 1: [Specific limitation]
-- Constraint 2: [Specific limitation]
-- Constraint 3: [Specific limitation]
+在這些限制內工作：
+- 限制 1：[具體限制]
+- 限制 2：[具體限制]
+- 限制 3：[具體限制]
 
-Given these limitations, [specific request for optimized solution].
+考慮這些限制，[對優化解決方案的具體要求]。
 """
 ```
 
-**Example:**
+**範例：**
 ```python
 """
-Design a marketing campaign for our new productivity app.
+為我們的新生產力 App 設計行銷活動。
 
-Work within these constraints:
-- Budget: Maximum $25,000 for 3 months
-- Team: 2 part-time marketers, no design resources
-- Audience: Small business owners (10-50 employees)
-- Timeline: Campaign must launch in 6 weeks
-- Channels: Limited to social media and email (no paid advertising)
+在這些限制內工作：
+- 預算：3 個月最多 75 萬台幣
+- 團隊：2 位兼職行銷人員，沒有設計資源
+- 受眾：中小企業主（10-50 名員工）
+- 時間表：活動必須在 6 週內啟動
+- 管道：僅限社群媒體和電子郵件（無付費廣告）
 
-Given these limitations, create a comprehensive campaign strategy that maximizes reach and conversion potential.
+考慮這些限制，建立一個全面的活動策略，最大化觸及和轉換潛力。
 """
 ```
 
-### 8. Comparative Analysis Pattern
+### 8. 比較分析模式
 
-Structure comparisons systematically.
+系統性地架構比較。
 
-**Structure:**
+**結構：**
 ```python
 """
-Compare [Option A] vs [Option B] across these dimensions:
+在這些維度上比較 [選項 A] 與 [選項 B]：
 
-Dimension 1 - [Criteria]:
-- Option A: [Analysis]
-- Option B: [Analysis]
-- Winner: [Choice with reasoning]
+維度 1 - [標準]：
+- 選項 A：[分析]
+- 選項 B：[分析]
+- 優勝者：[選擇和理由]
 
-Dimension 2 - [Criteria]:
-- Option A: [Analysis]  
-- Option B: [Analysis]
-- Winner: [Choice with reasoning]
+維度 2 - [標準]：
+- 選項 A：[分析]  
+- 選項 B：[分析]
+- 優勝者：[選擇和理由]
 
-Overall Recommendation: [Final choice with comprehensive reasoning]
+總體建議：[最終選擇和全面理由]
 """
 ```
 
-### 9. Scenario Planning Pattern
+### 9. 情境規劃模式
 
-Explore multiple future scenarios and responses.
+探索多種未來情境和應對方式。
 
-**Structure:**
+**結構：**
 ```python
 """
-Develop scenario plans for [situation]:
+為 [情況] 制定情境計畫：
 
-Scenario 1 - [Optimistic case]:
-- Assumptions: [Key assumptions]
-- Outcomes: [Expected results]
-- Strategy: [Recommended approach]
+情境 1 - [樂觀情況]：
+- 假設：[關鍵假設]
+- 結果：[預期結果]
+- 策略：[建議方法]
 
-Scenario 2 - [Realistic case]:
-- Assumptions: [Key assumptions]
-- Outcomes: [Expected results]  
-- Strategy: [Recommended approach]
+情境 2 - [實際情況]：
+- 假設：[關鍵假設]
+- 結果：[預期結果]  
+- 策略：[建議方法]
 
-Scenario 3 - [Pessimistic case]:
-- Assumptions: [Key assumptions]
-- Outcomes: [Expected results]
-- Strategy: [Recommended approach]
+情境 3 - [悲觀情況]：
+- 假設：[關鍵假設]
+- 結果：[預期結果]
+- 策略：[建議方法]
 
-Contingency Planning: [Flexible strategies that work across scenarios]
+應急計畫：[適用於各種情境的靈活策略]
 """
 ```
 
-## Pattern Combinations
+## 模式組合
 
-### Combining Role + Chain-of-Thought
-
-```python
-"""
-You are a financial advisor with expertise in tech startups.
-
-A client asks whether to raise Series A now or bootstrap for another year. Walk through your decision-making process step by step:
-
-1. First, assess the current financial runway and burn rate
-2. Then, evaluate market timing and investor climate  
-3. Next, analyze competitive positioning and growth trajectory
-4. Consider the dilution trade-offs of raising now vs. later
-5. Factor in team bandwidth and operational focus
-6. Finally, provide your recommendation with clear rationale
-
-Present your analysis as you would to a client meeting.
-"""
-```
-
-### Combining Few-Shot + Template
+### 結合角色 + Chain-of-Thought
 
 ```python
 """
-Create product requirement documents following this pattern:
+你是一位專精於科技新創的財務顧問。
 
-Example PRD:
-**Feature:** Dark Mode Toggle
-**Problem:** Users report eye strain during extended evening usage
-**Success Metrics:** 40% adoption rate, 15% increase in evening engagement
-**Requirements:**
-- System-wide dark theme implementation
-- User preference persistence
-- Smooth theme transition animations
+客戶詢問現在該進行 A 輪募資還是再自力更生一年。請逐步說明你的決策過程：
 
-Now create PRDs for these features:
-- Advanced search filters
-- Real-time collaboration
-- Mobile offline mode
+1. 首先，評估目前的資金跑道和燒錢率
+2. 接著，評估市場時機和投資環境  
+3. 然後，分析競爭定位和成長軌跡
+4. 考慮現在募資與稍後募資的稀釋權衡
+5. 納入團隊能量和營運焦點的考量
+6. 最後，提供帶有明確理由的建議
 
-Use the same template structure for each.
+以客戶會議的方式呈現你的分析。
 """
 ```
 
-## Pattern Selection Guide
+### 結合 Few-Shot + 範本
 
-| Use Case | Recommended Pattern | Why |
+```python
+"""
+按照這個模式建立產品需求文件：
+
+範例 PRD：
+**功能：** 深色模式切換
+**問題：** 使用者反應晚上長時間使用會眼睛疲勞
+**成功指標：** 40% 採用率，晚間使用度增加 15%
+**需求：**
+- 全系統深色主題實施
+- 使用者偏好持久化
+- 平滑的主題轉換動畫
+
+現在為這些功能建立 PRD：
+- 進階搜尋篩選器
+- 即時協作
+- 手機離線模式
+
+每個都使用相同的範本結構。
+"""
+```
+
+## 模式選擇指南
+
+| 使用場景 | 建議模式 | 原因 |
 |----------|-------------------|-----|
-| New task format | Few-Shot Learning | Examples clarify expectations |
-| Complex problem | Chain-of-Thought | Breaks down reasoning steps |
-| Domain expertise | Role-Based | Leverages specialized knowledge |
-| Stakeholder decisions | Perspective-Taking | Considers all viewpoints |
-| Consistent outputs | Template-Based | Ensures format standardization |
-| Limited resources | Constraint-Based | Optimizes within boundaries |
-| Multiple options | Comparative Analysis | Systematic evaluation |
-| Future planning | Scenario Planning | Prepares for uncertainty |
+| 新任務格式 | Few-Shot Learning | 範例能清楚說明期望 |
+| 複雜問題 | Chain-of-Thought | 分解推理步驟 |
+| 領域專業 | 角色基礎 | 利用專業知識 |
+| 利害關係人決策 | 多角度思考 | 考慮所有觀點 |
+| 一致的輸出 | 範本基礎 | 確保格式標準化 |
+| 有限資源 | 限制基礎 | 在界限內優化 |
+| 多個選項 | 比較分析 | 系統性評估 |
+| 未來規劃 | 情境規劃 | 為不確定性做準備 |
 
-## Anti-Patterns to Avoid
+## 要避免的反模式
 
-### 1. Pattern Overload
-**Problem:** Using too many patterns in one prompt
-**Solution:** Choose 1-2 complementary patterns maximum
+### 1. 模式過載
+**問題：** 在一個 prompt 中使用太多模式
+**解決方案：** 最多選擇 1-2 個互補的模式
 
-### 2. Mismatched Patterns
-**Problem:** Using Few-Shot for creative tasks requiring originality
-**Solution:** Match pattern to task requirements
+### 2. 模式不匹配
+**問題：** 對需要原創性的創意任務使用 Few-Shot
+**解決方案：** 模式要符合任務需求
 
-### 3. Generic Role Assignment
-**Problem:** "You are an expert" without specific domain
-**Solution:** Define specific expertise and experience level
+### 3. 通用角色指派
+**問題：** 「你是專家」但沒有具體領域
+**解決方案：** 定義具體的專業和經驗程度
 
-### 4. Incomplete Examples
-**Problem:** Few-shot examples that don't cover edge cases
-**Solution:** Include diverse, comprehensive examples
+### 4. 不完整的範例
+**問題：** Few-shot 範例沒有涵蓋邊緣情況
+**解決方案：** 包含多樣、全面的範例
 
-## Practice Exercises
+## 練習題
 
-1. **Pattern Identification:** Review your recent prompts - which patterns were you unconsciously using?
+1. **模式識別：** 回顧你最近的 prompts - 你無意識地使用了哪些模式？
 
-2. **Pattern Switching:** Take a basic prompt and rewrite it using three different patterns
+2. **模式切換：** 拿一個基本的 prompt，用三種不同的模式重寫
 
-3. **Combination Testing:** Combine two patterns for a complex task and compare results
+3. **組合測試：** 為複雜任務結合兩種模式，比較結果
 
-## Next Steps
+## 下一步
 
-Ready to apply these patterns? Explore:
-- **[Practical Tutorials](/docs/tutorials/content-creation)** - Apply patterns to real scenarios
-- **[Advanced Techniques](/docs/advanced/chain-of-thought)** - Sophisticated pattern combinations
-- **[Best Practices](/docs/best-practices/testing-prompts)** - Optimize pattern effectiveness
+準備應用這些模式嗎？來探索：
+- **[實用教學](/docs/tutorials/content-creation)** - 將模式應用到實際場景
+- **[進階技巧](/docs/advanced/chain-of-thought)** - 複雜的模式組合
+- **[最佳實務](/docs/best-practices/testing-prompts)** - 優化模式效果
 
-:::tip Pattern Library
-Create a personal library of proven pattern combinations for your most common use cases. This becomes your prompting toolkit for consistent, high-quality results.
+:::tip 模式庫
+為你最常用的場景建立一個經過驗證的模式組合庫。這將成為你獲得一致、高品質結果的 prompting 工具箱。
 :::

@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {translate} from '@docusaurus/Translate';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
@@ -17,13 +18,21 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Start Learning AI Prompting 🚀
+            {translate({
+              id: 'homepage.hero.startLearning',
+              message: 'Start Learning AI Prompting 🚀',
+              description: 'The text of the start learning button'
+            })}
           </Link>
           <Link
             className="button button--outline button--secondary button--lg"
             to="/docs/fundamentals/quick-start"
             style={{marginLeft: '1rem'}}>
-            Quick Start Guide
+            {translate({
+              id: 'homepage.hero.quickStart',
+              message: 'Quick Start Guide',
+              description: 'The text of the quick start button'
+            })}
           </Link>
         </div>
       </div>

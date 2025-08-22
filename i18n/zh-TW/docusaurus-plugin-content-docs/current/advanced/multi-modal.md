@@ -2,36 +2,124 @@
 sidebar_position: 3
 ---
 
-# Multi-Modal Prompting
+# Multi-Modal 多模態提示
 
-Learn how to work with text, images, audio, and other media types in your AI prompts.
+學會在 AI 提示中處理文字、圖片、音訊和其他媒體類型，打造更豐富的互動體驗。
 
-## Text and Image Integration
+## 文字與圖片整合
 
-Combine text descriptions with visual content for more contextual AI interactions.
+結合文字描述與視覺內容，創造更有脈絡的 AI 互動體驗。就像在夜市向老闆描述你想要的小吃一樣，有圖有真相！
 
-### Example: Image Analysis Prompt
+### 範例：圖片分析提示
 
 ```
-Analyze this image and describe:
-1. Main objects and their relationships
-2. Color scheme and composition
-3. Potential use cases or applications
+分析這張圖片並描述：
+1. 主要物件及其關係（例如：這看起來像台北 101 附近的街景嗎？）
+2. 色彩配置和構圖（是不是很有台灣夜市的繽紛感？）
+3. 潛在用途或應用場景（適合用在觀光手冊還是美食 app？）
 
-Please provide specific, actionable insights.
+請提供具體、可行的見解。
 ```
 
-## Audio Processing
+## 音訊處理
 
-Work with audio content in your prompts for speech analysis and audio description tasks.
+在提示中處理音訊內容，進行語音分析和音訊描述任務。想像你在捷運站聽到廣播，AI 也能幫你分析各種聲音！
 
-## Best Practices
+### 實用場景
+- **語音轉文字**：將會議錄音轉成逐字稿
+- **音樂分析**：識別歌曲風格和情緒
+- **環境音辨識**：分析背景噪音或特殊音效
+- **語調分析**：判斷說話者的情緒狀態
 
-- Always specify the expected output format
-- Provide context for the media type
-- Use clear, descriptive language
-- Test with various media combinations
+### 範例：音訊分析提示
 
-## Next Steps
+```
+分析這段音訊並提供：
+1. 語音內容逐字稿（如果有人聲）
+2. 背景音分析（是咖啡廳、辦公室還是夜市環境？）
+3. 音質評估（適合用於 podcast 或需要後製？）
+4. 情緒語調（說話者聽起來開心、緊張還是平靜？）
 
-Continue to [Production Deployment](../best-practices/production-deployment) to learn about scaling multi-modal systems.
+請用台灣人習慣的表達方式回覆。
+```
+
+## 最佳實務
+
+### 基本原則
+- **明確指定輸出格式**：就像點餐要說清楚要內用還是外帶
+- **提供媒體類型的脈絡**：告訴 AI 這是什麼情境下的內容
+- **使用清晰描述性語言**：避免模糊不清的指示
+- **測試各種媒體組合**：文字+圖片、圖片+音訊等不同搭配
+
+### 台灣在地化技巧
+
+#### 1. 文化參考點
+```
+這張夜市照片給人什麼感覺？
+- 像是寧夏夜市還是士林夜市的氛圍？
+- 色彩是偏向傳統紅燈籠還是現代 LED 風格？
+- 適合用在什麼樣的觀光宣傳？
+```
+
+#### 2. 生活場景應用
+```
+分析這段便當店點餐對話：
+- 客人點了什麼菜色？
+- 店員的服務態度如何？
+- 背景環境聽起來忙碌嗎？
+- 有沒有其他客人在排隊的聲音？
+```
+
+#### 3. 情境化描述
+```
+這張捷運站照片分析：
+- 看起來是哪個時段？（上班尖峰還是離峰時間）
+- 人潮密度如何？
+- 站內指標清楚嗎？
+- 適合作為什麼用途的素材？
+```
+
+## 進階應用場景
+
+### 電商應用
+```
+分析這個商品圖片組合：
+- 主商品照片品質如何？
+- 背景設定是否專業？
+- 適合在哪個平台販售？（蝦皮、momo 還是官網）
+- 需要什麼樣的商品文案搭配？
+```
+
+### 教育訓練
+```
+這段教學影片的音訊分析：
+- 講師的語速適合學習嗎？
+- 有沒有清楚的重點提示？
+- 背景音樂會不會干擾學習？
+- 適合什麼年齡層的學習者？
+```
+
+### 社群媒體
+```
+這張 IG 限時動態圖片：
+- 視覺效果夠吸睛嗎？
+- 文字大小在手機上清楚嗎？
+- 色調符合品牌調性嗎？
+- 適合搭配什麼樣的 hashtag？
+```
+
+## 實戰秘訣
+
+:::tip 多模態提示小撇步
+1. **循序漸進**：先從單一媒體類型開始，再慢慢組合
+2. **在地化語言**：使用台灣人熟悉的描述方式
+3. **具體場景**：結合實際使用情境來設計提示
+4. **反覆測試**：不同的媒體組合可能需要調整提示策略
+:::
+
+## 下一步
+
+準備將 Multi-Modal 技巧應用到實際專案中了嗎？
+- **[Prompt Chaining 提示鏈](./prompt-chaining)** - 將多模態處理串連成工作流程
+- **[生產環境部署](../best-practices/production-deployment)** - 學習如何擴展多模態系統
+- **[測試最佳實務](../best-practices/testing-prompts)** - 確保多模態提示的品質

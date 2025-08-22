@@ -2,70 +2,70 @@
 sidebar_position: 2
 ---
 
-# Production Deployment
+# 生產環境部署
 
-Learn to deploy AI prompting solutions in production environments with reliability, scalability, and maintainability best practices for enterprise applications.
+學習在生產環境中部署 AI 提示解決方案，掌握企業應用的可靠性、可擴展性和可維護性最佳實踐。
 
-## Production Readiness Framework
+## 生產就緒框架
 
-### System Architecture Considerations
+### 系統架構考量
 
 ```python
 """
-PRODUCTION ARCHITECTURE DESIGN:
+生產環境架構設計：
 
-Core Components:
-1. Prompt Management System
-   - Version control and rollback capabilities
-   - A/B testing infrastructure
-   - Template library and inheritance
-   - Configuration management
+核心組件：
+1. 提示管理系統
+   - 版本控制與回滾功能
+   - A/B 測試基礎設施
+   - 模板庫與繼承機制
+   - 配置管理
 
-2. Execution Engine
-   - Load balancing and failover
-   - Rate limiting and throttling
-   - Caching and optimization
-   - Error handling and recovery
+2. 執行引擎
+   - 負載平衡與故障轉移
+   - 速率限制與流量控制
+   - 快取與優化
+   - 錯誤處理與恢復
 
-3. Monitoring & Analytics
-   - Real-time performance metrics
-   - Quality monitoring and alerting
-   - Usage analytics and optimization
-   - Cost tracking and budgeting
+3. 監控與分析
+   - 即時效能指標
+   - 品質監控與警報
+   - 使用分析與優化
+   - 成本追蹤與預算控制
 
-4. Integration Layer
-   - API design and documentation
-   - Authentication and authorization
-   - Data pipeline integration
-   - Third-party service connections
+4. 整合層
+   - API 設計與文件
+   - 身份驗證與授權
+   - 資料管道整合
+   - 第三方服務連接
 """
 ```
 
-### Scalability Planning
+### 可擴展性規劃
 
 ```python
 """
-SCALABILITY ARCHITECTURE:
+可擴展性架構：
 
-Horizontal Scaling Strategy:
-- Load distribution across multiple AI service endpoints
-- Queue-based processing for high-volume requests
-- Caching frequently used prompt responses
-- Database sharding for prompt metadata and results
+水平擴展策略：
+- 跨多個 AI 服務端點的負載分配
+- 高流量請求的佇列處理
+- 快取常用提示回應
+- 提示中繼資料與結果的資料庫分片
 
-Performance Optimization:
-- Prompt template preprocessing and compilation
-- Response caching with intelligent invalidation
-- Connection pooling and resource management
-- Asynchronous processing for non-real-time tasks
+效能優化：
+- 提示模板預處理與編譯
+- 智慧失效的回應快取
+- 連接池與資源管理
+- 非即時任務的非同步處理
 
-Capacity Planning:
-- Traffic pattern analysis and forecasting
-- Resource utilization monitoring and alerting
-- Auto-scaling policies and thresholds
-- Cost optimization strategies
+容量規劃：
+- 流量模式分析與預測
+- 資源使用監控與警報
+- 自動擴展政策與閾值
+- 成本優化策略
 
-Example Scaling Configuration:
+擴展配置範例：
 ```yaml
 scaling_policy:
   metrics:
@@ -86,28 +86,28 @@ scaling_policy:
 """
 ```
 
-## Deployment Strategies
+## 部署策略
 
-### Blue-Green Deployment
+### 藍綠部署
 
 ```python
 """
-BLUE-GREEN DEPLOYMENT FOR PROMPTS:
+提示藍綠部署：
 
-Strategy Overview:
-- Blue Environment: Current production prompts
-- Green Environment: New prompt versions
-- Instant switchover capability
-- Zero-downtime deployments
+策略概述：
+- 藍色環境：當前生產環境提示
+- 綠色環境：新版本提示
+- 即時切換能力
+- 零停機時間部署
 
-Implementation Process:
-1. Deploy new prompts to green environment
-2. Run automated testing and validation
-3. Gradually route traffic to green environment  
-4. Monitor performance and quality metrics
-5. Complete switchover or rollback if issues
+實施流程：
+1. 將新提示部署到綠色環境
+2. 執行自動化測試與驗證
+3. 逐步將流量導向綠色環境
+4. 監控效能與品質指標
+5. 完成切換或回滾（如有問題）
 
-Deployment Configuration:
+部署配置：
 ```yaml
 deployment:
   strategy: blue_green
@@ -134,27 +134,27 @@ deployment:
       - manual_intervention: true
 ```
 
-Benefits:
-- Instant rollback capability
-- Risk-free testing in production environment
-- Zero downtime during deployments
-- Clear separation of environments
+優勢：
+- 即時回滾能力
+- 在生產環境中無風險測試
+- 部署期間零停機時間
+- 環境清楚分離
 """
 ```
 
-### Canary Deployment
+### 金絲雀部署
 
 ```python
 """
-CANARY DEPLOYMENT STRATEGY:
+金絲雀部署策略：
 
-Gradual Rollout Process:
-1. Deploy new prompt version to small subset (5% traffic)
-2. Monitor key metrics and quality indicators
-3. Gradually increase traffic if metrics are good
-4. Full rollout once confidence is established
+漸進推出流程：
+1. 將新提示版本部署到小子集（5% 流量）
+2. 監控關鍵指標與品質指標
+3. 如指標良好則逐步增加流量
+4. 建立信心後完全推出
 
-Traffic Routing Configuration:
+流量路由配置：
 ```python
 canary_config = {
     "rollout_stages": [
@@ -173,23 +173,23 @@ canary_config = {
 }
 ```
 
-Quality Gates:
-- Automated quality assessment at each stage
-- User satisfaction feedback monitoring
-- Performance metric comparison
-- Business metric impact analysis
+品質關卡：
+- 各階段自動化品質評估
+- 使用者滿意度回饋監控
+- 效能指標比較
+- 商業指標影響分析
 """
 ```
 
-## Configuration Management
+## 配置管理
 
-### Environment-Specific Configurations
+### 環境特定配置
 
 ```python
 """
-ENVIRONMENT CONFIGURATION MANAGEMENT:
+環境配置管理：
 
-Development Environment:
+開發環境：
 ```yaml
 environment: development
 prompt_config:
@@ -208,7 +208,7 @@ prompt_config:
     performance_profiling: true
 ```
 
-Staging Environment:
+測試環境：
 ```yaml
 environment: staging
 prompt_config:
@@ -227,7 +227,7 @@ prompt_config:
     integration_tests: true
 ```
 
-Production Environment:
+生產環境：
 ```yaml
 environment: production
 prompt_config:
@@ -248,13 +248,13 @@ prompt_config:
 """
 ```
 
-### Prompt Version Control
+### 提示版本控制
 
 ```python
 """
-PROMPT VERSION CONTROL SYSTEM:
+提示版本控制系統：
 
-Version Management Structure:
+版本管理結構：
 ```
 prompts/
 ├── templates/
@@ -274,23 +274,23 @@ prompts/
     └── response_schema.json
 ```
 
-Version Metadata:
+版本中繼資料：
 ```yaml
 prompt_metadata:
   version: "2.1.3"
   created_date: "2024-03-15T10:30:00Z"
   author: "ai-team@company.com"
-  description: "Enhanced blog post generation with SEO optimization"
+  description: "增強部落格文章產生，包含 SEO 優化"
   
   changes:
-    - "Added structured output format"
-    - "Improved keyword integration"
-    - "Enhanced readability scoring"
+    - "新增結構化輸出格式"
+    - "改善關鍵字整合"
+    - "增強可讀性評分"
   
   testing:
     test_coverage: 95%
     quality_score: 0.92
-    performance_benchmark: "1.8s avg response"
+    performance_benchmark: "平均回應時間 1.8 秒"
   
   deployment:
     environments: ["staging", "production"]
@@ -298,51 +298,51 @@ prompt_metadata:
     approval_required: true
 ```
 
-Deployment Pipeline:
-1. Developer commits prompt changes
-2. Automated testing and validation
-3. Code review and approval process
-4. Staging environment deployment
-5. Production readiness checklist
-6. Gradual production rollout
-7. Performance monitoring and validation
+部署管道：
+1. 開發者提交提示變更
+2. 自動化測試與驗證
+3. 程式碼檢視與核准流程
+4. 測試環境部署
+5. 生產就緒檢查清單
+6. 漸進式生產推出
+7. 效能監控與驗證
 """
 ```
 
-## Monitoring & Observability
+## 監控與可觀測性
 
-### Real-Time Monitoring Dashboard
+### 即時監控儀表板
 
 ```python
 """
-PRODUCTION MONITORING FRAMEWORK:
+生產監控框架：
 
-Key Performance Indicators:
-1. Quality Metrics
-   - Response quality scores (real-time)
-   - Format compliance rates
-   - Content relevance measurements
-   - User satisfaction ratings
+關鍵效能指標：
+1. 品質指標
+   - 回應品質分數（即時）
+   - 格式合規率
+   - 內容相關性測量
+   - 使用者滿意度評分
 
-2. Performance Metrics
-   - Average response time
-   - 95th percentile latency
-   - Throughput (requests per second)
-   - Error rates and failure patterns
+2. 效能指標
+   - 平均回應時間
+   - 第 95 百分位延遲
+   - 吞吐量（每秒請求數）
+   - 錯誤率與失敗模式
 
-3. Business Metrics
-   - Cost per request
-   - User engagement improvements
-   - Conversion rate impact
-   - Revenue attribution
+3. 商業指標
+   - 每請求成本
+   - 使用者參與度改善
+   - 轉換率影響
+   - 收益歸因
 
-4. System Health
-   - Service availability
-   - Resource utilization
-   - Queue depths and processing times
-   - Dependency health status
+4. 系統健康
+   - 服務可用性
+   - 資源使用率
+   - 佇列深度與處理時間
+   - 依賴項健康狀態
 
-Alerting Configuration:
+警報配置：
 ```yaml
 alerts:
   quality_degradation:
@@ -368,13 +368,13 @@ alerts:
 """
 ```
 
-### Logging & Debugging
+### 日誌記錄與除錯
 
 ```python
 """
-COMPREHENSIVE LOGGING STRATEGY:
+全面日誌記錄策略：
 
-Log Levels and Content:
+日誌層級與內容：
 ```python
 import logging
 import json
@@ -426,23 +426,23 @@ class PromptLogger:
         self.logger.error(json.dumps(log_entry))
 ```
 
-Structured Logging Benefits:
-- Easy parsing and analysis
-- Correlation across distributed systems
-- Performance optimization insights
-- Debugging and troubleshooting support
+結構化日誌記錄優勢：
+- 易於解析與分析
+- 跨分散式系統關聯
+- 效能優化洞察
+- 除錯與故障排除支援
 """
 ```
 
-## Error Handling & Resilience
+## 錯誤處理與韌性
 
-### Fault Tolerance Patterns
+### 容錯模式
 
 ```python
 """
-RESILIENCE PATTERNS FOR AI SYSTEMS:
+AI 系統韌性模式：
 
-1. Circuit Breaker Pattern:
+1. 斷路器模式：
 ```python
 class CircuitBreaker:
     def __init__(self, failure_threshold=5, timeout=60):
@@ -479,7 +479,7 @@ class CircuitBreaker:
         self.state = 'CLOSED'
 ```
 
-2. Retry with Exponential Backoff:
+2. 指數退避重試：
 ```python
 class RetryManager:
     def __init__(self, max_attempts=3, base_delay=1, max_delay=60):
@@ -496,49 +496,49 @@ class RetryManager:
                     raise
                 
                 delay = min(self.base_delay * (2 ** attempt), self.max_delay)
-                time.sleep(delay + random.uniform(0, 1))  # Jitter
+                time.sleep(delay + random.uniform(0, 1))  # 抖動
         
         raise MaxRetriesExceededException()
 ```
 
-3. Graceful Degradation:
+3. 優雅降級：
 ```python
 class GracefulDegradation:
     def __init__(self):
         self.fallback_responses = {
-            "content_generation": "I'm unable to generate content right now. Please try again later.",
-            "data_analysis": "Analysis service temporarily unavailable. Please check back shortly.",
-            "code_generation": "Code generation is currently offline. Manual implementation required."
+            "content_generation": "目前無法產生內容，請稍後再試。",
+            "data_analysis": "分析服務暫時無法使用，請稍後查看。",
+            "code_generation": "程式碼產生功能目前離線，需要手動實作。"
         }
     
     def handle_service_failure(self, service_type, original_request):
-        # Log the failure
-        logger.warning(f"Service {service_type} failed, using fallback")
+        # 記錄失敗
+        logger.warning(f"服務 {service_type} 失敗，使用備用方案")
         
-        # Return appropriate fallback response
+        # 回傳適當的備用回應
         if service_type in self.fallback_responses:
             return self.fallback_responses[service_type]
         
-        # Generic fallback
-        return "Service temporarily unavailable. Please try again later."
+        # 通用備用方案
+        return "服務暫時無法使用，請稍後再試。"
 ```
 """
 ```
 
-### Data Backup & Recovery
+### 資料備份與恢復
 
 ```python
 """
-BACKUP AND RECOVERY STRATEGY:
+備份與恢復策略：
 
-Backup Components:
-1. Prompt Templates and Versions
-2. Configuration Files
-3. Training Data and Examples  
-4. Performance Metrics and Analytics
-5. User Feedback and Ratings
+備份組件：
+1. 提示模板與版本
+2. 配置檔案
+3. 訓練資料與範例
+4. 效能指標與分析
+5. 使用者回饋與評分
 
-Backup Schedule:
+備份排程：
 ```yaml
 backup_strategy:
   incremental:
@@ -555,11 +555,11 @@ backup_strategy:
     
   disaster_recovery:
     cross_region_replication: true
-    rpo: 1_hour  # Recovery Point Objective
-    rto: 4_hours # Recovery Time Objective
+    rpo: 1_hour  # 恢復點目標
+    rto: 4_hours # 恢復時間目標
 ```
 
-Recovery Procedures:
+恢復程序：
 ```python
 class DisasterRecovery:
     def __init__(self, backup_manager, config_manager):
@@ -567,147 +567,163 @@ class DisasterRecovery:
         self.config_manager = config_manager
     
     def restore_service(self, recovery_point):
-        """Restore service to specific point in time"""
+        """將服務恢復到特定時間點"""
         try:
-            # 1. Restore prompt templates
+            # 1. 恢復提示模板
             self.backup_manager.restore_prompts(recovery_point)
             
-            # 2. Restore configurations
+            # 2. 恢復配置
             self.config_manager.restore_configs(recovery_point)
             
-            # 3. Validate restored components
+            # 3. 驗證恢復的組件
             validation_result = self.validate_restored_service()
             
             if validation_result.success:
-                logger.info(f"Service restored successfully to {recovery_point}")
+                logger.info(f"服務成功恢復到 {recovery_point}")
                 return True
             else:
-                logger.error(f"Service restoration failed: {validation_result.errors}")
+                logger.error(f"服務恢復失敗：{validation_result.errors}")
                 return False
                 
         except Exception as e:
-            logger.error(f"Disaster recovery failed: {str(e)}")
+            logger.error(f"災難恢復失敗：{str(e)}")
             return False
     
     def validate_restored_service(self):
-        """Run health checks on restored service"""
-        # Implementation of validation logic
+        """對恢復的服務執行健康檢查"""
+        # 驗證邏輯實作
         pass
 ```
 """
 ```
 
-## Security & Compliance
+## 安全性與合規
 
-### Security Best Practices
+### 安全最佳實踐
 
 ```python
 """
-PRODUCTION SECURITY FRAMEWORK:
+生產安全框架（符合台灣法規要求）：
 
-1. Input Validation and Sanitization:
+1. 輸入驗證與淨化（符合台灣個資法）：
 ```python
 class InputValidator:
     def __init__(self):
         self.max_input_length = 10000
         self.allowed_formats = ['text', 'json', 'yaml']
         self.forbidden_patterns = [
-            r'<script.*?>.*?</script>',  # XSS prevention
-            r'javascript:',               # JavaScript injection
+            r'<script.*?>.*?</script>',  # 防止 XSS
+            r'javascript:',               # JavaScript 注入
             r'data:text/html',           # Data URI XSS
+        ]
+        # 台灣個資法敏感資料模式
+        self.taiwan_pii_patterns = [
+            r'\d{10}',                   # 身分證號
+            r'09\d{8}',                  # 手機號碼
+            r'\d{4}-\d{4}-\d{4}-\d{4}',  # 信用卡號
         ]
     
     def validate_input(self, user_input, input_format='text'):
-        # Length validation
+        # 長度驗證
         if len(user_input) > self.max_input_length:
-            raise InputValidationError("Input too long")
+            raise InputValidationError("輸入過長")
         
-        # Format validation
+        # 格式驗證
         if input_format not in self.allowed_formats:
-            raise InputValidationError("Invalid format")
+            raise InputValidationError("格式無效")
         
-        # Pattern validation
+        # 惡意模式驗證
         for pattern in self.forbidden_patterns:
             if re.search(pattern, user_input, re.IGNORECASE):
-                raise SecurityViolationError("Potentially malicious content detected")
+                raise SecurityViolationError("偵測到潛在惡意內容")
+        
+        # 台灣個資檢查
+        for pattern in self.taiwan_pii_patterns:
+            if re.search(pattern, user_input):
+                raise PrivacyViolationError("偵測到個人資料，違反個資法")
         
         return True
 ```
 
-2. Authentication and Authorization:
+2. 身份驗證與授權（符合 NCC 資安規範）：
 ```python
 class SecurityManager:
     def __init__(self):
         self.token_manager = JWTTokenManager()
         self.rate_limiter = RateLimiter()
+        self.taiwan_compliance = TaiwanComplianceManager()
         
     def authenticate_request(self, request):
         token = request.headers.get('Authorization')
         if not token:
-            raise AuthenticationError("Missing authorization token")
+            raise AuthenticationError("缺少授權令牌")
         
         try:
             user_info = self.token_manager.validate_token(token)
+            # 檢查台灣資安要求
+            self.taiwan_compliance.validate_user_access(user_info)
             return user_info
         except TokenValidationError:
-            raise AuthenticationError("Invalid token")
+            raise AuthenticationError("無效令牌")
     
     def authorize_action(self, user_info, action, resource):
         permissions = user_info.get('permissions', [])
         required_permission = f"{action}:{resource}"
         
         if required_permission not in permissions:
-            raise AuthorizationError("Insufficient permissions")
+            raise AuthorizationError("權限不足")
+        
+        # 記錄存取日誌（法規要求）
+        self.taiwan_compliance.log_access_attempt(user_info, action, resource)
         
         return True
     
     def apply_rate_limiting(self, user_id, endpoint):
         if not self.rate_limiter.allow_request(user_id, endpoint):
-            raise RateLimitExceededError("Too many requests")
+            raise RateLimitExceededError("請求過於頻繁")
 ```
 
-3. Data Privacy and Protection:
+3. 資料隱私與保護（台灣個資法合規）：
 ```python
 class DataProtectionManager:
     def __init__(self):
         self.encryption_key = self.load_encryption_key()
-        self.pii_detector = PIIDetector()
+        self.taiwan_pii_detector = TaiwanPIIDetector()
     
     def sanitize_logs(self, log_data):
-        """Remove PII from logs before storage"""
+        """移除日誌中的個資（符合個資法）"""
         sanitized_data = log_data.copy()
         
-        # Detect and mask PII
-        pii_fields = self.pii_detector.find_pii(log_data)
+        # 偵測並遮罩台灣個資
+        pii_fields = self.taiwan_pii_detector.find_taiwan_pii(log_data)
         for field in pii_fields:
             sanitized_data[field] = self.mask_sensitive_data(sanitized_data[field])
         
         return sanitized_data
     
     def encrypt_sensitive_data(self, data):
-        """Encrypt sensitive data at rest"""
-        return self.encryption_manager.encrypt(data, self.encryption_key)
+        """加密敏感資料（符合政府資安規範）"""
+        return self.encryption_manager.encrypt_taiwan_compliant(data, self.encryption_key)
     
     def ensure_data_residency(self, user_location, data):
-        """Ensure data stays within required geographic boundaries"""
-        allowed_regions = self.get_allowed_regions(user_location)
-        current_region = self.get_current_region()
-        
-        if current_region not in allowed_regions:
-            raise DataResidencyViolationError("Data residency requirements violated")
+        """確保資料符合地理邊界要求（台灣資料在地化）"""
+        if user_location == 'taiwan':
+            current_region = self.get_current_region()
+            if current_region not in ['taiwan', 'asia-pacific']:
+                raise DataResidencyViolationError("違反台灣資料在地化要求")
 ```
 """
 ```
 
-## Cost Optimization
+## 成本優化
 
-### Resource Management
+### 資源管理
 
 ```python
 """
-COST OPTIMIZATION STRATEGIES:
+成本優化策略（適用台灣雲端服務）：
 
-1. Token Usage Optimization:
+1. Token 使用優化：
 ```python
 class TokenOptimizer:
     def __init__(self):
@@ -731,21 +747,21 @@ class TokenOptimizer:
         return optimized_prompt
     
     def compress_context(self, prompt, context):
-        """Remove redundant information from context"""
-        # Implementation of context compression
+        """移除內容中的冗餘資訊"""
+        # 內容壓縮實作
         pass
     
     def use_templates(self, prompt, context):
-        """Replace repetitive text with templates"""
-        # Implementation of template substitution
+        """使用模板取代重複文字"""
+        # 模板替換實作
         pass
 ```
 
-2. Caching Strategy:
+2. 快取策略（搭配台灣雲端服務）：
 ```python
 class IntelligentCache:
     def __init__(self, redis_client, ttl_default=3600):
-        self.redis = redis_client
+        self.redis = redis_client  # 可使用中華電信 HiCloud 或遠傳 Redis
         self.ttl_default = ttl_default
         self.cache_stats = CacheStatistics()
     
@@ -771,58 +787,59 @@ class IntelligentCache:
         )
     
     def calculate_dynamic_ttl(self, response):
-        """Calculate TTL based on response characteristics"""
+        """根據回應特性計算 TTL"""
         base_ttl = self.ttl_default
         
-        # Longer TTL for high-quality, stable responses
+        # 高品質穩定回應較長 TTL
         if response.get('quality_score', 0) > 0.9:
             base_ttl *= 2
         
-        # Shorter TTL for time-sensitive content
+        # 時敏內容較短 TTL
         if self.is_time_sensitive(response):
             base_ttl //= 2
         
         return base_ttl
 ```
 
-3. Budget Management:
+3. 預算管理（台幣計價）：
 ```python
 class BudgetManager:
     def __init__(self):
-        self.daily_budget = 1000.0  # USD
+        self.daily_budget = 30000.0  # 新台幣
         self.hourly_budget = self.daily_budget / 24
-        self.cost_per_token = 0.0001  # Example rate
+        self.cost_per_token = 0.003  # 台幣計價
         self.current_spend = self.get_current_spend()
+        self.taiwan_tax_rate = 0.05  # 營業稅
     
     def check_budget_availability(self, estimated_tokens):
-        estimated_cost = estimated_tokens * self.cost_per_token
+        estimated_cost = estimated_tokens * self.cost_per_token * (1 + self.taiwan_tax_rate)
         
         if self.current_spend + estimated_cost > self.daily_budget:
-            raise BudgetExceededException("Daily budget would be exceeded")
+            raise BudgetExceededException("將超過每日預算限制")
         
         return True
     
     def track_usage(self, actual_tokens, request_id):
-        actual_cost = actual_tokens * self.cost_per_token
+        actual_cost = actual_tokens * self.cost_per_token * (1 + self.taiwan_tax_rate)
         self.current_spend += actual_cost
         
-        # Log usage for analytics
+        # 記錄使用分析
         self.log_usage(request_id, actual_tokens, actual_cost)
         
-        # Alert if approaching budget limits
+        # 接近預算限制時警報
         if self.current_spend > self.daily_budget * 0.8:
-            self.send_budget_alert("80% of daily budget reached")
+            self.send_budget_alert("已達每日預算 80%")
 ```
 """
 ```
 
-## Next Steps
+## 下一步
 
-Ready to ensure responsible and secure AI deployment?
-- **[Security & Ethics](/docs/best-practices/security-ethics)** - Implement security and ethical guidelines
-- **[Team Collaboration](/docs/best-practices/team-collaboration)** - Scale prompting across teams
-- **[Case Studies](/docs/case-studies/enterprise-deployment)** - Learn from real-world implementations
+準備確保負責任且安全的 AI 部署？
+- **[安全與倫理](/docs/best-practices/security-ethics)** - 實施安全與倫理準則
+- **[團隊協作](/docs/best-practices/team-collaboration)** - 跨團隊擴展提示工程
+- **[案例研究](/docs/case-studies/enterprise-deployment)** - 從實際實作中學習
 
-:::tip Production Success
-Start with a pilot deployment in a non-critical system. Build monitoring and operational experience before scaling to mission-critical applications. Always have rollback plans and test them regularly.
+:::tip 生產成功要訣
+從非關鍵系統的試點部署開始。在擴展到關鍵業務應用之前，先建立監控和營運經驗。始終準備回滾計劃並定期測試。
 :::
