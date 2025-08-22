@@ -69,6 +69,36 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      
+      // SEO improvements
+      metadata: [
+        {name: 'keywords', content: 'AI, artificial intelligence, prompting, prompt engineering, LLM, ChatGPT, machine learning, NLP, O-RAN, 5G, 6G'},
+        {name: 'author', content: '蔡秀吉 (Hsiu-Chi Tsai)'},
+        {name: 'description', content: 'Comprehensive guide to AI prompting techniques, best practices, and advanced strategies for effective interaction with language models'},
+        {property: 'og:type', content: 'website'},
+        {property: 'og:image', content: 'https://thc1006.github.io/ai-prompting-guide/img/social-card.png'},
+        {name: 'twitter:card', content: 'summary_large_image'},
+        {name: 'twitter:image', content: 'https://thc1006.github.io/ai-prompting-guide/img/social-card.png'},
+        {name: 'robots', content: 'index, follow'},
+        {name: 'googlebot', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'},
+      ],
+      
+      // Accessibility
+      announcementBar: {
+        id: 'support_us',
+        content: '⭐ If you find this guide helpful, please star us on <a target="_blank" rel="noopener noreferrer" href="https://github.com/thc1006/ai-prompting-guide">GitHub</a>!',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
+      
+      // Color mode for accessibility
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+      
       navbar: {
         title: 'AI Prompting Guide',
         logo: {
@@ -138,8 +168,81 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['bash', 'json', 'yaml', 'python', 'javascript', 'typescript', 'jsx', 'tsx'],
+      },
+      
+      // Algolia search configuration (can be enabled later)
+      algolia: null, // Will be configured when Algolia DocSearch is set up
+      
+      // Table of contents
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 4,
       },
     }),
+    
+  // Plugins for enhanced functionality
+  plugins: [
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: false,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/logo.svg',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json',
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: '#25c2a0',
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-capable',
+            content: 'yes',
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-status-bar-style',
+            content: '#25c2a0',
+          },
+          {
+            tagName: 'link',
+            rel: 'apple-touch-icon',
+            href: '/img/logo.svg',
+          },
+          {
+            tagName: 'link',
+            rel: 'mask-icon',
+            href: '/img/logo.svg',
+            color: '#25c2a0',
+          },
+          {
+            tagName: 'meta',
+            name: 'msapplication-TileImage',
+            content: '/img/logo.svg',
+          },
+          {
+            tagName: 'meta',
+            name: 'msapplication-TileColor',
+            content: '#25c2a0',
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 export default config;

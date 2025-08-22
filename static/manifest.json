@@ -1,0 +1,22 @@
+{
+  "name": "AI Prompting Guide",
+  "short_name": "AI Guide",
+  "description": "Comprehensive guide to AI prompting techniques and best practices",
+  "start_url": "/ai-prompting-guide/",
+  "display": "standalone",
+  "theme_color": "#25c2a0",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/ai-prompting-guide/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity", "developer"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false
+}

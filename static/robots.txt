@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thc1006.github.io/ai-prompting-guide/sitemap.xml
+
+# Crawl-delay for responsible crawling
+Crawl-delay: 1
+
+# Block access to internal build files
+Disallow: /.docusaurus/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+
+# Allow search engines to index all content
+Allow: /docs/
+Allow: /blog/
+Allow: /assets/
+Allow: /img/
