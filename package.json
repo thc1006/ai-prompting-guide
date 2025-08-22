@@ -16,13 +16,13 @@
     "chatgpt",
     "llm"
   ],
-  "homepage": "https://tingy.github.io/ai-prompting-guide/",
+  "homepage": "https://thc1006.github.io/ai-prompting-guide/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tingy/ai-prompting-guide.git"
+    "url": "git+https://github.com/thc1006/ai-prompting-guide.git"
   },
   "bugs": {
-    "url": "https://github.com/tingy/ai-prompting-guide/issues"
+    "url": "https://github.com/thc1006/ai-prompting-guide/issues"
   },
   "author": "Your Name <your.email@example.com>",
   "license": "MIT",
