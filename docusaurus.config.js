@@ -11,6 +11,12 @@ const config = {
   title: 'AI Prompting Guide',
   tagline: 'Master the art of effective AI prompting',
   favicon: 'img/favicon.ico',
+  
+  // Custom fields for i18n
+  customFields: {
+    titleZhTW: 'AI 提示詞寶典',
+    taglineZhTW: '掌握 AI 提示詞的藝術，讓你成為 AI 溝通大師',
+  },
 
   // Set the production url of your site here
   url: 'https://thc1006.github.io',
@@ -34,8 +40,24 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-TW',
+    locales: ['zh-TW', 'en'],
+    localeConfigs: {
+      'zh-TW': {
+        label: '繁體中文',
+        direction: 'ltr',
+        htmlLang: 'zh-TW',
+        calendar: 'gregory',
+        path: 'zh-TW',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      },
+    },
   },
 
   presets: [
@@ -116,6 +138,10 @@ const config = {
           {
             href: 'https://github.com/thc1006/ai-prompting-guide',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],

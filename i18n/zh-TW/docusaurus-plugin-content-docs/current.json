@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Fundamentals": {
+    "message": "Fundamentals",
+    "description": "The label for category Fundamentals in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Practical Tutorials": {
+    "message": "Practical Tutorials",
+    "description": "The label for category Practical Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Advanced Techniques": {
+    "message": "Advanced Techniques",
+    "description": "The label for category Advanced Techniques in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Best Practices": {
+    "message": "Best Practices",
+    "description": "The label for category Best Practices in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Applications": {
+    "message": "Applications",
+    "description": "The label for category Applications in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Case Studies": {
+    "message": "Case Studies",
+    "description": "The label for category Case Studies in sidebar tutorialSidebar"
+  }
+}

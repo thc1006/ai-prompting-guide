@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "AI 提示詞寶典",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "AI 提示詞寶典 Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Tutorial": {
+    "message": "實戰教學",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.Blog": {
+    "message": "技術筆記",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "原始碼",
+    "description": "Navbar item with label GitHub"
+  }
+}
