@@ -1,0 +1,1344 @@
+
+
+=========================
+--- 內容來源：subtitle (1).txt ---
+=========================
+
+- Hi, I am Timothy, a Director of Developer Relations at Google. For the last 14 years, I've
+been helping developers and Google work better together. I've recently been working
+a lot more with gen AI to do things like technical
+writing and generating code. I've also been helping more
+developers integrate gen AI into their apps. Prompting is a new skill
+that a lot of us are learning and trying to get better at. Myself included. Now my
+first experience using gen AI that was transformative was
+for a pretty simple task. I needed to quickly collect
+everyone's availability for an important team meeting. I asked over chat and everyone
+responded in a different format as people are likely to do, and it was a lot to track. But with the help of gen AI, I was able to organize everyone's
+availability into a table and then transposed it so
+the table was sorted by date, not by chat message. A task that would've taken forever, manually only took me a
+few minutes with gen AI, and that was my breakthrough
+moment using gen AI in my everyday tasks to turn things that used to be a headache into
+something simple and easy. And that's what this course
+is about, using gen AI to help you get your job done. So what is prompting anyway? Put simply prompting is the process of providing specific
+instructions to a gen AI tool to receive new information or to achieve a desired outcome on a task. Those instructions are called prompts. When we write a prompt for a gen AI tool, we're giving it a series of inputs and telling it what we
+would like it to generate. Some gen AI tools can generate text or images while others generate
+video, audio, or even code. Prompting is both
+an art and a science. To get the best results, we need to be precise in defining what we need. Now, this is similar to the way
+you would help your teammate get started on a new project. Providing context and setting parameters
+will get you the best output from gen AI. The first thing you'll learn
+is the prompting framework. It's a formula for writing great prompts. You'll use this framework
+throughout the course, and after that, it's all about putting prompts to use on specific tasks
+that can save you time in your job. You'll use
+gen AI to brainstorm ideas, develop plans and draft
+emails for different audiences. We'll teach you how to
+summarize meeting notes, assign action items and more. We'll also teach you how to analyze data and spreadsheets with gen AI. You'll write prompts
+that can help you find insights buried in data. You'll then use gen AI to turn
+those insights into visuals, and eventually, turn it
+all into a slide deck with talking points for a presentation. Next, you'll learn advanced
+prompting techniques to help you untangle complex tasks. For example, you'll learn
+how to create prompts that can help make long-term
+complicated projects easier to plan and execute. You'll also learn how to design a prompt to create your own personalized AI agent to do things like practice
+before an interview or prepare for difficult
+work conversations. And finally, you'll learn
+how to use gen AI responsibly, including guidelines
+for using it in your job and on your team. This is crucial. Gen AI
+tools help you with the work that you do, but they don't do it for you. Anyone using gen AI should
+always be evaluating and fact-checking outputs. There are a lot of gen AI tools out there and in this course. We're
+gonna demonstrate how to prompt using Gemini and other Google AI tools like
+Gemini for Google Workspace and Google AI Studio. But all of the techniques and best practices you'll
+learn in this course can be applied to other gen AI tools like ChatGPT, Copilot, or Claude. Last thing, we designed this
+course to give you skills that you can use at work right away. So all of these lessons and techniques you're gonna
+learn are rooted in real world scenarios. You should experiment and
+play around to figure out what works best for you. And as you go through
+this course, feel free to pause the video and test what you just learned with something you're
+working on right now. Now let's get started
+with our first prompts.
+
+=========================
+--- 內容來源：subtitle (10).txt ---
+=========================
+
+- Okay. We just use text to create an image, but we can also use an
+image as part of our prompt to create a different type of output. Let me introduce you to
+multimodal prompting. The essence of multimodal
+prompting is using different types of media to prompt a generative
+AI tool, like inputting image and text, or audio and text. This can be especially
+useful in the workplace. You can take a picture of a chart and ask a gen AI tool to explain
+the data in plain language. You could upload different logo options for your company's rebrand
+as a set of references, and then prompt the gen AI tool to give you more choices
+based on each direction. Or you could capture
+audio of another language and ask for a transcription in
+the language you understand. Here's an example where
+we'll prompt with both image and text to receive a text
+based output from Gemini. Let's imagine you're an entrepreneur who needs help creating
+social media captions for a new design of
+nail art you're selling. You can take a picture of your nail art and ask for help writing a caption. Here's a photo of the nail art, and we'll input this
+into Gemini and prompt: Write a social media post
+featuring this image. The posts should be fun, short and focus on the fact it's a collection of new designs I am selling. Note that in addition to
+including a reference photo of the nail art, we still
+used the other elements of our prompting framework. We specified our task, added some context, and included the format.
+Besides the image itself, we didn't provide other references, but if we have a specific tone or voice, we want the
+gen AI tool to match. We could always input a
+few captions from previous posts to reference. This is great. Gemini analyzed the image and created a fun caption you can use to market the nail art. Notice how it uses emojis
+to break up the text and how it engages followers by asking a question about
+their favorite design. The cool thing about
+multimodal prompting is that it reflects the way
+you experience the world. You don't just discuss the words or images in a work presentation. You build connections between them to get a fuller understanding
+of the topic in question. A mix of text, images, and other modalities can open up new ways of solving problems or saving time. You could use a gen AI
+tool to turn a picture of a city map into a list
+of notable landmarks. Find key insights within an audio file, or quickly extract a list of room names from an office floor plan. Here's another example: You go to a conference and
+receive a schedule of events and you want your team to
+focus on a few of the events in particular. I want to send a reminder to my colleagues about certain
+events from a conference schedule. Extract the times
+of the keynote speaker and two panel discussions
+from this schedule into a table. Again, we specified our task,
+provided helpful context, and included the format before inputting the
+picture of the schedule. Let's check it out. Great. The table makes
+it really easy to see where your team needs to go and when. You can even
+take it a step further and prompt Gemini to draft
+an email about these events. We'll get into prompting for email drafts later in the course. Just remember to keep the
+prompting framework in mind no matter what modality you are prompting in to achieve the best results. How might you leverage different
+modalities in your prompts to help you at work?
+
+=========================
+--- 內容來源：subtitle (11).txt ---
+=========================
+
+- Generative AI tools are powerful, but like any tool, it's important
+you use them responsibly, especially at work. First, consider the
+problem you're using gen AI to help you solve. Does it align with your goals and your obligations to
+your clients and coworkers? What about your organization's policies and local laws about using gen AI to perform this type of task? If it doesn't align, then you
+should rethink your process and whether or not a gen AI
+tool is right for the job. Second, consult your
+company's rules or policies before entering confidential or sensitive data into gen AI tools. You can also check if your
+company has an enterprise version of a gen AI tool that is
+okay for other types of use. And remember, if you're using
+gen AI tools for personal use, avoid entering personal or confidential information
+about yourself into publicly available tools, and always check how the data you enter might be used. Finally, being a responsible
+gen AI user means evaluating outputs for potential bias and errors, and disclosing any use of gen AI when sharing
+content with others. While it's okay to enlist
+the help of gen AI, you'll still need to evaluate the outputs for accuracy the way you
+would for any output. The same goes for hallucinations, which is when a gen AI
+tool provides outputs that are inconsistent, incorrect, or even nonsensical Hallucinations
+most often happen when someone gives a gen AI tool
+vague or unclear instructions. Or when a tool guesses at an answer to something it didn't quite understand. Hallucinations can be hard to recognize. That's why it's so crucial to fact check and cross-reference outputs
+to confirm if a fact or statement in an output is true. Remember, gen AI tools aren't
+thinking critically the way humans can. It's important to keep what
+we call a human in the loop approach. Meaning a human
+should verify gen AI outputs before using them. I recently generated an
+image for a presentation. I wanted to have a bunch of cats on a rocket going to the moon. Now instead, the output
+was a little bit off. The cats were on top of the
+rocket rather than inside it. And that's not exactly
+safe for cats, is it? While I did write in my
+prompt that cats needed to be on a rocket, I
+didn't mean that literally, but the tool didn't know that. So I iterated and specified
+that the cats should appear safe and sound inside the rocket
+instead of on top of it. Some gen AI tools such as Gemini have a built-in
+fact checker that allows you to cross-reference the
+outputs using Google search. Comparing outputs side by side
+makes it easier to determine how accurate your initial output is and to find any discrepancies. So how can you avoid these issues before they become a problem? Try to recognize biases and outputs and the negative
+consequences they can have. They may appear as stereotypes or unfair representations
+of a group of people. Avoiding bias to negative outputs starts with inputting specific detailed prompts and iterating as needed. Another key part of this is using language that includes people of
+all backgrounds, genders, and ethnicities, and avoid stereotypes and generalizations in your inputs. For example, if you
+were using a gen AI tool to help you write the
+description for a job posting, you should avoid the gendered
+terms like serviceman or workman. Instead, use service person or worker. So the tool doesn't write
+a description that only speaks to someone who identifies as male. Remember, gen AI tools are
+only tools they don't think critically and can't understand
+nuance the way humans can. It's your job to bring that human perspective every
+time you use a gen AI tool.
+
+=========================
+--- 內容來源：subtitle (12).txt ---
+=========================
+
+- Okay, Tris. So let's talk about
+hallucinations for a second. First, let's talk about
+what are hallucinations and then maybe give me a few
+strategies on how to work through hallucinations that
+might come about as a result of you using this AI. - So hallucinations are AI
+outputs that don't match reality. They're not true. And sometimes that can be good if you're
+writing a fictional story or a creative piece. - Right. - And sometimes that
+can be very undesirable as when you're trying to
+have factual information or you're trying to analyze something and, and it comes up with a
+completely made up answer. Or even worse, a subtly wrong answer. - That's right.
+- So one of the most important things that everybody who uses AI
+should do is to check all outputs for hallucination,
+especially when you're trying to get factual output and non-creative outputs.
+It is your responsibility to make sure that what
+comes out of the AI actually matches reality. And that's a often a more
+difficult task than it would seem. Some tools like Gemini actually
+have built in fact checking capabilities, and I highly recommend using those sorts of things. You know, verify with search, verify with your own knowledge,
+check it with your community and your friends, other coworkers. Those are all good strategies
+for mitigating hallucinations. - Those are great tips. Thank you.
+
+=========================
+--- 內容來源：subtitle (13).txt ---
+=========================
+
+- I have to read a lot of
+research papers for my job. Sometimes I get several
+sent to me in a single day, and even though I love
+hearing about everything new happening in my field, there
+are times when I can't get through every line of every paper. When that happens, I'll
+upload one of these papers to a generative AI tool
+and start a conversation. I'll prompt for the most
+important points in the research and then ask follow up questions on information that I'm curious about. It's helped me get familiar
+with a lot of topics quickly because it's like having a
+creative on demand assistant that I can have a conversation with. In this module, you're going
+to learn about the best ways to prompt gen AI tools to
+help you summarize text, write better emails, level
+up your brainstorming, build schedules effortlessly, and take meeting notes instantly. Now, lets learn more
+about what you can do with those prompts and how
+they can benefit you at work to boost your productivity
+and spark your creativity.
+
+=========================
+--- 內容來源：subtitle (14).txt ---
+=========================
+
+- So Laura, I mean for
+some people like this is just a beginning for them. So how do they get started? What advice do you have for them? - Yeah, I think sometimes
+it can be intimidating just to look at a blank AI screen
+and say, where should I start? And so summarizing, brainstorming,
+planning, researching, you know, is any of that something
+that you are going to do? My job is to coach top
+executives at Google in the area of productivity. I also started productivity at Google, so I share productivity
+tips both internally and externally for people to
+get more done in their day. When I'm doing my coaching sessions, I usually have someone pull
+out their actual to-do list for that day or that week, and
+I scan through it with them and say, is there anything on this list that AI could help with? So if it is, you know, I need
+to write the email to that to my team, or I've been
+meaning to research this or start this project, I go right to AI and say, is there a way that
+AI can help kick this off? And so instead of thinking of
+what can I do with AI, think, what am I already doing, that AI can help.
+
+=========================
+--- 內容來源：subtitle (15).txt ---
+=========================
+
+- Hi, I'm Clara and I'm a product marketing
+manager on the Gemini team, and I'm one of your instructors. Before I joined Google,
+I was a startup founder, and as any founder can tell
+you, one of the most important and challenging parts of running a startup is getting
+in touch with investors. I sent out a lot of emails and sometimes I wouldn't get a response. I spent a lot of time coming up with creative follow-up emails in order to get their attention. Generative AI is really
+good at that sort of thing. Gen AI tools can help you
+draft emails, adjust your tone or style of writing, and give you ideas on how
+to change your approach. Here's how we can put
+that to work for you. Let's try this example
+using our prompt framework. We'll add the task, provide context, then evaluate and iterate. This is a useful exercise, whether you're a copywriter
+working on an ad campaign, a speech writer, drafting,
+talking points for an executive or gym manager communicating
+a schedule change. Let's start with the
+persona. I am a gym manager. Next, we'll add in the context
+and we have new gym schedule and specify the task. Write an email informing our
+staff of the new schedule. Highlight the fact that
+the Monday, Wednesday, Friday Cardio Blast
+class change from 7:00 AM to 6:00 AM and let's add
+even more specificity, especially about the content and format of the email, which could include language or tone. Make the email professional and friendly and short so that the
+readers can skim it quickly. And now let's just paste
+in the new gym schedule. Here's the new schedule. Okay, this is a really great
+email to send to the staff. All the information is there
+about the schedule changes, and it's short and easy to read. But did you know you can ask Gemini to adjust this same
+output for a new audience? This would be useful if, for
+example, you wanted your output to be more casual for a small
+intimate team, more formal for the executives of the team, or even for a completely
+different audience. Let's try it. We're gonna
+iterate on our prompt asking Gemini to write an email to the gym members in a more casual tone. We're asking for a new version here with new specifics and context. Now, write a concise consumer facing email with the same information for
+our gym members and clients. Let's get even more specific. Explain that this new schedule will help us better serve them. And now let's make sure we're
+clarifying the new tone. Make the tone fun, friendly, and motivating to reflect the gym's energy and enthusiasm for our members' health goals include a
+pun about lifting weights. That's more like it. What a fun email. And it still has all the
+same information about the schedule changes. With just one extra prompt,
+we completely alter this email for a new audience without
+losing the important information. Can you think of a time
+when you were having trouble figuring out how to get the tone right in
+something you've written? With some iterations to
+your task and context, you can tweak your writing to land your message how you want it. Whenever you're drafting
+any sort of communications with the help of a gen AI tool, make sure the outputs are factual and adjust your prompts so that
+you receive the information that's most helpful to you.
+
+=========================
+--- 內容來源：subtitle (16).txt ---
+=========================
+
+- Whenever we hire someone
+new to join my team, we have a meeting to welcome them. What I've started doing
+is prompting generative AI for suggestions on fun icebreakers that are engaging even over video call. I can even generate
+personalized icebreakers by including fun facts about
+my new teammate in the prompt. Whether you're leading a
+team bonding experience or thinking of ideas for a work
+project, you can use gen AI to generate ideas and brainstorm solutions to help you make more informed decisions. Remember, thoughtfully create
+really excellent inputs. You need to add your task context and include relevant references. Then you need to evaluate and iterate. In this lesson, you'll
+learn how to write prompts to generate ideas with Gemini. Consider this, you need to plan a launch for a new video game. Gemini can help you with everything. From brainstorming sales strategies to managing the launch timeline. We'll start with the persona and include the context as well. I'm a marketer for a
+well-known video game producer, known for creating immersive story-based online video games. I'm planning the launch of a new medieval
+fantasy role-playing game that follows the path of a
+young protagonist searching for their missing partner. The game's primary
+audience is young adults. The game is reaching the
+end stages of development, and I need help creating a
+timeline before it goes live. Then we'll specify the tasks and include the formats.
+Provide a rough timeline for the year leading up to its launch. Also provide some pre-launch ideas to help generate buzz around the game. Before we check the output, I wanna highlight a few important
+things about this prompt. We've set up the persona your
+company launches, video games, and the context, a medieval fantasy role-playing game launch. We've also specified the
+task, create a timeline for the launch, and provide pre-launch ideas to generate buzz. With all that in mind,
+let's review the output. This is a great start.
+Sign me up for the contest. While these are cool pre-launch ideas, they could use a little more detail. Maybe your team is hoping to promote this game around the world. Let's give Gemini more context and ask it to update the launch events with a global audience in mind. Since we're already in
+conversation with Gemini, we'll follow up on the prompt
+we just wrote by adding now provide pre-launch
+ideas that will appeal to a global audience of young adults. There we go. These ideas are suited
+for a global audience and not to mention seem really fun. I love the idea to include
+cultural references in the game to relate to players
+from around the world. Evaluating and iterating is
+like having a conversation with the gen AI tool
+continually guiding it to generate our desired output. We can all use a little
+help generating new ideas. How can gen AI help you
+with brainstorming at work?
+
+=========================
+--- 內容來源：subtitle (17).txt ---
+=========================
+
+- Okay. Spreadsheets aren't my
+favorite thing in the world. I'm a creative marketer,
+so I try to avoid cells and formulas as much as possible. But there are times when I
+really need to use spreadsheets to create tables or
+track a project timeline. So I've started to use
+generative AI to help me, and it's made creating
+those tables much easier and less time consuming.
+No matter where you work, being able to easily turn
+information into an organized plan can be a massive help. Think of a schedule or project tracker. These documents are so important because they keep team
+members aware of their roles and responsibilities and keep timelines and deliverables on track. But
+building them can be a chore. Let's explore how gen AI can help you speed that process along. Let's try this example. You need to create a schedule to plan your employee staffing each week and want to prompt
+Gemini to create a table. Here's our task, format and
+context. I have 10 employees. Their employee numbers are 1 through 10. Create a table that
+tracks weekly staffing, create columns for day, name, and shift, morning or afternoon. We also added constraints. There should always be
+two employees scheduled for the morning shift and two employees scheduled
+for the afternoon shift. Employees should not be scheduled for a morning shift on the following day after they were scheduled
+for an afternoon shift. Employees should not be
+scheduled for both the morning and afternoon shifts on the same day. Every employee should have
+roughly the same number of total shifts per week.
+In just a few seconds, Gemini created a staffing
+schedule in a format that's easy to track. The output includes the constraints
+we added when prompting, like making sure no one
+has to work a double shift. Even better, we can export
+the schedule to Google Sheets to continue working on it. After logging in, we can prompt Gemini in Sheets to summarize our
+schedule, create a new schedule, or even create formulas to
+quickly analyze the information. But remember to avoid entering
+any sensitive information that you wouldn't want a tool
+reviewer to have access to. In this case, we wouldn't want to enter any specific
+information about employees. That's why we use
+anonymous employee numbers. Always consult your
+organization's policies regarding sensitive data and gen AI use before leveraging a gen AI tool for work.
+
+=========================
+--- 內容來源：subtitle (18).txt ---
+=========================
+
+- My team and I work in
+Google Docs on a daily basis. Sometimes when I'm editing, I'll realize the writing
+could be improved, but I'm not sure how to approach it. Instead of staring blankly at
+my screen, I can prompt Gemini in Docs to pull out what I
+need to suggest something new. To do that, start by logging into docs. You'll need a Google account
+for this. Let's try an example. You receive customer feedback that your company's return
+policy is too long and confusing. You can paste the return
+policy into a doc, then prompt Gemini. From there, you can enter
+the following prompt. Let's specify the task and context. Summarize this content to write a clear and concise product return policy and outline five steps for customers to take in sequential order. Now you have a solid return policy to reference when assisting
+customers as well as a list of ways customers can begin their returns. There's even more you can do to save time and boost productivity
+with Gemini and Docs. Some days are just so packed
+with meetings and people and action items in those
+meetings that it can be hard to keep track of who said what or what you're responsible for. Think about a long
+meeting you had recently and just how much there was to cover. You might wanna a transcript, right? You can create one right in Google Meet. From there, you can turn to Gemini and Docs to help you keep things organized by creating meeting minutes, outlines a bulleted list and more. To illustrate how it works,
+we'll use a transcript generated by gen AI and open up docs. Now let's prompt Gemini,
+making sure to ask for exactly what you need. Using our prompt framework
+thoughtfully create really excellent inputs. First, we'll add the task, create meeting minutes for this meeting. Then specify the format.
+Section the meeting minutes by speaker, and create a bulleted summary of key points made by that speaker. If applicable, highlight
+action items for each speaker. The meeting notes might be
+more useful if formatted in a clearer way with more defined roles and responsibilities from the meeting. Let's iterate on our
+prompt to achieve that. We'll use the same task.
+Create meeting minutes for this meeting, but
+we'll change the format and get more specific with what exactly it is we
+want from the output. Create sections based on key points extracted from the minutes. Attribute each key point to a speaker, and then assign action
+items to the speaker who is most appropriate to complete them. Much better. The action
+items are clearly displayed and you have the most important takeaways from each attendee. Now you can use these notes to align with your colleagues on a project. Share updates to keep
+stakeholders informed, help your teammates complete
+their responsibilities and monitor the progress of deliverables.
+
+=========================
+--- 內容來源：subtitle (19).txt ---
+=========================
+
+- When you're doing
+research, writing a report, or investigating market
+trends, you're bound to come across some especially
+complex or lengthy materials. Luckily, a generative AI tool
+can summarize long blocks of texts, extract key insights, and even transform them
+into new resources. You can also specify your preferred format in your prompt, so you get exactly the type of output you want. What's a report you've
+been meaning to read but you haven't had the time to? You wanna summarize it
+and pull out key insights, but since the report
+is so long, you'll have to use a gen AI tool with
+a long context window. A long context window
+allows for the processing of a large amount of
+information in different formats at once. The long context window also
+enhances the gen AI model's ability to understand and
+generate more coherent and contextually relevant
+responses to our prompts. We'll test this in Google AI Studio. Let's open up AI studio and
+sign in with a Google account. Notice how we can give our prompt a name. This can make it easier
+to find our prompts later, and it can be useful when
+sharing prompts with others. Now let's start using
+the prompting framework. Here's the task, including the format. Summarize this report in an outline focus only on the most essential points. Pretty cool, huh? 44 pages of information distilled
+down into a few points. Let's call this prompt report summary. Long context windows aren't
+available on every gen AI tool, so depending on the gen AI tool
+you use, it may not be able to analyze long documents. Gen AI technology is dynamic and ever changing, so always
+double check what features and capabilities are available
+in the tools you're using. And here's a pro tip. In the meantime, if
+you're using a gen AI tool that can't handle a large piece of text and you need a summary, break the text up and paste chunks of it in at a time prompt to summarize each chunk, and then ask to summarize the summaries, whether you're doing research
+or analyzing reports. Getting a summary of what
+you're reading can help you understand the material in
+a shorter amount of time. Another pro tip for you, not only can gen AI tools
+summarize lengthy documents, but they can also explain
+them to you in different ways. By incorporating a persona
+specifying who the audience is, you can personalize the
+summary for different people. For example, you can ask
+things like, summarize this for someone who isn't great with numbers, or summarize this for
+a small business owner, or even summarize this
+using eighties movie quotes.
+
+=========================
+--- 內容來源：subtitle (2).txt ---
+=========================
+
+- Hi, I'm Mira, Senior
+Director in Technology and Society at Google. My team imagines and explores the possibilities of using AI to benefit people and society. Throughout this course,
+I'll be sitting down with experts at Google
+to dive deeper into some of the most exciting topics related to AI. I'm excited to be here with Tris, director of Product Management at Google DeepMind. So let's talk about prompting. Why is it important to
+learn prompting right now? - Prompting is completely new. We haven't been able to interact
+with computers in this way before. As AI becomes
+a much more common part of our lives, as it becomes
+part of how you use your phone, your computer, maybe interact
+with things around your house and also other people's AI, I think this is the new language. It's the new language by which
+we converse with computers. And the amazing part is
+that for the first time, computers actually listen to us. They talk the way that we want to talk. We still have to
+understand what works best, and I think that's what
+prompting is all about. But realistically, this
+is a chance for you to bring your own personality,
+your own desires directly to AI in all manner of fields. So I think learning the new
+language of how to interact with computers couldn't come
+at a better time than now.
+
+=========================
+--- 內容來源：subtitle (20).txt ---
+=========================
+
+- So, you know, AI is the thing that we're all talking about nowadays. Give me a few examples. How are you using it in your work life? How do you use it in your personal life? What are you already doing
+that AI has helped you with? - I think summarizing is probably
+one of the biggest places that I feel like was my AHA
+moment with how, you know, how much time did this save me? Because there was a couple of places where I was summarizing maybe
+500 or more survey responses and that used to take hours
+and I would go through and try to find themes of, you know, on a project I was working on annually. And just this past year I
+plugged that right into AI and I was given all of these
+key insights within seconds. And so, you know, knowing that
+that added hours to my day to do more strategic
+things was really helpful. Another way I've used it even
+in my personal life is just planning my daughter's
+fifth birthday party. So same thing, you know,
+I could have gone out, gathered activity ideas,
+snack ideas, all these things. And I told AI as much as
+I could about the party, these are five year olds,
+this is the theme, this is how many people, it's a pool party. And AI gave suggestions
+all the way from activities and themed food and
+giveaways that I could give. And so it was amazing that
+it did all of that for me. And what would've taken a while. - So back to your, you
+know, your use of using AI for summarizing some of your work. How do you know it's doing it correctly? - So I think that with
+that particular example, it's something I had done for
+the past five years on my own. And so by seeing the results, I was able to immediately compare and say, wow, that's
+exactly what I used to get. And that's what I can see in the data. And now that I'm getting those
+themes organized, I can see that it did it in a great way. I think a a quicker
+example is even saying, how can it help me draft an email? So maybe it's something you
+would've done for your team and you wanna send out
+comms if you give the most information. So this is the tone, this
+is the audience, this is what I want it to sound like. This is how I want it to look. Add bullets or whatever that is. So I think that in those
+moments when you see that first draft that AI did
+for you, you can really say, wow, that was maybe even
+better than I would've done first try. Or I can go from there. So I think it just continues to surprise you the more that you use it. And then from then on, of
+course I start with AI now when I'm writing any email.
+
+=========================
+--- 內容來源：subtitle (21).txt ---
+=========================
+
+- Now that you know a few
+summarizing techniques, let's discuss some more
+advanced methods you can use to condense information with gen AI tools. When you ask a gen AI
+tool to provide a summary, sometimes the initial
+output is way too broad. You need a bit more detail to
+make it truly useful to you. A technique called chain of density prompting can help with that. With this method, you get
+increasingly concise summaries and end up with a chain
+of refined outputs. Think of it this way, you're
+working on the perfect elevator pitch for your company. Your first draft is way too long and includes too many details, but as you refine it, it gets shorter and more direct, all without
+losing the important points you need to get across. Eventually, you land on the
+perfect elevator pitch, quick, direct, and effective. Iterating on our last prompt, we
+want to update the task and format. Provide a shorter summary, focusing on the report's,
+top two to three trends, mission accomplished, but
+maybe you want it even shorter. We can get more specific with our prompt to ensure the output not only
+provides a simpler summary, but is also really targeted to your needs. Let's go shorter. We'll ask
+for  a single sentence, condense the summary
+into a single sentence and even more specific context. Highlighting the most
+dominant trend. Nice. We kept asking it to refine
+further and we were direct and specific about the desired output. We can repeat this process until
+we generate the most useful and helpful outputs for the task. We can even get ahead of
+these extra iteration steps and ask that the gen AI tool
+provides multiple increasingly short iterations in the initial prompt. You might be wondering why we wouldn't get to the shortest output right away. Well, iteration helps us
+check for hallucinations as we go from something
+super detailed to an output that's more direct and to the point. It also helps us stay informed about what information is being taken out as the outputs get shorter. Chain of density prompting also works in the other direction. If the output is too
+short, we can also prompt to increase the length
+and add more detail. Remember, when I asked you to think of a report you haven't
+found the time to read, give these prompting techniques a try and discover how quickly you
+can generate a helpful summary.
+
+=========================
+--- 內容來源：subtitle (22).txt ---
+=========================
+
+- Remember that time your
+team launched a new product and sales went up in a specific region, or when a simple survey revealed
+an untapped customer need. Those weren't just
+numbers on a spreadsheet. They were stories that led to valuable insights when organized and analyzed. The problem, you
+may not always have the time to track those stories down. Generative AI tools can help
+you manage, analyze, visualize, and present data. In this module, you'll first learn how to prompt gen AI tools to
+uncover insights from data. Then you'll bring that data
+to life with visualizations, and finally, you'll explore how to put it all together into
+a compelling presentation that helps you show and tell your story.
+
+=========================
+--- 內容來源：subtitle (23).txt ---
+=========================
+
+- Data can teach you a lot, but you need to know how
+to interpret it first. Let's use the prompting
+framework thoughtfully, create, really, excellent, inputs to unlock insights and patterns from data
+using a gen AI tool. Before we get started, remember that not all gen AI tools work with data. Be sure to check what your
+tool can do before using it. We'll teach you how to do this by prompting Gemini models
+in Google AI Studio. One other note, as you work
+with these tools, remember some of the ground rules about
+using gen AI responsibly. Always review your organization's policies before including sensitive or confidential data in your prompt. For this example, we're using publicly
+available data found on Kaggle. Are you ready to try? Let's do it. Here we have a data set with information about a grocery chain. AI Studio can help us analyze
+all that data to find trends and patterns that could help inform how the company operates, but there are a lot of variables
+here, so it'll be helpful to organize the data to
+make it easier to work with. First, we'll ask for step-by-step help, we can upload the data
+directly from our Google Drive where the Google Sheet is stored. If we were using Microsoft Excel, we'd upload it from our computer. Once we've uploaded the spreadsheet, we're ready to write the prompt. Attached is a Google sheet of store data. Now that we've shared some context, we'll add the specific task. How can I create a new column in sheets that calculates the
+average sales per customer for each store? Let's review the output. The model provided some
+helpful suggestions for calculating the average sales per customer for each store. It even explained how to use
+a more descriptive formula to label our new column
+in the spreadsheet, and that's just one example. If that method of
+organization doesn't work, we can iterate on our
+prompt to get an output that's closer to what we need. Let's take this further. Discovering trends in a data
+set can help us make informed decisions and we can prompt a gen AI tool to help find those trends. Can you think of a spreadsheet that you've been meaning to analyze? Keep that in mind as we
+go through this example. Start again with the task. Give me insights into the relationship between daily customer count items, available and sales based on the given data. That prompt got us a lot
+of interesting information and fast, and this is fascinating. There seems to be no clear
+correlation between the number of items in a given store
+and its total sales volume. Some small stores are even
+outpacing the big ones. The output even gives us
+some potential reasons behind this trend so we
+can investigate further and think about potential
+sales strategies. This is great. Now, back
+to that spreadsheet, we've been meaning to analyze how can gen AI help us save time and extract meaningful insights. With the help of gen AI
+tools, we no longer have to spend hours crunching data. We can do it with just a few prompts.
+
+=========================
+--- 內容來源：subtitle (24).txt ---
+=========================
+
+- So Tris, it sounds like you've seen so many different aspects
+of AI over the years. What are some of the
+AHAs you've discovered? Well, I think one of the
+best parts about using AI for code data analysis or other analytical
+tasks is you don't have to know everything. Right. I think 20 years ago,
+if you went to college and you learned business skills, you had to learn about managing
+spreadsheets, et cetera. Now our relationship with
+data is getting much deeper. There's much more data around, and you don't need to
+know the magic words, the magic formulas, the scripting,
+the, the Python language. You don't need to know R. Yep. In fact, most language
+models now can take something that would've been completely
+impossible for most people who are not already
+computer science experts and puts it directly within
+their grasp, you know? Yep. You want to take a
+spreadsheet of all sales for the last month and you wanna write something that will update a running
+tally of the forecast for the next month, or
+something along those lines. You can actually, in four or five, six turns,
+probably find a library that is designed to do
+exactly that data analysis, to do exactly that projection, and it can look at rows that
+come in on this spreadsheet, update your sales forecast, and just make your life a lot easier. So one thing is bringing you
+new ideas and new concepts. That would've been
+something you would've had to spend hours learning. Right. And reducing that learning cycle. So rather than spending
+five hours to learn how to do this thing or, or
+just giving up instead, maybe it's two minutes and I have a basic implementation working. I think that's awesome.
+
+=========================
+--- 內容來源：subtitle (25).txt ---
+=========================
+
+- I am a spreadsheet nerd, but I also know that not
+everyone shares my passion for cells and formulas. Dense spreadsheets and complex
+formulas can be intimidating, but fear not generative AI can help you understand and
+write spreadsheet formulas. Just prompt it using natural language. You already know how
+to prompt a gen AI tool to help you create and
+understand text, images, and data points, but it can also help you
+better understand spreadsheet formulas. Let's put the framework into action. Imagine your coworker at a
+restaurant went on vacation and gave you a spreadsheet
+full of data and formulas. Some of them seem familiar, but there are others that are
+a little more complicated. You need to order inventory today, but you don't wanna bother
+your colleague, so you turn to Gemini for some guidance. We'll start off with the
+persona and some background. I work at a large restaurant and I need to order inventory while my coworker is on leave. Then add in some context. They left me with a formula to calculate how much food to order,
+but I don't understand it. Here's where we'll paste in the formula, and let's give Gemini the
+task and desired format. Explain what the formula means in simple step-by-step terms. That's much easier to understand. You now hopefully have a clear sense of what the formula is trying to
+accomplish so that you can get that stock order handled quickly. Now that you understand the
+formulas, you can figure out what to do if you get stuck. Let's try another one. Have
+you ever received an error message in your spreadsheet
+and not known what to do? Let's prompt Gemini to
+learn how you can figure out where those errors are coming from. The Google sheet I have uses this formula to calculate orders. I'll paste in the formula. However, I received an error message in one of the cells. Time to specify the task and what format we want. Give me a step-by-step process for finding the error and fixing it in Google Sheets. And there you have it, clear
+instructions for resolving that pesky error message. And with those out of the way, you can get that inventory order moving.
+
+=========================
+--- 內容來源：subtitle (26).txt ---
+=========================
+
+- Does your job involve presenting information to different people? Maybe you need to pitch
+new potential clients or relay information to your colleagues or your organization's leadership. When it comes to presenting data you want to show rather than tell. Thankfully, generative AI tools
+are really good at helping you determine the best
+ways to visualize data. You just need to know what to ask for. You can prompt a gen AI tool
+to get advice on the best types of charts and graphs to
+illustrate your data. The prompting framework
+should still be your guide. Add your task, context,
+and references if needed. Evaluate the output and iterate. The clearer you are about
+the kind of chart you want and what the parameters are, the more useful your output will be. Consider this: You and I are
+co-owners of a bookstore. Here we have a list of best-selling books and how many copies have been sold around the world since
+they've been published. Before we choose to stock
+some of those titles, let's examine the data. Remember, not all gen AI
+tools can analyze data. Be sure to check what your
+tool can do before using it. For this example, we'll
+use Google AI Studio. First, let's think through how to represent this data
+visually with a chart. If you don't know what
+type of chart to use, you can always prompt a gen
+AI tool for suggestions. We'll prompt the model
+using plain language to describe the data set in
+order to find out what kind of chart might work best. Describe the data set
+here. This is our context: My data set is a spreadsheet that uses the following columns: Title, Published, Genre, First published, and Approximate sales in millions. Now let's request the format to be a chart so we have some choices. Give me options for a chart that shows the correlation between genre and sales. Let's be even more specific
+so that we know what kind of correlation the chart
+will actually be displaying. Explain how genre and sales are correlated according to the information. Interesting. Now we have three great ideas for creating charts that will visualize the
+data clearly. Even better we have detailed explanations
+about each chart giving us the option to choose which visualization works best for our dataset. You're not always gonna know
+what type of chart you want to use, which is where adding a reference to your prompt can be helpful. You can use charts that are
+similar to what you want or charts you found helpful, and include those as a
+reference in your prompt. Then ask for recommendations on how to create a similar chart using your data, we'll find a chart to reference and prompt the model to
+emulate it using data from our bookstore scenario. Start by uploading the sample chart and then prompt the model to get some information
+about what it's depicting. Remember, it's sometimes
+better to start simple and then gradually add complexity. Describe this chart, what kind of data relationships are
+highlighted in the chart. We're asking for a
+description of the chart before we prompt to recreate it, just so that we can take it step-by-step. Okay. We have some good
+intel about the chart. The model is telling us it's
+called a stacked bar chart and that it represents the
+staffing breakdown across different departments in an organization, and it analyzed the data telling us how the finance department
+has a high proportion of full-time staff while
+the product department has a more even mix. Now, we'll enter a prompt
+about the data we already have and ask for recommendations
+on visualizing it in the same way as the chart we referenced. You guessed it. Let's add some context. My data set is a spreadsheet that uses the following columns: Title, Published, Genre, First published and Approximate Sales in millions. I am interested in showing
+the relationship between genre and sales. And the task. Suggest modifications to make this chart work better with my specific data using Google Sheets. Amazing. Now we have
+instructions about how to create a new chart with our data. The output even explains
+how to modify a bar to illustrate the
+relationship between genre and sales more clearly. And remember, if your output
+doesn't match what you need, you can always tweak
+your prompt and iterate.
+
+=========================
+--- 內容來源：subtitle (27).txt ---
+=========================
+
+- Communication goes way beyond sharing information with someone. You need to tell a story. Stories are how you make information
+stick in people's minds. Generative AI tools can help: organize your presentations
+into compelling stories, build talking points, and even create images to
+keep your audience engaged. We'll use Gemini to bring it all together. In this scenario, you work for
+a company that designs, makes and sells headphones. You're preparing to pitch
+your team on some cool new features. There's a lot of information and insights to convey,
+so you'll need to distill what you learned into
+a clear presentation. First, let's prompt Gemini
+to help figure out how to structure the presentation
+and summarize the findings. Let's add in the persona. I am a product designer
+at a headphones brand. Now here's where we'll
+paste in the context. Now, here's the task. How should I structure my presentation? And don't forget to specify the format. List each slide's topic
+with its key points and visuals. Yeah, nice. Gemini has suggested a
+structure for your presentation that includes key points and visuals for each slide,
+including a title slide, an intro that sets the stage and details on the three features that the audience is interested in. Gemini even suggested a call to action at the end of the presentation. It's good advice. There
+are a few other things that you can do to make it more engaging, like adding visuals that compliment the
+information on the slides. When using gen AI for
+image generation, you want to use the prompting framework with a few additional things added in. You want your input prompt to be as vivid and detailed as possible to help the Gen AI tool determine the type of image you want to create. Now, this means specifying
+the size, color, and position of things in the image and the overall aesthetic we want. So first, we'll specify
+our task and format. Start with the task,
+generate close-up images of a pair of sleek silver headphones and add in some more
+context on a desk in a college dorm room. They should have musical notes floating around the headphones to show
+that they're playing music. Yeah, so cool. Gemini created
+several images to choose from. You can even choose between
+photography, vector art, sketches, or watercolors for the style. You still want to evaluate
+the output just like you would when generating text. Check your images to make sure
+you're getting what you want and that there aren't any
+mistakes, like a headphone cord that's not plugged in or
+anything else that seems off. And remember, part of being a responsible gen
+AI user is disclosing when you've used these tools. So add a disclaimer whenever you're including an
+AI-generated image in your work.
+
+=========================
+--- 內容來源：subtitle (28).txt ---
+=========================
+
+- You've now created your presentation, but there's still one thing
+left to do, present your work. But you don't wanna just
+read off your slides. You wanna give your
+audience helpful context and commentary as you go through them. You could go through your whole deck and draft up some talking points yourself, but starting from scratch
+will take a lot of time. Instead, you can prompt
+a generative AI tool to give you a headstart and
+generate speaker notes for you. For this example, we need
+a long context window. Remember, long context
+windows aren't available on every AI tool. Different tools have different capacities. For this example, we'll
+switch to Google AI Studio. Let's upload our slide with the prompt. First, we'll add the persona and context. I'm a product designer at a headphones brand. Here's where we'll paste in the context. Then we'll give some
+more direction on tone and specify the format. Provide multiple options of concise, personable, and engaging speaker notes I can use while presenting this slide. Okay, you got some great ideas. The suggested speaker
+notes have some personality and energy, which will help
+keep your audience engaged, but you can get more specific. You learn that your company's
+marketing director will attend the presentation. You can prompt the model
+to adjust the speaker notes for a more senior audience. Let's give it a try. Although
+this time we'll use voice to prompt just to save time.
+Provide alternate speaker notes for this slide that are
+specifically directed toward my headphone company's marketing director. The director values precision and their priorities for the
+organization are to stay on top of industry trends and foster a strong
+community of loyal customers. And just like that, you
+have new speaker notes that are more appropriate
+for a marketing director. Now, one last thing. You have the presentation
+and the speaker notes, but you wanna fit in some
+practice before the big day. You can upload a recording of yourself to get specialized feedback. Let's start off by specifying the tone and what we want to accomplish. I am giving a presentation to my manager, pitching new product features, and I want to sound authoritative and confident. Then we'll explain what you're
+going to do and the task. I'm going to read my
+presentation aloud, afterward give me feedback on whether
+I've accomplished this goal. This was really helpful. You got a list of things to remember to deliver a great presentation, but you also got specific examples of where you can work on pacing and tone. Since you're using a gen AI
+tool with a long context window or large memory, you can save your prompt and come back to where you left off. You can continue practicing
+without starting all over again.
+
+=========================
+--- 內容來源：subtitle (29).txt ---
+=========================
+
+- So how would you explain
+a modern language model? What should people know about
+what these things are great at and what they're not so good at? - That's a really interesting question because language models can
+be great at many things. They can be adapted in many ways. And one of the most inspiring
+things about working on research and models is
+that we've seen tons of applications in planning, in games. Things that I would never
+have predicted being possible for a language model are being adapted and done now. For actual practical usage, I think anything that
+requires you to go back and do a little bit of hard
+thinking behind the scenes and then synthesize that into a new idea and then put that result into an answer. Those are typically things
+that are really hard for language models. If you would have to, you know, write out the math problem
+on a piece of paper, then almost certainly a language
+model is not ideally suited to solving that problem
+unless you have it really write out that problem in full and think through it entirely. And so that's the origin of
+chain of thought reasoning, which you'll learn more
+about in this course.
+
+=========================
+--- 內容來源：subtitle (3).txt ---
+=========================
+
+- In this lesson, you're gonna learn how to create effective prompts. A good prompt follows a simple
+framework, task, context, references, evaluate, and iterate. If you ever forget a step, just remember thoughtfully, create, really, excellent, inputs. First is task. You need to describe the task
+you want the generative AI tool to help you with. Now, this should include a persona and a format preference, so
+that the task is specific. Persona refers to what expertise you want the
+gen AI tool to draw from. You can ask the tool to
+take on a persona like a professional speech writer or a marketing executive
+with 15 years of experience. Or you can ask it to create
+output for a specific audience, a customer, or even your manager. You can be as detailed as you'd
+like when adding a persona to your task. Format refers
+to how you want the output to appear, whether that's a bulleted list, short sentences, or a table. So there you have it task. Next, you'll include context or the necessary details to
+help the gen AI tool understand what you need from it. This is the difference between writing. Give me some ideas for a
+birthday present under $30 and give me five ideas
+for a birthday present. My budget is $30. The gift is for a 29-year-old
+who loves winter sports and has recently switched
+from snowboarding to skiing. Sometimes you'll add
+references for the gen AI tool to use while creating its output. You just asked a gen AI
+tool to give you ideas for a birthday present, right? Well, if you add examples of birthday presents you've
+given in the past as references, the gen AI tool can give
+you a more useful output. There aren't always going
+to be clear references of what you need, especially if
+you're working on something more abstract or searching
+for ideas and inspiration. Once you have your output,
+it's time to evaluate. Ask yourself if the input you provided gave you the output you needed. This leads us to the final
+part of the framework. Iterate. If you evaluate your output and determine that you're
+not getting what you need, you can try again by
+adding more information or tweaking your prompt. And this is a key part
+of prompting effectively, and we'll explore it in
+depth later on in the course. One more note on the framework. There are plenty of ways to
+construct an effective prompt. The order of how you construct
+a prompt is less important than this substance of the prompt itself. As long as you're thoughtfully
+creating, really, excellent inputs, your outputs should be great.
+
+=========================
+--- 內容來源：subtitle (30).txt ---
+=========================
+
+- So I'm a researcher, which
+means that sometimes I have to deal with these hefty grant
+proposals that match my area of expertise, and not only
+that, I have to go out and find grants that I
+can apply for, which is in of itself its own headache. Something I've been doing
+is uploading my profile as a researcher to a generative AI tool, and using it to find potential grants. I'll add my resume, my
+published work, my cv, and then use different
+prompt techniques to search for grant programs that
+match my background. It's especially helpful because so many places have specific rules of requirements about who
+they're giving grants to. Using generative AI has taken
+a lot of the guesswork out of that process for me. In this module, you'll learn
+how to prompt gen AI tools for more complex projects. You can turn abstract ideas
+into step-by-step solutions. We'll explore how to
+converse with a gen AI tool, create an AI agent, and build a prompt library
+to help you save time and reuse your prompts. Let's get started.
+
+=========================
+--- 內容來源：subtitle (31).txt ---
+=========================
+
+- Have you ever tried to put
+together a jigsaw puzzle? You don't just dump all the pieces out and hope for the best, right? You start with a game plan. Maybe you find the corner pieces
+and slowly build the edges before working on the middle section. Or maybe you find the
+small sections to work on before connecting them
+to a bigger picture. The point is that it's
+a deliberate process, it builds over time. That's
+what prompt chaining is like. Prompt chaining guides a
+generative AI tool through a series of interconnected prompts,
+adding new layers of context or tasks each step of the way. Eventually, those linked
+prompts help the tools solve complex problems one step at a time, just like putting together a puzzle. Here's how we can put
+that to work for you. Have you ever taken time off work and needed to catch up on what you missed? You could prompt a gen AI
+tool to summarize your emails and any documents you
+received while you were gone. After reviewing the output,
+you may wanna prompt it again to focus on time sensitive requests. If the new output reveals an urgent issue, you could prompt the tool
+again for some solutions on how to handle it and on and on. With this technique,
+you're not just iterating. Instead, each prompt and response builds on the previous one. You're creating a chain
+of prompts together in a single sequence. Let's demonstrate prompt
+chaining in action. We'll use Google AI Studio as
+it enables us to get access to Gemini models with
+a long context window. You just finished writing a novel, huge accomplishment, right? Well, now the other work starts. You need to market and
+sell it, so you decide to create a marketing
+plan to promote the book. They claim you can't
+judge a book by its cover, but it's still important to
+make a good first impression. First, you'll need a
+catchy hook or tagline. We can use the prompt framework to generate some options in AI Studio. As always, let's be
+specific about our task. Generate three options
+for a one sentence summary of this novel manuscript. The manuscript will provide
+the story's background information directly, so
+let's just specify the tone. The summary should be similar in voice and tone to the manuscript,
+but more catchy and engaging. Okay, let's check out the output. These options are good, but
+maybe you want the tagline to focus on a specific theme in your book. We can write a follow up
+prompt to refine the taglines. Create a tagline that is a combination of the previous three options with a special focus on
+the exciting plot twists and mystery of the book. There's the new context. Find the catchiest and
+most impactful combination. The tagline should be concise
+and leave the reader hooked and wanting to read more, and we've specified the task and format. Great. This is really strong and gives you a great one-liner
+for marketing your book. Remember, prompt chaining
+isn't just about adding more context to your prompts. It's about expanding on what the gen AI tool has
+previously generated. This is a little different
+from iteration in the prompt framework. Since that focuses on
+adjusting a given prompt to improve the results. Here
+you wanna use its output as a building block for
+more complex requests. This brings us back to
+the tagline you generated. It's a great starting point. For the next piece in your prompt chain, you wanna generate a blurb for
+the back cover of the book. Let's continue. Create a five sentence summary of the entire manuscript below that expands on the one sentence summary. Okay, so we like this summary. We could iterate on it, of course, but for the moment, let's use this output as the first step in
+your chaining process. With your tagline and blurb set, it's time to think about your book tour, where you promote it in
+local bookstores, stores that specialize in your book's genre. Let's continue to build the chain and generate a plan based on what we've already told the
+gen AI tool about your book. Since the model has already
+analyzed your manuscript and remembers the conversation, thanks to the long context window,
+just provide the new task. Generate a six week promotional
+plan for a book tour, including what locations I should visit and what channels I should utilize to promote each stop on the tour. Awesome. You got a plan, and of course, you can iterate on any of these prompts if you're
+not happy with the options. The gen AI tool provided. That's the power of prompt chaining. All it took was a series of prompts, and we guided the Gemini model and AI Studio to write
+taglines, summaries, and a plan for the book tour.
+
+=========================
+--- 內容來源：subtitle (32).txt ---
+=========================
+
+- Here are two advanced prompt chaining techniques you can try. The first is chain of thought prompting, or C-O-T. C-O-T prompting
+asks the gen AI tool to explain its reasoning or to describe step by step how
+it got to a specific result. It's similar to the way
+math teachers ask students to explain how they got to an answer. This method can help you
+understand the gen AI tool's reasoning methods, which can help you make better decisions based on its outputs. For example, you might
+need help deciding how to balance visiting all
+six book tour locations with a limited budget or time constraints. You could prompt the gen
+AI tool for ideas on how to solve this, but this time
+you include explain your thought process in your initial prompt. That way you can evaluate the logic behind each proposed solution. A related concept is Tree of Thought prompting, or TOT. Tree of
+Thought involves asking the tool to explore multiple
+reasoning paths at once. Like branches growing on a
+tree, TOT enables the tool to explore multiple
+solutions to a given problem. It evaluates as it goes, which helps you get the best outcome. It's like going through a maze. Your goal is to get to the end, but you may have to follow a couple of different paths before you get there. This method is particularly
+helpful when solving abstract problems like developing a
+plot for the novel sequel with new characters
+and complex storylines. These techniques can be really
+useful for creating outlines or drafting small sections of
+longer documents at work too. Prompt chaining gives you the chance to explore more complicated ideas and generate interesting responses. You might even uncover some
+insights you could miss with a single prompt.
+
+=========================
+--- 內容來源：subtitle (33).txt ---
+=========================
+
+- Nowadays we actually have
+quite a bit more memory. And what that lets you do
+is it lets you put in large amounts of data and reason over it. And so I've been writing a book and I tend to put my manuscript through AI and I have it critique and analyze that
+manuscript pull things out, drop connections in there
+that I would not have. It's a 300 page manuscript. And so having someone try to do that in person would take hours
+and hours and days and days, and yet we can do this now with
+these larger context windows and these AI systems, it's very powerful. - Yeah. Well the last couple of years of large language models has
+definitely been a big boon. - Yep.
+- I've been pretty excited by it as well as have benefited a lot in my own work. I have found that using
+the large language model as a partner for brainstorming or questions actually really works. I'll give you an example of something of the time when I realized
+that writing was going to be a big deal on large language models. I had a proposal that was due the next day and it was around 8:00 PM in the night, and I was thinking about how
+it was gonna take me four hours between now and then in order
+to get that proposal done if I had to write it all from scratch. So I sat down in front of one
+of the large language models and basically asked it to help
+me out, giving it the role that I was playing, giving it some details about
+the proposal that I was doing and asking it to create a draft. When I saw the draft, I realized it had saved me a
+couple of those four hours. Oh, incredible. You know,
+right at the outset. And I was actually quite thrilled because I was able to
+take that early draft and do my own work on it afterwards to turn it into something that
+I could turn in the next day. - So you use it as a starting point? - Just used it as a starting
+point? Yeah, absolutely. It was actually quite a surprise
+that it was actually able to give me an outline that
+was actually very reasonable. - Right.
+- In Fact, it added sections of the outline that I knew would've taken me some time to even think about myself. - Oh, that's fascinating.
+- But I was really excited about that ability and the help that I got.
+
+=========================
+--- 內容來源：subtitle (34).txt ---
+=========================
+
+- I work at a tech company, but I don't have a
+traditional tech background. A lot of what I know is self-taught or something I learned on the job. There are lots of things
+I'm curious about, but it's tough to find the
+right time or place to ask. One great thing about
+generative AI tools is that they can create a safe
+space for me to ask questions. Instead of getting embarrassed or avoiding it, I can get
+expert advice from a gen AI tool with just a few prompts. With the right prompting techniques, you can transform your gen
+AI tool into your own team of experts ready to help
+you take on any challenge. These are called AI agents, and while they don't have
+secret night vision glasses or rocket powered sports cars, they are incredibly effective
+at helping you do your job. You can create AI agents
+for different purposes, depending on what you
+need, a coding partner, a creative soundboard, or even an accountability buddy to keep you on track with your goals. We're gonna learn about two
+different types of AI agents. We'll assign them names
+so it's easy to follow. The first one, let's call it AgentSim, helps you simulate
+scenarios like interviews or role playing a difficult
+conversation so you can practice and change your approach as needed. And the second AgentX gives
+you feedback on whatever topic you prompted to be an expert on. Think of AgentX, like a
+personalized consultant. Let's start with AgentSim, a simulation. You've been asked to
+create a training program to help interns improve
+their interview skills to help them get new positions. Let's go through a series of prompts that will help us create
+this AI agent in Gemini Act as a career development
+training simulator. To make this agent effective,
+we need to provide a lot of detail and background
+information about the persona. Your task is to help interns
+master interview skills and conduct conversations
+with potential managers. Now let's set the scene. To do that, we'll give it benchmarks about what it actually needs to provide in the outputs in this case. And for a lot of simulation or role-playing AI agents
+like this, you need to specify the types of
+conversations you want it to have. You need to support the
+following types of conversations, articulating strengths and skills, communicating professionally and confidently, discussing future career development goals. We could stop there and
+let the tool process, it's not necessary, but
+it can help the output. For our purposes, let's just
+continue the same prompt. Once an intern has picked
+a conversation topic, provide details about the situation and the interviewer's role. Then act as the interviewer and allow the intern to
+participate as the employee. Make sure to guide the
+conversation in a way that will allow the intern to exercise their interview skills. Notice how much detail we're
+giving it to help ensure that the conversations proceed
+the way we want them to. And now we're going to add a
+stop phrase to indicate when and how the role play can end. This could be anything, the
+end, that's a wrap, end scene, or something a little fun like JAZZ HANDS. Continue the role play
+until the intern replies with JAZZ HANDS. After the intern gives
+the stop rule JAZZ HANDS, provide them with key
+takeaways from the simulation and skills they can work on. Okay, let's review our prompt. We've specified the role act as the task. Your task is too and the intended outcome,
+the skills specified. We also provided plenty of details and background to set the scene. It's time to start the simulation and have a real conversation. Let's use articulating strengths
+and skills and test it out. Okay, here we go. It's asking me to tell it a bit about my strengths and why I would make a
+good fit for the role. I'll respond. My top strength
+is translating complex marketing concepts into
+clear, engaging messages that resonate with diverse audiences. Great. Gemini is doing its job. The response is encouraging, and now it's asking me
+for a specific example. Here's what I'll write. Yes. I designed a marketing
+campaign for a local company who sells custom jewelry online. Okay, let's check out the
+response. AgentSim is impressed. Okay, I'm ready. I'll type
+by stop rule "JAZZ HANDS". Now, in the original prompt, we told it to provide key takeaways
+from the simulation. Let's make sure. Yes, it responded that I did a great job
+citing specific examples and demonstrating enthusiasm and value. That's good. Ah, and here we can find the
+areas for improvement, which include being more concise and tailoring my answers better. This is so helpful. This is one of the most
+interesting ways to interact with a gen AI tool because
+there are so many possibilities. You could even upload a job description and prompt the tool to ask
+interview questions based on the jobs criteria. Another example, you can design a prompt to make the AI agent take
+on different roles you might encounter in the workplace and use it to simulate
+conversations, meetings, and feedback sessions.
+
+=========================
+--- 內容來源：subtitle (35).txt ---
+=========================
+
+- We're done with Agent Sim for now. Let's move on to the second
+type of AI agent, AgentX. Think of AgentX as your
+personalized consultant. With the right prompt, you
+can instruct your agent to be an expert on anything you need. In this example, we need our AI agent to provide expert feedback on a pitch for a potential client. Since this prompt will
+include a lot of context and information about the
+potential client, we'll need to use a long context window that allows the generative
+AI tool to retain and utilize more information
+leading to better responses. So we'll switch to Google AI Studio. You are my potential client, the VP of advertising at a world
+famous sports car company known for its innovation, performance,
+and engineering excellence. Okay, it's got the persona and background, but we need to set up the
+interactive conversation a bit. Let's set the scene. You're
+considering hiring a creative agency to develop a new campaign that will attract a younger
+generation of buyers. You are in a meeting with
+me, the design director of a creative agency that's
+pitching a new campaign for your company. We could put the whole pitch in here. Act as my potential client
+when I provide answers, critique the answers if needed,
+ask follow up questions. Continue the conversation until
+I give the stop rule "BREAK". Then give me a summary of the whole conversation
+highlighting ways I can improve my pitch. We'll upload the brief
+the client gave us here. That way the model will critique the pitch through the client's point of view. I've included the brief the car company provided me that has all the relevant information for this project. Use the information from this
+brief to inform your answers. This was another long involved prompt. Let's review it keeping in mind that we're still using
+our prompt framework. We started by setting
+up the role of the VP before establishing what we
+want the gen AI tool to do, which is to critique the pitch
+and ask follow up questions. We also specified our intended outcome, which involved highlighting
+ways the pitch can get better. Okay, time to converse. It's asking for more details. Let's check out the response. Uh oh. There are still some concerns
+that need addressing. That's super helpful
+for this practice round. Let's type the stop rule now and evaluate the feedback, "BREAK". Nice. The AI agent has given a summary of the conversation so far, what's working and what needs improvement and recommendations to
+strengthen the pitch. Wonderful. Now that the
+gen AI tool is acting as your client, you can continue asking for feedback on the pitch. Remember to save your
+prompt so you can return to this conversation after you revise your pitch
+to help you test more ideas as you hone in on a final version. You can even create customized versions of Gemini called GEMS. Simply describe what
+you want your GEM to do and how you want it to respond, and Gemini will take those instructions and help you create a GEM
+for your specific needs.
+
+=========================
+--- 內容來源：subtitle (36).txt ---
+=========================
+
+- Okay, so practically speaking, how do you use language models at work and how do you use them
+in your personal life? - Right now, when you do a task, you think of every computer
+program as a tool, right? So if I asked you to build a house and I said, here's a plot
+of land and a bunch of money and some materials, and I want you to build
+me a house from scratch, but the only tool you can use is Google Search. - Could you actually build
+me a house from scratch? - It's fascinating.
+- I think you could, I actually think most
+people could do that, but it might be 10,000, a
+hundred thousand searches later and you would probably
+make a lot of mistakes that you didn't know and
+wouldn't be corrected. And it would be much better actually, if I had master builder Mira
+standing right next to me - to say, hey, don't put the electrical under the subfloor. But you know, I think like
+having a master builder to advise you and that being a back and forth where you say, oh, actually I just screwed up the framing of the window over there
+and I'm gonna tear out this, you know, plywood, it's
+just temporary for now. That needs to be something
+where you can go back and forth. So rather than thinking
+of computer programs and computers as just tools
+where you need to pick it up and understand how to use
+it instead, think about it as something that could help you build, could help you conceive of new projects. And I think that to me is very empowering and that's really actually
+how I use AI every day.
+
+=========================
+--- 內容來源：subtitle (37).txt ---
+=========================
+
+- Throughout this course,
+you've learned how to thoughtfully create
+really excellent inputs. How to prompt. Like most skills, your prompting abilities will improve through experimentation and practice. You can save a ton of time by
+noting which prompts work best and for what use cases. I encourage you to keep track and go back to determine
+what's worked and what hasn't. That's where prompt versioning comes in. Prompt versioning is a way to keep track of the different versions
+of your prompts over time. It's a powerful way to capture
+your most effective prompts, track your progress, and develop your gen AI prompting skills. And here's a tip. You can name
+your most effective prompts and store them in your
+personal prompt library for easy access in the future. In fact, some generative
+AI tools allow you to name and save your prompts
+right inside the tool. Imagine you're doing meal
+prep for your family. You found a set of meals you really like, but you wanna start
+experimenting with new cuisines. You wouldn't scrap your entire meal plan and start again, right? You'd use what you've already
+learned about things like preferences, portions, and allergies, and use that as a base to create a new weekly
+menu for your family. The same goes for prompt versioning. Once you have a prompt
+that works, you don't need to reinvent the wheel. You can experiment with
+different tasks, context, and references to get different results based on what you need. For example, you can develop
+a reusable prompt for emails. The gen AI tool will
+draft the email for you, but you can adjust the tone and format based on the audience
+you're communicating with. Or you could use a single
+source of information to create different
+frequently asked questions, sections dedicated to
+different types of customers that visit your website. You can tweak the prompt
+that generated the FAQ for individual consumers and change the persona to make an FAQ for enterprise customers. Think about all the prompts
+we've created in this course. What versions can you
+create for your needs? Playing and experimenting
+with prompts is the best way to figure out how to get what you want. And the only way to get
+there is to get comfortable, explore and learn what path works for you. And remember, you're not alone. There's a big community of folks out there that are sharing prompts
+that have worked for them, so that people can learn from
+each other's successes, find inspiration and support. Participating in that
+community is a great way to improve your prompting
+skills and build a network.
+
+=========================
+--- 內容來源：subtitle (38).txt ---
+=========================
+
+- We know that AI is transforming a lot of different industries. I'd love to get your insights. - Yeah, I mean, AI has such a big opportunity
+in almost every industry and area to both make a difference in advancing the industry, but really it's in
+partnership with the people who are actually in those industries. That's right. I have a project or an area of projects
+around society centered AI that means involve the
+communities in the development of the AI to solve core problems that those communities have. By having those impacted
+communities involved in the development process, that will
+lead to the best solutions and it will also lead to the
+impact on those communities. - One of the things that I
+think is very complimentary and similar in both of
+our roles is the ways that we interact with society
+and people bring them in and co-create with them. I'd love to learn a little bit more about how you're doing that in your role. - Yeah. Having multiple
+perspectives on society centered and AI is foundational and critical. I think it is largely because communities are so
+diverse, people are so diverse, and to really understand full aspects of the problem involves
+all of those skills and all of the variety of different skills that people can bring. One of the things that
+is also very difficult is to tackle it not just at
+an individual user level, but to tackle it at a community level, or even aspire to tackle
+it at a society level, - And it's a hard problem. I think with a technology
+that is so transformative. There's a responsibility to
+approach it very intentionally with this, you know, plurality
+of work and perspective.
+
+=========================
+--- 內容來源：subtitle (39).txt ---
+=========================
+
+- Congrats. You just learned a lot and you should be really proud of all the work you put into this course. Prompting is key to unlocking
+the power of generative AI. You've learned how to do
+everything from writing simple text prompts to creating your
+own personal AI agent. You learned how to gradually
+build on the complexity of your prompts to get useful
+outputs. From helping you draft emails, to summarizing documents, and to creating engaging presentations. You've learned how to
+draw insights out of data, create advanced prompts, and turn gen AI tools into
+creative collaborators. But remember, it's vital that you use these tools responsibly. I'm so glad to have been
+a part of your journey, and I encourage you to keep
+experimenting with gen AI so that you can figure out how to make these tools work for you. The best way to do that
+is to get out there and write your own prompts. Now, go get started.
+
+=========================
+--- 內容來源：subtitle (4).txt ---
+=========================
+
+- Let's put the framework into action. First, we'll log into Gemini and then use the tool to
+help us brainstorm ideas for a new high-performance sneaker line. First, let's add the task. Generate five ideas for a new high-performance sneaker line. Okay, we've asked Gemini
+to complete a task, but we're not really applying
+the prompting framework yet. Remember, thoughtfully create really excellent inputs. This prompt is all task and nothing else, which
+might give us an output that's too broad and not very useful. Still, Gemini generated
+five ideas with unique names and descriptions. This isn't a bad start,
+but we can do better. Let's add some more details
+like our desired format and a more specific task
+for the tool to complete. List the concepts and materials for each sneaker in an outline. That's much better. Now we
+have a set of unique ideas for a sneaker line that
+includes the materials for each shoe, and it came
+in our preferred format. I think we can do even better, don't you? Let's add some context. The sneakers should be made for athletes doing
+cross-training activities. With the new information, Gemini created five new sneaker
+ideas that are more suited to our specific goals. Remember, getting tailored
+outputs means we need to provide a gen AI tool with more details and context in order to
+generate more useful results. Success is all about the details. so let's give references a try. References, give gen AI
+tools, examples to work from, and that can mean asking a gen AI tool to learn from the tone, style, or length of a given reference. Providing multiple
+references is also known as few shot prompting. Shots are just references or examples, and the term is used a lot. There's also single-shot prompting, which means we're giving it one reference and zero-shot prompting, which means we don't give
+the AI tool any references. Now, most of the time, between two and five references is the
+sweet spot for a gen AI tool. Too few references and we
+don't give enough context. Too many, we could skew the results and limit creativity to practice. Few shot prompting with
+our new sneaker line. Let's include descriptions
+of shoes that already exist. One of them is from a
+budget line of shoes, and the other one has a new adaptive sole. We can input those descriptions like this, keep the five ideas generated, but refine them using these two examples as references. Here's what we'll paste in the references. Ah, there's a lot of choices here, and they all seem like
+good options for the task, and this is cool. A shoe that regulates temperature. Evaluating the output and iterating might be the last parts of our prompting framework, but they're also where
+we get to experiment and get creative. Each new output is an opportunity to further refine your prompt until you get the response you want. In fact, we've been evaluating and iterating this whole time. We evaluated the sneaker
+ideas from our first prompt and we iterated by adding context. We evaluated the output again and we iterated by adding references. And remember, we can always add details or tweak phrasing in order
+to change our outputs. We like to say a BI or
+always be iterating. Give the prompting
+framework a try yourself. Remember, it's always
+better to start simple and then slowly add complexity,
+iterating as you go. If your outputs start to
+lose quality, you might need to go back and make your prompts
+simpler, and that's okay. Learning what works and what doesn't is all
+part of the journey. If you ever get stuck, just remember to thoughtfully create
+really excellent inputs and you'll get back on track.
+
+=========================
+--- 內容來源：subtitle (5).txt ---
+=========================
+
+- I am excited to be here with Laura, Productivity Advisor at Google. So I'm curious, do you have
+any tips, any prompting, tips that you would give to our learners on how to get the best out of these systems, things that you tend to go to often? - Just the more context you
+give, the better answers you get and the better results. And you know, also continuing
+to iterate once it comes back, thinking of it as an ongoing conversation. I like to include things like
+the persona saying, you know, I'm looking for a marketing plan. Start by saying, imagine you're a world class marketer, right? And you're marketing for this
+budget and this timeline, and really providing a starting point. So maybe this is what you've done before, this is the company's values. And so just the more that
+you can give it, you start to realize, wow, I'm, I'm
+getting a lot out of it this way. - That's right. You can
+even upload, you know, your team's mission statement
+and all that context and give that as part
+of the prompt as well. - Yeah. I really like the,
+the idea that you don't have to start from scratch at the prompt page. So maybe you have a project
+plan that you really like, but you're wanting to better it. - Yep.
+- You can upload that project plan and say, here's what I've
+been using for two years. Yeah. What are some ways
+that I could do more? Yep. And that's a great place for it to start. - Yep. Help me expand this
+in a certain direction. Help me change course.
+
+=========================
+--- 內容來源：subtitle (6).txt ---
+=========================
+
+- There are gonna be times
+when your prompt simply isn't giving you what you want, but instead of scrapping all your work and starting again from zero, think about how you can Always Be
+Iterating or ABI to try and mold the outputs into
+something more useful. By the end of this video, you'll learn four helpful
+iteration methods. The first method is to revisit
+the prompting framework and make sure you're providing
+enough specificity in your task, context, and references. For example, if you wrote,
+give me five Blog Post Ideas. A generative AI tool might
+respond better if you adjusted your prompt to include
+the persona and format. For example, you are an
+expert on sports nutrition. Provide five blog posts, headlines that summarize the biggest
+trends happening in the industry for an audience of
+physical therapists working with professional basketball players. The second method is to
+separate your prompt into shorter sentences. Start by taking a long input and breaking it down into smaller tasks. This is the long input:
+Summarize the key data points and information in this report. Then create visual graphs from the data and shorten the key
+information into bullets. You can break this up
+into shorter sentences and input them as separate prompts. You'll input each prompt
+receive an output, and then follow up with
+a new prompt until all of your tasks have been submitted. First, summarize the key data points and information in this report. Then follow that up with
+create visual graphs with the data you summarized, and finally, shorten
+the key information you summarized into bullets. Sometimes shorter sentences
+can yield more precise results because the gen AI tool can
+parse one small task at a time instead of identifying the relationships between all of them at once. You can also try using different phrasing or switching to an analogous
+task, which is a task that is very similar to the
+one you're trying to complete, but different enough to
+trigger a new response. For example, if you're
+asking a gen AI tool to help write a marketing
+plan for a product or service, you could instead
+ask it to write a story about how this product fits into the lives of our target customer demographic. By moving from write a
+marketing plan to write a story, you're asking the gen AI tool to approach the task differently, which might lead you
+closer to a useful output. Finally, introducing constraints
+might also help focus a gen AI tools outputs. Maybe you wanna make a playlist
+for an upcoming road trip and you're trying to figure out what artists you want to include. You've added some context
+about your favorite genre, but the results are kind of boring. You've heard all these songs
+a million times before. To get better output and something more unexpected, you could start adding
+constraints like specifying you only want artists
+from a certain region or artists that have released
+music in the last five years. Adding constraints to your
+prompt will help the gen AI tool narrow down its outputs and give you something
+more helpful or unique. The better you can evaluate and iterate, the better
+your output will be.
+
+=========================
+--- 內容來源：subtitle (7).txt ---
+=========================
+
+- It is my pleasure to be here
+with Anoop, Research Director of AI and Future Technologies
+on the Technology and Society team at Google. So Anoop, I'm curious,
+do you have any tips, how should people get started, what are some of the gotchas
+they should watch out for, that sort of thing? - Yeah, I think the first
+thing is to remember that they're not perfect and
+those mistakes will show up and sometimes they'll show
+up in the most subtle ways. If I asked my LLM to
+help me write a draft, sometimes it'll write a draft and it'll write a paragraph that it's extremely confident about. And then I just have to know and I have to double check everything because knowing the topic that I'm working on means I can catch it, - Right - and make sure that I'm not taking what the large language model
+has suggested as ground truth because it's not, it requires checking. It's also the case, it's very iterative process I think, as well. So whatever my first prompt
+might be, it's the iterations that actually extract the
+help that I might need or the answers to the
+questions that I might have. So I'll usually start with a prompt, but I'm also really quite aware
+that I'm gonna be iterating that prompt forward until I get the thing that I actually want. - It's not one and done,
+it's a conversation. - It's not one and done
+at all. And it's important to be a bit careful that maybe
+there's some factual error that's actually being shown. But then also the iteration
+is what can get it to be what actually solves
+the task that I've got.
+
+=========================
+--- 內容來源：subtitle (8).txt ---
+=========================
+
+- Images and visuals can be as important as words when you want
+to communicate ideas. In this lesson, I'm gonna teach you how to use generative AI
+tools to create visuals. So far, we've asked gen AI tools to produce responses in what's
+called a text-based modality. Modalities are the different
+formats in which gen AI tools receive or produce information,
+whether that's text, images, video, audio, or code. Different gen AI tools
+are better at working in certain modalities. Be sure to check the
+gen AI tool you're using to find out which modalities it's capable of using or producing. Let's start with image generation. Some gen AI tools can create
+images, a sunrise, a bouquet of flowers, or even a
+crab riding a dolphin. But those same tools can also
+make images for a business or a professional presentation. Maybe you're a musician
+playing a gig in New Orleans and you want to promote your concert, so you use a gen AI tool
+to help you create a poster to advertise the show. Let's prompt Gemini to create both text and images so we can discuss the subtle differences between prompting for each modality. We'll
+start with the text first. Remember to keep the thoughtfully,
+create, really, excellent, inputs framework in mind. Text-based prompts work best
+when we specify our task and add some clear
+context so we could prompt: Generate headlines for a poster promoting a rock concert in New Orleans. And to add a little more context about the task we could write: The concert is one night only, and the headlines should
+encourage the audience not to miss out. By specifying our task and adding context, we're
+guiding the gen AI tool to the text-based output we want. And just like that, Gemini came up with a few catchy
+headlines for the poster. And this is a good one right
+here, NOLA. This is it: Unforgettable Rock, One Night Only. It's catchy and it gets to the point. Now, in order to prompt the
+gen AI tool for an image, we'll need to tweak our language. We'll still use the prompting framework, but we'll need to provide
+more vivid descriptions that help the gen AI
+tool determine the type of image it needs to create. This means specifying the size, color, and position of things in the image and the overall aesthetic we want. So first, we'll specify
+our task and format. Generate an image of an electric guitar for a poster. It should be a photographic style. And how about some vivid descriptions? The guitar should be glittery or sparkly and create a sense of excitement. The guitar should be in the foreground and give a sense that
+it's floating in the sky. Great. Gemini created
+four different images that you can use on your poster. So how can we make these
+images even better? Let's break down how to iterate and refine a prompt for images. We're still going to use
+the prompting framework, but with a few little tweaks.
+For the concert poster maybe you liked the
+appearance of the guitar, but you wanna make it even
+more exciting by adding a storm with lightning striking the guitar. We could refine it by writing: Now, make the sky stormy with lightning hitting the guitar. There we go. You could keep
+this image or keep evaluating and iterating again and again, adding relevant
+details from each new output until you get one that works.
+
+=========================
+--- 內容來源：subtitle (9).txt ---
+=========================
+
+- All right, Tris, talk to me about iteration.
+We hear this term a lot. What does it mean? Give me some examples. - So iteration is just
+improving constantly. So trying to take a prompt
+or an interaction with AI and improve it iteratively, that is by looking at the output,
+using that feedback to make your prompt better. - What's an example? What? What do you do? - So a good example of
+this is if you ask an AI for an image, let's say as
+an example, you say, Hey, I want a new logo for
+my team at work, right? And it builds you a logo, and
+there's maybe four of them. They all look a little bit strange, but none of them really
+fit your aesthetic. You say, well, actually I want
+them to be in these colors. And so you ask him for some colors and still, you know,
+there's an abstract one, there's a cartoony one,
+there's a very serious one, you know, then maybe
+there's a line art one. You say, oh, the line art looks right. But actually I want it
+to be more coherent. I want it to be simpler. So you iterate on your prompt
+again, you know, I want a logo for this team that conveys
+this idea in a line art style, using these colors, right? And then you get some more
+options and you keep on going. You keep on iterating until you get some logo
+choices that you might like. And I wouldn't generally
+recommend just taking the output of the model and literally
+using it as your logo, but as inspiration for a designer that
+could, that's too close. Go and actually build your logo. Say, Hey, here are some of the things that we thought might be
+interesting, brand representations for our team, or ways of showing our team. I think that's a really great way of just constantly improving on a prompt until you get the kind
+of output that you want. - And I think it's a
+mind shift, too, right? It's now a dialogue versus
+a I give you a command, you give me something,
+and then we're done. This is a, you give me
+something, I get a result back. I might not like it. I fine
+tune this a little bit. And there's sort of this back
+and forth that's going on. - And what's amazing
+about that is that we do that naturally with humans. - We do - With each other.
+We're very forgiving, you know? Oh, I don't know if that's quite the right
+color scheme or right. Maybe it should be bigger or maybe whatever sort of feedback you might work
+through with a designer. But we haven't naturally
+done that with computers yet. And that's part of what's so
+exciting about this generation of AI is that you really
+can collaborate back and forth on iterative tasks.
+
+=========================
+--- 內容來源：subtitle.txt ---
+=========================
+
+- Chances are you've already
+experimented with generative AI and you've probably gotten some results that have been helpful and maybe some that fell
+short. Throughout this course AI experts at Google will
+teach you the difference between a good prompt and a great prompt, so you can work faster and smarter with gen AI at your side, and we'll share practical examples of where you can use gen AI at work. Hi, I'm Amina. I work on
+generative AI at Google. In this course, my colleagues and I are going to teach you how you can get the most out of gen AI. You'll learn when to use gen AI and how by designing better
+prompts to get the best results. You'll apply what you've
+learned with hands-on activities and quizzes to level up
+your prompting skills. After you've completed this
+course, you'll have lots of practice applying gen AI
+in ways that matter to you and your job. As recognition of your work you'll earn a certificate
+from Google to share with your network and potential employers. We have a lot of exciting
+stuff in store, so let's get to it.
