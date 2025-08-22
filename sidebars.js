@@ -44,6 +44,7 @@ const sidebars = {
       items: [
         'advanced/chain-of-thought',
         'advanced/prompt-chaining',
+        'advanced/multi-modal',
       ],
     },
     {
@@ -53,6 +54,24 @@ const sidebars = {
       items: [
         'best-practices/testing-prompts',
         'best-practices/production-deployment',
+        'best-practices/security-ethics',
+        'best-practices/team-collaboration',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Applications',
+      collapsed: false,
+      items: [
+        'applications/business-intelligence',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Case Studies',
+      collapsed: false,
+      items: [
+        'case-studies/enterprise-deployment',
       ],
     },
   ],
