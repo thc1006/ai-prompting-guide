@@ -45,7 +45,7 @@ export default {
 
 The docs version dropdown appears in your navbar:
 
-![Docs Version Dropdown](./img/docsVersionDropdown.png)
+You can add a version dropdown to your site for easy navigation between versions.
 
 ## Update an existing version
 
