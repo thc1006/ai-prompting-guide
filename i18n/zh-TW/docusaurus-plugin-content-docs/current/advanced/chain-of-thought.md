@@ -7,7 +7,7 @@ sidebar_position: 1
 掌握進階推理技巧，讓 AI 模型能夠將複雜問題拆解成邏輯步驟，提升準確度並提供透明的問題解決過程。
 
 :::note 2026 年的思維鏈
-現代的推理模型已經在內部做了大量這種逐步思考——常以「延伸思考（extended thinking）」或推理模式的形式呈現——所以你已經很少需要像以前那樣硬是叫模型「一步一步想」。但這項技巧遠未過時：明確的思維鏈仍然讓模型的推理「看得見」，於是你能驗證它、引導它、看出它哪裡出錯。這種「可見性」正是 [Agentic 工作流程](/docs/vibe-coding/agentic-workflows) 用來查核 agent 工作的依據，也能與 [Multi-Modal 提示](/docs/advanced/multi-modal) 中的圖片分析自然搭配。
+現代的推理模型已經在內部做了大量這種逐步思考（常以「延伸思考（extended thinking）」或推理模式的形式呈現），所以你已經很少需要像以前那樣硬是叫模型「一步一步想」。但這項技巧遠未過時：明確的思維鏈仍然讓模型的推理「看得見」，於是你能驗證它、引導它、看出它哪裡出錯。這種「可見性」正是 [Agentic 工作流程](/docs/vibe-coding/agentic-workflows) 用來查核 agent 工作的依據，也能與 [Multi-Modal 提示](/docs/advanced/multi-modal) 中的圖片分析自然搭配。
 :::
 
 ## 理解 Chain-of-Thought

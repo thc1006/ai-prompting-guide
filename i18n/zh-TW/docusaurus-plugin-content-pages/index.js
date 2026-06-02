@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.customFields.titleZhTW} － 掌握 AI 提示詞與 agentic 開發`}
-      description="從 prompt 基礎到 2026 年的 agentic coding（Claude Code、OpenAI Codex、情境工程）——一份繁體中文的 AI 提示詞與 AI 編碼代理寶典。">
+      description="從 prompt 基礎到 2026 年的 agentic coding（Claude Code、OpenAI Codex、情境工程），一份繁體中文的 AI 提示詞與 AI 編碼代理寶典。">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
