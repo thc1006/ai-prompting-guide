@@ -16,7 +16,7 @@ Chain-of-Thought (CoT) prompting guides AI models to explicitly show their reaso
 
 ### Basic CoT Structure
 
-```python
+```text
 """
 [Problem statement]
 
@@ -44,7 +44,7 @@ Therefore: [Final answer]
 
 ### Advanced Mathematical CoT
 
-```python
+```text
 """
 Solve this optimization problem using chain-of-thought reasoning:
 
@@ -86,7 +86,7 @@ Therefore: The optimal pricing strategy is $75 per unit, resulting in 250 units 
 
 ### Statistical Analysis CoT
 
-```python
+```text
 """
 Analyze this A/B testing scenario with chain-of-thought reasoning:
 
@@ -129,7 +129,7 @@ Therefore: The difference is NOT statistically significant. We need more data or
 
 ### Strategic Decision CoT
 
-```python
+```text
 """
 Should our SaaS company expand to the European market? Use chain-of-thought analysis.
 
@@ -180,7 +180,7 @@ Therefore: Recommend delaying European expansion for 6-12 months. Focus on stren
 
 ### Investment Analysis CoT
 
-```python
+```text
 """
 Evaluate this technology investment using discounted cash flow analysis:
 
@@ -240,7 +240,7 @@ Therefore: The investment shows positive NPV and strong strategic benefits. Reco
 
 ### System Architecture CoT
 
-```python
+```text
 """
 Design a scalable architecture for a real-time chat application expecting 1M concurrent users.
 
@@ -303,7 +303,7 @@ Therefore: Implement a microservices architecture using WebSocket connection ser
 
 ### Debugging CoT
 
-```python
+```text
 """
 Debug this performance issue: API response times increased from 200ms to 2000ms over the past week.
 
@@ -366,7 +366,7 @@ Therefore: Focus investigation on database performance and recent deployments as
 
 ### Innovation Framework CoT
 
-```python
+```text
 """
 Develop an innovative solution for reducing food waste in grocery stores using technology.
 
@@ -433,7 +433,7 @@ Therefore: Develop an integrated AI-powered platform combining demand forecastin
 
 ### Multi-Perspective CoT
 
-```python
+```text
 """
 Analyze whether our company should adopt remote-first work policy from multiple perspectives:
 
@@ -475,7 +475,7 @@ Therefore: Recommend hybrid approach - remote-first with quarterly in-person gat
 
 ### Iterative Refinement CoT
 
-```python
+```text
 """
 Design a pricing strategy for our new SaaS product, refining through multiple iterations:
 

@@ -20,37 +20,31 @@ Image understanding is the most mature and widely available multi-modal capabili
 
 The simplest task. Useful for alt text, content moderation triage, and cataloging.
 
-```python
-"""
+```text
 Write a one-sentence alt-text caption for this image, suitable for a
 screen reader. Be factual and concise. Do not speculate about anything
 not visibly present.
-"""
 ```
 
 For richer descriptions, ask for structure instead of a paragraph:
 
-```python
-"""
+```text
 Describe this image as JSON with these fields:
 - "subject": the main subject in 3-6 words
 - "setting": where the scene takes place
 - "objects": array of notable objects
 - "mood": one of ["neutral", "positive", "negative"]
 Return only valid JSON.
-"""
 ```
 
 ### Visual Question Answering
 
 Ask a single, concrete question about the image rather than "tell me about this."
 
-```python
-"""
+```text
 Looking only at this photo of a parking sign: on which days and times
 is parking NOT permitted? If the sign is partially obscured or ambiguous,
 say so explicitly rather than guessing.
-"""
 ```
 
 :::tip One clear question beats five vague ones
@@ -61,8 +55,7 @@ Models answer focused questions far more reliably than open-ended ones. If you h
 
 This is one of the highest-value image tasks. Always specify the exact schema you want so the output is machine-usable.
 
-```python
-"""
+```text
 This image is a receipt. Extract the line items into JSON:
 {
   "merchant": string,
@@ -74,67 +67,56 @@ This image is a receipt. Extract the line items into JSON:
 }
 Use null for any field you cannot read. Do not invent values.
 Return only the JSON object.
-"""
 ```
 
 For a chart, name the axes and the unit so the model reads the right numbers:
 
-```python
-"""
+```text
 This is a bar chart of monthly revenue. The x-axis is month (Jan-Dec)
 and the y-axis is revenue in thousands. Return a JSON array of
 { "month": string, "revenue_k": number } for every bar you can read.
 If a bar's value sits between gridlines, estimate and add
 "approx": true for that entry.
-"""
 ```
 
 ### OCR: Read Text from an Image
 
 When you need the literal text rather than an interpretation, ask for transcription explicitly and tell the model how to handle uncertainty.
 
-```python
-"""
+```text
 Transcribe all visible text in this image exactly as written, preserving
 line breaks and original spelling. Mark any word you cannot read
 confidently as [illegible]. Do not correct grammar or translate.
-"""
 ```
 
 ### Understand a Diagram or UI Screenshot
 
 Diagrams and screenshots carry structure — boxes, arrows, layout — not just pixels. Tell the model what kind of artifact it is so it reads the relationships.
 
-```python
-"""
+```text
 This is an architecture diagram. List each component (box) and, for every
 arrow, state the direction and what it represents (e.g. "API Gateway ->
 Auth Service: validates token"). Then flag any component that has no
 incoming or outgoing connections.
-"""
 ```
 
 For a UI screenshot, anchor the model to a region:
 
-```python
-"""
+```text
 This is a screenshot of a web form. Focus on the section under the
 heading "Billing Address". List every input field there, its label, and
 whether it appears required (marked with an asterisk) or optional.
-"""
 ```
 
 ### Compare Two Images
 
 When sending more than one image, label them in the prompt so you can refer to each unambiguously.
 
-```python
-"""
+```text
 I am sending two screenshots: the first is the design mockup, the second
 is the implemented page. List every visual difference between them,
 grouped by: layout/spacing, color, typography, and missing or extra
 elements. Order the differences by how noticeable they are.
-"""
 ```
 
 This compare pattern is the foundation of the agentic verification loop covered below.
@@ -145,12 +127,10 @@ Audio and video understanding are more capability-variable than image input — 
 
 **Transcription (speech-to-text)** is the most common audio task. As with OCR, be explicit about format and how to handle uncertainty:
 
-```python
-"""
+```text
 Transcribe this audio. Label each speaker as "Speaker 1", "Speaker 2",
 etc. Add a timestamp [mm:ss] at the start of each speaker turn. Mark
 unclear passages as [inaudible].
-"""
 ```
 
 **Audio understanding** goes beyond the words — tone, summarization, intent. For example: "Summarize the key decisions and action items from this meeting recording as a bulleted list, and note who is responsible for each."
@@ -161,8 +141,7 @@ unclear passages as [inaudible].
 
 A PDF or a screenshot of a document is a multi-modal input, and treating it that way is often better than running plain-text extraction first. Layout carries meaning — columns, tables, headers, checkboxes, signatures, and figures are all lost or scrambled by naive text extraction, but a multi-modal model can read them in place.
 
-```python
-"""
+```text
 This is a 3-page scanned contract. Extract as JSON:
 {
   "parties": [string],
@@ -173,7 +152,6 @@ This is a 3-page scanned contract. Extract as JSON:
 }
 Quote the exact clause text you used for "termination_notice_days" in a
 separate "evidence" field. Return null for anything not stated.
-"""
 ```
 
 Asking for an `evidence` field that quotes the source clause makes the extraction auditable — you can check the model's reading without re-reading the whole document.
@@ -184,14 +162,12 @@ Modern coding agents are multi-modal in practice, and this is where multi-modal 
 
 The most powerful pattern is the **screenshot verification loop**:
 
-```python
-"""
+```text
 1. Implement the attached mockup [image] as a React component.
 2. Run the app and take a screenshot of the result.
 3. Compare your screenshot to the original mockup and list the
    differences (spacing, color, missing elements).
 4. Fix the differences and repeat until they match.
-"""
 ```
 
 Here the agent uses image *output* (its own screenshot) as image *input* for the next comparison — closing the loop between intent and result the same way a human would by glancing at the screen. This is far more reliable than asking the agent to build a UI blind and hoping it looks right.

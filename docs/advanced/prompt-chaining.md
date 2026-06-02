@@ -16,23 +16,22 @@ Prompt chaining involves breaking complex tasks into smaller, manageable steps w
 
 ### Basic Chaining Structure
 
-```python
-"""
-Workflow: [Overall Task Description]
+**Workflow:** `[Overall Task Description]`
 
-Step 1: [Initial Processing]
-Input: [Raw data/requirements]
-Output: [Structured intermediate result]
+#### Step 1: `[Initial Processing]`
 
-Step 2: [Refinement/Analysis]  
-Input: [Output from Step 1]
-Output: [Enhanced or analyzed result]
+- **Input:** `[Raw data/requirements]`
+- **Output:** `[Structured intermediate result]`
 
-Step 3: [Final Synthesis]
-Input: [Output from Step 2]
-Output: [Final deliverable]
-"""
-```
+#### Step 2: `[Refinement/Analysis]`
+
+- **Input:** `[Output from Step 1]`
+- **Output:** `[Enhanced or analyzed result]`
+
+#### Step 3: `[Final Synthesis]`
+
+- **Input:** `[Output from Step 2]`
+- **Output:** `[Final deliverable]`
 
 ### Benefits of Chaining
 
@@ -46,7 +45,7 @@ Output: [Final deliverable]
 
 ### Blog Post Production Chain
 
-```python
+```text
 """
 CHAIN 1: Research & Outline Generation
 
@@ -127,7 +126,7 @@ Provide the polished final version with specific improvements noted.
 
 ### Marketing Campaign Development Chain
 
-```python
+```text
 """
 CHAIN 1: Market Analysis
 
@@ -195,7 +194,7 @@ Include specific tools and processes for campaign management.
 
 ### Feature Development Chain
 
-```python
+```text
 """
 CHAIN 1: User Research Synthesis
 
@@ -266,7 +265,7 @@ Create comprehensive launch playbook for cross-functional execution.
 
 ### Business Intelligence Chain
 
-```python
+```text
 """
 CHAIN 1: Data Exploration & Quality Assessment
 
@@ -337,7 +336,7 @@ Include specific next steps and owner assignments for each recommendation.
 
 ### System Troubleshooting Chain
 
-```python
+```text
 """
 CHAIN 1: Problem Definition & Information Gathering
 
@@ -409,7 +408,7 @@ Ensure comprehensive resolution and organizational learning.
 
 ### Competitive Intelligence Chain
 
-```python
+```text
 """
 CHAIN 1: Competitive Landscape Mapping
 
@@ -479,93 +478,89 @@ Create executable roadmap with clear milestones and accountability.
 
 ### Parallel Processing Chains
 
-```python
-"""
-PARALLEL CHAIN WORKFLOW: Comprehensive Product Launch Analysis
+**Parallel Chain Workflow: Comprehensive Product Launch Analysis**
 
-CHAIN A: Market Analysis Track
-A1: Market size and segmentation analysis
-A2: Customer needs and behavior analysis  
-A3: Market opportunity quantification
-A4: Go-to-market strategy recommendations
+#### Chain A: Market Analysis Track
 
-CHAIN B: Competitive Analysis Track  
-B1: Competitor identification and mapping
-B2: Feature and pricing comparison
-B3: Competitive positioning analysis
-B4: Differentiation strategy development
+1. Market size and segmentation analysis
+2. Customer needs and behavior analysis
+3. Market opportunity quantification
+4. Go-to-market strategy recommendations
 
-CHAIN C: Financial Analysis Track
-C1: Cost structure and pricing analysis
-C2: Revenue projections and scenarios
-C3: Investment requirements assessment
-C4: Financial risk and return analysis
+#### Chain B: Competitive Analysis Track
 
-SYNTHESIS CHAIN: Integration & Strategy
-S1: Combine outputs from Chains A, B, C
-S2: Identify synergies and conflicts
-S3: Develop integrated launch strategy
-S4: Create comprehensive business case
+1. Competitor identification and mapping
+2. Feature and pricing comparison
+3. Competitive positioning analysis
+4. Differentiation strategy development
+
+#### Chain C: Financial Analysis Track
+
+1. Cost structure and pricing analysis
+2. Revenue projections and scenarios
+3. Investment requirements assessment
+4. Financial risk and return analysis
+
+#### Synthesis Chain: Integration & Strategy
+
+1. Combine outputs from Chains A, B, C
+2. Identify synergies and conflicts
+3. Develop integrated launch strategy
+4. Create comprehensive business case
 
 This parallel approach allows specialized analysis while maintaining overall coherence.
-"""
-```
 
 ### Conditional Chaining
 
-```python
-"""
-CONDITIONAL WORKFLOW: Customer Support Issue Resolution
+**Conditional Workflow: Customer Support Issue Resolution**
 
-CHAIN 1: Issue Classification
-Classify support ticket: [TICKET_CONTENT]
-Output: Issue type (Technical, Billing, Feature Request, Bug Report)
+#### Chain 1: Issue Classification
 
-IF Issue Type = "Technical":
-→ CHAIN 2A: Technical troubleshooting workflow
-→ CHAIN 3A: Technical solution implementation
+- Classify support ticket: `[TICKET_CONTENT]`
+- Output: Issue type (Technical, Billing, Feature Request, Bug Report)
 
-IF Issue Type = "Billing":  
-→ CHAIN 2B: Billing inquiry workflow
-→ CHAIN 3B: Account resolution process
+Then branch on the resulting issue type:
 
-IF Issue Type = "Feature Request":
-→ CHAIN 2C: Feature evaluation workflow  
-→ CHAIN 3C: Product roadmap integration
-
-IF Issue Type = "Bug Report":
-→ CHAIN 2D: Bug verification workflow
-→ CHAIN 3D: Development prioritization process
+- **If Issue Type = "Technical":**
+  - Chain 2A: Technical troubleshooting workflow
+  - Chain 3A: Technical solution implementation
+- **If Issue Type = "Billing":**
+  - Chain 2B: Billing inquiry workflow
+  - Chain 3B: Account resolution process
+- **If Issue Type = "Feature Request":**
+  - Chain 2C: Feature evaluation workflow
+  - Chain 3C: Product roadmap integration
+- **If Issue Type = "Bug Report":**
+  - Chain 2D: Bug verification workflow
+  - Chain 3D: Development prioritization process
 
 Each conditional path optimizes for the specific issue type while maintaining consistent quality standards.
-"""
-```
 
 ### Iterative Refinement Chains
 
-```python
-"""
-ITERATIVE CHAIN: Creative Brief Development
+**Iterative Chain: Creative Brief Development**
 
-ITERATION 1: Initial Concept
-Create basic creative brief for [CAMPAIGN]
-Focus: Core message and target audience
+#### Iteration 1: Initial Concept
 
-ITERATION 2: Enhancement  
-Refine brief based on: [ITERATION_1_OUTPUT]
-Add: Competitive differentiation and channel strategy
+- Create basic creative brief for `[CAMPAIGN]`
+- **Focus:** Core message and target audience
 
-ITERATION 3: Optimization
-Further refine: [ITERATION_2_OUTPUT]  
-Add: Creative executions and measurement framework
+#### Iteration 2: Enhancement
 
-ITERATION 4: Finalization
-Polish and complete: [ITERATION_3_OUTPUT]
-Add: Budget allocation and timeline
+- Refine brief based on: `[ITERATION_1_OUTPUT]`
+- **Add:** Competitive differentiation and channel strategy
+
+#### Iteration 3: Optimization
+
+- Further refine: `[ITERATION_2_OUTPUT]`
+- **Add:** Creative executions and measurement framework
+
+#### Iteration 4: Finalization
+
+- Polish and complete: `[ITERATION_3_OUTPUT]`
+- **Add:** Budget allocation and timeline
 
 Each iteration builds sophistication while maintaining focus on core objectives.
-"""
-```
 
 ## Chain Quality Control
 
@@ -580,28 +575,22 @@ Between each chain step, validate:
 
 ### Error Handling
 
-```python
-"""
-ERROR HANDLING PROTOCOL:
+**Error Handling Protocol**
 
-IF Chain Output is Incomplete:
-→ Retry with enhanced prompt specificity
-→ Request missing information explicitly
-→ Provide additional context if needed
-
-IF Chain Output is Inconsistent:
-→ Review previous chain outputs for conflicts  
-→ Clarify requirements and constraints
-→ Re-run problematic chain with corrections
-
-IF Chain Output Quality is Low:
-→ Analyze prompt clarity and specificity
-→ Add examples or templates
-→ Increase context or reduce complexity
+- **If Chain Output is Incomplete:**
+  - Retry with enhanced prompt specificity
+  - Request missing information explicitly
+  - Provide additional context if needed
+- **If Chain Output is Inconsistent:**
+  - Review previous chain outputs for conflicts
+  - Clarify requirements and constraints
+  - Re-run problematic chain with corrections
+- **If Chain Output Quality is Low:**
+  - Analyze prompt clarity and specificity
+  - Add examples or templates
+  - Increase context or reduce complexity
 
 Always validate critical outputs before proceeding to next chain.
-"""
-```
 
 ## Implementation Best Practices
 
@@ -615,7 +604,7 @@ Always validate critical outputs before proceeding to next chain.
 
 ### Documentation Standards
 
-```python
+```text
 """
 CHAIN DOCUMENTATION TEMPLATE:
 
