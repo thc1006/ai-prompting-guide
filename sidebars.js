@@ -35,6 +35,8 @@ const sidebars = {
         'vibe-coding/overview',
         'vibe-coding/claude-code',
         'vibe-coding/openai-codex',
+        'vibe-coding/context-engineering',
+        'vibe-coding/agentic-workflows',
       ],
     },
     {
