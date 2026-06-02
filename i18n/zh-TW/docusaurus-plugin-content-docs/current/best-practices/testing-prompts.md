@@ -639,6 +639,8 @@ Ready to implement production-ready prompting systems?
 - **[Production Deployment](/docs/best-practices/production-deployment)** - Deploy prompts in production environments
 - **[Security & Ethics](/docs/best-practices/security-ethics)** - Ensure responsible AI usage
 - **[Team Collaboration](/docs/best-practices/team-collaboration)** - Scale prompting across organizations
+- **[驗證與安全](/docs/vibe-coding/verification-and-safety)** - 把測試門檻接上 agentic 驗證迴圈
+- **[Agentic 工作流程](/docs/vibe-coding/agentic-workflows)** - 為 agent 驅動的工作提供機器可檢核的訊號
 
 :::tip Testing Discipline
 Treat prompt engineering like software development - use version control, systematic testing, and continuous integration. The investment in testing pays dividends in production reliability and performance.

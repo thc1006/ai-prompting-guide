@@ -278,7 +278,7 @@ prompts/
 ```yaml
 prompt_metadata:
   version: "2.1.3"
-  created_date: "2024-03-15T10:30:00Z"
+  created_date: "2026-01-15T10:30:00Z"
   author: "ai-team@company.com"
   description: "增強部落格文章產生，包含 SEO 優化"
   
@@ -807,7 +807,7 @@ class BudgetManager:
     def __init__(self):
         self.daily_budget = 30000.0  # 新台幣
         self.hourly_budget = self.daily_budget / 24
-        self.cost_per_token = 0.003  # 台幣計價
+        self.cost_per_token = 0.003  # 僅為示意，非實際費率；請以服務商當前定價為準
         self.current_spend = self.get_current_spend()
         self.taiwan_tax_rate = 0.05  # 營業稅
     
@@ -839,6 +839,8 @@ class BudgetManager:
 - **[安全與倫理](/docs/best-practices/security-ethics)** - 實施安全與倫理準則
 - **[團隊協作](/docs/best-practices/team-collaboration)** - 跨團隊擴展提示工程
 - **[案例研究](/docs/case-studies/enterprise-deployment)** - 從實際實作中學習
+- **[驗證與安全](/docs/vibe-coding/verification-and-safety)** - AI 輔助變更的驗證關卡與人在迴路
+- **[Agentic 工作流程](/docs/vibe-coding/agentic-workflows)** - 把分階段推出視為 agent 驗證迴圈中的一個階段
 
 :::tip 生產成功要訣
 從非關鍵系統的試點部署開始。在擴展到關鍵業務應用之前，先建立監控和營運經驗。始終準備回滾計劃並定期測試。
