@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+sidebar_label: "驗證與安全"
 ---
 
 # 驗證、安全與工程紀律

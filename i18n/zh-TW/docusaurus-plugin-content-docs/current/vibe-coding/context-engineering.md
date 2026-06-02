@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+sidebar_label: "Context Engineering"
 ---
 
 # Context Engineering：CLAUDE.md、AGENTS.md 與專案記憶

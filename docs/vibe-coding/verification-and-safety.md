@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+sidebar_label: "Verification & Safety"
 ---
 
 # Verification, Safety & Engineering Discipline

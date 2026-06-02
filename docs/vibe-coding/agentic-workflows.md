@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+sidebar_label: "Agentic Workflows"
 ---
 
 # Agentic Workflows: Plan, Delegate, Verify
