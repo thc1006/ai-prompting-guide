@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'AI Prompting Guide',
   tagline: 'Master the art of effective AI prompting',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
   
   // Custom fields for i18n
   customFields: {
@@ -35,6 +35,12 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  // Enable Mermaid diagrams (```mermaid fenced code blocks)
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -89,18 +95,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // Social card used for OG/Twitter link previews (auto-emits og:image + twitter:image)
+      image: 'img/social-card.svg',
       
       // SEO improvements
       metadata: [
-        {name: 'keywords', content: 'AI, artificial intelligence, prompting, prompt engineering, LLM, ChatGPT, machine learning, NLP, vibe coding, AI coding agents, Claude Code, OpenAI Codex, agentic coding, context engineering, spec-driven development, O-RAN, 5G, 6G'},
+        {name: 'keywords', content: 'AI, artificial intelligence, prompting, prompt engineering, LLM, ChatGPT, machine learning, NLP, vibe coding, AI coding agents, Claude Code, OpenAI Codex, agentic coding, context engineering, spec-driven development'},
         {name: 'author', content: '蔡秀吉 (Hsiu-Chi Tsai)'},
         {name: 'description', content: 'Comprehensive guide to AI prompting techniques, best practices, and advanced strategies for effective interaction with language models'},
         {property: 'og:type', content: 'website'},
-        {property: 'og:image', content: 'https://thc1006.github.io/ai-prompting-guide/img/social-card.png'},
-        {name: 'twitter:card', content: 'summary_large_image'},
-        {name: 'twitter:image', content: 'https://thc1006.github.io/ai-prompting-guide/img/social-card.png'},
         {name: 'robots', content: 'index, follow'},
         {name: 'googlebot', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'},
       ],
