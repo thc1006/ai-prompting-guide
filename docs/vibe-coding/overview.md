@@ -78,8 +78,8 @@ For a working team this is good news: it means most of your leverage comes from 
 
 The rest of this chapter moves from tools to discipline. Upcoming docs:
 
-- **Claude Code field guide** — Anthropic's coding agent: setup, plan mode, and day-to-day use.
-- **OpenAI Codex field guide** — the Codex agent across CLI, IDE, and cloud surfaces.
+- **[Claude Code field guide](/docs/vibe-coding/claude-code)** — Anthropic's coding agent: setup, plan mode, and day-to-day use.
+- **[OpenAI Codex field guide](/docs/vibe-coding/openai-codex)** — the Codex agent across CLI, IDE, and cloud surfaces.
 - **Context engineering with CLAUDE.md / AGENTS.md** — writing project context files that agents read automatically.
 - **Agentic workflows** — structuring plan-act-verify loops and multi-step delegation.
 - **Spec-driven development** — turning intent into specs and acceptance criteria the agent implements against.

@@ -33,6 +33,8 @@ const sidebars = {
       collapsed: false,
       items: [
         'vibe-coding/overview',
+        'vibe-coding/claude-code',
+        'vibe-coding/openai-codex',
       ],
     },
     {

@@ -78,8 +78,8 @@ vibe coding 落在一道光譜的其中一端。用下面這份指南，幫你�
 
 這一章接下來會從工具一路走到紀律。後面會有這些文件：
 
-- **Claude Code 實戰指南**——Anthropic 的程式代理：設定、plan mode，以及日常怎麼用。
-- **OpenAI Codex 實戰指南**——橫跨 CLI、IDE 與雲端介面的 Codex 代理。
+- **[Claude Code 實戰指南](/docs/vibe-coding/claude-code)**——Anthropic 的程式代理：設定、plan mode，以及日常怎麼用。
+- **[OpenAI Codex 實戰指南](/docs/vibe-coding/openai-codex)**——橫跨 CLI、IDE 與雲端介面的 Codex 代理。
 - **用 CLAUDE.md / AGENTS.md 做 context engineering**——撰寫代理會自動讀取的專案情境檔。
 - **Agentic 工作流**——怎麼把「規劃—行動—驗證」迴圈和多步驟委派架起來。
 - **Spec-driven development（規格驅動開發）**——把意圖轉成 spec 和驗收標準，讓代理照著去實作。
