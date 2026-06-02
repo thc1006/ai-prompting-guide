@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: "總覽"
 ---
 
 # Vibe Coding 與 AI 程式代理：2026 年的大轉變

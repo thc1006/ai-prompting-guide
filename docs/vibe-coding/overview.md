@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: "Overview"
 ---
 
 # Vibe Coding & AI Coding Agents: The 2026 Shift

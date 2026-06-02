@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+sidebar_label: "OpenAI Codex"
 ---
 
 # OpenAI Codex：實戰指南

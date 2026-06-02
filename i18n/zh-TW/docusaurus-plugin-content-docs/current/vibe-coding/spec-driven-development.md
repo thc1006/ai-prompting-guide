@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+sidebar_label: "規格驅動開發"
 ---
 
 # 規格驅動開發：當規格成為真相來源

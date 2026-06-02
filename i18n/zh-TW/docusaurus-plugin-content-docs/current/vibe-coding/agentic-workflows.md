@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+sidebar_label: "Agentic 工作流程"
 ---
 
 # 代理式工作流程：規劃、委派、驗證

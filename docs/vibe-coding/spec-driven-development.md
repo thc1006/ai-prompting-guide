@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+sidebar_label: "Spec-Driven Development"
 ---
 
 # Spec-Driven Development: When the Spec Is the Source of Truth
