@@ -80,8 +80,8 @@ jobs:
 
       - name: Install ESLint security plugin
         run: |
-          npm install --save-dev eslint-plugin-security
-          npm install --save-dev eslint-plugin-no-unsanitized
+          npm install --save-dev --legacy-peer-deps eslint-plugin-security
+          npm install --save-dev --legacy-peer-deps eslint-plugin-no-unsanitized
 
       - name: Run ESLint with security rules
         run: |
