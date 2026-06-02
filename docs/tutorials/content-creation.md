@@ -10,8 +10,7 @@ Learn to craft prompts that generate high-quality content across different forma
 
 ### Basic Blog Post Prompt
 
-```python
-"""
+```text
 You are an experienced content marketer and blogger.
 
 Write a blog post about [TOPIC] that:
@@ -30,13 +29,11 @@ SEO requirements:
 - Include [PRIMARY_KEYWORD] naturally throughout
 - Add relevant internal linking opportunities
 - Suggest meta description
-"""
 ```
 
 ### Advanced Blog Post with Research
 
-```python
-"""
+```text
 You are a senior content strategist with expertise in [INDUSTRY].
 
 Research and write a comprehensive blog post about [SPECIFIC_TOPIC]:
@@ -59,12 +56,10 @@ Format:
 - Detailed sections with supporting data
 - Visual content suggestions (charts, infographics)
 - Call-to-action aligned with [BUSINESS_GOAL]
-"""
 ```
 
 **Example Implementation:**
-```python
-"""
+```text
 You are a senior content strategist with expertise in digital marketing.
 
 Research and write a comprehensive blog post about "AI-Powered Marketing Automation for Small Businesses":
@@ -87,15 +82,13 @@ Format:
 - Implementation roadmap with budget considerations
 - Tool comparison matrix with pricing
 - Call-to-action for free automation audit
-"""
 ```
 
 ## Social Media Content
 
 ### Multi-Platform Social Strategy
 
-```python
-"""
+```text
 Create a social media content series about [TOPIC] optimized for different platforms:
 
 Platform-Specific Requirements:
@@ -123,13 +116,11 @@ Content Theme: [SPECIFIC_THEME]
 Target Audience: [AUDIENCE_DESCRIPTION]
 Brand Voice: [TONE_AND_PERSONALITY]
 Campaign Goal: [AWARENESS/ENGAGEMENT/CONVERSION]
-"""
 ```
 
 ### Viral Content Formula
 
-```python
-"""
+```text
 Create viral-potential social media content using this framework:
 
 Hook Elements:
@@ -154,15 +145,13 @@ Platform Optimization:
 Topic: [YOUR_TOPIC]
 Audience: [TARGET_DEMOGRAPHIC]
 Desired Action: [SPECIFIC_GOAL]
-"""
 ```
 
 ## Email Marketing
 
 ### Newsletter Template System
 
-```python
-"""
+```text
 Create an email newsletter template system for [BUSINESS_TYPE]:
 
 Newsletter Components:
@@ -193,13 +182,11 @@ Frequency: [WEEKLY/BIWEEKLY/MONTHLY]
 Primary Goal: [ENGAGEMENT/EDUCATION/SALES]
 
 Include A/B testing suggestions for optimization.
-"""
 ```
 
 ### Conversion-Focused Email Sequences
 
-```python
-"""
+```text
 Design a 5-email welcome sequence for [PRODUCT/SERVICE]:
 
 Email 1 - Welcome & Value Delivery (Send immediately):
@@ -237,15 +224,13 @@ Each email specifications:
 - 300-500 word body content
 - Mobile-optimized formatting
 - Conversion tracking recommendations
-"""
 ```
 
 ## Video Scripts
 
 ### Educational Video Framework
 
-```python
-"""
+```text
 Write a video script for [VIDEO_TYPE] about [TOPIC]:
 
 Script Structure:
@@ -280,15 +265,13 @@ Additional Elements:
 Target Length: [DURATION]
 Platform: [YOUTUBE/TIKTOK/INSTAGRAM/LINKEDIN]
 Audience Level: [BEGINNER/INTERMEDIATE/ADVANCED]
-"""
 ```
 
 ## Long-Form Content
 
 ### White Paper Creation
 
-```python
-"""
+```text
 Develop a comprehensive white paper on [TOPIC] for [INDUSTRY]:
 
 Executive Summary (500 words):
@@ -335,15 +318,13 @@ Requirements:
 - Visual content recommendations
 - Lead generation optimization
 - Industry-specific terminology and context
-"""
 ```
 
 ## Content Optimization Techniques
 
 ### SEO-Optimized Content Framework
 
-```python
-"""
+```text
 Create SEO-optimized content for [TOPIC] targeting [PRIMARY_KEYWORD]:
 
 Keyword Strategy:
@@ -385,13 +366,11 @@ Content Topic: [SPECIFIC_SUBJECT]
 Search Intent: [INFORMATIONAL/NAVIGATIONAL/TRANSACTIONAL]
 Competition Level: [HIGH/MEDIUM/LOW]
 Target Audience: [DEMOGRAPHICS_AND_INTENT]
-"""
 ```
 
 ### Content Repurposing Strategy
 
-```python
-"""
+```text
 Create a content repurposing strategy for [ORIGINAL_CONTENT_PIECE]:
 
 Original Asset Analysis:
@@ -429,7 +408,6 @@ Success Metrics:
 - Traffic generation to original content
 - Lead generation from repurposed content
 - Brand awareness and reach expansion
-"""
 ```
 
 ## Quality Control Checklist

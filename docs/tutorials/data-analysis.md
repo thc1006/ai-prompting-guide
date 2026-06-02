@@ -10,8 +10,7 @@ Learn to extract meaningful insights, create comprehensive reports, and generate
 
 ### Basic Data Exploration Template
 
-```python
-"""
+```text
 You are a data analyst with expertise in [DOMAIN] analytics.
 
 Perform exploratory data analysis on this dataset:
@@ -46,13 +45,11 @@ Analysis Requirements:
    - Interactive element opportunities
 
 Format as a comprehensive EDA report with actionable next steps.
-"""
 ```
 
 ### Advanced Statistical Analysis
 
-```python
-"""
+```text
 You are a senior data scientist specializing in [STATISTICAL_METHOD/ML_TECHNIQUE].
 
 Conduct advanced statistical analysis on [DATASET_DESCRIPTION]:
@@ -90,15 +87,13 @@ Include:
 - Visualization specifications
 - Limitations and caveats
 - Future analysis suggestions
-"""
 ```
 
 ## Business Intelligence Reports
 
 ### Executive Dashboard Creation
 
-```python
-"""
+```text
 You are a business intelligence analyst creating executive dashboards.
 
 Design a comprehensive dashboard for [BUSINESS_FUNCTION]:
@@ -140,13 +135,11 @@ For each section, specify:
 - Chart types and formatting
 - Interactivity and drill-down capabilities
 - Mobile responsiveness considerations
-"""
 ```
 
 ### Financial Analysis Framework
 
-```python
-"""
+```text
 You are a financial analyst with expertise in [FINANCIAL_DOMAIN].
 
 Analyze the financial performance for [COMPANY/DIVISION]:
@@ -189,15 +182,13 @@ Include:
 - Visual representation suggestions
 - Peer comparison framework
 - Scenario planning considerations
-"""
 ```
 
 ## Customer Analytics
 
 ### Customer Segmentation Analysis
 
-```python
-"""
+```text
 You are a customer analytics specialist with expertise in behavioral segmentation.
 
 Perform customer segmentation analysis on [CUSTOMER_DATA]:
@@ -238,13 +229,11 @@ Deliverables:
 - Targeting strategy framework
 - Campaign customization guidelines
 - Performance measurement plan
-"""
 ```
 
 ### Customer Journey Analysis
 
-```python
-"""
+```text
 You are a customer experience analyst specializing in journey mapping.
 
 Analyze the customer journey for [PRODUCT/SERVICE]:
@@ -284,15 +273,13 @@ Analysis Framework:
    - Expected impact metrics
 
 Include journey visualization suggestions and measurement frameworks.
-"""
 ```
 
 ## Market Research & Competitive Analysis
 
 ### Market Analysis Template
 
-```python
-"""
+```text
 You are a market research analyst specializing in [INDUSTRY_SECTOR].
 
 Conduct comprehensive market analysis for [PRODUCT/SERVICE_CATEGORY]:
@@ -335,15 +322,13 @@ Analysis Components:
    - Success metrics definition
 
 Include data source recommendations and validation approaches.
-"""
 ```
 
 ## Operational Analytics
 
 ### Performance Optimization Analysis
 
-```python
-"""
+```text
 You are an operations analyst focused on process optimization.
 
 Analyze operational performance for [BUSINESS_PROCESS]:
@@ -386,13 +371,11 @@ Deliverables:
 - Performance tracking dashboard
 - Change management considerations
 - Success measurement criteria
-"""
 ```
 
 ### Supply Chain Analytics
 
-```python
-"""
+```text
 You are a supply chain analyst with expertise in logistics optimization.
 
 Analyze supply chain performance for [PRODUCT_CATEGORY/BUSINESS]:
@@ -435,15 +418,13 @@ Recommendations should include:
 - Service level improvements
 - Risk mitigation strategies
 - Technology investment priorities
-"""
 ```
 
 ## Data Visualization & Reporting
 
 ### Interactive Dashboard Design
 
-```python
-"""
+```text
 You are a data visualization expert specializing in interactive dashboard design.
 
 Design an interactive dashboard for [BUSINESS_FUNCTION]:
@@ -490,15 +471,13 @@ Include:
 - Technical implementation notes
 - User testing recommendations
 - Maintenance and update procedures
-"""
 ```
 
 ## Advanced Analytics Techniques
 
 ### Predictive Modeling Framework
 
-```python
-"""
+```text
 You are a data scientist specializing in predictive analytics.
 
 Develop a predictive model for [PREDICTION_TARGET]:
@@ -545,7 +524,6 @@ Include:
 - Documentation requirements
 - Stakeholder communication plan
 - Ethical considerations assessment
-"""
 ```
 
 ## Quality Assurance for Data Analysis

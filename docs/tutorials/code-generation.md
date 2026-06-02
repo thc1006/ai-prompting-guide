@@ -14,8 +14,7 @@ These prompt templates still apply, but in 2026 most coding happens through agen
 
 ### Basic Code Generation Template
 
-```python
-"""
+```text
 You are a [LANGUAGE] developer with [EXPERTISE_LEVEL] experience.
 
 Create a [FUNCTION/CLASS/MODULE] that:
@@ -33,13 +32,11 @@ Include:
 - Comprehensive error handling
 - Clear docstrings and comments
 - Unit test examples
-"""
 ```
 
 ### Advanced Code Architecture Prompt
 
-```python
-"""
+```text
 You are a senior software architect specializing in [TECHNOLOGY_STACK].
 
 Design and implement [PROJECT_DESCRIPTION]:
@@ -76,7 +73,6 @@ Deliverables:
 Technology Constraints: [SPECIFIC_TECH_STACK]
 Timeline: [PROJECT_TIMELINE]
 Team Size: [DEVELOPMENT_TEAM_SIZE]
-"""
 ```
 
 ## Language-Specific Examples
@@ -84,8 +80,7 @@ Team Size: [DEVELOPMENT_TEAM_SIZE]
 ### Python Development
 
 **Data Processing Pipeline:**
-```python
-"""
+```text
 You are a Python data engineer with expertise in pandas, NumPy, and data pipeline design.
 
 Create a robust data processing pipeline that:
@@ -110,12 +105,10 @@ Structure:
 5. Configuration management module
 
 Include unit tests using pytest and example usage documentation.
-"""
 ```
 
 **API Development:**
-```python
-"""
+```text
 You are a Python backend developer specializing in FastAPI and modern web development.
 
 Create a RESTful API for [APPLICATION_DOMAIN] with these endpoints:
@@ -146,14 +139,12 @@ Requirements:
 - Comprehensive test suite
 
 Include Docker configuration and deployment instructions.
-"""
 ```
 
 ### JavaScript/Node.js Development
 
 **React Component Library:**
-```javascript
-"""
+```text
 You are a senior React developer with expertise in component design and TypeScript.
 
 Create a reusable component library for [UI_COMPONENT_TYPE]:
@@ -185,14 +176,12 @@ Additional Requirements:
 - Performance monitoring integration points
 
 Include build configuration and npm publishing setup.
-"""
 ```
 
 ### Database Design & SQL
 
 **Database Schema Design:**
-```sql
-"""
+```text
 You are a database architect with expertise in PostgreSQL and relational database design.
 
 Design a database schema for [APPLICATION_TYPE]:
@@ -223,15 +212,13 @@ Performance Considerations:
 - Scalability requirements: [GROWTH_PROJECTIONS]
 
 Include documentation for developers and DBAs.
-"""
 ```
 
 ## API Documentation Generation
 
 ### OpenAPI/Swagger Documentation
 
-```python
-"""
+```text
 Create comprehensive OpenAPI 3.0 specification for [API_NAME]:
 
 API Overview:
@@ -267,14 +254,12 @@ Include:
 - cURL examples for each endpoint
 - Client library usage examples
 - Common integration patterns
-"""
 ```
 
 ### Technical Documentation Templates
 
 **README Generation:**
-```markdown
-"""
+```text
 Create a comprehensive README.md for [PROJECT_NAME]:
 
 Project Overview:
@@ -321,7 +306,6 @@ Additional Sections:
 - Contact and support information
 
 Make it scannable with proper headers, code blocks, and badges.
-"""
 ```
 
 ## Testing & Quality Assurance
@@ -329,8 +313,7 @@ Make it scannable with proper headers, code blocks, and badges.
 ### Test Generation Prompts
 
 **Unit Test Creation:**
-```python
-"""
+```text
 You are a test engineer specializing in [TESTING_FRAMEWORK].
 
 Create comprehensive unit tests for this [LANGUAGE] code:
@@ -370,13 +353,11 @@ Include:
 - Test data fixtures
 - Performance benchmarks where relevant
 - Documentation for complex test scenarios
-"""
 ```
 
 ### Code Review Automation
 
-```python
-"""
+```text
 You are a senior code reviewer with expertise in [LANGUAGE/FRAMEWORK].
 
 Review this code for:
@@ -420,15 +401,13 @@ Provide feedback in this format:
 - Testing strategy improvements
 - Documentation enhancements
 - Performance optimization opportunities
-"""
 ```
 
 ## DevOps & Deployment
 
 ### Infrastructure as Code
 
-```yaml
-"""
+```text
 You are a DevOps engineer specializing in [CLOUD_PROVIDER] and infrastructure automation.
 
 Create Infrastructure as Code for [APPLICATION_TYPE]:
@@ -474,7 +453,6 @@ Deliverables:
 - Environment variable management
 - Deployment scripts and documentation
 - Cost optimization recommendations
-"""
 ```
 
 ## Code Generation Best Practices
@@ -501,8 +479,7 @@ Before using generated code:
 
 ### Code Migration & Modernization
 
-```python
-"""
+```text
 You are a software modernization expert with experience in [LEGACY_TECH] to [MODERN_TECH] migrations.
 
 Modernize this legacy code:
@@ -528,7 +505,6 @@ Consider:
 - API compatibility
 - User impact and training needs
 - Timeline and resource estimates
-"""
 ```
 
 ## Next Steps
