@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "部落格",
+    "message": "技術筆記",
     "description": "The title for the blog used in SEO"
   },
   "description": {
-    "message": "部落格",
+    "message": "蔡秀吉的技術筆記：橫跨 AI／prompting、開源電信（O-RAN／5G／6G）與跨領域教育；文章以繁體中文為主。",
     "description": "The description for the blog used in SEO"
   },
   "sidebar.title": {

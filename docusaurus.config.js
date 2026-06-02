@@ -80,6 +80,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogDescription:
+            'Cross-domain technical notes spanning AI & prompting, open-source telecom (O-RAN / 5G / 6G), and interdisciplinary education by 蔡秀吉 (Hsiu-Chi Tsai). Posts are primarily in Traditional Chinese.',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
