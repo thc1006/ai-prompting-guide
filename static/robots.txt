@@ -1,19 +1,35 @@
-User-agent: *
-Allow: /
-
+# Sitemap (global directive)
 Sitemap: https://thc1006.github.io/ai-prompting-guide/sitemap.xml
 
-# Crawl-delay for responsible crawling
-Crawl-delay: 1
-
-# Block access to internal build files
+# Default: all crawlers may index the whole site (internal build dirs blocked)
+User-agent: *
+Allow: /
 Disallow: /.docusaurus/
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /.github/
+Crawl-delay: 1
 
-# Allow search engines to index all content
-Allow: /docs/
-Allow: /blog/
-Allow: /assets/
-Allow: /img/
+# Explicitly welcome AI answer-engine / citation crawlers — this site WANTS to be
+# retrieved and cited by AI search assistants. These are the citation / user-facing
+# bots; training-only crawlers (GPTBot, ClaudeBot, CCBot) are intentionally not listed.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
