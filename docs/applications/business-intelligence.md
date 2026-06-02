@@ -92,3 +92,9 @@ Highlight the top 3 differentiating factors.
 - Maintain audit trails for AI-generated content
 - Regular model performance reviews
 - Clear documentation of AI assistance in reports
+
+## See Also
+
+- **[Vibe Coding & AI Agents](/docs/vibe-coding/overview)** - building agentic BI automation, not just one-off prompts
+- **[Agentic Workflows](/docs/vibe-coding/agentic-workflows)** - let an agent run the analysis pipeline with verification
+- **[Data Analysis](/docs/tutorials/data-analysis)** - prompt patterns for the analysis itself

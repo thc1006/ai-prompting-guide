@@ -10,7 +10,7 @@ sidebar_position: 1
 
 **公司**: 台積電（Taiwan Semiconductor Manufacturing Company）  
 **行業**: 半導體製造  
-**時程**: 18 個月（2023-2024）  
+**時程**: 18 個月（2024-2025）  
 **團隊規模**: 45 名工程師、12 名提示專家  
 **投資金額**: 初始投資 8400 萬新台幣，年度營運 2400 萬新台幣  
 
@@ -205,7 +205,16 @@ def validate_response(prompt, response):
 - 即時商業智慧生成
 - 整合式提示驅動產品開發
 - 在全球半導體行業的領先 AI 治理框架
-- 成為台灣 AI 應用的標童企業
+- 成為台灣 AI 應用的標竿企業
+
+## 延伸閱讀
+
+這類部署在 2026 年，會以 [Vibe Coding 與 AI 編碼代理](/docs/vibe-coding/overview) 這一章的「agentic、驗證優先」工作流程來打造：
+
+- **[Agentic 工作流程](/docs/vibe-coding/agentic-workflows)** - AI 輔助交付的「規劃、行動、驗證」迴圈
+- **[Harness Engineering 框架工程](/docs/vibe-coding/harness-engineering)** - 設計模型周邊的鷹架（scaffolding）
+- **[驗證與安全](/docs/vibe-coding/verification-and-safety)** - 讓企業推出維持安全的關卡
+- **[生產環境部署](/docs/best-practices/production-deployment)** - 分階段推出、監控與回滾
 
 ## 聯絡資訊
 
