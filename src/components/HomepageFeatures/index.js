@@ -39,7 +39,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: translate({
       id: 'homepage.features.strategies.description',
-      message: 'Scale your prompting expertise with advanced techniques like chain-of-thought reasoning, prompt chaining, and production deployment best practices.',
+      message: 'Scale your expertise with advanced techniques like chain-of-thought reasoning, prompt chaining, and agentic coding with Claude Code and OpenAI Codex.',
       description: 'The description of the strategies feature'
     }),
   },

@@ -343,7 +343,7 @@
     "description": "The title of the strategies feature"
   },
   "homepage.features.strategies.description": {
-    "message": "運用進階技巧擴展您的提示詞專業知識，包括思維鏈推理、提示詞串聯，以及生產環境部署最佳實務。",
+    "message": "運用進階技巧擴展你的專業知識，包括思維鏈推理、提示詞串聯，以及用 Claude Code、OpenAI Codex 進行的代理式（agentic）開發。",
     "description": "The description of the strategies feature"
   },
   "homepage.hero.startLearning": {

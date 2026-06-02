@@ -94,7 +94,7 @@ const config = {
       
       // SEO improvements
       metadata: [
-        {name: 'keywords', content: 'AI, artificial intelligence, prompting, prompt engineering, LLM, ChatGPT, machine learning, NLP, O-RAN, 5G, 6G'},
+        {name: 'keywords', content: 'AI, artificial intelligence, prompting, prompt engineering, LLM, ChatGPT, machine learning, NLP, vibe coding, AI coding agents, Claude Code, OpenAI Codex, agentic coding, context engineering, spec-driven development, O-RAN, 5G, 6G'},
         {name: 'author', content: '蔡秀吉 (Hsiu-Chi Tsai)'},
         {name: 'description', content: 'Comprehensive guide to AI prompting techniques, best practices, and advanced strategies for effective interaction with language models'},
         {property: 'og:type', content: 'website'},
