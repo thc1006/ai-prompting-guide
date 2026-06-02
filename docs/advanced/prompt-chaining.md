@@ -6,6 +6,10 @@ sidebar_position: 2
 
 Learn to create sophisticated AI workflows by connecting multiple prompts in sequence, enabling complex multi-step processes and maintaining context across interactions.
 
+:::note Chaining in 2026
+Prompt chaining is the manual ancestor of today's agentic workflows. When you wire one prompt's output into the next — planning the steps, passing context along, checking each result — you are doing by hand what an AI agent now does autonomously. That makes this chapter the best way to understand what an agent is actually doing under the hood, and to judge when a pipeline is simple enough to script yourself versus worth handing to an agent. See [Agentic Workflows](/docs/vibe-coding/agentic-workflows) for the autonomous version.
+:::
+
 ## Understanding Prompt Chaining
 
 Prompt chaining involves breaking complex tasks into smaller, manageable steps where the output of one prompt becomes the input for the next. This approach improves reliability, enables specialized processing, and allows for better quality control.
@@ -632,6 +636,8 @@ Ready to master more advanced techniques?
 - **[Multi-Modal Prompting](/docs/advanced/multi-modal)** - Integrate text, images, and other data types
 - **[Best Practices](/docs/best-practices/testing-prompts)** - Optimize your chaining effectiveness
 - **[Production Systems](/docs/best-practices/production-deployment)** - Deploy chains in real applications
+- **[Agentic Workflows](/docs/vibe-coding/agentic-workflows)** - Let an agent run the chain autonomously
+- **[Chain-of-Thought](/docs/advanced/chain-of-thought)** - Make each step's reasoning visible
 
 :::tip Chain Development
 Start with simple 2-3 step chains and gradually increase complexity. Test each chain thoroughly before connecting them together. The key to successful chaining is clear interfaces and robust error handling.

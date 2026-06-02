@@ -6,6 +6,10 @@ sidebar_position: 2
 
 學會透過序列連接多個提示來創建精密的 AI 工作流程，實現複雜的多步驟過程並在互動中維持脈絡。就像組裝一台電腦，每個零件都要在正確的步驟安裝！
 
+:::note 2026 年的提示鏈
+提示鏈，是今日 agentic 工作流程的「手動版祖先」。當你把一個提示的輸出接到下一個——規劃步驟、把脈絡往下傳、逐一檢查每個結果——你正用手做著如今 AI agent 會自動完成的事。這讓本章成為理解「agent 在底層究竟在做什麼」的最佳途徑，也讓你能判斷：一條管線什麼時候簡單到自己寫腳本就好、什麼時候值得交給一個 agent。自動化的版本見 [Agentic 工作流程](/docs/vibe-coding/agentic-workflows)。
+:::
+
 ## 理解 Prompt Chaining
 
 Prompt Chaining 就是將複雜任務拆解成更小、更好管理的步驟，其中一個提示的輸出成為下一個提示的輸入。這種方法提高可靠性、實現專業化處理，並允許更好的品質控制。
@@ -632,7 +636,9 @@ S4：建立全面的商業案例
 - **[Multi-Modal 提示](/docs/advanced/multi-modal)** - 整合文字、圖片和其他資料類型
 - **[最佳實務](/docs/best-practices/testing-prompts)** - 最佳化你的鏈接效率
 - **[生產系統](/docs/best-practices/production-deployment)** - 在實際應用中部署鏈
+- **[Agentic 工作流程](/docs/vibe-coding/agentic-workflows)** - 讓 agent 自動執行整條鏈
+- **[思維鏈推理](/docs/advanced/chain-of-thought)** - 讓每一步的推理都看得見
 
-:::tip 鏈開發小抃步
-從簡單的 2-3 步驟鏈開始，逐漸增加複雜度。在將鏈連接在一起之前，要彼底測試每個鏈。成功鏈接的關鍵在於清晰的介面和強健的錯誤處理。
+:::tip 鏈開發小撇步
+從簡單的 2-3 步驟鏈開始，逐漸增加複雜度。在將鏈連接在一起之前，要徹底測試每個鏈。成功鏈接的關鍵在於清晰的介面和強健的錯誤處理。
 :::

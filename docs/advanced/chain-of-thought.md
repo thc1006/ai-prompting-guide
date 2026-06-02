@@ -6,6 +6,10 @@ sidebar_position: 1
 
 Master advanced reasoning techniques that enable AI models to break down complex problems into logical steps, improving accuracy and providing transparent problem-solving processes.
 
+:::note Chain-of-thought in 2026
+Modern reasoning models perform much of this step-by-step thinking internally — often exposed as an "extended thinking" or reasoning mode — so you rarely need to force "think step by step" the way you once did. The skill is far from obsolete, though: explicit chain-of-thought still makes a model's reasoning *visible* so you can verify it, steer it, and see where it goes wrong. That visibility is exactly what [Agentic Workflows](/docs/vibe-coding/agentic-workflows) rely on to check an agent's work, and it pairs naturally with image analysis in [Multi-Modal Prompting](/docs/advanced/multi-modal).
+:::
+
 ## Understanding Chain-of-Thought
 
 Chain-of-Thought (CoT) prompting guides AI models to explicitly show their reasoning process, similar to how humans work through complex problems step by step.
@@ -540,6 +544,7 @@ Ready to master more advanced techniques?
 - **[Multi-Modal Prompting](/docs/advanced/multi-modal)** - Work with text, images, and other data types
 - **[Prompt Chaining](/docs/advanced/prompt-chaining)** - Connect multiple prompts for complex workflows
 - **[Best Practices](/docs/best-practices/testing-prompts)** - Optimize your prompting effectiveness
+- **[Agentic Workflows](/docs/vibe-coding/agentic-workflows)** - See how visible reasoning powers agent verification
 
 :::tip CoT Development
 Practice chain-of-thought reasoning on problems in your domain. Start with simpler problems and gradually increase complexity. The key is making your thinking process explicit and systematic.

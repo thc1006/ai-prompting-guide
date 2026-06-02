@@ -6,6 +6,10 @@ sidebar_position: 1
 
 掌握進階推理技巧，讓 AI 模型能夠將複雜問題拆解成邏輯步驟，提升準確度並提供透明的問題解決過程。
 
+:::note 2026 年的思維鏈
+現代的推理模型已經在內部做了大量這種逐步思考——常以「延伸思考（extended thinking）」或推理模式的形式呈現——所以你已經很少需要像以前那樣硬是叫模型「一步一步想」。但這項技巧遠未過時：明確的思維鏈仍然讓模型的推理「看得見」，於是你能驗證它、引導它、看出它哪裡出錯。這種「可見性」正是 [Agentic 工作流程](/docs/vibe-coding/agentic-workflows) 用來查核 agent 工作的依據，也能與 [Multi-Modal 提示](/docs/advanced/multi-modal) 中的圖片分析自然搭配。
+:::
+
 ## 理解 Chain-of-Thought
 
 Chain-of-Thought（CoT）提示引導 AI 模型明確展示推理過程，就像人類逐步解決複雜問題一樣。
@@ -540,6 +544,7 @@ Therefore: [Final answer]
 - **[Multi-Modal 提示](/docs/advanced/multi-modal)** - 處理文字、圖片和其他資料類型
 - **[提示鏈](/docs/advanced/prompt-chaining)** - 連接多個提示進行複雜工作流程
 - **[最佳實務](/docs/best-practices/testing-prompts)** - 最佳化你的提示效果
+- **[Agentic 工作流程](/docs/vibe-coding/agentic-workflows)** - 看看「可見的推理」如何支撐 agent 的驗證
 
 :::tip CoT 開發
 在你的領域問題上練習思維鏈推理。從簡單問題開始，逐漸增加複雜度。關鍵是讓你的思考過程明確且系統化。
