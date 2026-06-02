@@ -29,6 +29,14 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Vibe Coding & AI Agents',
+      collapsed: false,
+      items: [
+        'vibe-coding/overview',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Practical Tutorials',
       collapsed: false,
       items: [
