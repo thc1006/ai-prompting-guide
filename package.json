@@ -25,7 +25,7 @@
     "url": "https://github.com/thc1006/ai-prompting-guide/issues"
   },
   "author": "AI Prompting Guide Contributors",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --host localhost --port 3000",

@@ -7,9 +7,9 @@
     "message": "AI 提示詞寶典 Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Tutorial": {
-    "message": "實戰教學",
-    "description": "Navbar item with label Tutorial"
+  "item.label.Docs": {
+    "message": "文件",
+    "description": "Navbar item with label Docs"
   },
   "item.label.Blog": {
     "message": "技術筆記",
