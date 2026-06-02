@@ -34,6 +34,9 @@ Explore sophisticated approaches like prompt chaining, dynamic context managemen
 ### 💡 Real-World Applications
 See how prompting techniques apply to content creation, code generation, data analysis, customer service, and more.
 
+### 🤖 AI Coding Agents & Vibe Coding
+Go beyond single prompts into agentic coding with tools like Claude Code and OpenAI Codex. Learn the 2026 shift from prompt engineering to context engineering and spec-driven development in the [Vibe Coding & AI Coding Agents](/docs/vibe-coding/overview) chapter.
+
 ## Getting Started
 
 Ready to transform how you work with AI? Start with our [Fundamentals](/docs/fundamentals/what-is-prompting) section to build a solid foundation, then progress through practical tutorials and advanced techniques.
