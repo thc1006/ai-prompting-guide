@@ -16,7 +16,7 @@ Chain-of-Thought（CoT）提示引導 AI 模型明確展示推理過程，就像
 
 ### 基本 CoT 結構
 
-```python
+```text
 """
 [Problem statement]
 
@@ -44,7 +44,7 @@ Therefore: [Final answer]
 
 ### 進階數學 CoT
 
-```python
+```text
 """
 使用思維鏈推理解決這個最佳化問題：
 
@@ -86,7 +86,7 @@ Therefore: [Final answer]
 
 ### 統計分析 CoT
 
-```python
+```text
 """
 使用思維鏈推理分析這個 A/B 測試情境：
 
@@ -129,7 +129,7 @@ Therefore: [Final answer]
 
 ### 策略決策 CoT
 
-```python
+```text
 """
 我們的 SaaS 公司應該拓展到歐洲市場嗎？使用思維鏈分析。
 
@@ -180,7 +180,7 @@ Therefore: [Final answer]
 
 ### 投資分析 CoT
 
-```python
+```text
 """
 使用折現現金流分析評估這項科技投資：
 
@@ -240,7 +240,7 @@ Therefore: [Final answer]
 
 ### 系統架構 CoT
 
-```python
+```text
 """
 為預期 100 萬併發用戶的即時聊天應用程式設計可擴展架構。
 
@@ -303,7 +303,7 @@ Therefore: [Final answer]
 
 ### 除錯 CoT
 
-```python
+```text
 """
 除錯這個效能問題：API 回應時間在過去一週從 200ms 增加到 2000ms。
 
@@ -366,7 +366,7 @@ Therefore: [Final answer]
 
 ### 創新框架 CoT
 
-```python
+```text
 """
 開發創新科技解決方案來減少便利商店的食物浪費。
 
@@ -433,7 +433,7 @@ Therefore: [Final answer]
 
 ### 多角度 CoT
 
-```python
+```text
 """
 從多個角度分析我們公司是否應該採用遠端優先的工作政策：
 
@@ -475,7 +475,7 @@ Therefore: [Final answer]
 
 ### 迭代改進 CoT
 
-```python
+```text
 """
 為我們的新 SaaS 產品設計定價策略，透過多次迭代進行改進：
 
