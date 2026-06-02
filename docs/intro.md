@@ -37,6 +37,10 @@ See how prompting techniques apply to content creation, code generation, data an
 ### 🤖 AI Coding Agents & Vibe Coding
 Go beyond single prompts into agentic coding with tools like Claude Code and OpenAI Codex. Learn the 2026 shift from prompt engineering to context engineering and spec-driven development in the [Vibe Coding & AI Coding Agents](/docs/vibe-coding/overview) chapter.
 
+:::note Evolution, not replacement
+Does the 2026 shift mean prompting is obsolete? **No — the opposite.** Context engineering and agentic workflows *build on* prompting; they don't retire it. Every skill in the [Fundamentals](/docs/fundamentals/what-is-prompting) chapter — clear instructions, role-setting, examples, constraints — is exactly what you apply when you write a `CLAUDE.md` file, author a spec, or steer an agent. A great prompt shapes one response; the same craft, applied to context, shapes every response. Master the fundamentals first — they make everything that follows work.
+:::
+
 ## Getting Started
 
 Ready to transform how you work with AI? Start with our [Fundamentals](/docs/fundamentals/what-is-prompting) section to build a solid foundation, then progress through practical tutorials and advanced techniques.
