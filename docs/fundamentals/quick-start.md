@@ -10,8 +10,7 @@ Get immediate results with proven prompt templates and practical examples. This 
 
 ### 1. Content Creation Template
 
-```python
-"""
+```text
 You are a [ROLE] with expertise in [DOMAIN].
 
 Create [CONTENT_TYPE] about [TOPIC] that:
@@ -21,12 +20,10 @@ Create [CONTENT_TYPE] about [TOPIC] that:
 - Includes [SPECIFIC_REQUIREMENTS]
 
 Format: [DESIRED_FORMAT]
-"""
 ```
 
 **Example Usage:**
-```python
-"""
+```text
 You are a technical writer with expertise in software development.
 
 Create a blog post about API security best practices that:
@@ -36,13 +33,11 @@ Create a blog post about API security best practices that:
 - Includes code examples and real-world scenarios
 
 Format: Blog post with headers, bullet points, and code blocks
-"""
 ```
 
 ### 2. Data Analysis Template
 
-```python
-"""
+```text
 You are a data analyst. Analyze the following [DATA_TYPE]:
 
 Data: [INSERT_DATA]
@@ -53,12 +48,10 @@ Please provide:
 3. [ANALYSIS_POINT_3]
 
 Format your response as [FORMAT_REQUIREMENT]
-"""
 ```
 
 **Example Usage:**
-```python
-"""
+```text
 You are a data analyst. Analyze the following sales data:
 
 Data: Q3 Sales: $150k (up 15%), Q2 Sales: $130k, Q1 Sales: $125k
@@ -69,13 +62,11 @@ Please provide:
 3. Recommendations for Q4
 
 Format your response as a structured report with clear sections
-"""
 ```
 
 ### 3. Code Generation Template
 
-```python
-"""
+```text
 You are a [PROGRAMMING_LANGUAGE] developer.
 
 Create a [FUNCTION/CLASS/SCRIPT] that:
@@ -88,12 +79,10 @@ Requirements:
 - [REQUIREMENT_2]
 
 Include comments and error handling.
-"""
 ```
 
 **Example Usage:**
-```python
-"""
+```text
 You are a Python developer.
 
 Create a function that:
@@ -106,13 +95,11 @@ Requirements:
 - Comprehensive error handling
 
 Include comments and error handling.
-"""
 ```
 
 ### 4. Problem-Solving Template
 
-```python
-"""
+```text
 I need help with [PROBLEM_DESCRIPTION].
 
 Context:
@@ -128,7 +115,6 @@ Please provide:
 2. Multiple solution approaches
 3. Recommended approach with reasoning
 4. Implementation steps
-"""
 ```
 
 ## Ready-to-Use Prompts by Category
@@ -136,8 +122,7 @@ Please provide:
 ### Content & Marketing
 
 **Blog Post Creation:**
-```python
-"""
+```text
 Write a comprehensive blog post about [TOPIC] for [TARGET_AUDIENCE].
 
 Structure:
@@ -149,12 +134,10 @@ Structure:
 Length: 1200-1500 words
 Tone: Professional yet engaging
 Include: Statistics, examples, and actionable tips
-"""
 ```
 
 **Social Media Content:**
-```python
-"""
+```text
 Create 5 social media posts for [PLATFORM] about [TOPIC]:
 
 Requirements:
@@ -165,14 +148,12 @@ Requirements:
 - Mix of educational and promotional content
 
 Target audience: [AUDIENCE_DESCRIPTION]
-"""
 ```
 
 ### Technical Documentation
 
 **API Documentation:**
-```python
-"""
+```text
 Create comprehensive API documentation for this endpoint:
 
 Endpoint: [METHOD] [URL]
@@ -187,12 +168,10 @@ Include:
 6. Rate limiting information
 
 Format: OpenAPI 3.0 specification
-"""
 ```
 
 **Code Review:**
-```python
-"""
+```text
 Review this [LANGUAGE] code for:
 - Code quality and best practices
 - Performance optimizations
@@ -207,14 +186,12 @@ Provide:
 2. Specific issues with line numbers
 3. Suggested improvements with examples
 4. Priority ranking (High/Medium/Low)
-"""
 ```
 
 ### Business & Analysis
 
 **Competitive Analysis:**
-```python
-"""
+```text
 Conduct a competitive analysis for [COMPANY/PRODUCT] in the [INDUSTRY] space.
 
 Analyze these competitors: [COMPETITOR_LIST]
@@ -228,12 +205,10 @@ Provide:
 6. Strategic recommendations
 
 Format: Executive summary followed by detailed analysis
-"""
 ```
 
 **Meeting Summary:**
-```python
-"""
+```text
 Summarize this meeting transcript into a professional summary:
 
 Participants: [LIST_PARTICIPANTS]
@@ -248,7 +223,6 @@ Create:
 5. Next steps
 
 Format: Structured document suitable for distribution
-"""
 ```
 
 ## Optimization Techniques
@@ -262,8 +236,7 @@ Format: Structured document suitable for distribution
 **Try:** "Analyze this data and present findings as: 1) Executive summary, 2) Key metrics table, 3) Trend analysis, 4) Recommendations"
 
 ### 3. Include Examples
-```python
-"""
+```text
 Generate product descriptions following this example:
 
 Example:
@@ -272,19 +245,16 @@ Description: "Experience premium sound quality with our noise-canceling wireless
 
 Now generate for:
 Product: [YOUR_PRODUCT]
-"""
 ```
 
 ### 4. Set Clear Constraints
-```python
-"""
+```text
 Generate 5 marketing headlines that:
 - Are exactly 60 characters or less
 - Include the word "innovative"
 - Target small business owners
 - Avoid superlatives like "best" or "amazing"
 - Focus on practical benefits
-"""
 ```
 
 ## Testing Your Prompts
