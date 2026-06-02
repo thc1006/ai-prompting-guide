@@ -278,7 +278,7 @@ Version Metadata:
 ```yaml
 prompt_metadata:
   version: "2.1.3"
-  created_date: "2024-03-15T10:30:00Z"
+  created_date: "2026-01-15T10:30:00Z"
   author: "ai-team@company.com"
   description: "Enhanced blog post generation with SEO optimization"
   
@@ -791,7 +791,7 @@ class BudgetManager:
     def __init__(self):
         self.daily_budget = 1000.0  # USD
         self.hourly_budget = self.daily_budget / 24
-        self.cost_per_token = 0.0001  # Example rate
+        self.cost_per_token = 0.0001  # Illustrative only — check current provider pricing
         self.current_spend = self.get_current_spend()
     
     def check_budget_availability(self, estimated_tokens):
@@ -822,6 +822,8 @@ Ready to ensure responsible and secure AI deployment?
 - **[Security & Ethics](/docs/best-practices/security-ethics)** - Implement security and ethical guidelines
 - **[Team Collaboration](/docs/best-practices/team-collaboration)** - Scale prompting across teams
 - **[Case Studies](/docs/case-studies/enterprise-deployment)** - Learn from real-world implementations
+- **[Verification & Safety](/docs/vibe-coding/verification-and-safety)** - Verification gates and human-in-the-loop for AI-assisted change
+- **[Agentic Workflows](/docs/vibe-coding/agentic-workflows)** - Treat staged rollout as a stage in the agent verification loop
 
 :::tip Production Success
 Start with a pilot deployment in a non-critical system. Build monitoring and operational experience before scaling to mission-critical applications. Always have rollback plans and test them regularly.
