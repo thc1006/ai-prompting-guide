@@ -2,43 +2,39 @@
 sidebar_position: 1
 ---
 
-# Testing & Optimization
+# 測試與最佳化
 
-Master systematic approaches to testing, measuring, and optimizing your prompts for consistent, high-quality results across different use cases and conditions.
+掌握測試、衡量與最佳化提示的系統化方法，在不同的使用情境與條件下，獲得一致且高品質的結果。
 
-## Prompt Testing Framework
+## 提示測試框架
 
-### Systematic Testing Approach
+### 系統化測試方法
 
-```python
-"""
-PROMPT TESTING METHODOLOGY:
+**提示測試方法論：**
 
-1. Baseline Establishment
-   - Define success criteria
-   - Create test datasets
-   - Document initial performance
+1. **建立基準**
+   - 定義成功標準
+   - 建立測試資料集
+   - 記錄初始效能
 
-2. Controlled Testing
-   - Single variable changes
-   - Consistent test conditions
-   - Measurable outcomes
+2. **受控測試**
+   - 單一變數變更
+   - 一致的測試條件
+   - 可衡量的結果
 
-3. Performance Evaluation
-   - Quantitative metrics
-   - Qualitative assessment
-   - Statistical significance
+3. **效能評估**
+   - 量化指標
+   - 質化評估
+   - 統計顯著性
 
-4. Iterative Refinement
-   - Analyze results
-   - Implement improvements
-   - Retest and validate
-"""
-```
+4. **迭代精煉**
+   - 分析結果
+   - 實施改進
+   - 重新測試與驗證
 
-### Test Design Components
+### 測試設計元件
 
-**Test Inputs:**
+**測試輸入：**
 ```python
 test_scenarios = {
     "edge_cases": [
@@ -63,90 +59,80 @@ test_scenarios = {
 }
 ```
 
-## Performance Metrics
+## 效能指標
 
-### Quantitative Measures
+### 量化衡量
 
-**Accuracy Metrics:**
-```python
-"""
-ACCURACY ASSESSMENT FRAMEWORK:
+**準確度指標：**
 
-Content Quality Score (1-10):
-- Factual accuracy: Are statements correct?
-- Completeness: Are all requirements addressed?
-- Relevance: Does output match the request?
-- Consistency: Are multiple outputs similar in quality?
+#### 準確度評估框架
 
-Format Compliance Score (1-10):
-- Structure adherence: Follows specified format?
-- Length requirements: Meets word/character limits?
-- Style consistency: Maintains requested tone?
-- Technical specifications: Includes required elements?
+**內容品質分數（1-10）：**
+- 事實準確性：陳述是否正確？
+- 完整性：是否處理了所有需求？
+- 相關性：輸出是否符合請求？
+- 一致性：多次輸出的品質是否相近？
 
-Usability Score (1-10):
-- Clarity: Easy to understand and act upon?
-- Actionability: Provides clear next steps?
-- Context appropriateness: Suitable for audience?
-- Implementation feasibility: Practical and realistic?
-"""
-```
+**格式合規分數（1-10）：**
+- 結構遵循：是否遵循指定格式？
+- 長度需求：是否符合字數/字元限制？
+- 風格一致性：是否維持要求的語氣？
+- 技術規格：是否包含必要元素？
 
-**Efficiency Metrics:**
-```python
-"""
-EFFICIENCY MEASUREMENT:
+**易用性分數（1-10）：**
+- 清晰度：是否易於理解並據以行動？
+- 可執行性：是否提供清楚的後續步驟？
+- 情境適切性：是否適合目標受眾？
+- 實作可行性：是否實際且可行？
 
-Response Quality per Token:
-- High-quality outputs with fewer tokens
-- Reduced need for follow-up prompts
-- Consistent first-time success rate
+**效率指標：**
 
-Time to Desired Output:
-- Iterations required to get usable result
-- Total time investment including refinements
-- Comparison across different approaches
+#### 效率衡量
 
-Cost Effectiveness:
-- Token usage optimization
-- Quality-to-cost ratio analysis
-- Scalability considerations
-"""
-```
+**每個 Token 的回應品質：**
+- 以較少的 Token 產出高品質輸出
+- 減少後續追問提示的需求
+- 一致的首次成功率
 
-### Qualitative Assessment
+**達到理想輸出的時間：**
+- 取得可用結果所需的迭代次數
+- 包含精煉在內的總時間投入
+- 不同方法之間的比較
 
-**Expert Review Framework:**
-```python
-"""
-EXPERT EVALUATION PROTOCOL:
+**成本效益：**
+- Token 使用最佳化
+- 品質對成本比分析
+- 可擴展性考量
 
-Domain Expert Review:
-- Technical accuracy assessment
-- Industry best practice alignment
-- Professional terminology usage
-- Real-world applicability
+### 質化評估
 
-End User Testing:
-- Usability in actual workflows
-- Clarity and understandability
-- Actionability of recommendations
-- Integration with existing processes
+**專家審查框架：**
 
-Stakeholder Feedback:
-- Business value delivery
-- Strategic alignment
-- Risk assessment
-- Implementation feasibility
-"""
-```
+#### 專家評估流程
 
-## A/B Testing for Prompts
+**領域專家審查：**
+- 技術準確性評估
+- 產業最佳實務一致性
+- 專業術語使用
+- 真實世界適用性
 
-### Structured Comparison Testing
+**終端使用者測試：**
+- 在實際工作流程中的易用性
+- 清晰度與可理解性
+- 建議的可執行性
+- 與既有流程的整合
 
-```python
-"""
+**利害關係人回饋：**
+- 商業價值交付
+- 策略一致性
+- 風險評估
+- 實作可行性
+
+## 提示的 A/B 測試
+
+### 結構化比較測試
+
+```text
 A/B TEST DESIGN: Email Subject Line Generation
 
 CONTROL PROMPT (A):
@@ -179,469 +165,419 @@ TESTING FRAMEWORK:
 - Success metric: Open rate improvement
 - Secondary metrics: Click-through rate, spam rate
 - Statistical significance: 95% confidence level
-"""
 ```
 
-### Multivariate Testing
-
-```python
-"""
-MULTIVARIATE PROMPT TESTING:
-
-Variables to Test:
-1. Role Assignment: Generic vs. Specific Expert
-2. Context Length: Minimal vs. Detailed Background  
-3. Output Format: Structured vs. Free-form
-4. Example Usage: With Examples vs. Without
-5. Constraint Specification: Loose vs. Strict
-
-Test Matrix:
-Combination 1: Specific Expert + Detailed Context + Structured Format + Examples + Strict Constraints
-Combination 2: Generic Role + Minimal Context + Free-form + No Examples + Loose Constraints
-...
-[Test all 32 combinations systematically]
-
-Evaluation Criteria:
-- Output quality consistency
-- Task completion accuracy
-- User satisfaction scores
-- Time to acceptable result
-"""
-```
-
-## Quality Assurance Protocols
-
-### Pre-Deployment Checklist
-
-```python
-"""
-提示 QA 檢查清單（台灣本土化）：
-
-需求驗證：
-□ 提供清晰、具體的指示
-□ 明確定義成功標準
-□ 包含輸出格式規格
-□ 說明約束和限制
-□ 在有幫助的地方提供範例
-□ 符合台灣使用者期望
-
-技術驗證：
-□ 提示語法正確且完整
-□ Token 數量優化以提高效率
-□ 考量情境視窗限制
-□ 解決錯誤處理場景
-□ 驗證整合相容性
-□ 適用於台灣雲端環境
-
-內容驗證：
-□ 適當指定領域專業知識
-□ 術語使用准確且一致
-□ 解決偏見和公平性問題
-□ 符合文化敏感性要求
-□ 包含法律和合規因素
-□ 遵循台灣個資法要求
-□ 符合台灣文化背景
-
-效能驗證：
-□ 跨多種場景測試
-□ 適當處理邊緣情況
-□ 在多次執行中保持一致性
-□ 符合可擴展性要求
-□ 成本效率優化
-□ 符合台灣市場成本考量
-"""
-```
-
-### Production Monitoring
-
-```python
-"""
-PRODUCTION PROMPT MONITORING:
-
-Real-time Metrics:
-- Success rate (% of satisfactory outputs)
-- Average response quality score
-- Token usage efficiency
-- Error frequency and types
-- User satisfaction feedback
-
-Quality Drift Detection:
-- Baseline performance comparison
-- Statistical control charts
-- Anomaly detection algorithms
-- Automated quality alerts
-- Performance trend analysis
-
-Continuous Improvement:
-- Weekly performance reviews
-- User feedback integration
-- Prompt version control
-- A/B testing in production
-- Automated optimization suggestions
-"""
-```
-
-## Optimization Strategies
-
-### Iterative Improvement Process
-
-```python
-"""
-OPTIMIZATION WORKFLOW:
-
-Step 1: Performance Analysis
-- Identify lowest-performing scenarios
-- Analyze failure patterns and causes
-- Categorize issues by type and frequency
-- Prioritize optimization opportunities
-
-Step 2: Hypothesis Formation
-- Specific improvement hypotheses
-- Expected impact predictions
-- Resource requirement estimates
-- Risk assessment
-
-Step 3: Controlled Testing
-- Single-variable modifications
-- Controlled test environments
-- Statistically valid sample sizes
-- Blind evaluation when possible
-
-Step 4: Results Analysis
-- Statistical significance testing
-- Effect size calculations
-- Cost-benefit analysis
-- Unintended consequence assessment
-
-Step 5: Implementation
-- Gradual rollout strategy
-- Performance monitoring
-- Rollback procedures
-- Documentation updates
-"""
-```
-
-### Prompt Engineering Techniques
-
-**Clarity Optimization:**
-```python
-"""
-CLARITY ENHANCEMENT TECHNIQUES:
-
-Before (Unclear):
-"Write about marketing for our product"
-
-After (Clear):
-"You are a B2B marketing specialist. Write a 1500-word marketing strategy for our project management SaaS targeting small businesses (10-50 employees). Include: target audience analysis, competitive positioning, channel strategy, and success metrics. Use professional tone with actionable recommendations."
-
-Optimization Elements:
-- Specific role assignment
-- Clear output requirements  
-- Defined scope and constraints
-- Explicit deliverable format
-- Tone and style guidance
-"""
-```
-
-**Context Optimization:**
-```python
-"""
-CONTEXT ENHANCEMENT STRATEGIES:
-
-Insufficient Context:
-"Analyze this data and provide insights"
-
-Optimized Context:
-"You are a data analyst for an e-commerce company. Analyze this Q3 sales data to identify trends that will inform our Q4 strategy. 
-
-Context:
-- Company: Mid-size online retailer ($50M annual revenue)
-- Market: Competitive holiday shopping season approaching
-- Goal: 20% revenue growth in Q4
-- Concerns: Rising customer acquisition costs
-
-Data: [SALES_DATA]
-
-Focus on: seasonal patterns, customer segment performance, product category trends, and actionable recommendations for Q4 planning."
-"""
-```
-
-**Constraint Optimization:**
-```python
-"""
-CONSTRAINT REFINEMENT:
-
-Too Loose:
-"Create a marketing plan"
-
-Too Restrictive:
-"Create exactly 847 words about social media marketing using blue headers, 3 bullet points per section, mentioning Facebook 5 times, Instagram 3 times, with a conclusion ending in an exclamation point"
-
-Optimized Constraints:
-"Create a social media marketing plan (1000-1200 words) with:
-- Executive summary (100 words)
-- Platform strategy for Facebook, Instagram, LinkedIn
-- Content calendar template
-- Success metrics and KPIs
-- Implementation timeline (3 months)
-- Budget considerations
-
-Use professional tone with clear headings and bullet points for key recommendations."
-"""
-```
-
-## Advanced Testing Methods
-
-### Robustness Testing
-
-```python
-"""
-ROBUSTNESS VALIDATION FRAMEWORK:
-
-Input Variation Tests:
-1. Language Variation
-   - Different phrasings of same request
-   - Formal vs. casual language
-   - Technical vs. non-technical terminology
-
-2. Context Variation  
-   - Minimal vs. extensive background
-   - Different industry contexts
-   - Various complexity levels
-
-3. Format Variation
-   - Different input structures
-   - Multiple data formats
-   - Various request patterns
-
-4. Load Testing
-   - High-volume processing
-   - Concurrent usage scenarios
-   - Extended session testing
-
-Evaluation Criteria:
-- Consistency across variations
-- Graceful degradation under stress
-- Maintained quality standards
-- Predictable failure modes
-"""
-```
-
-### Cross-Domain Validation
-
-```python
-"""
-DOMAIN TRANSFER TESTING:
-
-Original Domain: Marketing Content Creation
-Test Domains:
-- Technical Documentation
-- Financial Analysis
-- Educational Content
-- Customer Support
-
-Validation Process:
-1. Adapt core prompt structure to new domain
-2. Test with domain-specific examples
-3. Evaluate output quality with domain experts
-4. Identify required modifications
-5. Document domain-specific optimizations
-
-Success Criteria:
-- 80%+ quality retention across domains
-- Minimal modification requirements
-- Consistent formatting and structure
-- Domain-appropriate terminology usage
-"""
-```
-
-## Error Analysis & Debugging
-
-### Common Failure Patterns
-
-```python
-"""
-FAILURE PATTERN ANALYSIS:
-
-Pattern 1: Context Overload
-Symptoms: Confused outputs, contradictory information
-Cause: Too much context, conflicting requirements
-Solution: Prioritize information, separate complex requests
-
-Pattern 2: Insufficient Specification
-Symptoms: Generic outputs, missing requirements
-Cause: Vague instructions, unclear success criteria
-Solution: Add specific constraints, provide examples
-
-Pattern 3: Format Inconsistency
-Symptoms: Variable output structures
-Cause: Ambiguous formatting instructions
-Solution: Explicit templates, clear structure requirements
-
-Pattern 4: Domain Mismatch
-Symptoms: Inappropriate terminology, incorrect assumptions
-Cause: Wrong expertise assignment, insufficient context
-Solution: Correct role specification, domain-specific context
-
-Pattern 5: Length Violations
-Symptoms: Too short or too long outputs
-Cause: Unclear length requirements, competing priorities
-Solution: Specific length targets, priority guidance
-"""
-```
-
-### Debugging Protocol
-
-```python
-"""
-SYSTEMATIC DEBUGGING PROCESS:
-
-1. Issue Identification
-   - Document specific problems
-   - Collect example failures
-   - Categorize by failure type
-   - Assess frequency and impact
-
-2. Root Cause Analysis
-   - Trace problems to prompt elements
-   - Test isolated components
-   - Identify contributing factors
-   - Validate hypotheses
-
-3. Solution Development
-   - Design targeted fixes
-   - Consider side effects
-   - Plan implementation approach
-   - Prepare validation tests
-
-4. Testing & Validation
-   - Test fixes with problem cases
-   - Verify no new issues introduced
-   - Confirm consistent improvement
-   - Document changes and results
-
-5. Prevention Planning
-   - Update testing protocols
-   - Improve quality gates
-   - Enhance monitoring systems
-   - Share learnings with team
-"""
-```
-
-## Performance Benchmarking
-
-### Baseline Establishment
-
-```python
-"""
-BENCHMARKING FRAMEWORK:
-
-Performance Baselines:
-1. Quality Metrics
-   - Accuracy: 85% factual correctness
-   - Completeness: 90% requirement coverage
-   - Relevance: 80% on-topic content
-   - Usability: 75% actionable outputs
-
-2. Efficiency Metrics
-   - First-time success: 70%
-   - Token efficiency: <2000 tokens per task
-   - Response time: <30 seconds
-   - Iteration count: <3 refinements
-
-3. User Satisfaction
-   - Overall satisfaction: 4.0/5.0
-   - Ease of use: 4.2/5.0
-   - Result quality: 3.8/5.0
-   - Time savings: 60% vs. manual
-
-Benchmark Comparison:
-- Industry standards
-- Competitor performance
-- Previous version performance
-- Alternative approaches
-"""
-```
-
-### Continuous Improvement Metrics
-
-```python
-"""
-IMPROVEMENT TRACKING:
-
-Monthly Review Metrics:
-- Quality score trends
-- User satisfaction changes
-- Efficiency improvements
-- Cost optimization progress
-- Error rate reductions
-
-Quarterly Optimization Goals:
-- 5% quality improvement
-- 10% efficiency gains
-- 15% cost reduction
-- 20% user satisfaction increase
-- 25% error reduction
-
-Annual Performance Reviews:
-- Comprehensive benchmarking
-- ROI analysis and reporting
-- Strategic optimization planning
-- Technology upgrade evaluation
-- Team skill development assessment
-"""
-```
-
-## Testing Tools & Automation
-
-### Automated Testing Framework
-
-```python
-"""
-AUTOMATED PROMPT TESTING SYSTEM:
-
-Test Suite Components:
-1. Input Generation
-   - Systematic test case creation
-   - Edge case identification
-   - Scenario variation generation
-   - Load testing simulation
-
-2. Output Evaluation
-   - Automated quality scoring
-   - Format validation
-   - Content analysis
-   - Performance measurement
-
-3. Regression Testing
-   - Version comparison
-   - Performance tracking
-   - Quality maintenance
-   - Breaking change detection
-
-4. Reporting & Analytics
-   - Performance dashboards
-   - Trend analysis
-   - Improvement recommendations
-   - Stakeholder reporting
-
-Implementation Tools:
-- Test case management system
-- Automated evaluation scripts
-- Performance monitoring dashboard
-- Version control integration
-"""
-```
-
-## Next Steps
-
-Ready to implement production-ready prompting systems?
-- **[Production Deployment](/docs/best-practices/production-deployment)** - Deploy prompts in production environments
-- **[Security & Ethics](/docs/best-practices/security-ethics)** - Ensure responsible AI usage
-- **[Team Collaboration](/docs/best-practices/team-collaboration)** - Scale prompting across organizations
+### 多變量測試
+
+#### 多變量提示測試
+
+**待測變數：**
+1. 角色指派：通用 vs. 特定專家
+2. 情境長度：精簡 vs. 詳細背景
+3. 輸出格式：結構化 vs. 自由形式
+4. 範例使用：有範例 vs. 無範例
+5. 約束規格：寬鬆 vs. 嚴格
+
+**測試矩陣：**
+- 組合 1：特定專家 + 詳細情境 + 結構化格式 + 範例 + 嚴格約束
+- 組合 2：通用角色 + 精簡情境 + 自由形式 + 無範例 + 寬鬆約束
+- ...
+- `[系統化測試全部 32 種組合]`
+
+**評估標準：**
+- 輸出品質一致性
+- 任務完成準確性
+- 使用者滿意度分數
+- 達到可接受結果的時間
+
+## 品質保證流程
+
+### 部署前檢查清單
+
+#### 提示 QA 檢查清單（台灣本土化）
+
+**需求驗證：**
+- 提供清晰、具體的指示
+- 明確定義成功標準
+- 包含輸出格式規格
+- 說明約束和限制
+- 在有幫助的地方提供範例
+- 符合台灣使用者期望
+
+**技術驗證：**
+- 提示語法正確且完整
+- Token 數量優化以提高效率
+- 考量情境視窗限制
+- 解決錯誤處理場景
+- 驗證整合相容性
+- 適用於台灣雲端環境
+
+**內容驗證：**
+- 適當指定領域專業知識
+- 術語使用準確且一致
+- 解決偏見和公平性問題
+- 符合文化敏感性要求
+- 包含法律和合規因素
+- 遵循台灣個資法要求
+- 符合台灣文化背景
+
+**效能驗證：**
+- 跨多種場景測試
+- 適當處理邊緣情況
+- 在多次執行中保持一致性
+- 符合可擴展性要求
+- 成本效率優化
+- 符合台灣市場成本考量
+
+### 生產環境監控
+
+#### 生產環境提示監控
+
+**即時指標：**
+- 成功率（令人滿意的輸出百分比）
+- 平均回應品質分數
+- Token 使用效率
+- 錯誤頻率與類型
+- 使用者滿意度回饋
+
+**品質漂移偵測：**
+- 基準效能比較
+- 統計管制圖
+- 異常偵測演算法
+- 自動化品質警示
+- 效能趨勢分析
+
+**持續改進：**
+- 每週效能審查
+- 整合使用者回饋
+- 提示版本控制
+- 生產環境中的 A/B 測試
+- 自動化最佳化建議
+
+## 最佳化策略
+
+### 迭代改進流程
+
+#### 最佳化工作流程
+
+**步驟 1：效能分析**
+- 找出效能最差的場景
+- 分析失敗模式與成因
+- 依類型與頻率分類問題
+- 排定最佳化機會的優先順序
+
+**步驟 2：形成假設**
+- 具體的改進假設
+- 預期影響的預測
+- 資源需求估計
+- 風險評估
+
+**步驟 3：受控測試**
+- 單一變數修改
+- 受控的測試環境
+- 統計上有效的樣本數
+- 盡可能採用盲測
+
+**步驟 4：結果分析**
+- 統計顯著性檢定
+- 效果量計算
+- 成本效益分析
+- 非預期後果評估
+
+**步驟 5：實施**
+- 漸進式上線策略
+- 效能監控
+- 回復程序
+- 文件更新
+
+### 提示工程技巧
+
+**清晰度最佳化：**
+
+#### 清晰度提升技巧
+
+**修改前（不清楚）：**
+「為我們的產品撰寫關於行銷的內容」
+
+**修改後（清楚）：**
+「你是一位 B2B 行銷專家。為我們鎖定小型企業（10-50 名員工）的專案管理 SaaS 撰寫一份 1500 字的行銷策略。內容包含：目標受眾分析、競爭定位、通路策略與成功指標。使用專業語氣並提供可執行的建議。」
+
+**最佳化要素：**
+- 具體的角色指派
+- 清楚的輸出需求
+- 明確界定的範圍與約束
+- 明確的交付物格式
+- 語氣與風格指引
+
+**情境最佳化：**
+
+#### 情境提升策略
+
+**情境不足：**
+「分析這份資料並提供洞見」
+
+**最佳化後的情境：**
+「你是一家電子商務公司的資料分析師。分析這份第三季銷售資料，找出能為我們第四季策略提供參考的趨勢。
+
+情境：
+- 公司：中型線上零售商（`$50M` 年營收）
+- 市場：競爭激烈的假期購物季即將到來
+- 目標：第四季營收成長 20%
+- 顧慮：日益升高的顧客取得成本
+
+資料：[SALES_DATA]
+
+聚焦於：季節性模式、顧客區隔表現、產品類別趨勢，以及第四季規劃的可執行建議。」
+
+**約束最佳化：**
+
+#### 約束精煉
+
+**過於寬鬆：**
+「製作一份行銷計畫」
+
+**過於嚴苛：**
+「製作一份恰好 847 字、關於社群媒體行銷的內容，使用藍色標題、每段 3 個項目符號、提及 Facebook 5 次、Instagram 3 次，並以驚嘆號結尾的結論」
+
+**最佳化後的約束：**
+「製作一份社群媒體行銷計畫（1000-1200 字），內容包含：
+- 執行摘要（100 字）
+- 針對 Facebook、Instagram、LinkedIn 的平台策略
+- 內容行事曆範本
+- 成功指標與 KPI
+- 實施時間表（3 個月）
+- 預算考量
+
+使用專業語氣，並以清楚的標題與項目符號呈現關鍵建議。」
+
+## 進階測試方法
+
+### 穩健性測試
+
+#### 穩健性驗證框架
+
+**輸入變化測試：**
+
+1. **語言變化**
+   - 同一請求的不同措辭
+   - 正式 vs. 隨意的語言
+   - 技術性 vs. 非技術性術語
+
+2. **情境變化**
+   - 精簡 vs. 詳盡的背景
+   - 不同的產業情境
+   - 各種複雜度層級
+
+3. **格式變化**
+   - 不同的輸入結構
+   - 多種資料格式
+   - 各種請求模式
+
+4. **負載測試**
+   - 高量處理
+   - 並行使用情境
+   - 長時間工作階段測試
+
+**評估標準：**
+- 跨各種變化的一致性
+- 壓力下的優雅降級
+- 維持品質標準
+- 可預測的失敗模式
+
+### 跨領域驗證
+
+#### 領域轉移測試
+
+**原始領域：** 行銷內容創作
+
+**測試領域：**
+- 技術文件
+- 財務分析
+- 教育內容
+- 客戶支援
+
+**驗證流程：**
+1. 將核心提示結構調整至新領域
+2. 以領域特定範例進行測試
+3. 由領域專家評估輸出品質
+4. 找出所需的修改
+5. 記錄領域特定的最佳化
+
+**成功標準：**
+- 跨領域維持 80%+ 的品質
+- 最少的修改需求
+- 一致的格式與結構
+- 領域適切的術語使用
+
+## 錯誤分析與除錯
+
+### 常見失敗模式
+
+#### 失敗模式分析
+
+**模式 1：情境過載**
+- 症狀：輸出混亂、資訊互相矛盾
+- 成因：情境過多、需求互相衝突
+- 解法：排定資訊優先順序、拆分複雜請求
+
+**模式 2：規格不足**
+- 症狀：輸出泛泛、缺少需求
+- 成因：指示模糊、成功標準不明確
+- 解法：加入具體約束、提供範例
+
+**模式 3：格式不一致**
+- 症狀：輸出結構不定
+- 成因：格式指示含糊
+- 解法：明確的範本、清楚的結構需求
+
+**模式 4：領域不符**
+- 症狀：術語不當、假設錯誤
+- 成因：專業指派錯誤、情境不足
+- 解法：修正角色規格、提供領域特定情境
+
+**模式 5：長度違反**
+- 症狀：輸出過短或過長
+- 成因：長度需求不明確、優先順序互相競爭
+- 解法：具體的長度目標、優先順序指引
+
+### 除錯流程
+
+#### 系統化除錯流程
+
+1. **問題識別**
+   - 記錄具體問題
+   - 蒐集失敗範例
+   - 依失敗類型分類
+   - 評估頻率與影響
+
+2. **根本原因分析**
+   - 將問題追溯至提示元素
+   - 測試獨立元件
+   - 找出促成因素
+   - 驗證假設
+
+3. **解決方案開發**
+   - 設計針對性修正
+   - 考量副作用
+   - 規劃實作方法
+   - 準備驗證測試
+
+4. **測試與驗證**
+   - 以問題案例測試修正
+   - 確認未引入新問題
+   - 確認一致的改善
+   - 記錄變更與結果
+
+5. **預防規劃**
+   - 更新測試流程
+   - 改進品質關卡
+   - 強化監控系統
+   - 與團隊分享學習心得
+
+## 效能基準測試
+
+### 建立基準
+
+#### 基準測試框架
+
+**效能基準：**
+
+1. **品質指標**
+   - 準確度：85% 事實正確性
+   - 完整性：90% 需求涵蓋率
+   - 相關性：80% 切題內容
+   - 易用性：75% 可執行輸出
+
+2. **效率指標**
+   - 首次成功率：70%
+   - Token 效率：每項任務 `<2000` 個 Token
+   - 回應時間：`<30` 秒
+   - 迭代次數：`<3` 次精煉
+
+3. **使用者滿意度**
+   - 整體滿意度：4.0/5.0
+   - 易用性：4.2/5.0
+   - 結果品質：3.8/5.0
+   - 時間節省：相較人工 60%
+
+**基準比較：**
+- 產業標準
+- 競爭對手表現
+- 前一版本表現
+- 替代方法
+
+### 持續改進指標
+
+#### 改進追蹤
+
+**每月審查指標：**
+- 品質分數趨勢
+- 使用者滿意度變化
+- 效率改善
+- 成本最佳化進度
+- 錯誤率降低
+
+**每季最佳化目標：**
+- 品質提升 5%
+- 效率提升 10%
+- 成本降低 15%
+- 使用者滿意度提升 20%
+- 錯誤降低 25%
+
+**年度效能審查：**
+- 全面的基準測試
+- ROI 分析與報告
+- 策略性最佳化規劃
+- 技術升級評估
+- 團隊技能發展評估
+
+## 測試工具與自動化
+
+### 自動化測試框架
+
+#### 自動化提示測試系統
+
+**測試套件元件：**
+
+1. **輸入產生**
+   - 系統化測試案例建立
+   - 邊緣案例識別
+   - 情境變化產生
+   - 負載測試模擬
+
+2. **輸出評估**
+   - 自動化品質評分
+   - 格式驗證
+   - 內容分析
+   - 效能衡量
+
+3. **回歸測試**
+   - 版本比較
+   - 效能追蹤
+   - 品質維護
+   - 破壞性變更偵測
+
+4. **報告與分析**
+   - 效能儀表板
+   - 趨勢分析
+   - 改進建議
+   - 利害關係人報告
+
+**實作工具：**
+- 測試案例管理系統
+- 自動化評估腳本
+- 效能監控儀表板
+- 版本控制整合
+
+## 後續步驟
+
+準備好實作可投入生產的提示系統了嗎？
+- **[生產環境部署](/docs/best-practices/production-deployment)** - 在生產環境中部署提示
+- **[安全與倫理](/docs/best-practices/security-ethics)** - 確保負責任的 AI 使用
+- **[團隊協作](/docs/best-practices/team-collaboration)** - 在組織內擴展提示工程
 - **[驗證與安全](/docs/vibe-coding/verification-and-safety)** - 把測試門檻接上 agentic 驗證迴圈
 - **[Agentic 工作流程](/docs/vibe-coding/agentic-workflows)** - 為 agent 驅動的工作提供機器可檢核的訊號
 
-:::tip Testing Discipline
-Treat prompt engineering like software development - use version control, systematic testing, and continuous integration. The investment in testing pays dividends in production reliability and performance.
+:::tip 測試紀律
+把提示工程當成軟體開發來看待 - 使用版本控制、系統化測試與持續整合。投入測試的心力，會在生產環境的可靠性與效能上獲得回報。
 :::
