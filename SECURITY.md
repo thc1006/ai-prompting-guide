@@ -1,149 +1,66 @@
 # Security Policy
 
+This repository hosts a **static documentation website** built with Docusaurus and
+served from GitHub Pages. It has **no backend server, no database, no user accounts,
+and accepts no user input at runtime**. As a result, classic web-application risks
+such as SQL injection, CSRF, session hijacking, and server-side rate limiting do not
+apply here. Our security surface is limited to the build toolchain, third-party
+dependencies, and the published static assets.
+
 ## Supported Versions
 
-Currently supported versions for security updates:
+Security fixes are applied to the latest released line only.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
-| < 1.0   | :x:                |
+| 2.0.x   | :white_check_mark: |
+| < 2.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-We take security vulnerabilities seriously. If you discover a security issue, please report it responsibly.
+Please report security issues **privately** — do not open a public GitHub issue.
 
-### How to Report
+- **Preferred:** Use GitHub's private vulnerability reporting: open the repository's
+  **Security** tab → **"Report a vulnerability"**
+  (https://github.com/thc1006/ai-prompting-guide/security/advisories/new).
+- **Alternative:** email the maintainer at **hctsai1006@cs.nctu.edu.tw**.
 
-1. **DO NOT** create a public GitHub issue for security vulnerabilities
-2. Email security concerns to: [Create a security contact email]
-3. Include the following information:
-   - Type of vulnerability
-   - Full paths of source file(s) related to the vulnerability
-   - Location of the affected source code (tag/branch/commit or direct URL)
-   - Step-by-step instructions to reproduce the issue
-   - Proof-of-concept or exploit code (if possible)
-   - Impact of the issue
+When reporting, please include:
 
-### Response Timeline
+- A description of the issue and its potential impact
+- Affected file(s) and location (branch/commit or URL)
+- Steps to reproduce, and a proof of concept if available
 
-- **Initial Response**: Within 48 hours
-- **Status Update**: Within 5 business days
-- **Resolution Target**: 
-  - Critical: 7 days
-  - High: 14 days
-  - Medium: 30 days
-  - Low: 60 days
+We aim to acknowledge reports within **5 business days** and to provide a remediation
+plan or fix as quickly as the severity warrants. This is a community-maintained
+project, so timelines are best-effort.
 
-## Security Best Practices
+## What We Actually Do
 
-### For Contributors
+- **Dependency scanning:** `npm audit` and CodeQL run in CI
+  (`.github/workflows/security-scan.yml`), and GitHub Dependabot monitors dependencies
+  for known vulnerabilities.
+- **Secret scanning:** TruffleHog runs in CI to catch accidentally committed
+  credentials; contributors must never commit API keys, tokens, or passwords.
+- **Static analysis:** ESLint security rules run in CI as advisory checks.
 
-1. **Dependencies**
-   - Run `npm audit` before submitting PRs
-   - Keep dependencies up to date
-   - Avoid dependencies with known vulnerabilities
+## What We Cannot Do (and Why)
 
-2. **Code Security**
-   - Never commit sensitive data (API keys, passwords, tokens)
-   - Validate and sanitize all user inputs
-   - Use parameterized queries for database operations
-   - Implement proper error handling without exposing system details
+Because the site is served by GitHub Pages, the following are **outside our control**
+and are intentionally not claimed:
 
-3. **Authentication & Authorization**
-   - Use secure session management
-   - Implement proper CSRF protection
-   - Use HTTPS for all communications
-   - Follow the principle of least privilege
+- **HTTP security headers** (CSP, HSTS, X-Frame-Options, etc.) cannot be set — GitHub
+  Pages does not allow custom response headers. HTTPS is enforced by GitHub Pages itself.
+- **Rate limiting, CSRF protection, secure cookies, and authentication** are not
+  applicable — there is no server, no session, and no user-submitted data.
 
-### For Users
+## For Contributors
 
-1. **Deployment Security**
-   - Always use HTTPS in production
-   - Configure proper CSP headers
-   - Enable security headers (X-Frame-Options, X-Content-Type-Options, etc.)
-   - Implement rate limiting
-   - Keep the application and dependencies updated
-
-2. **Environment Configuration**
-   - Use environment variables for sensitive configuration
-   - Never commit `.env` files
-   - Rotate secrets regularly
-   - Use strong, unique passwords
-
-## Security Features
-
-### Current Implementation
-
-- Input validation and sanitization
-- XSS protection through content sanitization
-- CSRF token generation and validation
-- Security headers configuration
-- Rate limiting capabilities
-- Secure cookie settings
-
-### Planned Enhancements
-
-- [ ] Implement Content Security Policy (CSP)
-- [ ] Add automated security scanning in CI/CD
-- [ ] Integrate dependency vulnerability scanning
-- [ ] Add security logging and monitoring
-- [ ] Implement API authentication
-- [ ] Add two-factor authentication support
-
-## Security Checklist for Releases
-
-Before each release, ensure:
-
-- [ ] All dependencies are up to date
-- [ ] `npm audit` shows no high or critical vulnerabilities
-- [ ] Security headers are properly configured
-- [ ] No sensitive data in codebase
-- [ ] Error messages don't expose system information
-- [ ] Input validation is implemented for all user inputs
-- [ ] Rate limiting is configured
-- [ ] HTTPS is enforced in production
-- [ ] Security documentation is updated
-
-## Third-Party Security
-
-### Dependencies
-
-We regularly monitor and update our dependencies for security vulnerabilities using:
-- npm audit
-- GitHub Dependabot
-- Manual security reviews
-
-### CDN and External Resources
-
-All external resources are loaded from trusted CDNs with:
-- Subresource Integrity (SRI) checks where possible
-- HTTPS enforcement
-- Fallback mechanisms for CDN failures
-
-## Compliance
-
-This project aims to comply with:
-- OWASP Top 10 security guidelines
-- GDPR requirements for data protection
-- Industry best practices for web application security
-
-## Security Updates
-
-Security updates will be released as:
-- **Patches**: For critical vulnerabilities
-- **Minor versions**: For high-priority security improvements
-- **Major versions**: When security changes require breaking changes
-
-## Contact
-
-For security concerns, contact: [Add security contact]
-
-## Acknowledgments
-
-We appreciate responsible disclosure of security vulnerabilities. Contributors who report valid security issues will be acknowledged in our security hall of fame (unless they prefer to remain anonymous).
+- Run `npm audit` before submitting a pull request and avoid introducing dependencies
+  with known high/critical vulnerabilities.
+- Never commit secrets. If a secret is exposed, rotate it immediately.
+- Keep dependencies reasonably up to date.
 
 ---
 
-Last Updated: 2025-08-22
-Next Review: 2025-09-22
+_Last updated: 2026-06-03_
