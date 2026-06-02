@@ -39,6 +39,7 @@ const sidebars = {
         'vibe-coding/agentic-workflows',
         'vibe-coding/spec-driven-development',
         'vibe-coding/verification-and-safety',
+        'vibe-coding/harness-engineering',
       ],
     },
     {
