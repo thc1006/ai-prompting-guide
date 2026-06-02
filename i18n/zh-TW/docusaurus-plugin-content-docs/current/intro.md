@@ -37,6 +37,10 @@ AI 提示詞工程就是一門撰寫精準、有脈絡指令的技術，讓 AI �
 ### 🤖 AI 編碼代理與 Vibe Coding
 從單一 prompt 再往前一步，進入用 Claude Code、OpenAI Codex 這類工具的代理式（agentic）開發。在 [Vibe Coding 與 AI 編碼代理](/docs/vibe-coding/overview) 這一章，學會 2026 年從 prompt engineering 走向 context engineering 與規格驅動開發的轉變。
 
+:::note 是演進，不是取代
+2026 年的這個轉變，是否意味著 prompting 已經過時？**不，恰恰相反。** Context engineering 與 agentic 工作流程是「建立在」prompting 之上，而不是把它淘汰掉。[基礎概念](/docs/fundamentals/what-is-prompting) 這一章裡的每一項技巧（清楚的指令、角色設定、範例、限制條件），正是你在寫 `CLAUDE.md` 檔、撰寫規格、或引導一個 agent 時所要運用的。一個好的 prompt 形塑「一次」回應；同樣的功夫用在情境（context）上，就能形塑「每一次」回應。先把基礎打好，它就會讓後面所有的東西都運作得起來。
+:::
+
 ## 開始上手
 
 準備好改變你使用 AI 的方式了嗎？從我們的[基礎概念](/docs/fundamentals/what-is-prompting)開始打好基礎，然後逐步學習實用教學和進階技巧。
