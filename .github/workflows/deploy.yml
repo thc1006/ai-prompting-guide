@@ -1,17 +1,11 @@
 name: Deploy Docusaurus to GitHub Pages
 
 on:
-  # Trigger deployment on push to main branch
+  # Trigger deployment on every push to main (incl. docs — this is a docs site)
   push:
     branches:
       - main
-    # Don't trigger on README or documentation only changes
-    paths-ignore:
-      - 'README.md'
-      - 'docs/**/*.md'
-      - '.gitignore'
-      - 'LICENSE'
-  
+
   # Allow manual triggering
   workflow_dispatch:
 
@@ -47,7 +41,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           # Use package-lock.json or yarn.lock for caching
           cache: 'npm'
           cache-dependency-path: 'package-lock.json'
