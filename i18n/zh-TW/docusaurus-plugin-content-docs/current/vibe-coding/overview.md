@@ -82,8 +82,8 @@ vibe coding 落在一道光譜的其中一端。用下面這份指南，幫你�
 - **[OpenAI Codex 實戰指南](/docs/vibe-coding/openai-codex)**——橫跨 CLI、IDE 與雲端介面的 Codex 代理。
 - **[用 CLAUDE.md / AGENTS.md 做 context engineering](/docs/vibe-coding/context-engineering)**——撰寫代理會自動讀取的專案情境檔。
 - **[Agentic 工作流](/docs/vibe-coding/agentic-workflows)**——怎麼把「規劃—行動—驗證」迴圈和多步驟委派架起來。
-- **Spec-driven development（規格驅動開發）**——把意圖轉成 spec 和驗收標準，讓代理照著去實作。
-- **驗證與安全**——審查代理的產出、sandboxing（沙箱）、測試，還有給未審查程式碼的護欄。
+- **[Spec-driven development（規格驅動開發）](/docs/vibe-coding/spec-driven-development)**——把意圖轉成 spec 和驗收標準，讓代理照著去實作。
+- **[驗證與安全](/docs/vibe-coding/verification-and-safety)**——審查代理的產出、sandboxing（沙箱）、測試，還有給未審查程式碼的護欄。
 
 （這裡先把它們列出來幫你定位；要進去看就跟著本章的側邊欄走。）
 

@@ -82,8 +82,8 @@ The rest of this chapter moves from tools to discipline. Upcoming docs:
 - **[OpenAI Codex field guide](/docs/vibe-coding/openai-codex)** — the Codex agent across CLI, IDE, and cloud surfaces.
 - **[Context engineering with CLAUDE.md / AGENTS.md](/docs/vibe-coding/context-engineering)** — writing project context files that agents read automatically.
 - **[Agentic workflows](/docs/vibe-coding/agentic-workflows)** — structuring plan-act-verify loops and multi-step delegation.
-- **Spec-driven development** — turning intent into specs and acceptance criteria the agent implements against.
-- **Verification & safety** — reviewing agent output, sandboxing, tests, and guardrails for unreviewed code.
+- **[Spec-driven development](/docs/vibe-coding/spec-driven-development)** — turning intent into specs and acceptance criteria the agent implements against.
+- **[Verification & safety](/docs/vibe-coding/verification-and-safety)** — reviewing agent output, sandboxing, tests, and guardrails for unreviewed code.
 
 (These are named here for orientation; follow the chapter sidebar to reach them.)
 

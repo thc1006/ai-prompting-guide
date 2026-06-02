@@ -37,6 +37,8 @@ const sidebars = {
         'vibe-coding/openai-codex',
         'vibe-coding/context-engineering',
         'vibe-coding/agentic-workflows',
+        'vibe-coding/spec-driven-development',
+        'vibe-coding/verification-and-safety',
       ],
     },
     {
