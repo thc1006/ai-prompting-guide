@@ -18,17 +18,12 @@ The project uses a comprehensive GitHub Actions workflow for automated deploymen
 - **File**: `.github/workflows/deploy.yml`
 - **Triggers**: Push to `main` branch, manual dispatch
 - **Features**:
-  - Node.js 18 with npm caching
+  - Node.js 20 with npm caching
   - Build optimization with increased memory allocation
   - Artifact uploading for GitHub Pages
   - Deployment status tracking
   - Failure notifications with automatic issue creation
   - Lighthouse performance auditing
-
-### Simplified Pages Workflow
-- **File**: `.github/workflows/pages.yml`
-- **Purpose**: Alternative simple deployment workflow
-- **Use Case**: Fallback option for basic deployments
 
 ## Configuration Files
 
