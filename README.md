@@ -1,115 +1,51 @@
-# AI Prompting Guide
+# AI 提示詞寶典 · AI Prompting Guide
 
-This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
+A bilingual (Traditional Chinese · English) handbook for getting real work done with large language models — from prompt fundamentals to 2026 **agentic coding** with tools like Claude Code and OpenAI Codex.
 
-## Installation
+- 🌐 **Live site:** https://thc1006.github.io/ai-prompting-guide/
+- ✍️ **Author:** 蔡秀吉 (Hsiu-Chi Tsai)
+- 🛠️ Built with [Docusaurus 3](https://docusaurus.io/). Default language is 繁體中文 (Taiwan); English is available via the locale switcher.
 
-```bash
-npm install
-```
+## What's inside
 
-## Local Development
+- **Fundamentals** — what prompting is, prompt structure, common patterns, and a quick-start.
+- **Vibe Coding & AI Agents** *(new in v2.0)* — the 2025–2026 shift from prompt engineering to **context engineering** and **agentic, spec-driven** workflows: field guides for Claude Code and OpenAI Codex, project context files (CLAUDE.md / AGENTS.md), agentic workflows, spec-driven development, and verification/safety/engineering discipline (TDD, Small CLs, the Boy Scout Rule).
+- **Practical Tutorials** — content creation, code generation, data analysis.
+- **Advanced Techniques** — chain-of-thought, prompt chaining, multi-modal.
+- **Best Practices** — testing & optimization, production deployment, security & ethics, team collaboration.
+- **Applications & Case Studies** — business intelligence, an enterprise deployment case study.
+- **Blog** — notes on prompt-engineering education and related topics.
 
-```bash
-npm start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-npm run build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+## Local development
 
 ```bash
-USE_SSH=true npm run deploy
+npm install      # install dependencies
+npm start        # dev server at http://localhost:3000
+npm run build    # production build into ./build (builds both locales)
+npm run serve    # serve the production build locally
 ```
 
-Not using SSH:
+Requires Node.js >= 18.
 
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-
-## Project Structure
+## Project structure
 
 ```
-ai-prompting-guide/
-├── blog/                    # Blog posts
-│   ├── 2019-05-28-first-blog-post.md
-│   ├── 2019-05-29-long-blog-post.md
-│   ├── 2021-08-01-mdx-blog-post.mdx
-│   ├── 2021-08-26-welcome/
-│   │   └── index.md
-│   └── authors.yml          # Blog authors
-├── docs/                    # Documentation files
-│   ├── intro.md
-│   ├── tutorial-basics/     # Basic tutorials
-│   │   ├── create-a-document.md
-│   │   ├── create-a-page.md
-│   │   ├── create-a-blog-post.md
-│   │   ├── markdown-features.mdx
-│   │   ├── deploy-your-site.md
-│   │   └── congratulations.md
-│   └── tutorial-extras/     # Advanced tutorials
-│       ├── manage-docs-versions.md
-│       └── translate-your-site.md
-├── src/                     # Source files
-│   ├── components/          # React components
-│   │   └── HomepageFeatures/
-│   ├── css/                 # Custom CSS
-│   │   └── custom.css
-│   └── pages/               # Custom pages
-│       ├── index.js         # Homepage
-│       └── markdown-page.md
-├── static/                  # Static assets
-│   └── img/                 # Images and icons
-├── docusaurus.config.js     # Site configuration
-├── package.json             # Node.js dependencies
-└── sidebars.js             # Sidebar configuration
+docs/                  # documentation chapters (English source)
+i18n/zh-TW/            # Traditional Chinese (Taiwan) translations + theme strings
+blog/                  # blog posts
+src/                   # homepage, React components, custom CSS
+static/                # images and static assets
+docusaurus.config.js   # site configuration
+sidebars.js            # docs sidebar structure
 ```
 
-## Configuration
+## Contributing
 
-- **Site Configuration**: Edit `docusaurus.config.js` to customize your site settings, navbar, footer, and more
-- **Sidebar**: Modify `sidebars.js` to organize your documentation structure
-- **Styling**: Update `src/css/custom.css` to customize the site's appearance
-- **Homepage**: Customize `src/pages/index.js` and `src/components/HomepageFeatures/` for your homepage
+Issues and pull requests are welcome at
+[github.com/thc1006/ai-prompting-guide](https://github.com/thc1006/ai-prompting-guide).
+Documentation lives under `docs/` (English source) with mirrored Traditional
+Chinese translations under `i18n/zh-TW/…` — please keep both in sync.
 
-## Writing Content
+## License
 
-### Documentation
-- Add new docs in the `docs/` folder
-- Use frontmatter to set sidebar position and labels
-- Support for Markdown and MDX (React components in Markdown)
-
-### Blog Posts
-- Add blog posts in the `blog/` folder
-- Use the format `YYYY-MM-DD-post-name.md` for file names
-- Configure authors in `blog/authors.yml`
-
-## Features
-
-- ⚡️ **Fast**: Built with modern web technologies
-- 📱 **Mobile-friendly**: Responsive design that works on all devices
-- 🌙 **Dark mode**: Built-in dark/light theme switching
-- 🔍 **Search**: Full-text search across all content
-- 📊 **Analytics**: Easy integration with Google Analytics, etc.
-- 🌐 **i18n**: Multi-language support
-- 📖 **Versioning**: Support for multiple documentation versions
-- 🎨 **Customizable**: Extensive theming and customization options
-
-## Learn More
-
-- [Docusaurus Documentation](https://docusaurus.io/docs)
-- [Markdown Features](https://docusaurus.io/docs/markdown-features)
-- [Deployment Guide](https://docusaurus.io/docs/deployment)
+Licensed under the [Apache License 2.0](./LICENSE).
