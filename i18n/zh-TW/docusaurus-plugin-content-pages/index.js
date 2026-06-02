@@ -11,8 +11,8 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1 className="hero__title">{siteConfig.customFields.titleZhTW}</h1>
+        <p className="hero__subtitle">{siteConfig.customFields.taglineZhTW}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -35,8 +35,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} - Master AI Prompting`}
-      description="Comprehensive guide to AI prompting techniques, from fundamentals to production deployment. Learn effective prompt engineering for developers, content creators, and AI practitioners.">
+      title={`${siteConfig.customFields.titleZhTW} － 掌握 AI 提示詞與 agentic 開發`}
+      description="從 prompt 基礎到 2026 年的 agentic coding（Claude Code、OpenAI Codex、情境工程）——一份繁體中文的 AI 提示詞與 AI 編碼代理寶典。">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
