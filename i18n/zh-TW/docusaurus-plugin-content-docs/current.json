@@ -7,6 +7,10 @@
     "message": "基礎概念",
     "description": "The label for category Fundamentals in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Vibe Coding & AI Agents": {
+    "message": "Vibe Coding 與 AI 編碼代理",
+    "description": "The label for category Vibe Coding & AI Agents in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Practical Tutorials": {
     "message": "實作教學",
     "description": "The label for category Practical Tutorials in sidebar tutorialSidebar"

@@ -29,6 +29,20 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Vibe Coding & AI Agents',
+      collapsed: false,
+      items: [
+        'vibe-coding/overview',
+        'vibe-coding/claude-code',
+        'vibe-coding/openai-codex',
+        'vibe-coding/context-engineering',
+        'vibe-coding/agentic-workflows',
+        'vibe-coding/spec-driven-development',
+        'vibe-coding/verification-and-safety',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Practical Tutorials',
       collapsed: false,
       items: [

@@ -34,6 +34,9 @@ AI 提示詞工程就是一門撰寫精準、有脈絡指令的技術，讓 AI �
 ### 💡 實務應用
 看看提示詞技術如何應用在內容創作、程式碼生成、數據分析、客戶服務等領域。
 
+### 🤖 AI 編碼代理與 Vibe Coding
+從單一 prompt 再往前一步，進入用 Claude Code、OpenAI Codex 這類工具的代理式（agentic）開發。在 [Vibe Coding 與 AI 編碼代理](/docs/vibe-coding/overview) 這一章，學會 2026 年從 prompt engineering 走向 context engineering 與規格驅動開發的轉變。
+
 ## 開始上手
 
 準備好改變你使用 AI 的方式了嗎？從我們的[基礎概念](/docs/fundamentals/what-is-prompting)開始打好基礎，然後逐步學習實用教學和進階技巧。

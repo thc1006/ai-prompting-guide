@@ -6,6 +6,10 @@ sidebar_position: 2
 
 Master the art of generating clean, functional code and comprehensive technical documentation through strategic prompting techniques.
 
+:::tip New in v2.0 — agentic coding
+These prompt templates still apply, but in 2026 most coding happens through agents like Claude Code and OpenAI Codex. For the agentic workflow, project context files, and verification discipline, see the [Vibe Coding & AI Coding Agents](/docs/vibe-coding/overview) chapter.
+:::
+
 ## Code Generation Fundamentals
 
 ### Basic Code Generation Template

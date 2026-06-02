@@ -6,6 +6,10 @@ sidebar_position: 2
 
 透過策略性提示技巧，掌握生成乾淨、功能性程式碼和全面技術文件的藝術。
 
+:::tip v2.0 新增 — 代理式編碼
+這些 prompt 模板現在還是用得上，但在 2026 年，大部分的寫程式都是透過 Claude Code、OpenAI Codex 這類代理（agent）在進行。想了解 agentic 工作流程、專案情境檔，還有驗證紀律，請看 [Vibe Coding 與 AI 編碼代理](/docs/vibe-coding/overview) 這一章。
+:::
+
 ## 程式碼生成基礎
 
 ### 基本程式碼生成模板
