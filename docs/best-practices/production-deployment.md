@@ -10,62 +10,63 @@ Learn to deploy AI prompting solutions in production environments with reliabili
 
 ### System Architecture Considerations
 
-```python
-"""
-PRODUCTION ARCHITECTURE DESIGN:
+A production architecture design centers on four core components.
 
-Core Components:
-1. Prompt Management System
-   - Version control and rollback capabilities
-   - A/B testing infrastructure
-   - Template library and inheritance
-   - Configuration management
+**1. Prompt Management System**
 
-2. Execution Engine
-   - Load balancing and failover
-   - Rate limiting and throttling
-   - Caching and optimization
-   - Error handling and recovery
+- Version control and rollback capabilities
+- A/B testing infrastructure
+- Template library and inheritance
+- Configuration management
 
-3. Monitoring & Analytics
-   - Real-time performance metrics
-   - Quality monitoring and alerting
-   - Usage analytics and optimization
-   - Cost tracking and budgeting
+**2. Execution Engine**
 
-4. Integration Layer
-   - API design and documentation
-   - Authentication and authorization
-   - Data pipeline integration
-   - Third-party service connections
-"""
-```
+- Load balancing and failover
+- Rate limiting and throttling
+- Caching and optimization
+- Error handling and recovery
+
+**3. Monitoring & Analytics**
+
+- Real-time performance metrics
+- Quality monitoring and alerting
+- Usage analytics and optimization
+- Cost tracking and budgeting
+
+**4. Integration Layer**
+
+- API design and documentation
+- Authentication and authorization
+- Data pipeline integration
+- Third-party service connections
 
 ### Scalability Planning
 
-```python
-"""
-SCALABILITY ARCHITECTURE:
+The scalability architecture combines a horizontal scaling strategy, performance optimization, and capacity planning.
 
-Horizontal Scaling Strategy:
+**Horizontal Scaling Strategy**
+
 - Load distribution across multiple AI service endpoints
 - Queue-based processing for high-volume requests
 - Caching frequently used prompt responses
 - Database sharding for prompt metadata and results
 
-Performance Optimization:
+**Performance Optimization**
+
 - Prompt template preprocessing and compilation
 - Response caching with intelligent invalidation
 - Connection pooling and resource management
 - Asynchronous processing for non-real-time tasks
 
-Capacity Planning:
+**Capacity Planning**
+
 - Traffic pattern analysis and forecasting
 - Resource utilization monitoring and alerting
 - Auto-scaling policies and thresholds
 - Cost optimization strategies
 
-Example Scaling Configuration:
+Example scaling configuration:
+
 ```yaml
 scaling_policy:
   metrics:
@@ -83,31 +84,30 @@ scaling_policy:
     max_instances: 20
     cooldown_period: 300s
 ```
-"""
-```
 
 ## Deployment Strategies
 
 ### Blue-Green Deployment
 
-```python
-"""
-BLUE-GREEN DEPLOYMENT FOR PROMPTS:
+Blue-green deployment for prompts maintains two parallel environments for zero-downtime releases.
 
-Strategy Overview:
+**Strategy Overview**
+
 - Blue Environment: Current production prompts
 - Green Environment: New prompt versions
 - Instant switchover capability
 - Zero-downtime deployments
 
-Implementation Process:
+**Implementation Process**
+
 1. Deploy new prompts to green environment
 2. Run automated testing and validation
-3. Gradually route traffic to green environment  
+3. Gradually route traffic to green environment
 4. Monitor performance and quality metrics
 5. Complete switchover or rollback if issues
 
-Deployment Configuration:
+Deployment configuration:
+
 ```yaml
 deployment:
   strategy: blue_green
@@ -134,27 +134,26 @@ deployment:
       - manual_intervention: true
 ```
 
-Benefits:
+**Benefits**
+
 - Instant rollback capability
 - Risk-free testing in production environment
 - Zero downtime during deployments
 - Clear separation of environments
-"""
-```
 
 ### Canary Deployment
 
-```python
-"""
-CANARY DEPLOYMENT STRATEGY:
+The canary deployment strategy rolls out new prompt versions gradually.
 
-Gradual Rollout Process:
+**Gradual Rollout Process**
+
 1. Deploy new prompt version to small subset (5% traffic)
 2. Monitor key metrics and quality indicators
 3. Gradually increase traffic if metrics are good
 4. Full rollout once confidence is established
 
-Traffic Routing Configuration:
+Traffic routing configuration:
+
 ```python
 canary_config = {
     "rollout_stages": [
@@ -173,23 +172,21 @@ canary_config = {
 }
 ```
 
-Quality Gates:
+**Quality Gates**
+
 - Automated quality assessment at each stage
 - User satisfaction feedback monitoring
 - Performance metric comparison
 - Business metric impact analysis
-"""
-```
 
 ## Configuration Management
 
 ### Environment-Specific Configurations
 
-```python
-"""
-ENVIRONMENT CONFIGURATION MANAGEMENT:
+Each environment uses its own prompt configuration for model settings, quality thresholds, and operational tooling.
 
-Development Environment:
+Development environment:
+
 ```yaml
 environment: development
 prompt_config:
@@ -208,7 +205,8 @@ prompt_config:
     performance_profiling: true
 ```
 
-Staging Environment:
+Staging environment:
+
 ```yaml
 environment: staging
 prompt_config:
@@ -227,7 +225,8 @@ prompt_config:
     integration_tests: true
 ```
 
-Production Environment:
+Production environment:
+
 ```yaml
 environment: production
 prompt_config:
@@ -245,17 +244,12 @@ prompt_config:
     performance_tracking: true
     business_metrics: true
 ```
-"""
-```
 
 ### Prompt Version Control
 
-```python
-"""
-PROMPT VERSION CONTROL SYSTEM:
+The prompt version control system organizes templates, configurations, and schemas under a single version-managed structure.
 
-Version Management Structure:
-```
+```text
 prompts/
 ├── templates/
 │   ├── content_generation/
@@ -274,7 +268,8 @@ prompts/
     └── response_schema.json
 ```
 
-Version Metadata:
+Version metadata:
+
 ```yaml
 prompt_metadata:
   version: "2.1.3"
@@ -298,7 +293,8 @@ prompt_metadata:
     approval_required: true
 ```
 
-Deployment Pipeline:
+**Deployment Pipeline**
+
 1. Developer commits prompt changes
 2. Automated testing and validation
 3. Code review and approval process
@@ -306,43 +302,43 @@ Deployment Pipeline:
 5. Production readiness checklist
 6. Gradual production rollout
 7. Performance monitoring and validation
-"""
-```
 
 ## Monitoring & Observability
 
 ### Real-Time Monitoring Dashboard
 
-```python
-"""
-PRODUCTION MONITORING FRAMEWORK:
+The production monitoring framework tracks key performance indicators across four categories.
 
-Key Performance Indicators:
-1. Quality Metrics
-   - Response quality scores (real-time)
-   - Format compliance rates
-   - Content relevance measurements
-   - User satisfaction ratings
+**1. Quality Metrics**
 
-2. Performance Metrics
-   - Average response time
-   - 95th percentile latency
-   - Throughput (requests per second)
-   - Error rates and failure patterns
+- Response quality scores (real-time)
+- Format compliance rates
+- Content relevance measurements
+- User satisfaction ratings
 
-3. Business Metrics
-   - Cost per request
-   - User engagement improvements
-   - Conversion rate impact
-   - Revenue attribution
+**2. Performance Metrics**
 
-4. System Health
-   - Service availability
-   - Resource utilization
-   - Queue depths and processing times
-   - Dependency health status
+- Average response time
+- 95th percentile latency
+- Throughput (requests per second)
+- Error rates and failure patterns
 
-Alerting Configuration:
+**3. Business Metrics**
+
+- Cost per request
+- User engagement improvements
+- Conversion rate impact
+- Revenue attribution
+
+**4. System Health**
+
+- Service availability
+- Resource utilization
+- Queue depths and processing times
+- Dependency health status
+
+Alerting configuration:
+
 ```yaml
 alerts:
   quality_degradation:
@@ -365,16 +361,11 @@ alerts:
     severity: critical
     notification: ["engineering", "on-call"]
 ```
-"""
-```
 
 ### Logging & Debugging
 
-```python
-"""
-COMPREHENSIVE LOGGING STRATEGY:
+A comprehensive logging strategy defines log levels and content through a structured logger.
 
-Log Levels and Content:
 ```python
 import logging
 import json
@@ -426,23 +417,21 @@ class PromptLogger:
         self.logger.error(json.dumps(log_entry))
 ```
 
-Structured Logging Benefits:
+**Structured Logging Benefits**
+
 - Easy parsing and analysis
 - Correlation across distributed systems
 - Performance optimization insights
 - Debugging and troubleshooting support
-"""
-```
 
 ## Error Handling & Resilience
 
 ### Fault Tolerance Patterns
 
-```python
-"""
-RESILIENCE PATTERNS FOR AI SYSTEMS:
+Several resilience patterns apply to AI systems.
 
-1. Circuit Breaker Pattern:
+**1. Circuit Breaker Pattern**
+
 ```python
 class CircuitBreaker:
     def __init__(self, failure_threshold=5, timeout=60):
@@ -479,7 +468,8 @@ class CircuitBreaker:
         self.state = 'CLOSED'
 ```
 
-2. Retry with Exponential Backoff:
+**2. Retry with Exponential Backoff**
+
 ```python
 class RetryManager:
     def __init__(self, max_attempts=3, base_delay=1, max_delay=60):
@@ -501,7 +491,8 @@ class RetryManager:
         raise MaxRetriesExceededException()
 ```
 
-3. Graceful Degradation:
+**3. Graceful Degradation**
+
 ```python
 class GracefulDegradation:
     def __init__(self):
@@ -522,23 +513,21 @@ class GracefulDegradation:
         # Generic fallback
         return "Service temporarily unavailable. Please try again later."
 ```
-"""
-```
 
 ### Data Backup & Recovery
 
-```python
-"""
-BACKUP AND RECOVERY STRATEGY:
+The backup and recovery strategy covers what to back up, how often, and how to restore.
 
-Backup Components:
+**Backup Components**
+
 1. Prompt Templates and Versions
 2. Configuration Files
-3. Training Data and Examples  
+3. Training Data and Examples
 4. Performance Metrics and Analytics
 5. User Feedback and Ratings
 
-Backup Schedule:
+Backup schedule:
+
 ```yaml
 backup_strategy:
   incremental:
@@ -559,7 +548,8 @@ backup_strategy:
     rto: 4_hours # Recovery Time Objective
 ```
 
-Recovery Procedures:
+Recovery procedures:
+
 ```python
 class DisasterRecovery:
     def __init__(self, backup_manager, config_manager):
@@ -594,18 +584,15 @@ class DisasterRecovery:
         # Implementation of validation logic
         pass
 ```
-"""
-```
 
 ## Security & Compliance
 
 ### Security Best Practices
 
-```python
-"""
-PRODUCTION SECURITY FRAMEWORK:
+The production security framework addresses input validation, authentication, and data protection.
 
-1. Input Validation and Sanitization:
+**1. Input Validation and Sanitization**
+
 ```python
 class InputValidator:
     def __init__(self):
@@ -634,7 +621,8 @@ class InputValidator:
         return True
 ```
 
-2. Authentication and Authorization:
+**2. Authentication and Authorization**
+
 ```python
 class SecurityManager:
     def __init__(self):
@@ -666,7 +654,8 @@ class SecurityManager:
             raise RateLimitExceededError("Too many requests")
 ```
 
-3. Data Privacy and Protection:
+**3. Data Privacy and Protection**
+
 ```python
 class DataProtectionManager:
     def __init__(self):
@@ -696,18 +685,15 @@ class DataProtectionManager:
         if current_region not in allowed_regions:
             raise DataResidencyViolationError("Data residency requirements violated")
 ```
-"""
-```
 
 ## Cost Optimization
 
 ### Resource Management
 
-```python
-"""
-COST OPTIMIZATION STRATEGIES:
+Cost optimization strategies focus on token usage, caching, and budget management.
 
-1. Token Usage Optimization:
+**1. Token Usage Optimization**
+
 ```python
 class TokenOptimizer:
     def __init__(self):
@@ -741,7 +727,8 @@ class TokenOptimizer:
         pass
 ```
 
-2. Caching Strategy:
+**2. Caching Strategy**
+
 ```python
 class IntelligentCache:
     def __init__(self, redis_client, ttl_default=3600):
@@ -785,7 +772,8 @@ class IntelligentCache:
         return base_ttl
 ```
 
-3. Budget Management:
+**3. Budget Management**
+
 ```python
 class BudgetManager:
     def __init__(self):
@@ -812,8 +800,6 @@ class BudgetManager:
         # Alert if approaching budget limits
         if self.current_spend > self.daily_budget * 0.8:
             self.send_budget_alert("80% of daily budget reached")
-```
-"""
 ```
 
 ## Next Steps

@@ -10,62 +10,63 @@ sidebar_position: 2
 
 ### 系統架構考量
 
-```python
-"""
-生產環境架構設計：
+生產環境架構設計圍繞四個核心組件展開。
 
-核心組件：
-1. 提示管理系統
-   - 版本控制與回滾功能
-   - A/B 測試基礎設施
-   - 模板庫與繼承機制
-   - 配置管理
+**1. 提示管理系統**
 
-2. 執行引擎
-   - 負載平衡與故障轉移
-   - 速率限制與流量控制
-   - 快取與優化
-   - 錯誤處理與恢復
+- 版本控制與回滾功能
+- A/B 測試基礎設施
+- 模板庫與繼承機制
+- 配置管理
 
-3. 監控與分析
-   - 即時效能指標
-   - 品質監控與警報
-   - 使用分析與優化
-   - 成本追蹤與預算控制
+**2. 執行引擎**
 
-4. 整合層
-   - API 設計與文件
-   - 身份驗證與授權
-   - 資料管道整合
-   - 第三方服務連接
-"""
-```
+- 負載平衡與故障轉移
+- 速率限制與流量控制
+- 快取與優化
+- 錯誤處理與恢復
+
+**3. 監控與分析**
+
+- 即時效能指標
+- 品質監控與警報
+- 使用分析與優化
+- 成本追蹤與預算控制
+
+**4. 整合層**
+
+- API 設計與文件
+- 身份驗證與授權
+- 資料管道整合
+- 第三方服務連接
 
 ### 可擴展性規劃
 
-```python
-"""
-可擴展性架構：
+可擴展性架構結合了水平擴展策略、效能優化與容量規劃。
 
-水平擴展策略：
+**水平擴展策略**
+
 - 跨多個 AI 服務端點的負載分配
 - 高流量請求的佇列處理
 - 快取常用提示回應
 - 提示中繼資料與結果的資料庫分片
 
-效能優化：
+**效能優化**
+
 - 提示模板預處理與編譯
 - 智慧失效的回應快取
 - 連接池與資源管理
 - 非即時任務的非同步處理
 
-容量規劃：
+**容量規劃**
+
 - 流量模式分析與預測
 - 資源使用監控與警報
 - 自動擴展政策與閾值
 - 成本優化策略
 
 擴展配置範例：
+
 ```yaml
 scaling_policy:
   metrics:
@@ -83,31 +84,30 @@ scaling_policy:
     max_instances: 20
     cooldown_period: 300s
 ```
-"""
-```
 
 ## 部署策略
 
 ### 藍綠部署
 
-```python
-"""
-提示藍綠部署：
+提示的藍綠部署會維護兩個並行環境，以實現零停機時間的版本發布。
 
-策略概述：
+**策略概述**
+
 - 藍色環境：當前生產環境提示
 - 綠色環境：新版本提示
 - 即時切換能力
 - 零停機時間部署
 
-實施流程：
+**實施流程**
+
 1. 將新提示部署到綠色環境
 2. 執行自動化測試與驗證
 3. 逐步將流量導向綠色環境
 4. 監控效能與品質指標
-5. 完成切換或回滾（如有問題）
+5. 完成切換，或在發生問題時回滾
 
 部署配置：
+
 ```yaml
 deployment:
   strategy: blue_green
@@ -134,27 +134,26 @@ deployment:
       - manual_intervention: true
 ```
 
-優勢：
+**優勢**
+
 - 即時回滾能力
 - 在生產環境中無風險測試
 - 部署期間零停機時間
 - 環境清楚分離
-"""
-```
 
 ### 金絲雀部署
 
-```python
-"""
-金絲雀部署策略：
+金絲雀部署策略會以漸進方式推出新版本的提示。
 
-漸進推出流程：
+**漸進推出流程**
+
 1. 將新提示版本部署到小子集（5% 流量）
 2. 監控關鍵指標與品質指標
 3. 如指標良好則逐步增加流量
 4. 建立信心後完全推出
 
 流量路由配置：
+
 ```python
 canary_config = {
     "rollout_stages": [
@@ -173,23 +172,21 @@ canary_config = {
 }
 ```
 
-品質關卡：
+**品質關卡**
+
 - 各階段自動化品質評估
 - 使用者滿意度回饋監控
 - 效能指標比較
 - 商業指標影響分析
-"""
-```
 
 ## 配置管理
 
 ### 環境特定配置
 
-```python
-"""
-環境配置管理：
+每個環境都使用各自的提示配置，涵蓋模型設定、品質閾值與營運工具。
 
 開發環境：
+
 ```yaml
 environment: development
 prompt_config:
@@ -209,6 +206,7 @@ prompt_config:
 ```
 
 測試環境：
+
 ```yaml
 environment: staging
 prompt_config:
@@ -228,6 +226,7 @@ prompt_config:
 ```
 
 生產環境：
+
 ```yaml
 environment: production
 prompt_config:
@@ -245,17 +244,12 @@ prompt_config:
     performance_tracking: true
     business_metrics: true
 ```
-"""
-```
 
 ### 提示版本控制
 
-```python
-"""
-提示版本控制系統：
+提示版本控制系統會將模板、配置與綱要組織在單一的版本管理結構之下。
 
-版本管理結構：
-```
+```text
 prompts/
 ├── templates/
 │   ├── content_generation/
@@ -275,6 +269,7 @@ prompts/
 ```
 
 版本中繼資料：
+
 ```yaml
 prompt_metadata:
   version: "2.1.3"
@@ -298,7 +293,8 @@ prompt_metadata:
     approval_required: true
 ```
 
-部署管道：
+**部署管道**
+
 1. 開發者提交提示變更
 2. 自動化測試與驗證
 3. 程式碼檢視與核准流程
@@ -306,43 +302,43 @@ prompt_metadata:
 5. 生產就緒檢查清單
 6. 漸進式生產推出
 7. 效能監控與驗證
-"""
-```
 
 ## 監控與可觀測性
 
 ### 即時監控儀表板
 
-```python
-"""
-生產監控框架：
+生產監控框架會橫跨四大類別追蹤關鍵效能指標。
 
-關鍵效能指標：
-1. 品質指標
-   - 回應品質分數（即時）
-   - 格式合規率
-   - 內容相關性測量
-   - 使用者滿意度評分
+**1. 品質指標**
 
-2. 效能指標
-   - 平均回應時間
-   - 第 95 百分位延遲
-   - 吞吐量（每秒請求數）
-   - 錯誤率與失敗模式
+- 回應品質分數（即時）
+- 格式合規率
+- 內容相關性測量
+- 使用者滿意度評分
 
-3. 商業指標
-   - 每請求成本
-   - 使用者參與度改善
-   - 轉換率影響
-   - 收益歸因
+**2. 效能指標**
 
-4. 系統健康
-   - 服務可用性
-   - 資源使用率
-   - 佇列深度與處理時間
-   - 依賴項健康狀態
+- 平均回應時間
+- 第 95 百分位延遲
+- 吞吐量（每秒請求數）
+- 錯誤率與失敗模式
+
+**3. 商業指標**
+
+- 每請求成本
+- 使用者參與度改善
+- 轉換率影響
+- 收益歸因
+
+**4. 系統健康**
+
+- 服務可用性
+- 資源使用率
+- 佇列深度與處理時間
+- 依賴項健康狀態
 
 警報配置：
+
 ```yaml
 alerts:
   quality_degradation:
@@ -365,16 +361,11 @@ alerts:
     severity: critical
     notification: ["engineering", "on-call"]
 ```
-"""
-```
 
 ### 日誌記錄與除錯
 
-```python
-"""
-全面日誌記錄策略：
+全面的日誌記錄策略會透過結構化的記錄器來定義日誌層級與內容。
 
-日誌層級與內容：
 ```python
 import logging
 import json
@@ -426,23 +417,21 @@ class PromptLogger:
         self.logger.error(json.dumps(log_entry))
 ```
 
-結構化日誌記錄優勢：
+**結構化日誌記錄優勢**
+
 - 易於解析與分析
 - 跨分散式系統關聯
 - 效能優化洞察
 - 除錯與故障排除支援
-"""
-```
 
 ## 錯誤處理與韌性
 
 ### 容錯模式
 
-```python
-"""
-AI 系統韌性模式：
+有數種韌性模式可套用於 AI 系統。
 
-1. 斷路器模式：
+**1. 斷路器模式**
+
 ```python
 class CircuitBreaker:
     def __init__(self, failure_threshold=5, timeout=60):
@@ -479,7 +468,8 @@ class CircuitBreaker:
         self.state = 'CLOSED'
 ```
 
-2. 指數退避重試：
+**2. 指數退避重試**
+
 ```python
 class RetryManager:
     def __init__(self, max_attempts=3, base_delay=1, max_delay=60):
@@ -501,7 +491,8 @@ class RetryManager:
         raise MaxRetriesExceededException()
 ```
 
-3. 優雅降級：
+**3. 優雅降級**
+
 ```python
 class GracefulDegradation:
     def __init__(self):
@@ -522,16 +513,13 @@ class GracefulDegradation:
         # 通用備用方案
         return "服務暫時無法使用，請稍後再試。"
 ```
-"""
-```
 
 ### 資料備份與恢復
 
-```python
-"""
-備份與恢復策略：
+備份與恢復策略涵蓋了要備份什麼、多久備份一次，以及如何還原。
 
-備份組件：
+**備份組件**
+
 1. 提示模板與版本
 2. 配置檔案
 3. 訓練資料與範例
@@ -539,6 +527,7 @@ class GracefulDegradation:
 5. 使用者回饋與評分
 
 備份排程：
+
 ```yaml
 backup_strategy:
   incremental:
@@ -560,6 +549,7 @@ backup_strategy:
 ```
 
 恢復程序：
+
 ```python
 class DisasterRecovery:
     def __init__(self, backup_manager, config_manager):
@@ -594,18 +584,15 @@ class DisasterRecovery:
         # 驗證邏輯實作
         pass
 ```
-"""
-```
 
 ## 安全性與合規
 
 ### 安全最佳實踐
 
-```python
-"""
-生產安全框架（符合台灣法規要求）：
+生產安全框架（符合台灣法規要求）涵蓋輸入驗證、身份驗證與資料保護。
 
-1. 輸入驗證與淨化（符合台灣個資法）：
+**1. 輸入驗證與淨化（符合台灣個資法）**
+
 ```python
 class InputValidator:
     def __init__(self):
@@ -645,7 +632,8 @@ class InputValidator:
         return True
 ```
 
-2. 身份驗證與授權（符合 NCC 資安規範）：
+**2. 身份驗證與授權（符合 NCC 資安規範）**
+
 ```python
 class SecurityManager:
     def __init__(self):
@@ -683,7 +671,8 @@ class SecurityManager:
             raise RateLimitExceededError("請求過於頻繁")
 ```
 
-3. 資料隱私與保護（台灣個資法合規）：
+**3. 資料隱私與保護（台灣個資法合規）**
+
 ```python
 class DataProtectionManager:
     def __init__(self):
@@ -712,18 +701,15 @@ class DataProtectionManager:
             if current_region not in ['taiwan', 'asia-pacific']:
                 raise DataResidencyViolationError("違反台灣資料在地化要求")
 ```
-"""
-```
 
 ## 成本優化
 
 ### 資源管理
 
-```python
-"""
-成本優化策略（適用台灣雲端服務）：
+成本優化策略（適用台灣雲端服務）聚焦於 token 使用、快取與預算管理。
 
-1. Token 使用優化：
+**1. Token 使用優化**
+
 ```python
 class TokenOptimizer:
     def __init__(self):
@@ -757,7 +743,8 @@ class TokenOptimizer:
         pass
 ```
 
-2. 快取策略（搭配台灣雲端服務）：
+**2. 快取策略（搭配台灣雲端服務）**
+
 ```python
 class IntelligentCache:
     def __init__(self, redis_client, ttl_default=3600):
@@ -801,7 +788,8 @@ class IntelligentCache:
         return base_ttl
 ```
 
-3. 預算管理（台幣計價）：
+**3. 預算管理（台幣計價）**
+
 ```python
 class BudgetManager:
     def __init__(self):
@@ -829,8 +817,6 @@ class BudgetManager:
         # 接近預算限制時警報
         if self.current_spend > self.daily_budget * 0.8:
             self.send_budget_alert("已達每日預算 80%")
-```
-"""
 ```
 
 ## 下一步
