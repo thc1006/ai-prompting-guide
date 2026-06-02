@@ -10,7 +10,7 @@ Real-world implementation of AI prompting systems in a Fortune 500 company.
 
 **Company**: Global Technology Corporation  
 **Industry**: Enterprise Software  
-**Timeline**: 18 months (2023-2024)  
+**Timeline**: 18 months (2024-2025)  
 **Team Size**: 45 engineers, 12 prompt specialists  
 **Investment**: $2.8M initial, $800K annual operations  
 
@@ -178,6 +178,15 @@ def validate_response(prompt, response):
 - Real-time business intelligence generation
 - Integrated prompt-driven product development
 - Industry-leading AI governance framework
+
+## See Also
+
+The agentic, verification-first workflows in the [Vibe Coding & AI Agents](/docs/vibe-coding/overview) chapter are how a deployment like this is built in 2026:
+
+- **[Agentic Workflows](/docs/vibe-coding/agentic-workflows)** - plan / act / verify loops for AI-assisted delivery
+- **[Harness Engineering](/docs/vibe-coding/harness-engineering)** - designing the scaffolding around the model
+- **[Verification & Safety](/docs/vibe-coding/verification-and-safety)** - the gates that keep an enterprise rollout safe
+- **[Production Deployment](/docs/best-practices/production-deployment)** - staged rollout, monitoring, and rollback
 
 ## Contact Information
 
