@@ -76,7 +76,7 @@ You also have several ways to gate when it is allowed to stop:
 - **A deterministic Stop hook** — block the stop programmatically unless the check passes (covered below).
 - **An adversarial review subagent** — spin up a reviewer in fresh context to judge the work without the bias of having just written it.
 
-Pair the check with the work, not as an afterthought. "It builds and the tests pass" is evidence; "I made the change" is not.
+Pair the check with the work, not as an afterthought. For turning these checks into enforceable gates — committed tests, evidence over assertions, and independent certification — see [Verification & Safety](/docs/vibe-coding/verification-and-safety).
 
 ## Extending Claude Code
 
@@ -128,7 +128,7 @@ Once the basics are solid, Claude Code scales out:
 - **Headless mode** — `claude -p "<prompt>"` runs non-interactively, for CI jobs, pre-commit checks, or fanning the same task across many inputs.
 - **Parallel sessions** — run several agents at once on independent tasks.
 - **Git worktrees** — give each parallel session its own working tree so they edit without colliding.
-- **The writer/reviewer pattern** — one agent writes, a *separate fresh-context* agent reviews. The reviewer hasn't seen the authoring rationale, so it is less biased toward defending code it just produced and more likely to catch real problems.
+- **The writer/reviewer pattern** — one agent writes, a separate fresh-context agent reviews. See [Agentic Workflows](/docs/vibe-coding/agentic-workflows) for the pattern and [Verification & Safety](/docs/vibe-coding/verification-and-safety) for using it as a certification gate.
 
 ```bash
 # Headless: run a check and let Claude fix failures, no interaction

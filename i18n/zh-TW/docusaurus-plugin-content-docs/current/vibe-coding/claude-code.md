@@ -76,7 +76,7 @@ Claude Code 是 Anthropic 的代理式（agentic）程式開發環境。它以�
 - **一個確定性的 Stop hook**——除非檢查通過，否則用程式的方式擋住停止動作（下面會講到）。
 - **一個對抗式的 review subagent**——在全新的 context 裡開一個 reviewer，讓它在沒有「剛寫完這段所以想護航」這種偏誤的情況下評斷成果。
 
-把檢查跟工作綁在一起，而不是事後才補上。「它編得過、測試也都過」是證據；「我改好了」不是。
+把檢查跟工作綁在一起，而不是事後才補上。想把這些檢查變成可強制執行的關卡——已提交的測試、要證據而不要嘴上講講、由獨立的對象來認證——請看 [驗證、安全與工程紀律](/docs/vibe-coding/verification-and-safety)。
 
 ## 擴充 Claude Code
 
@@ -128,7 +128,7 @@ Claude Code 會改檔案、跑指令，所以它對這些動作設了關卡：
 - **Headless mode（無頭模式）**——`claude -p "<prompt>"` 以非互動方式執行，適合 CI 工作、pre-commit 檢查，或是把同一個任務攤開來跑在很多組輸入上。
 - **平行 session**——同時跑好幾個代理，各自處理獨立的任務。
 - **Git worktrees**——給每個平行 session 自己的 working tree，讓它們改東西時不會互相撞車。
-- **writer/reviewer 模式**——一個代理負責寫，另一個*獨立、全新 context* 的代理負責審。reviewer 沒看過撰寫時的來龍去脈，所以比較不會偏向去護航自己剛產出的程式碼，反而更容易抓到真正的問題。
+- **writer/reviewer 模式**——一個代理負責寫，另一個獨立、全新 context 的代理負責審。這個模式的細節請看 [Agentic 工作流程](/docs/vibe-coding/agentic-workflows)，把它當成認證關卡來用則請看 [驗證、安全與工程紀律](/docs/vibe-coding/verification-and-safety)。
 
 ```bash
 # Headless: run a check and let Claude fix failures, no interaction
