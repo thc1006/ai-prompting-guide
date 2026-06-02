@@ -1,9 +1,10 @@
 # AI 提示詞寶典 · AI Prompting Guide
 
-A bilingual (Traditional Chinese · English) handbook for getting real work done with large language models — from prompt fundamentals to 2026 **agentic coding** with tools like Claude Code and OpenAI Codex.
+A free, bilingual (Traditional Chinese · English) handbook on **prompt engineering**, **context engineering**, and 2026 **agentic / "vibe" coding** with AI coding agents like **Claude Code** and **OpenAI Codex** — from prompt fundamentals to spec-driven, verification-first agent workflows. Written by 蔡秀吉 (Hsiu-Chi Tsai).
 
 - 🌐 **Live site:** https://thc1006.github.io/ai-prompting-guide/
 - ✍️ **Author:** 蔡秀吉 (Hsiu-Chi Tsai)
+- 📅 **Status:** v2.0 · last updated June 2026
 - 🛠️ Built with [Docusaurus 3](https://docusaurus.io/). Default language is 繁體中文 (Taiwan); English is available via the locale switcher.
 
 ## What's inside
@@ -25,7 +26,7 @@ npm run build    # production build into ./build (builds both locales)
 npm run serve    # serve the production build locally
 ```
 
-Requires Node.js >= 18.
+Requires Node.js >= 20.
 
 ## Project structure
 
