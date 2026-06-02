@@ -7,7 +7,7 @@ tags: [prompt-engineering, education, AI, interdisciplinary, open-source]
 
 # Prompt Engineering 教育實踐：從技術到人文的跨領域思考
 
-作為一個「技能樹亂點」的人——從醫學、電機資訊到戲劇，我發現 Prompt Engineering 正是一門需要跨領域思維的藝術。今天想分享一些關於如何教學和學習 prompt engineering 的思考。
+作為一個「技能樹亂點」的人（從醫學、電機資訊到戲劇），我發現 Prompt Engineering 正是一門需要跨領域思維的藝術。今天想分享一些關於如何教學和學習 prompt engineering 的思考。
 
 <!--truncate-->
 
