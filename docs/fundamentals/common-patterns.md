@@ -15,8 +15,7 @@ Provide examples to guide the AI's understanding and output format.
 **When to use:** New tasks, specific formatting, consistent style requirements
 
 **Structure:**
-```python
-"""
+```text
 [Task description]
 
 Examples:
@@ -26,12 +25,10 @@ Examples:
 
 Now apply this pattern to:
 [Your specific input]
-"""
 ```
 
 **Real Example:**
-```python
-"""
+```text
 Extract key information from customer support tickets:
 
 Examples:
@@ -52,7 +49,6 @@ Extraction:
 
 Now extract from:
 "The app keeps crashing when I try to upload large files over 100MB"
-"""
 ```
 
 ### 2. Chain-of-Thought Pattern
@@ -62,8 +58,7 @@ Break down complex reasoning into step-by-step thinking.
 **When to use:** Complex problem-solving, mathematical calculations, logical reasoning
 
 **Structure:**
-```python
-"""
+```text
 [Problem statement]
 
 Let's think through this step by step:
@@ -72,12 +67,10 @@ Let's think through this step by step:
 3. [Building on previous steps]
 ...
 Therefore: [Conclusion]
-"""
 ```
 
 **Real Example:**
-```python
-"""
+```text
 Determine the best pricing strategy for our new SaaS product.
 
 Let's think through this step by step:
@@ -90,7 +83,6 @@ Let's think through this step by step:
 7. Model revenue scenarios for each option
 
 Based on this analysis, recommend the optimal pricing structure.
-"""
 ```
 
 ### 3. Role-Based Pattern
@@ -100,25 +92,21 @@ Assign specific expertise and perspective to the AI.
 **When to use:** Domain-specific tasks, expert analysis, specialized knowledge
 
 **Structure:**
-```python
-"""
+```text
 You are a [specific role] with [relevant experience/expertise].
 
 [Context about the situation]
 
 As this expert, [specific task with role-appropriate considerations].
-"""
 ```
 
 **Real Example:**
-```python
-"""
+```text
 You are a cybersecurity architect with 15 years of experience in enterprise security, specializing in cloud infrastructure and zero-trust implementations.
 
 Our company is migrating from on-premises to AWS cloud infrastructure and needs to design a comprehensive security framework.
 
 As a cybersecurity expert, evaluate our current security posture, identify migration risks, and design a phased security implementation plan that maintains business continuity while achieving zero-trust architecture.
-"""
 ```
 
 ### 4. Perspective-Taking Pattern
@@ -128,8 +116,7 @@ Analyze from multiple viewpoints or stakeholder perspectives.
 **When to use:** Complex decisions, stakeholder analysis, comprehensive evaluation
 
 **Structure:**
-```python
-"""
+```text
 Analyze [situation/decision] from these perspectives:
 
 Perspective 1 - [Stakeholder A]:
@@ -142,12 +129,10 @@ Perspective 3 - [Stakeholder C]:
 [Their concerns, priorities, constraints]
 
 Synthesis: [Balanced recommendation considering all perspectives]
-"""
 ```
 
 **Real Example:**
-```python
-"""
+```text
 Analyze the decision to implement AI-powered customer service chatbots from these perspectives:
 
 Perspective 1 - Customer Experience Team:
@@ -166,7 +151,6 @@ Perspective 3 - Customer Service Representatives:
 - Workload changes and job satisfaction impact
 
 Synthesis: Provide a balanced implementation strategy that addresses each group's concerns.
-"""
 ```
 
 ### 5. Template-Based Pattern
@@ -176,8 +160,7 @@ Provide specific output templates for consistency.
 **When to use:** Standardized outputs, reporting, consistent formatting
 
 **Structure:**
-```python
-"""
+```text
 [Task description]
 
 Use this exact template:
@@ -189,12 +172,10 @@ Use this exact template:
 [Specific requirements for this section]
 
 [Additional formatting requirements]
-"""
 ```
 
 **Real Example:**
-```python
-"""
+```text
 Create a competitive analysis report for our project management software.
 
 Use this exact template:
@@ -218,7 +199,6 @@ Use this exact template:
 1. **Immediate Actions** (0-3 months)
 2. **Medium-term Strategy** (3-12 months)
 3. **Long-term Vision** (1-3 years)
-"""
 ```
 
 ## Advanced Patterns
@@ -228,8 +208,7 @@ Use this exact template:
 Build solutions through successive refinement.
 
 **Structure:**
-```python
-"""
+```text
 [Initial request]
 
 First, provide a basic [solution/analysis].
@@ -240,12 +219,10 @@ Then, refine it by:
 - [Refinement criteria 3]
 
 Finally, present the polished version.
-"""
 ```
 
 **Example:**
-```python
-"""
+```text
 Design a user onboarding flow for our mobile app.
 
 First, provide a basic onboarding sequence covering essential steps.
@@ -257,7 +234,6 @@ Then, refine it by:
 - Including retention-focused engagement hooks
 
 Finally, present the polished onboarding flow with rationale for each decision.
-"""
 ```
 
 ### 7. Constraint-Based Pattern
@@ -265,8 +241,7 @@ Finally, present the polished onboarding flow with rationale for each decision.
 Define specific limitations that shape the solution.
 
 **Structure:**
-```python
-"""
+```text
 [Task description]
 
 Work within these constraints:
@@ -275,12 +250,10 @@ Work within these constraints:
 - Constraint 3: [Specific limitation]
 
 Given these limitations, [specific request for optimized solution].
-"""
 ```
 
 **Example:**
-```python
-"""
+```text
 Design a marketing campaign for our new productivity app.
 
 Work within these constraints:
@@ -291,7 +264,6 @@ Work within these constraints:
 - Channels: Limited to social media and email (no paid advertising)
 
 Given these limitations, create a comprehensive campaign strategy that maximizes reach and conversion potential.
-"""
 ```
 
 ### 8. Comparative Analysis Pattern
@@ -299,8 +271,7 @@ Given these limitations, create a comprehensive campaign strategy that maximizes
 Structure comparisons systematically.
 
 **Structure:**
-```python
-"""
+```text
 Compare [Option A] vs [Option B] across these dimensions:
 
 Dimension 1 - [Criteria]:
@@ -314,7 +285,6 @@ Dimension 2 - [Criteria]:
 - Winner: [Choice with reasoning]
 
 Overall Recommendation: [Final choice with comprehensive reasoning]
-"""
 ```
 
 ### 9. Scenario Planning Pattern
@@ -322,8 +292,7 @@ Overall Recommendation: [Final choice with comprehensive reasoning]
 Explore multiple future scenarios and responses.
 
 **Structure:**
-```python
-"""
+```text
 Develop scenario plans for [situation]:
 
 Scenario 1 - [Optimistic case]:
@@ -342,15 +311,13 @@ Scenario 3 - [Pessimistic case]:
 - Strategy: [Recommended approach]
 
 Contingency Planning: [Flexible strategies that work across scenarios]
-"""
 ```
 
 ## Pattern Combinations
 
 ### Combining Role + Chain-of-Thought
 
-```python
-"""
+```text
 You are a financial advisor with expertise in tech startups.
 
 A client asks whether to raise Series A now or bootstrap for another year. Walk through your decision-making process step by step:
@@ -363,13 +330,11 @@ A client asks whether to raise Series A now or bootstrap for another year. Walk 
 6. Finally, provide your recommendation with clear rationale
 
 Present your analysis as you would to a client meeting.
-"""
 ```
 
 ### Combining Few-Shot + Template
 
-```python
-"""
+```text
 Create product requirement documents following this pattern:
 
 Example PRD:
@@ -387,7 +352,6 @@ Now create PRDs for these features:
 - Mobile offline mode
 
 Use the same template structure for each.
-"""
 ```
 
 ## Pattern Selection Guide

@@ -11,14 +11,14 @@ Understanding the building blocks of effective prompts is crucial for consistent
 Use the **CLEAR** framework to structure your prompts:
 
 - **C**ontext - Set the scene and background
-- **L**ength - Specify output length requirements  
+- **L**ength - Specify output length requirements
 - **E**xamples - Provide samples when needed
 - **A**ction - Define the specific task
 - **R**esults - Describe the expected output format
 
 ### CLEAR in Practice
 
-```python
+```text
 # Context
 """You are a senior software architect reviewing system design proposals."""
 
@@ -47,19 +47,22 @@ Example feedback format:
 Define who the AI should act as to set appropriate context and expertise level.
 
 **Basic Role:**
-```python
+
+```text
 "You are a data scientist..."
 ```
 
 **Advanced Role with Context:**
-```python
+
+```text
 """You are a senior data scientist at a Fortune 500 retail company with 
 10+ years of experience in customer behavior analysis and predictive modeling. 
 You specialize in turning complex data insights into actionable business strategies."""
 ```
 
 **Multiple Roles:**
-```python
+
+```text
 """You are wearing two hats:
 1. Technical architect - ensuring scalability and performance
 2. Business analyst - considering cost and resource implications"""
@@ -70,19 +73,22 @@ You specialize in turning complex data insights into actionable business strateg
 Be specific about what you want the AI to accomplish.
 
 **Vague Task:**
-```python
+
+```text
 "Help me with my presentation"
 ```
 
 **Clear Task:**
-```python
+
+```text
 """Create an outline for a 20-minute presentation on AI ethics for 
 a non-technical executive audience, including key talking points, 
 potential Q&A topics, and suggested visual aids."""
 ```
 
 **Multi-Step Task:**
-```python
+
+```text
 """Please complete these steps in order:
 1. Analyze the provided customer feedback data
 2. Identify the top 5 recurring issues
@@ -96,19 +102,22 @@ potential Q&A topics, and suggested visual aids."""
 Provide relevant background information that influences the output.
 
 **Temporal Context:**
-```python
+
+```text
 """Context: This is for our Q4 2024 board meeting, following a challenging 
 year with supply chain disruptions and market volatility."""
 ```
 
 **Audience Context:**
-```python
+
+```text
 """Target audience: Technical leads who are familiar with cloud architecture 
 but new to Kubernetes deployment strategies."""
 ```
 
 **Situational Context:**
-```python
+
+```text
 """Situation: Our startup just raised Series A funding and needs to scale 
 from 10 to 50 engineers in 6 months while maintaining code quality."""
 ```
@@ -118,12 +127,14 @@ from 10 to 50 engineers in 6 months while maintaining code quality."""
 Define exactly how you want the output structured.
 
 **Simple Format:**
-```python
+
+```text
 "Format your response as a numbered list with brief explanations."
 ```
 
 **Structured Format:**
-```python
+
+```text
 """
 Format your response using this structure:
 
@@ -145,7 +156,8 @@ Format your response using this structure:
 ```
 
 **Template Format:**
-```python
+
+```text
 """Use this exact template for each product review:
 
 **Product:** [name]
@@ -163,7 +175,8 @@ Format your response using this structure:
 Set clear boundaries and requirements.
 
 **Length Constraints:**
-```python
+
+```text
 """
 - Executive summary: exactly 100 words
 - Main content: 800-1200 words
@@ -172,7 +185,8 @@ Set clear boundaries and requirements.
 ```
 
 **Style Constraints:**
-```python
+
+```text
 """
 Writing style requirements:
 - Professional but conversational tone
@@ -184,7 +198,8 @@ Writing style requirements:
 ```
 
 **Content Constraints:**
-```python
+
+```text
 """
 Constraints:
 - Focus only on open-source solutions
@@ -200,7 +215,7 @@ Constraints:
 
 Break complex tasks into hierarchical components.
 
-```python
+```text
 """
 Primary Goal: Create a comprehensive marketing strategy
 
@@ -225,7 +240,7 @@ Level 3: Implementation Details (for high-priority tactics)
 
 Use if-then statements for complex scenarios.
 
-```python
+```text
 """
 Analyze this code and provide feedback based on these conditions:
 
@@ -250,7 +265,7 @@ IF the code has security vulnerabilities:
 
 Request analysis from different viewpoints.
 
-```python
+```text
 """
 Evaluate this business proposal from three perspectives:
 
@@ -280,22 +295,26 @@ For each perspective, provide specific concerns and recommendations.
 Start broad, then add specificity in layers.
 
 **Level 1 (Basic):**
-```python
+
+```text
 "Write about customer service"
 ```
 
 **Level 2 (Targeted):**
-```python
+
+```text
 "Write a guide about customer service for SaaS companies"
 ```
 
 **Level 3 (Specific):**
-```python
+
+```text
 "Write a customer service playbook for B2B SaaS companies with 100+ enterprise clients, focusing on technical support escalation procedures"
 ```
 
 **Level 4 (Highly Specific):**
-```python
+
+```text
 """Create a customer service playbook for B2B SaaS companies serving 100+ enterprise clients.
 
 Focus Areas:
@@ -314,27 +333,32 @@ Length: 3000-4000 words with actionable checklists"""
 Build prompts by adding enhancement layers.
 
 **Base Prompt:**
-```python
+
+```text
 "Explain machine learning algorithms"
 ```
 
 **+ Audience:**
-```python
+
+```text
 "Explain machine learning algorithms for business executives"
 ```
 
 **+ Context:**
-```python
+
+```text
 "Explain machine learning algorithms for business executives considering AI implementation"
 ```
 
 **+ Format:**
-```python
+
+```text
 "Explain machine learning algorithms for business executives considering AI implementation, structured as a decision-making framework"
 ```
 
 **+ Examples:**
-```python
+
+```text
 """Explain machine learning algorithms for business executives considering AI implementation, structured as a decision-making framework.
 
 Include real-world examples like:
