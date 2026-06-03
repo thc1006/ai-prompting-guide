@@ -10,7 +10,7 @@ A free, bilingual (Traditional Chinese · English) handbook on **prompt engineer
 ## What's inside
 
 - **Fundamentals** — what prompting is, prompt structure, common patterns, and a quick-start.
-- **Vibe Coding & AI Agents** *(new in v2.0)* — the 2025–2026 shift from prompt engineering to **context engineering** and **agentic, spec-driven** workflows: field guides for Claude Code and OpenAI Codex, project context files (CLAUDE.md / AGENTS.md), agentic workflows, spec-driven development, and verification/safety/engineering discipline (TDD, Small CLs, the Boy Scout Rule).
+- **Vibe Coding & AI Agents** *(new in v2.0)* — the 2025–2026 shift from prompt engineering to **context engineering** and **agentic, spec-driven** workflows: field guides for Claude Code and OpenAI Codex, project context files (CLAUDE.md / AGENTS.md), agentic workflows, spec-driven development, harness engineering, and verification/safety/engineering discipline (TDD, Small CLs, the Boy Scout Rule).
 - **Practical Tutorials** — content creation, code generation, data analysis.
 - **Advanced Techniques** — chain-of-thought, prompt chaining, multi-modal.
 - **Best Practices** — testing & optimization, production deployment, security & ethics, team collaboration.

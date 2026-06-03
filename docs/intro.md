@@ -67,7 +67,7 @@ prompt = """
 You are a helpful assistant specialized in data analysis.
 
 Task: Analyze the following sales data and provide insights.
-Context: Q3 2024 performance review
+Context: Q3 2026 performance review
 Data: [sales_data]
 
 Please provide:
