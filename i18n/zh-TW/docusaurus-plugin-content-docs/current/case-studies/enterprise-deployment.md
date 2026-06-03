@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ## 執行摘要
 
-**公司**: 台積電（Taiwan Semiconductor Manufacturing Company）  
+**公司**: 台灣某大型半導體製造商（匿名案例）  
 **行業**: 半導體製造  
 **時程**: 18 個月（2024-2025）  
 **團隊規模**: 45 名工程師、12 名提示專家  
@@ -72,7 +72,7 @@ sidebar_position: 1
 - 進階分析儀表板
 - 跨團隊協作工具
 - 智慧財產管理整合
-- 符合台積電內部標準的 AI 治理框架
+- 符合該公司內部標準的 AI 治理框架
 ```
 
 ## 成果
@@ -99,7 +99,7 @@ sidebar_position: 1
 ```javascript
 // 客戶支援模板（台灣本土化）
 const supportTemplate = {
-  system: "您是台積電 [PRODUCT] 的專業客戶服務代表。請始終保持同理心並專注於解決方案。",
+  system: "您是本公司 [PRODUCT] 的專業客戶服務代表。請始終保持同理心並專注於解決方案。",
   context: "{customer_history} {product_info} {known_issues} {taiwan_regulations}",
   instructions: "請在 150 字以內提供清晰、可執行的回應。使用繁體中文回應。",
   escalation: "以下情況需轉人工處理：技術複雜度 > 7、情緒強度 > 8、涉及法律問題",
@@ -218,7 +218,7 @@ def validate_response(prompt, response):
 
 ## 聯絡資訊
 
-有關詳細實施指南和技術規格，請聯絡企業 AI 團隊：enterprise-ai@tsmc.com。
+有關詳細實施指南和技術規格，請聯絡企業 AI 團隊：enterprise-ai@example.com.tw。
 
 ---
 
