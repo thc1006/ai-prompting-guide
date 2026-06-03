@@ -97,8 +97,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Social card used for OG/Twitter link previews (auto-emits og:image + twitter:image)
-      image: 'img/social-card.svg',
+      // Social card used for OG/Twitter link previews (auto-emits og:image + twitter:image).
+      // Must be a raster image (PNG/JPG) — X/Facebook/LinkedIn/Slack do NOT render SVG previews.
+      image: 'img/social-card.png',
       
       // SEO improvements
       metadata: [
