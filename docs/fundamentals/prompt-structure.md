@@ -104,7 +104,7 @@ Provide relevant background information that influences the output.
 **Temporal Context:**
 
 ```text
-"""Context: This is for our Q4 2024 board meeting, following a challenging 
+"""Context: This is for our Q4 2026 board meeting, following a challenging 
 year with supply chain disruptions and market volatility."""
 ```
 

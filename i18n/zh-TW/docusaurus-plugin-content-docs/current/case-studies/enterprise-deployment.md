@@ -81,7 +81,7 @@ sidebar_position: 1
 - **客戶滿意度**: 從 3.2 提升到 4.6（5 分制）
 - **回應時間**: 從平均 4.2 小時縮短到 18 分鐘
 - **成本節省**: 年度支援營運節省 3600 萬新台幣
-- **文件准確性**: 94%（從 67% 提升）
+- **文件準確性**: 94%（從 67% 提升）
 - **團隊生產力**: 內容生成效率提升 3.2 倍
 - **法規合規率**: 99.8%（符合台灣法規要求）
 
@@ -113,7 +113,7 @@ const supportTemplate = {
 def validate_response(prompt, response):
     checks = [
         tone_analysis(response),           # 語調分析
-        accuracy_verification(response),   # 准確性驗證
+        accuracy_verification(response),   # 準確性驗證
         brand_compliance(response),        # 品牌合規性
         length_validation(response),       # 長度驗證
         taiwan_cultural_check(response),   # 台灣文化適切性
